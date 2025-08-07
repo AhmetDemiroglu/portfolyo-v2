@@ -2,13 +2,13 @@
 
 W## Modern, çok dilli, dinamik ve kişiselleştirilebilir bir portfolyo web uygulaması
 
-![Ahmet Demiroğlu](public/ahmetfoto.png)
+![Ahmet Demiroğlu](public/ben3.png)
 
 ---
 
 ## 🚀 Proje Hakkında
 
-Bu proje, Ahmet Demiroğlu'nun yazılım, şehir planlama ve gayrimenkul değerleme alanlarındaki deneyimlerini ve projelerini sergilediği modern bir portfolyo sitesidir. React, Vite, TypeScript, TailwindCSS ve çoklu dil desteği (i18next) ile geliştirilmiştir.
+Bu proje, Benim yazılım, şehir planlama ve gayrimenkul değerleme alanlarındaki deneyimlerimi ve projelerimi sergilediği modern bir portfolyo sitesidir. React, Vite, TypeScript, TailwindCSS ve çoklu dil desteği (i18next) ile geliştirilmiştir.
 
 ## 🛠️ Kullanılan Teknolojiler
 
