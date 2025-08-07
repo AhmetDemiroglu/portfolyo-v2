@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "skills": "Yetenekler",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "home": {
+    "greeting": "Ahmet Demiroğlu",
+    "description": "Kod ve tasarımı birleştirerek, hem estetik hem de işlevsel modern web deneyimleri yaratıyorum.",
+    "button": "Projelerimi İncele",
+    "typing_sequences": [
+      "Full-Stack Developer", 2000,
+      "UI/UX Meraklısı", 2000,
+      "Kullanıcı Odaklı Çözümler", 2000
+    ],
+    "career_section_background": "KARİYER",
+    "career_section_title": "Kısaca Ben",
+    "career_section_paragraph": "Şehir Planlama ve Gayrimenkul Değerleme alanındaki 9 yıllık analitik düşünme ve problem çözme tecrübemi, teknoloji tutkumla birleştirerek web geliştirme dünyasına adım attım. Detaylara verdiğim önem ve kullanıcı odaklı bakış açımla, karmaşık sorunlara basit ve zarif çözümler üretmeyi hedefliyorum."
+  },
+  "about": {
+    "background_text": "HAKKIMDA",
+    "title": "Benim Hikayem",
+    "p1": "Ben Ahmet Demiroğlu. Gazi Üniversitesi Mimarlık Fakültesi, Şehir ve Bölge Planlama Bölümü'nden mezun bir Şehir Plancısı ve dokuz yıllık saha ile kontrol tecrübesine sahip bir Gayrimenkul Değerleme Uzmanıyım. Bu süreçte, planlama ve analiz becerilerimi geliştirmenin yanı sıra, detaylara özen gösterme ve raporlama konusunda tecrübe kazandım. Sorumlu Değerleme Uzmanı yetki belgesini de alarak mesleki tecrübemi bir adım öteye taşıdım.",
+    "p2": "Çocukluğumdan beri bilgisayarlara ve teknolojiye büyük bir ilgi duydum. Üniversite yıllarımda, bölümüm gereği aktif olarak kullandığım çizim ve tasarım programlarında kendimi geliştirme fırsatı buldum. Ancak, yazılıma olan tutkum her zaman içimdeydi ve bu tutku beni kariyerimde önemli bir değişikliğe yönlendirdi. Hatırı sayılır bir tecrübeye sahip olduğum gayrimenkul sektöründen ayrılarak, full-stack web geliştirme alanında kendimi geliştirmeye karar verdim.",
+    "p3": "Bu hedef doğrultusunda, Neos Yazılım Akademi'nin Yazılım Uzmanlığı Eğitimi'ni başarıyla tamamladım. Bu eğitim, HTML, CSS, JavaScript ve C# gibi programlama dillerinin yanı sıra, Bootstrap, React.js ve .NET gibi popüler kütüphane ve framework'leri de kapsıyordu. Temmuz 2023'te tamamladığım 7 haftalık yoğun staj programı sayesinde, teorik bilgilerimi pratik uygulamalarla pekiştirdim ve baştan sona çalışır durumda olan bir araç kiralama (rent a car) web sitesi projesini başarıyla hayata geçirdim. Bu projede, hem front-end hem de back-end geliştirmelerinde aktif rol alarak, web uygulamalarının tüm katmanlarında deneyim kazandım. Staj süresince ayrıca Neos Yazılım bünyesinde yerli ve açık kaynak bir CSS ve JS kütüphanesinin hazırlanması sürecinde yer aldım.",
+    "p4": "Stajımın ardından, Udemy üzerinden aldığım kapsamlı bir Vue.js eğitimi ile front-end geliştirme becerilerimi daha da ileriye taşıdım. Şu anda, görsel tasarım ve kullanıcı deneyimi (UI/UX) konularına olan ilgim ve yeteneğim doğrultusunda front-end geliştirmeye odaklanmış durumdayım. Vue.js kullanarak çeşitli projeler geliştiriyor, dinamik ve kullanıcı dostu arayüzler tasarlayarak kendimi bu alanda sürekli olarak geliştiriyorum.",
+    "p5": "Problem çözmeyi seven, yaratıcı, takım çalışmasına yatkın ve aynı zamanda uzun dönemli bireysel çalışma tecrübesine sahip biriyim. Hızlı öğrenme kabiliyetim ve gelişime açık yapım sayesinde, yeni teknolojilere kolayca adapte olabiliyorum. Şu anda, kendimi geliştirerek farklı vizyonlar edinebileceğim, tecrübelerimi aktarıp yeni tecrüeler kazanabileceğim bir sonraki heyecan verici adımı arıyorum."
+  },
+  "skills_page": {
+    "main_title": "Yeteneklerim",
+    "subtitle": "Kariyerim boyunca edindiğim ve projelerimde kullandığım temel teknolojiler ve araçlar.",
+    "skill_categories": [
+      {
+        "category": "Teknik Beceriler",
+        "subCategories": [
+          {
+            "title": "Front-End",
+            "skills": [
+              { "name": "HTML", "description": "Semantik, erişilebilir ve SEO dostu HTML5 yapıları." },
+              { "name": "CSS", "description": "Modern, duyarlı tasarımlar, animasyonlar ve CSS kütüphanesi geliştirme deneyimi." },
+              { "name": "JavaScript", "description": "ES6+ syntax, asenkron programlama ve DOM yetkinliği." },
+              { "name": "TypeScript", "description": "Statik tipleme ile daha sağlam ve ölçeklenebilir kod yazımı." },
+              { "name": "React", "description": "Bileşen bazlı mimari ve temel hook'lar." },
+              { "name": "Vue.js", "description": "Kapsamlı proje deneyimi, state yönetimi (Pinia) ve yönlendirme." },
+              { "name": "jQuery", "description": "Temel düzeyde DOM manipülasyonu ve event yönetimi." },
+              { "name": "Bootstrap", "description": "Hızlı ve duyarlı arayüzler geliştirmek için etkin kullanım." },
+              { "name": "Tailwind CSS", "description": "Utility-first yaklaşımıyla özelleştirilebilir tasarımlar." }
+            ]
+          },
+          {
+            "title": "Back-End",
+            "skills": [
+              { "name": "C#", "description": "Orta düzeyde OOP prensipleri ve dil yetkinliği." },
+              { "name": ".NET Core", "description": "API geliştirme ve framework kullanımı konusunda staj projesi deneyimi." },
+              { "name": "Entity Framework", "description": "Temel düzeyde ORM aracı ile veritabanı işlemleri." },
+              { "name": "SQL Server", "description": "Veritabanı tasarımı, sorgulama ve temel optimizasyon." }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Diğer Araçlar ve Teknolojiler",
+        "skills": {
+          "github": { "name": "GitHub", "description": "Versiyon kontrolü, branch yönetimi ve ekip çalışması." },
+          "photoshop": { "name": "Photoshop", "description": "Görsel düzenleme ve UI elementleri tasarlama." },
+          "autocad": { "name": "AutoCAD", "description": "Mimari ve teknik çizimler konusunda uzmanlık." },
+          "netcad": { "name": "Netcad", "description": "Şehir planlama ve haritacılık projelerinde etkin kullanım." },
+          "gis_systems": { "name": "GIS Sistemleri", "description": "Mekansal analiz ve coğrafi veri görselleştirme." }
+        }
+      },
+      {
+        "category": "Yazılımsal Olmayan Beceriler",
+        "skills": {
+          "real_estate_appraisal": { "name": "Gayrimenkul Değerleme", "description": "9 yıllık saha ve kontrol tecrübesi, SPK Lisanslı Sorumlu Değerleme Uzmanı." },
+          "reporting_analysis": { "name": "Raporlama ve Analiz", "description": "Verileri yorumlama ve detaylı raporlar hazırlama." },
+          "problem_solving": { "name": "Problem Çözme", "description": "Karmaşık sorunları analiz etme ve pragmatik çözümler üretme." },
+          "teamwork": { "name": "Takım Çalışması", "description": "Ekip içinde uyumlu çalışma ve etkili iletişim." },
+          "time_management": { "name": "Zaman Yönetimi", "description": "Görevleri planlama, önceliklendirme ve zamanında tamamlama." }
+        }
+      }
+    ]
+  },
+  "projects_page": {
+    "main_title": "Projelerim",
+    "subtitle": "Yolculuğum boyunca geliştirdiğim ve yeteneklerimi sergilediğim çalışmalar.",
+    "featured_badge": "ÖNE ÇIKAN PROJE",
+    "view_live_button": "İncele",
+    "view_github_button": "GitHub",
+    "view_github_button_long": "GitHub'da İncele",
+    "projects": {
+      "rent_a_car": {
+        "title": "Rent A Car Full-Stack Web Sitesi",
+        "description": "Tam kapsamlı bir araç kiralama sitesi. C#, ASP.NET Core, Entity Framework ve SQL Server kullanılarak geliştirilmiştir. Neos Yazılım Akademi staj projesidir.",
+        "tags": ["C#", ".NET Core", "Entity Framework", "SQL Server"]
+      },
+      "butce_360": {
+        "title": "Bütçe360° Harcama Takip Uygulaması",
+        "description": "Kredi kartı dönem takibi ve harcama yönetimi için modern bir web uygulaması. Vue.js 3.0 ve Firebase Realtime Database ile geliştirilmiştir.",
+        "tags": ["Vue.js", "Firebase", "JavaScript"]
+      },
+      "not_defteri": {
+        "title": "İnteraktif NotDefteri Uygulaması",
+        "description": "Kullanıcılara dinamik bir not defteri deneyimi sunar. HTML, CSS ve Vue.js 3.0 kullanılarak geliştirilmiştir.",
+        "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
+      },
+      "simon_game": {
+        "title": "Simon Hafıza Oyunu",
+        "description": "JavaScript ve jQuery pratiği yapmak amacıyla geliştirilmiş, ekrandaki renk sırasını takip etmeye dayalı eğlenceli ve etkileşimli bir oyun.",
+        "tags": ["JavaScript", "jQuery", "HTML", "CSS"]
+      },
+      "atak_hesaplama": {
+        "title": "Atak Dönemi Hesaplama Aracı",
+        "description": "Bebeklerin gelişim süreçlerindeki atak dönemlerini kolayca hesaplamada ebeveynlere yardımcı olmak amacıyla geliştirilmiş basit bir araç.",
+        "tags": ["JavaScript", "HTML", "CSS"]
+      }
+    }
+  },
+  "contact_page": {
+    "main_title": "İletişime Geçin",
+    "subtitle": "Bir proje fikriniz mi var veya sadece merhaba mı demek istiyorsunuz? Bana aşağıdaki kanallardan ulaşabilirsiniz.",
+    "direct_contact_title": "Doğrudan Ulaşın",
+    "location_title": "Konum",
+    "location_popup": "İzmir'de yaşıyorum. <br /> Bir kahveye beklerim!",
+    "form_title": "Veya Formu Doldurun",
+    "form_placeholder_name": "Adınız Soyadınız",
+    "form_placeholder_email": "E-posta Adresiniz",
+    "form_placeholder_message": "Mesajınız...",
+    "form_button_submit": "Mesajı Gönder",
+    "form_button_submitting": "Gönderiliyor...",
+    "form_status_success": "Mesajınız başarıyla gönderildi!",
+    "form_status_error": "Bir hata oluştu: ",
+    "social_title": "Sosyal Medya Hesaplarım",
+    "direct_links": {
+      "email": { "label": "E-posta" },
+      "whatsapp": { "label": "WhatsApp" }
+    },
+    "social_links": {
+      "github": { "label": "GitHub" },
+      "linkedin": { "label": "LinkedIn" },
+      "instagram": { "label": "Instagram" },
+      "twitter": { "label": "X (Twitter)" }
+    }
+  },
+  "404_page": {
+    "title": "Sayfa Bulunamadı",
+    "subtitle": "Aradığınız sayfa ya kaldırılmış ya da hiç var olmamış.",
+    "home_link": "Ana Sayfaya Dön",
+    "error_code": "Hata Kodu: 404"   
+  }
+}

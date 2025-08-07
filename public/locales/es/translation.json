@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "home": {
+    "greeting": "Ahmet Demiroğlu",
+    "description": "Combino código y diseño para crear experiencias web modernas que son tanto estéticas como funcionales.",
+    "button": "Ver mis proyectos",
+    "typing_sequences": [
+      "Desarrollador Full-Stack", 2000,
+      "Entusiasta de UI/UX", 2000,
+      "Soluciones Centradas en el Usuario", 2000
+    ],
+    "career_section_background": "CARRERA",
+    "career_section_title": "Brevemente sobre mí",
+    "career_section_paragraph": "He combinado mis 9 años de experiencia en pensamiento analítico y resolución de problemas en los campos de la planificación urbana y la valoración inmobiliaria con mi pasión por la tecnología para entrar en el mundo del desarrollo web. Con mi atención al detalle y mi perspectiva centrada en el usuario, mi objetivo es producir soluciones simples y elegantes para problemas complejos."
+  },
+  "about": {
+    "background_text": "SOBRE MÍ",
+    "title": "Mi Historia",
+    "p1": "Soy Ahmet Demiroğlu. Un Planificador Urbano graduado del Departamento de Planificación Urbana y Regional de la Facultad de Arquitectura de la Universidad de Gazi, y un Tasador de Bienes Raíces con nueve años de experiencia en campo y control. Durante este tiempo, no solo desarrollé mis habilidades de planificación y análisis, sino que también gané experiencia en la atención al detalle y la elaboración de informes. Llevé mi experiencia profesional un paso más allá al obtener la licencia de Tasador Responsable.",
+    "p2": "Desde mi infancia, he tenido un gran interés en las computadoras y la tecnología. Durante mis años universitarios, tuve la oportunidad de mejorar mis habilidades en los programas de dibujo y diseño que utilizaba activamente para mi campo. Sin embargo, mi pasión por el software siempre estuvo presente y me llevó a un cambio de carrera significativo. Decidí dejar el sector inmobiliario, donde había acumulado una considerable experiencia, para desarrollarme en el campo del desarrollo web full-stack.",
+    "p3": "Con este objetivo en mente, completé con éxito la Formación de Especialista en Software en la Academia de Software Neos. Esta formación abarcó lenguajes de programación como HTML, CSS, JavaScript y C#, así como bibliotecas y frameworks populares como Bootstrap, React.js y .NET. Gracias a un intenso programa de prácticas de 7 semanas que completé en julio de 2023, pude consolidar mis conocimientos teóricos con aplicaciones prácticas y llevar a cabo con éxito un proyecto de sitio web de alquiler de coches totalmente funcional. En este proyecto, participé activamente tanto en el desarrollo del front-end como del back-end, ganando experiencia en todas las capas de las aplicaciones web. Durante las prácticas, también participé en el desarrollo de una biblioteca local de CSS y JS de código abierto en Neos Software.",
+    "p4": "Después de mi pasantía, mejoré aún más mis habilidades de desarrollo front-end con un curso completo de Vue.js en Udemy. Actualmente, me estoy centrando en el desarrollo front-end, en línea con mi interés y talento por el diseño visual y la experiencia de usuario (UI/UX). Estoy desarrollando varios proyectos con Vue.js, mejorando continuamente en este campo mediante el diseño de interfaces dinámicas y fáciles de usar.",
+    "p5": "Soy una persona creativa, orientada al trabajo en equipo, a la que le gusta resolver problemas y que también tiene una larga experiencia trabajando de forma individual. Gracias a mi rápida capacidad de aprendizaje y mi apertura al desarrollo, puedo adaptarme fácilmente a las nuevas tecnologías. Actualmente, estoy buscando el próximo paso emocionante donde pueda desarrollarme, adquirir nuevas perspectivas, compartir mis experiencias y ganar otras nuevas."
+  },
+  "skills_page": {
+    "main_title": "Mis Habilidades",
+    "subtitle": "Las tecnologías y herramientas fundamentales que he adquirido a lo largo de mi carrera y utilizado en mis proyectos.",
+    "skill_categories": [
+      {
+        "category": "Habilidades Técnicas",
+        "subCategories": [
+          {
+            "title": "Front-End",
+            "skills": [
+              { "name": "HTML", "description": "Estructuras HTML5 semánticas, accesibles y amigables para SEO." },
+              { "name": "CSS", "description": "Diseños modernos y responsivos, animaciones y experiencia en el desarrollo de bibliotecas CSS." },
+              { "name": "JavaScript", "description": "Sintaxis ES6+, programación asíncrona y competencia en DOM." },
+              { "name": "TypeScript", "description": "Código más robusto y escalable con tipado estático." },
+              { "name": "React", "description": "Arquitectura basada en componentes y hooks básicos." },
+              { "name": "Vue.js", "description": "Amplia experiencia en proyectos, gestión de estado (Pinia) y enrutamiento." },
+              { "name": "jQuery", "description": "Manipulación básica del DOM y gestión de eventos." },
+              { "name": "Bootstrap", "description": "Uso eficiente para desarrollar interfaces rápidas y responsivas." },
+              { "name": "Tailwind CSS", "description": "Diseños personalizables con el enfoque 'utility-first'." }
+            ]
+          },
+          {
+            "title": "Back-End",
+            "skills": [
+              { "name": "C#", "description": "Conocimiento intermedio de los principios de POO y competencia en el lenguaje." },
+              { "name": ".NET Core", "description": "Experiencia en proyectos de prácticas en desarrollo de API y uso de frameworks." },
+              { "name": "Entity Framework", "description": "Operaciones básicas de base de datos con la herramienta ORM." },
+              { "name": "SQL Server", "description": "Diseño de bases de datos, consultas y optimización básica." }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Otras Herramientas y Tecnologías",
+        "skills": {
+          "github": { "name": "GitHub", "description": "Control de versiones, gestión de ramas y trabajo en equipo." },
+          "photoshop": { "name": "Photoshop", "description": "Edición de imágenes y diseño de elementos de interfaz de usuario." },
+          "autocad": { "name": "AutoCAD", "description": "Experiencia en dibujos técnicos y de arquitectura." },
+          "netcad": { "name": "Netcad", "description": "Uso eficiente en proyectos de planificación urbana y cartografía." },
+          "gis_systems": { "name": "Sistemas GIS", "description": "Análisis espacial y visualización de datos geográficos." }
+        }
+      },
+      {
+        "category": "Habilidades No Técnicas",
+        "skills": {
+          "real_estate_appraisal": { "name": "Valoración Inmobiliaria", "description": "9 años de experiencia en campo y control, Tasador Responsable con licencia (SPK)." },
+          "reporting_analysis": { "name": "Informes y Análisis", "description": "Interpretación de datos y preparación de informes detallados." },
+          "problem_solving": { "name": "Resolución de Problemas", "description": "Análisis de problemas complejos y producción de soluciones pragmáticas." },
+          "teamwork": { "name": "Trabajo en Equipo", "description": "Colaboración armoniosa en equipo y comunicación efectiva." },
+          "time_management": { "name": "Gestión del Tiempo", "description": "Planificación, priorización y finalización de tareas a tiempo." }
+        }
+      }
+    ]
+  },
+  "projects_page": {
+    "main_title": "Mis Proyectos",
+    "subtitle": "Trabajos que he desarrollado a lo largo de mi viaje y que demuestran mis habilidades.",
+    "featured_badge": "PROYECTO DESTACADO",
+    "view_live_button": "Ver en vivo",
+    "view_github_button": "GitHub",
+    "view_github_button_long": "Ver en GitHub",
+    "projects": {
+      "rent_a_car": {
+        "title": "Sitio Web Full-Stack de Alquiler de Coches",
+        "description": "Un sitio web de alquiler de coches totalmente funcional. Desarrollado con C#, ASP.NET Core, Entity Framework y SQL Server. Proyecto de prácticas de la Academia de Software Neos.",
+        "tags": ["C#", ".NET Core", "Entity Framework", "SQL Server"]
+      },
+      "butce_360": {
+        "title": "Aplicación de Seguimiento de Gastos Bütçe360°",
+        "description": "Una aplicación web moderna para el seguimiento de extractos de tarjetas de crédito y la gestión de gastos. Desarrollada con Vue.js 3.0 y Firebase Realtime Database.",
+        "tags": ["Vue.js", "Firebase", "JavaScript"]
+      },
+      "not_defteri": {
+        "title": "Aplicación de Bloc de Notas Interactivo",
+        "description": "Ofrece a los usuarios una experiencia dinámica de bloc de notas. Desarrollada con HTML, CSS y Vue.js 3.0.",
+        "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
+      },
+      "simon_game": {
+        "title": "Juego de Memoria Simon",
+        "description": "Un juego divertido e interactivo basado en seguir una secuencia de colores en la pantalla, desarrollado para practicar JavaScript y jQuery.",
+        "tags": ["JavaScript", "jQuery", "HTML", "CSS"]
+      },
+      "atak_hesaplama": {
+        "title": "Herramienta de Cálculo de Saltos de Crecimiento",
+        "description": "Una herramienta sencilla desarrollada para ayudar a los padres a calcular fácilmente los saltos de crecimiento de sus bebés.",
+        "tags": ["JavaScript", "HTML", "CSS"]
+      }
+    }
+  },
+  "contact_page": {
+    "main_title": "Ponte en Contacto",
+    "subtitle": "¿Tienes una idea para un proyecto o simplemente quieres saludar? Puedes contactarme a través de los siguientes canales.",
+    "direct_contact_title": "Contacto Directo",
+    "location_title": "Ubicación",
+    "location_popup": "Vivo en Izmir. <br /> ¡Estás invitado a tomar un café!",
+    "form_title": "O Rellena el Formulario",
+    "form_placeholder_name": "Tu Nombre",
+    "form_placeholder_email": "Tu Correo Electrónico",
+    "form_placeholder_message": "Tu Mensaje...",
+    "form_button_submit": "Enviar Mensaje",
+    "form_button_submitting": "Enviando...",
+    "form_status_success": "¡Tu mensaje ha sido enviado con éxito!",
+    "form_status_error": "Ocurrió un error: ",
+    "social_title": "Mis Cuentas de Redes Sociales",
+    "direct_links": {
+      "email": { "label": "Correo Electrónico" },
+      "whatsapp": { "label": "WhatsApp" }
+    },
+    "social_links": {
+      "github": { "label": "GitHub" },
+      "linkedin": { "label": "LinkedIn" },
+      "instagram": { "label": "Instagram" },
+      "twitter": { "label": "X (Twitter)" }
+    }
+  },
+  "404_page": {
+    "title": "Página no encontrada",
+    "subtitle": "La página que buscas ha sido eliminada o nunca existió.",
+    "home_link": "Volver a la página de inicio",
+    "error_code": "Código de error: 404"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Ahmet Demiroğlu",
+    "description": "I create modern web experiences that are both aesthetic and functional by combining code and design.",
+    "button": "Explore My Projects",
+    "typing_sequences": [
+      "Full-Stack Developer", 2000,
+      "UI/UX Enthusiast", 2000,
+      "User-Focused Solutions", 2000
+    ],
+    "career_section_background": "CAREER",
+    "career_section_title": "A Bit About Me",
+    "career_section_paragraph": "I stepped into the world of web development by combining my 9 years of experience in analytical thinking and problem-solving from my Urban Planning and Real Estate Appraisal background with my passion for technology. With my attention to detail and user-centric perspective, I aim to produce simple and elegant solutions to complex problems."
+  },
+  "about": {
+    "background_text": "ABOUT ME",
+    "title": "My Story",
+    "p1": "I am Ahmet Demiroğlu. I am an Urban Planner, a graduate of Gazi University, Faculty of Architecture, Department of City and Regional Planning, and a Real Estate Appraiser with nine years of field and inspection experience. During this time, I improved my planning and analysis skills and gained experience in paying attention to detail and reporting. I took my professional experience one step further by obtaining the Certified Appraiser license.",
+    "p2": "I have had a great interest in computers and technology since my childhood. During my university years, I had the opportunity to improve myself in the drawing and design programs that I actively used for my department. However, my passion for software was always inside me, and this passion led me to a significant change in my career. I decided to leave the real estate sector, where I had considerable experience, and improve myself in the field of full-stack web development.",
+    "p3": "In line with this goal, I successfully completed the Software Specialization Training at Neos Software Academy. This training covered programming languages such as HTML, CSS, JavaScript, and C#, as well as popular libraries and frameworks like Bootstrap, React.js, and .NET. Thanks to the 7-week intensive internship program I completed in July 2023, I reinforced my theoretical knowledge with practical applications and successfully launched a fully functional rent a car website project from start to finish. In this project, I took an active role in both front-end and back-end development, gaining experience in all layers of web applications. During my internship, I also took part in the process of preparing a domestic and open-source CSS and JS library within Neos Software.",
+    "p4": "After my internship, I further advanced my front-end development skills with a comprehensive Vue.js training I took on Udemy. Currently, I am focused on front-end development in line with my interest and talent in visual design and user experience (UI/UX). I am constantly improving myself in this field by developing various projects using Vue.js and designing dynamic and user-friendly interfaces.",
+    "p5": "I am a creative person who loves to solve problems, is prone to teamwork, and also has long-term individual work experience. Thanks to my ability to learn quickly and my open-minded structure, I can easily adapt to new technologies. I am currently looking for the next exciting step where I can develop myself, gain different visions, transfer my experiences, and gain new ones."
+  },
+  "skills_page": {
+    "main_title": "My Skills",
+    "subtitle": "The core technologies and tools I've acquired throughout my career and used in my projects.",
+    "skill_categories": [
+      {
+        "category": "Technical Skills",
+        "subCategories": [
+          {
+            "title": "Front-End",
+            "skills": [
+              { "name": "HTML", "description": "Semantic, accessible, and SEO-friendly HTML5 structures." },
+              { "name": "CSS", "description": "Experience in modern, responsive designs, animations, and CSS library development." },
+              { "name": "JavaScript", "description": "ES6+ syntax, asynchronous programming, and DOM proficiency." },
+              { "name": "TypeScript", "description": "Writing more robust and scalable code with static typing." },
+              { "name": "React", "description": "Component-based architecture and fundamental hooks." },
+              { "name": "Vue.js", "description": "Comprehensive project experience, state management (Pinia), and routing." },
+              { "name": "jQuery", "description": "Basic level of DOM manipulation and event management." },
+              { "name": "Bootstrap", "description": "Effective use for developing fast and responsive interfaces." },
+              { "name": "Tailwind CSS", "description": "Customizable designs with a utility-first approach." }
+            ]
+          },
+          {
+            "title": "Back-End",
+            "skills": [
+              { "name": "C#", "description": "Intermediate level of OOP principles and language proficiency." },
+              { "name": ".NET Core", "description": "Internship project experience in API development and framework usage." },
+              { "name": "Entity Framework", "description": "Basic level database operations with an ORM tool." },
+              { "name": "SQL Server", "description": "Database design, querying, and basic optimization." }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Other Tools and Technologies",
+        "skills": {
+          "github": { "name": "GitHub", "description": "Version control, branch management, and teamwork." },
+          "photoshop": { "name": "Photoshop", "description": "Image editing and designing UI elements." },
+          "autocad": { "name": "AutoCAD", "description": "Expertise in architectural and technical drawings." },
+          "netcad": { "name": "Netcad", "description": "Effective use in urban planning and mapping projects." },
+          "gis_systems": { "name": "GIS Systems", "description": "Spatial analysis and geographic data visualization." }
+        }
+      },
+      {
+        "category": "Soft Skills",
+        "skills": {
+          "real_estate_appraisal": { "name": "Real Estate Appraisal", "description": "9 years of field and inspection experience, CMB Licensed Certified Appraiser." },
+          "reporting_analysis": { "name": "Reporting and Analysis", "description": "Interpreting data and preparing detailed reports." },
+          "problem_solving": { "name": "Problem Solving", "description": "Analyzing complex problems and producing pragmatic solutions." },
+          "teamwork": { "name": "Teamwork", "description": "Harmonious work within a team and effective communication." },
+          "time_management": { "name": "Time Management", "description": "Planning, prioritizing, and completing tasks on time." }
+        }
+      }
+    ]
+  },
+  "projects_page": {
+    "main_title": "My Projects",
+    "subtitle": "Works I have developed throughout my journey and showcased my skills.",
+    "featured_badge": "FEATURED PROJECT",
+    "view_live_button": "View Live",
+    "view_github_button": "GitHub",
+    "view_github_button_long": "View on GitHub",
+    "projects": {
+      "rent_a_car": {
+        "title": "Rent A Car Full-Stack Website",
+        "description": "A comprehensive car rental site. Developed using C#, ASP.NET Core, Entity Framework, and SQL Server. It is a Neos Software Academy internship project.",
+        "tags": ["C#", ".NET Core", "Entity Framework", "SQL Server"]
+      },
+      "butce_360": {
+        "title": "Budget360° Expense Tracker App",
+        "description": "A modern web application for credit card cycle tracking and expense management. Developed with Vue.js 3.0 and Firebase Realtime Database.",
+        "tags": ["Vue.js", "Firebase", "JavaScript"]
+      },
+      "not_defteri": {
+        "title": "Interactive Notebook App",
+        "description": "Provides users with a dynamic notebook experience. Developed using HTML, CSS, and Vue.js 3.0.",
+        "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
+      },
+      "simon_game": {
+        "title": "Simon Memory Game",
+        "description": "A fun and interactive game based on following the color sequence on the screen, developed to practice JavaScript and jQuery.",
+        "tags": ["JavaScript", "jQuery", "HTML", "CSS"]
+      },
+      "atak_hesaplama": {
+        "title": "Wonder Weeks Calculator Tool",
+        "description": "A simple tool developed to help parents easily calculate the wonder weeks in their babies' development processes.",
+        "tags": ["JavaScript", "HTML", "CSS"]
+      }
+    }
+  },
+  "contact_page": {
+    "main_title": "Get In Touch",
+    "subtitle": "Have a project idea or just want to say hello? You can reach me through the channels below.",
+    "direct_contact_title": "Contact Me Directly",
+    "location_title": "Location",
+    "location_popup": "I live in Izmir. <br /> Let's grab a coffee!",
+    "form_title": "Or Fill Out The Form",
+    "form_placeholder_name": "Your Name",
+    "form_placeholder_email": "Your Email Address",
+    "form_placeholder_message": "Your Message...",
+    "form_button_submit": "Send Message",
+    "form_button_submitting": "Sending...",
+    "form_status_success": "Your message has been sent successfully!",
+    "form_status_error": "An error occurred: ",
+    "social_title": "My Social Media Accounts",
+    "direct_links": {
+      "email": { "label": "Email" },
+      "whatsapp": { "label": "WhatsApp" }
+    },
+    "social_links": {
+      "github": { "label": "GitHub" },
+      "linkedin": { "label": "LinkedIn" },
+      "instagram": { "label": "Instagram" },
+      "twitter": { "label": "X (Twitter)" }
+    }
+  },
+  "404_page": {
+    "title": "Page Not Found",
+    "subtitle": "The page you are looking for has either been removed or never existed.",
+    "home_link": "Return to Homepage",
+    "error_code": "Error Code: 404"
+  }
+}
