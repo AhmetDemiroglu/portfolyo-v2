@@ -1,6 +1,6 @@
 # Portfolyo v2
 
-W## Modern, çok dilli, dinamik ve kişiselleştirilebilir bir portfolyo web uygulaması
+## Modern, çok dilli, dinamik ve kişiselleştirilebilir bir portfolyo web uygulaması
 
 ![Ahmet Demiroğlu](public/ben3.png)
 
