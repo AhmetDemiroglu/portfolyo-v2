@@ -7,7 +7,6 @@ import { AnimatedGridBackground } from "../components/GridBackground";
 import { useTranslation } from 'react-i18next';
 import type { TFunction } from 'i18next';
 
-
 interface ProjectTranslation {
   title: string;
   description: string;
