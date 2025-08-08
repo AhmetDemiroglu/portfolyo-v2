@@ -5,7 +5,7 @@ import { BsPinAngleFill } from 'react-icons/bs'
 import { projectsData, type ProjectBase } from '../data/projects'
 import { AnimatedGridBackground } from "../components/GridBackground";
 import { useTranslation } from 'react-i18next';
-import type { TFunction } from 'i18next';
+import type { TFunction } from 'i18next';   
 
 interface ProjectTranslation {
   title: string;
