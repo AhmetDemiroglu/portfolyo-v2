@@ -8,7 +8,24 @@ import emailjs from '@emailjs/browser'
 import { AnimatedGridBackground } from "../components/GridBackground";
 import { useTranslation } from 'react-i18next'
 import { useTheme } from '../contexts/ThemeContext'
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+import iconUrl from 'leaflet/dist/images/marker-icon.png';
+import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
+import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 
+const DefaultIcon = L.icon({
+    iconUrl,
+    iconRetinaUrl,
+    shadowUrl,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    tooltipAnchor: [16, -28],
+    shadowSize: [41, 41]
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
 
 const directContactLinks = [
   { id: 'email', href: 'mailto:ahmetdemiroglu89@gmail.com', icon: FaEnvelope, handle: 'ahmetdemiroglu89@gmail.com' },
@@ -21,7 +38,6 @@ const socialLinks = [
     { id: 'instagram', href: 'https://www.instagram.com/ahmetdemiroglu___/', icon: FaInstagram },
     { id: 'twitter', href: 'https://twitter.com/a__demiroglu', icon: BsTwitterX },
 ];
-
 
 export const Route = createFileRoute('/contact')({
   component: ContactPage,
