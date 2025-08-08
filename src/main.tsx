@@ -7,7 +7,10 @@ import 'leaflet/dist/leaflet.css'
 import './i18n';
 import { Suspense } from 'react';
 
-const router = createRouter({ routeTree })
+const router = createRouter({
+  routeTree,
+  basepath: import.meta.env.DEV ? '/' : '/portfolyo-v2/',
+})
 
 declare module '@tanstack/react-router' {
   interface Register {
