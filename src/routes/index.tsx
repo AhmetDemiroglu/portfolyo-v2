@@ -89,7 +89,7 @@ const backgroundTextY = useTransform(aboutSectionScrollYProgress, [0, 1], ['-60%
             transition={{ duration: 1, delay: 0.2 }}
             style={{ x: heroImageX, opacity: heroOpacity }} 
           >
-            <img src="/ahmetfoto.png" alt="Ahmet Demiroğlu Portre" className="rounded-full shadow-2xl shadow-sky-500/20" />
+            <img src="ahmetfoto.png" alt="Ahmet Demiroğlu Portre" className="rounded-full shadow-2xl shadow-sky-500/20" />
           </motion.div>
         </div>
 
@@ -128,7 +128,7 @@ const backgroundTextY = useTransform(aboutSectionScrollYProgress, [0, 1], ['-60%
               rotate,
             }}
           >
-            <img src="/ben2.png" alt="Ahmet Demiroğlu" className="max-h-[70vh] w-full object-contain" />
+            <img src="ben2.png" alt="Ahmet Demiroğlu" className="max-h-[70vh] w-full object-contain" />
           </motion.div>
 
           {/* Sağ Taraf */}

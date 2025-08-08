@@ -41,7 +41,7 @@ function NotFoundPage() {
       <AnimatedGridBackground />
       <div
         className="absolute inset-0 z-0 bg-cover bg-center opacity-70"
-        style={{ backgroundImage: 'url(/404.jpg)' }}
+        style={{ backgroundImage: 'url(404.jpg)' }}
       />
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent" />
       
