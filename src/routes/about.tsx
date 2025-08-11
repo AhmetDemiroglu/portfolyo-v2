@@ -66,7 +66,7 @@ function AboutPage() {
             <div className="relative w-full h-full">
               <motion.img
                 style={{ opacity: opacityImage1, pointerEvents: pointerEventsImage1 }}
-                src="ben4.png"
+                src="ben4_t.png"
                 alt="Ahmet Demiroğlu Karikatür-1"
                 className="absolute inset-0 w-full h-full object-contain rounded-lg transition-all duration-500 dark:brightness-50 dark:saturate-90 hover:!brightness-100 hover:!saturate-100"              />
               <motion.img
