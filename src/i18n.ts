@@ -12,7 +12,7 @@ i18n
     fallbackLng: 'tr', 
     debug: import.meta.env.MODE === 'development',
     detection: {
-      order: ['path', 'cookie', 'htmlTag', 'localStorage', 'subdomain'],
+      order: ['navigator', 'cookie', 'htmlTag', 'localStorage', 'path', 'subdomain'],
       caches: ['cookie'],
     },
     backend: {
