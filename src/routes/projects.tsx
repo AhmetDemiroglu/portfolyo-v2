@@ -6,6 +6,7 @@ import { projectsData, type ProjectBase } from '../data/projects'
 import { AnimatedGridBackground } from "../components/GridBackground";
 import { useTranslation } from 'react-i18next';
 import type { TFunction } from 'i18next';   
+import { Helmet } from 'react-helmet-async';
 
 interface ProjectTranslation {
   title: string;
@@ -23,7 +24,7 @@ export const Route = createFileRoute('/projects')({
 })
 
 function ProjectsPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation()
 
   const translatedProjects = t('projects_page.projects', { returnObjects: true }) as Record<string, ProjectTranslation>;
   const fullProjectsData: FullProject[] = projectsData.map(projectBase => ({
@@ -36,6 +37,14 @@ function ProjectsPage() {
 
   return (
     <div className="relative min-h-screen pt-16">
+      <Helmet
+        key={`${i18n.language}`}
+        defer={false}
+        prioritizeSeoTags
+      >
+        <title>{t('seo.projects_title')}</title>
+        <meta name="description" content={t('seo.projects_description') ?? ''} />
+      </Helmet>
       <AnimatedGridBackground />
       <div className="relative z-10 container mx-auto px-8 py-16">
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>

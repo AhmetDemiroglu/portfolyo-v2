@@ -2,13 +2,14 @@ import { createFileRoute } from '@tanstack/react-router'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 
 export const Route = createFileRoute('/about')({
   component: AboutPage,
 })
 
 function AboutPage() {
-  const { t } = useTranslation(); 
+  const { t, i18n } = useTranslation(); 
   const containerRef = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll({
@@ -26,6 +27,14 @@ function AboutPage() {
 
   return (
     <div ref={containerRef} className="relative bg-gray-50 dark:bg-slate-900 pt-32 min-h-screen transition-colors duration-300">
+      <Helmet
+        key={`${i18n.language}`}
+        defer={false}
+        prioritizeSeoTags
+        >
+        <title>{t('seo.about_title')}</title>
+        <meta name="description" content={t('seo.about_description') ?? ''} />
+      </Helmet>
       {/* Arka Planlar */}
       <motion.div
         animate={{ y: [-10, 10, -10], x: [-5, 5, -5] }}

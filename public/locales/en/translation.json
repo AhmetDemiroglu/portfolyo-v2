@@ -1,4 +1,18 @@
 {
+  "seo": {
+    "home_title": "Ahmet Demiroğlu | Full-Stack Web Developer",
+    "home_description": "Izmir-based Full-Stack Developer creating user-focused modern web experiences. React, Vue.js, .NET Core, and more.",
+    "about_title": "About Me | Ahmet Demiroğlu",
+    "about_description": "Learn more about my background, my goals, and my journey into the world of web development.",
+    "skills_title": "My Skills | Ahmet Demiroğlu",
+    "skills_description": "Explore my skills in front-end and back-end technologies: React, Vue, C#, .NET, SQL, and more.",
+    "projects_title": "My Projects | Ahmet Demiroğlu",
+    "projects_description": "Take a look at the web applications and projects I have developed.",
+    "contact_title": "Contact | Ahmet Demiroğlu",
+    "contact_description": "Have a project idea or just want to say hello? Get in touch with me.",
+    "404_title": "Page Not Found | Ahmet Demiroğlu",
+    "404_description": "The page you are looking for does not exist. Please check the address or return to the homepage."
+  },
   "nav": {
     "home": "Home",
     "about": "About",

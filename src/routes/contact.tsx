@@ -13,6 +13,7 @@ import L from 'leaflet';
 import iconUrl from 'leaflet/dist/images/marker-icon.png';
 import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
 import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
+import { Helmet } from 'react-helmet-async';
 
 const DefaultIcon = L.icon({
     iconUrl,
@@ -44,7 +45,7 @@ export const Route = createFileRoute('/contact')({
 })
 
 function ContactPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const { theme } = useTheme();
   
@@ -89,6 +90,14 @@ function ContactPage() {
 
   return ( 
     <div className="relative min-h-screen pt-16">
+      <Helmet
+        key={`${i18n.language}`}
+        defer={false}
+        prioritizeSeoTags
+        >
+        <title>{t('seo.contact_title')}</title>
+        <meta name="description" content={t('seo.contact_description') ?? ''} />
+      </Helmet>
       <AnimatedGridBackground />
       <div className="relative z-10 container mx-auto px-8 py-16">
         <motion.div

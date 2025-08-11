@@ -5,6 +5,7 @@ import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { FiArrowDownCircle } from 'react-icons/fi'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -31,10 +32,18 @@ function HomePage() {
   const opacity = useTransform(aboutSectionScrollYProgress, [0, 0.4], [0, 1])
   const scale = useTransform(aboutSectionScrollYProgress, [0, 0.4], [0.8, 1])
   const rotate = useTransform(aboutSectionScrollYProgress, [0, 0.4], [-15, 0])
-const backgroundTextY = useTransform(aboutSectionScrollYProgress, [0, 1], ['-60%', '-40%'])
+  const backgroundTextY = useTransform(aboutSectionScrollYProgress, [0, 1], ['-60%', '-40%'])
   
   return (
     <div>
+      <Helmet
+        key={`${location.pathname}-${i18n.language}`}
+        defer={false}
+        prioritizeSeoTags
+      >
+        <title>{t('seo.home_title')}</title>
+        <meta name="description" content={t('seo.home_description') ?? ''} />
+      </Helmet>
       {/* BÖLÜM 1: HERO ALANI */}
       <section ref={heroSectionRef} className="relative flex min-h-screen items-center justify-center overflow-hidden">
         {/* Arka Plan */}

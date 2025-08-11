@@ -3,6 +3,8 @@ import { motion, type Variants } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { FaHome } from 'react-icons/fa'
 import { AnimatedGridBackground } from '../components/GridBackground'
+import { Helmet } from 'react-helmet-async';
+
 
 export const Route = createFileRoute('/$')({
   component: NotFoundPage,
@@ -32,12 +34,20 @@ const itemVariants: Variants = {
 }
 
 function NotFoundPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   if (!t) { return <div>Yükleniyor...</div> }
 
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden p-8">
+      <Helmet
+          key={`${i18n.language}`}
+          defer={false}
+          prioritizeSeoTags
+          >
+        <title>{t('seo.404_title')}</title>
+        <meta name="description" content={t('seo.404_description') ?? ''} />
+      </Helmet>
       <AnimatedGridBackground />
       <div
         className="absolute inset-0 z-0 bg-cover bg-center opacity-70"

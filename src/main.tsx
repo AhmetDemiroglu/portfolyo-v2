@@ -6,6 +6,7 @@ import { routeTree } from './routeTree.gen'
 import 'leaflet/dist/leaflet.css'
 import './i18n';
 import { Suspense } from 'react';
+import { HelmetProvider, Helmet} from 'react-helmet-async'; 
 
 const router = createRouter({
   routeTree,
@@ -23,9 +24,13 @@ if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <React.StrictMode>
-      <Suspense fallback={<div>Yükleniyor...</div>}>
-        <RouterProvider router={router} />
-      </Suspense>
+      
+      <HelmetProvider>
+        <Helmet defaultTitle="Ahmet Demiroğlu | Portfolyo" titleTemplate="%s | Ahmet Demiroğlu" />
+        <Suspense fallback={<div>Yükleniyor...</div>}>
+          <RouterProvider router={router} />
+        </Suspense>
+      </HelmetProvider>
     </React.StrictMode>,
   )
 }

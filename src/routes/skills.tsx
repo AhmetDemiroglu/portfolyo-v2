@@ -7,6 +7,7 @@ import { DiNetmagazine } from "react-icons/di";
 import { TbSql } from 'react-icons/tb'
 import { useTranslation } from 'react-i18next';
 import { AnimatedGridBackground } from "../components/GridBackground";
+import { Helmet } from 'react-helmet-async';
 
 interface Skill {
   name: string;
@@ -90,7 +91,7 @@ export const Route = createFileRoute('/skills')({
 })
 
 function SkillsPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   const translatedCategories = t('skills_page.skill_categories', { returnObjects: true }) as MainCategory[];
 
@@ -138,6 +139,14 @@ function SkillsPage() {
   
   return (
     <div className="relative min-h-screen pt-16">
+      <Helmet
+        key={`${i18n.language}`}
+        defer={false}
+        prioritizeSeoTags
+        >
+        <title>{t('seo.skills_title')}</title>
+        <meta name="description" content={t('seo.skills_description') ?? ''} />
+      </Helmet>
       <AnimatedGridBackground />
         <div className="relative z-10 container mx-auto px-8 py-16">
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} >
