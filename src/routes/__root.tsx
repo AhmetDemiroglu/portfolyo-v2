@@ -1,7 +1,6 @@
-import { Outlet, createRootRoute, useRouter } from '@tanstack/react-router'
+import { Outlet, createRootRoute } from '@tanstack/react-router'
 import { Header } from '../components/Header'
 import { ThemeProvider } from '../contexts/ThemeContext'
-import { useEffect } from 'react'
 
 // function GitHubPagesRedirectHandler() {
 //   const router = useRouter();
