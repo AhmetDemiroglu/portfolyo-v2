@@ -10,7 +10,8 @@ import { HelmetProvider, Helmet} from 'react-helmet-async';
 
 const router = createRouter({
   routeTree,
-  basepath: import.meta.env.DEV ? '/' : '/portfolyo-v2/',
+  // basepath: import.meta.env.DEV ? '/' : '/portfolyo-v2/',
+  basepath: '/',
 })
 
 declare module '@tanstack/react-router' {
