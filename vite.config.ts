@@ -11,6 +11,13 @@ export default defineConfig({
       autoCodeSplitting: true,
     }),
     react(),
-    sitemap({ hostname: 'https://ahmetdemiroglu.dev' })
+    sitemap({ hostname: 'https://ahmetdemiroglu.dev',
+      dynamicRoutes: [
+        '/about',
+        '/skills',
+        '/projects',
+        '/contact',
+      ],
+    }) 
   ],
 })
