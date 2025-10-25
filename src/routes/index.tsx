@@ -27,7 +27,6 @@ function HomePage() {
 
     const heroOpacity = useTransform(windowScrollYProgress, [0.1, 0.3], [1, 0]);
     const heroTextX = useTransform(windowScrollYProgress, [0.1, 0.3], ["0%", "-100%"]);
-    const heroImageX = useTransform(windowScrollYProgress, [0.1, 0.3], ["0%", "100%"]);
 
     const opacity = useTransform(aboutSectionScrollYProgress, [0, 0.4], [0, 1]);
     const scale = useTransform(aboutSectionScrollYProgress, [0, 0.4], [0.8, 1]);
@@ -63,7 +62,7 @@ function HomePage() {
                         transition={{ duration: 0.8 }}
                         style={{ x: heroTextX, opacity: heroOpacity }}
                     >
-                        <h1 className="text-5xl font-extrabold text-white md:text-7xl">{t("home.greeting")}</h1>
+                        <h1 className="text-5xl font-extrabold text-slate-800 dark:text-white md:text-7xl drop-shadow-lg z-50">{t("home.greeting")}</h1>{" "}
                         <TypeAnimation
                             key={i18n.language}
                             sequence={t("home.typing_sequences", { returnObjects: true }) as (string | number)[]}
@@ -90,13 +89,13 @@ function HomePage() {
                         </div>
                     </motion.div>
                     <motion.div
-                        className="hidden w-2/5 md:block mt-20"
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={{ opacity: isHeroInView ? 1 : 0, x: isHeroInView ? 0 : 100 }}
+                        className="w-full md:w-2/5 mt-8 md:mt-20"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: isHeroInView ? 1 : 0, y: isHeroInView ? 0 : 50 }}
                         transition={{ duration: 1, delay: 0.2 }}
-                        style={{ x: heroImageX, opacity: heroOpacity }}
+                        style={{ opacity: heroOpacity }}
                     >
-                        <img src="ahmetfoto_t.webp" alt="Ahmet Demiroğlu Portre" className="rounded-full" />
+                        <img src="ahmetfoto_t.webp" alt="Ahmet Demiroğlu Portre" className="rounded-full mx-auto max-w-xs md:max-w-full" />
                     </motion.div>
                 </div>
 
@@ -108,7 +107,7 @@ function HomePage() {
                 </div>
             </section>
 
-            {/* BÖLÜM 2: GELİŞMİŞ ANİMASYONLU "KISACA BEN" BÖLÜMÜ */}
+            {/* BÖLÜM 2: KISACA BEN */}
             <section ref={aboutSectionRef} className="relative flex min-h-screen items-center bg-slate-100 dark:bg-slate-800 py-20 overflow-hidden transition-colors duration-300">
                 {/* VİZYON - Katman 1: Parallax Arka Plan Yazısı */}
                 <motion.h1
@@ -116,7 +115,7 @@ function HomePage() {
                         position: "absolute",
                         left: "50%",
                         top: "50%",
-                        x: "-50%", // ← Tam ortada
+                        x: "-50%",
                         y: backgroundTextY,
                     }}
                     className="whitespace-nowrap text-[18vw] font-extrabold text-slate-200 dark:text-slate-700/50 pointer-events-none"
@@ -124,7 +123,7 @@ function HomePage() {
                     {t("home.career_section_background")}
                 </motion.h1>
 
-                <div className="container z-10 mx-auto flex flex-col items-center gap-12 px-8 md:flex-row">
+                <div className="container z-10 mx-auto flex flex-col md:flex-row items-center justify-between px-8">
                     {/* Sol Taraf*/}
                     <motion.div
                         className="w-full md:w-1/3"
@@ -136,7 +135,6 @@ function HomePage() {
                     >
                         <img src="career_change.png" alt="Ahmet Demiroğlu" className="max-h-[70vh] w-full object-contain opacity-25" />{" "}
                     </motion.div>
-
                     {/* Sağ Taraf */}
                     <motion.div className="w-full md:w-2/3" style={{ opacity }}>
                         <h2 className="text-4xl font-bold text-slate-900 dark:text-white">{t("home.career_section_title")}</h2>
