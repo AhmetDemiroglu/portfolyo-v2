@@ -30,8 +30,9 @@
       "User-Focused Solutions", 2000
     ],
     "career_section_background": "CAREER",
-    "career_section_title": "A Bit About Me",
-    "career_section_paragraph": "I stepped into the world of web development by combining my 9 years of experience in analytical thinking and problem-solving from my Urban Planning and Real Estate Appraisal background with my passion for technology. With my attention to detail and user-centric perspective, I aim to produce simple and elegant solutions to complex problems."
+    "career_section_title": "An Interdisciplinary Approach",
+    "career_section_p1": "My career is built on a 9-year foundation in Urban Planning and Real Estate Appraisal. The skills I acquired in analytical thinking, detailed reporting, and data interpretation during this time are the cornerstones of my software development approach today.",
+    "career_section_p2": "As I transform my passion for technology into a professional career, I carry this discipline from my past into my code. For me, software development isn't just about creating functional tools; it's about producing user-centric, clean, and sustainable solutions. My commitment to detail is my strongest guide in this new field."
   },
   "about": {
     "background_text": "ABOUT ME",

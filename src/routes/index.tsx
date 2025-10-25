@@ -96,7 +96,7 @@ function HomePage() {
                         transition={{ duration: 1, delay: 0.2 }}
                         style={{ x: heroImageX, opacity: heroOpacity }}
                     >
-                        <img src="ahmetfoto_t.webp" alt="Ahmet Demiroğlu Portre" className="rounded-full shadow-2xl shadow-sky-500/20" />
+                        <img src="ahmetfoto_t.webp" alt="Ahmet Demiroğlu Portre" className="rounded-full" />
                     </motion.div>
                 </div>
 
@@ -116,7 +116,7 @@ function HomePage() {
                         position: "absolute",
                         left: "50%",
                         top: "50%",
-                        x: "-40%",
+                        x: "-50%", // ← Tam ortada
                         y: backgroundTextY,
                     }}
                     className="whitespace-nowrap text-[18vw] font-extrabold text-slate-200 dark:text-slate-700/50 pointer-events-none"
@@ -134,7 +134,7 @@ function HomePage() {
                             rotate,
                         }}
                     >
-                        <img src="career_change.png" alt="Ahmet Demiroğlu" className="max-h-[70vh] w-full object-contain" />
+                        <img src="career_change.png" alt="Ahmet Demiroğlu" className="max-h-[70vh] w-full object-contain opacity-25" />{" "}
                     </motion.div>
 
                     {/* Sağ Taraf */}
