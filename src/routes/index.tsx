@@ -54,7 +54,7 @@ function HomePage() {
                 />
 
                 {/* Ana İçerik */}
-                <div className="container z-10 mx-auto flex items-center justify-between px-8">
+                <div className="container z-10 mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-8">
                     <motion.div
                         className="w-full md:w-3/5"
                         initial={{ opacity: 0, x: -100 }}
@@ -62,7 +62,7 @@ function HomePage() {
                         transition={{ duration: 0.8 }}
                         style={{ x: heroTextX, opacity: heroOpacity }}
                     >
-                        <h1 className="text-5xl font-extrabold text-slate-800 dark:text-white md:text-7xl drop-shadow-lg z-50">{t("home.greeting")}</h1>{" "}
+                        <h1 className="text-5xl font-extrabold text-slate-800 dark:text-white md:text-7xl drop-shadow-lg z-50">{t("home.greeting")}</h1>
                         <TypeAnimation
                             key={i18n.language}
                             sequence={t("home.typing_sequences", { returnObjects: true }) as (string | number)[]}
@@ -79,12 +79,10 @@ function HomePage() {
                         </div>
                         <div className="mt-8 flex items-center gap-6">
                             <a href="https://github.com/AhmetDemiroglu" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition hover:text-white">
-                                {" "}
-                                <FaGithub size={28} />{" "}
+                                <FaGithub size={28} />
                             </a>
                             <a href="https://www.linkedin.com/in/ahmet-d-a11b8853/" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition hover:text-white">
-                                {" "}
-                                <FaLinkedin size={28} />{" "}
+                                <FaLinkedin size={28} />
                             </a>
                         </div>
                     </motion.div>
@@ -123,7 +121,7 @@ function HomePage() {
                     {t("home.career_section_background")}
                 </motion.h1>
 
-                <div className="container z-10 mx-auto flex flex-col md:flex-row items-center justify-between px-8">
+                <div className="container z-10 mx-auto flex items-center justify-between px-8 hero-main-container">
                     {/* Sol Taraf*/}
                     <motion.div
                         className="w-full md:w-1/3"
@@ -133,7 +131,7 @@ function HomePage() {
                             rotate,
                         }}
                     >
-                        <img src="career_change.png" alt="Ahmet Demiroğlu" className="max-h-[70vh] w-full object-contain opacity-25" />{" "}
+                        <img src="career_change.png" alt="Ahmet Demiroğlu" className="max-h-[70vh] w-full object-contain opacity-25" />
                     </motion.div>
                     {/* Sağ Taraf */}
                     <motion.div className="w-full md:w-2/3" style={{ opacity }}>

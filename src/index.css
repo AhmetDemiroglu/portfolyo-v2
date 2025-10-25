@@ -2,16 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
-  scrollbar-gutter: stable;
+    scrollbar-gutter: stable;
 }
 
 .dark .leaflet-control-attribution {
-  background-color: rgba(0, 0, 0, 0.7) !important;
-  color: #aaa !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    color: #aaa !important;
 }
 
 .dark .leaflet-control-attribution a {
-  color: #a7d7ff !important;
+    color: #a7d7ff !important;
+}
+
+@media (max-width: 767px) {
+    .hero-main-container {
+        flex-direction: column;
+    }
 }
