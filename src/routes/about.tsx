@@ -64,9 +64,9 @@ function AboutPage() {
 
                     {/* İçerik Akışı */}
                     <div className="space-y-12">
-                        <TimelineSection year="2015" icon="🎓" title={t("about.timeline_1_title")} subtitle={t("about.timeline_1_subtitle")} content={t("about.p1")} index={0} />
+                        <TimelineSection year="2013" icon="🎓" title={t("about.timeline_1_title")} subtitle={t("about.timeline_1_subtitle")} content={t("about.p1")} index={0} />
 
-                        <TimelineSection year="2015-2023" icon="🏢" title={t("about.timeline_2_title")} subtitle={t("about.timeline_2_subtitle")} content={t("about.p2")} index={1} />
+                        <TimelineSection year="2014-2023" icon="🏢" title={t("about.timeline_2_title")} subtitle={t("about.timeline_2_subtitle")} content={t("about.p2")} index={1} />
 
                         <TimelineSection year="2023" icon="💻" title={t("about.timeline_3_title")} subtitle={t("about.timeline_3_subtitle")} content={t("about.p3")} index={2} />
 
