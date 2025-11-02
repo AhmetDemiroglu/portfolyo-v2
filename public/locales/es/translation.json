@@ -135,10 +135,10 @@
         "description": "Un juego divertido e interactivo basado en seguir una secuencia de colores en la pantalla, desarrollado para practicar JavaScript y jQuery.",
         "tags": ["JavaScript", "jQuery", "HTML", "CSS"]
       },
-      "atak_hesaplama": {
-        "title": "Herramienta de Cálculo de Saltos de Crecimiento",
-        "description": "Una herramienta sencilla desarrollada para ayudar a los padres a calcular fácilmente los saltos de crecimiento de sus bebés.",
-        "tags": ["JavaScript", "HTML", "CSS"]
+      "gghub": {
+        "title": "GGHub - Plataforma Social de Jugadores",
+        "description": "Plataforma social centrada en videojuegos de Turquía. Descubre juegos, crea listas, comenta e interactúa con otros jugadores. Proyecto full-stack monorepo desarrollado con .NET 8 y Next.js.",
+        "tags": [".NET 8", "Next.js", "PostgreSQL", "React Query", "Tailwind CSS"]
       }
     }
   },

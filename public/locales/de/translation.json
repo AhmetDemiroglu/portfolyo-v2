@@ -135,10 +135,10 @@
         "description": "Ein unterhaltsames und interaktives Spiel, das auf dem Verfolgen einer Farbsequenz auf dem Bildschirm basiert und zum Üben von JavaScript und jQuery entwickelt wurde.",
         "tags": ["JavaScript", "jQuery", "HTML", "CSS"]
       },
-      "atak_hesaplama": {
-        "title": "Tool zur Berechnung von Entwicklungsschüben",
-        "description": "Ein einfaches Werkzeug, das Eltern hilft, die Entwicklungsschübe ihrer Babys leicht zu berechnen.",
-        "tags": ["JavaScript", "HTML", "CSS"]
+      "gghub": {
+        "title": "GGHub - Gaming Social Platform",
+        "description": "Türkische Gaming-fokussierte soziale Plattform. Entdecke Spiele, erstelle Listen, kommentiere und interagiere mit anderen Gamern. Full-Stack-Monorepo-Projekt entwickelt mit .NET 8 und Next.js.",
+        "tags": [".NET 8", "Next.js", "PostgreSQL", "React Query", "Tailwind CSS"]
       }
     }
   },

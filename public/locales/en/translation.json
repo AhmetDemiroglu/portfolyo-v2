@@ -135,10 +135,10 @@
         "description": "A fun and interactive game based on following the color sequence on the screen, developed to practice JavaScript and jQuery.",
         "tags": ["JavaScript", "jQuery", "HTML", "CSS"]
       },
-      "atak_hesaplama": {
-        "title": "Wonder Weeks Calculator Tool",
-        "description": "A simple tool developed to help parents easily calculate the wonder weeks in their babies' development processes.",
-        "tags": ["JavaScript", "HTML", "CSS"]
+      "gghub": {
+        "title": "GGHub - Gaming Social Platform",
+        "description": "Turkey's game-focused social platform. Discover games, create lists, comment, and interact with other gamers. Full-stack monorepo project built with .NET 8 and Next.js.",
+        "tags": [".NET 8", "Next.js", "PostgreSQL", "React Query", "Tailwind CSS"]
       }
     }
   },

@@ -8,11 +8,18 @@ export interface ProjectBase {
 
 export const projectsData: ProjectBase[] = [
   {
+    id: 'gghub',
+    image: 'gghub-placeholder.png',
+    liveLink: 'https://gghub.social',
+    githubLink: 'https://github.com/AhmetDemiroglu/GGHub',
+    pinned: true,
+  },
+  {
     id: 'rent_a_car',
     image: 'Rent A Car Svg.svg',
     liveLink: null,
     githubLink: 'https://github.com/AhmetDemiroglu/rota-rent-a-car',
-    pinned: true,
+    pinned: false,
   },
   {
     id: 'butce_360',
@@ -33,13 +40,6 @@ export const projectsData: ProjectBase[] = [
     image: 'responsive simon gif.gif',
     liveLink: 'https://ahmetdemiroglu.github.io/Simon/',
     githubLink: 'https://github.com/AhmetDemiroglu/Simon',
-    pinned: false,
-  },
-  {
-    id: 'atak_hesaplama',
-    image: 'responsive atak gif.gif',
-    liveLink: 'https://ahmetdemiroglu.github.io/atakhesaplama/',
-    githubLink: 'https://github.com/AhmetDemiroglu/atakhesaplama',
     pinned: false,
   },
 ];

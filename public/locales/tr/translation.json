@@ -135,10 +135,10 @@
         "description": "JavaScript ve jQuery pratiği yapmak amacıyla geliştirilmiş, ekrandaki renk sırasını takip etmeye dayalı eğlenceli ve etkileşimli bir oyun.",
         "tags": ["JavaScript", "jQuery", "HTML", "CSS"]
       },
-      "atak_hesaplama": {
-        "title": "Atak Dönemi Hesaplama Aracı",
-        "description": "Bebeklerin gelişim süreçlerindeki atak dönemlerini kolayca hesaplamada ebeveynlere yardımcı olmak amacıyla geliştirilmiş basit bir araç.",
-        "tags": ["JavaScript", "HTML", "CSS"]
+      "gghub": {
+        "title": "GGHub - Oyuncu Sosyal Platformu",
+        "description": "Türkiye'nin oyun odaklı sosyal platformu. Oyunları keşfet, listeler oluştur, yorum yap ve diğer oyuncularla etkileşime geç. .NET 8 ve Next.js ile geliştirilmiş monorepo yapısında tam kapsamlı full-stack proje.",
+        "tags": [".NET 8", "Next.js", "PostgreSQL", "React Query", "Tailwind CSS"]
       }
     }
   },
