@@ -68,11 +68,11 @@ function AboutPage() {
 
                         <TimelineSection year="2014-2023" icon="🏢" title={t("about.timeline_2_title")} subtitle={t("about.timeline_2_subtitle")} content={t("about.p2")} index={1} />
 
-                        <TimelineSection year="2023" icon="💻" title={t("about.timeline_3_title")} subtitle={t("about.timeline_3_subtitle")} content={t("about.p3")} index={2} />
+                        <TimelineSection year="2023" icon="✨" title={t("about.timeline_3_title")} subtitle={t("about.timeline_3_subtitle")} content={t("about.p3")} index={2} />
 
-                        <TimelineSection year="2023" icon="🚀" title={t("about.timeline_4_title")} subtitle={t("about.timeline_4_subtitle")} content={t("about.p4")} index={3} />
+                        <TimelineSection year="2025" icon="🖥️" title={t("about.timeline_4_title")} subtitle={t("about.timeline_4_subtitle")} content={t("about.p4")} index={3} />
 
-                        <TimelineSection year="2025" icon="⚡" title={t("about.timeline_5_title")} subtitle={t("about.timeline_5_subtitle")} content={t("about.p5")} index={4} />
+                        <TimelineSection year="2025" icon="🎮" title={t("about.timeline_5_title")} subtitle={t("about.timeline_5_subtitle")} content={t("about.p5")} index={4} />
                     </div>
                 </div>
             </div>
