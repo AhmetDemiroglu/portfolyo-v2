@@ -2,7 +2,7 @@
 
 ## Modern, çok dilli, dinamik ve kişiselleştirilebilir bir portfolyo web uygulaması
 
-![Ahmet Demiroğlu](public/ben3.png)
+![Ahmet Demiroğlu](public/ahmetfoto_t.webp)
 
 ---
 
