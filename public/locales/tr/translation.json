@@ -117,13 +117,13 @@
     "view_github_button_long": "GitHub'da İncele",
     "projects": {
       "rent_a_car": {
-        "title": "Rent A Car Full-Stack Web Sitesi",
-        "description": "Tam kapsamlı bir araç kiralama sitesi. C#, ASP.NET Core, Entity Framework ve SQL Server kullanılarak geliştirilmiştir. Neos Yazılım Akademi staj projesidir.",
-        "tags": ["C#", ".NET Core", "Entity Framework", "SQL Server"]
+        "title": "Rent A Car Full-Stack Platform",
+        "description": "Modern .NET 8 ve ASP.NET Core MVC mimarisi üzerine inşa edilmiş, ölçeklenebilir araç kiralama platformu. Entity Framework Core ile ilişkisel veritabanı (SQL Server) yönetimi, Identity kütüphanesi ile Rol Tabanlı Erişim Kontrolü (RBAC) ve güvenli CRUD operasyonları içerir. Neos Yazılım Akademi stajı kapsamında, temiz kod prensiplerine sadık kalınarak geliştirilmiştir.",
+        "tags": ["ASP.NET Core MVC", ".NET 8", "EF Core", "Identity", "SQL Server", "Bootstrap"]
       },
       "butce_360": {
         "title": "Bütçe360° Harcama Takip Uygulaması",
-        "description": "Kredi kartı dönem takibi ve harcama yönetimi için modern bir web uygulaması. Vue.js 3.0 ve Firebase Realtime Database ile geliştirilmiştir.",
+        "description": "Kredi kartı dönem takibi ve harcama yönetimi için geliştirilen ilk prototip. Vue.js 3.0 ve Firebase Realtime Database ile oluşturulmuş olup, Fintel projesinin (V2) temelini oluşturan deneysel çalışmadır.",
         "tags": ["Vue.js", "Firebase", "JavaScript"]
       },
       "not_defteri": {
@@ -131,15 +131,15 @@
         "description": "Kullanıcılara dinamik bir not defteri deneyimi sunar. HTML, CSS ve Vue.js 3.0 kullanılarak geliştirilmiştir.",
         "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
       },
-      "simon_game": {
-        "title": "Simon Hafıza Oyunu",
-        "description": "JavaScript ve jQuery pratiği yapmak amacıyla geliştirilmiş, ekrandaki renk sırasını takip etmeye dayalı eğlenceli ve etkileşimli bir oyun.",
-        "tags": ["JavaScript", "jQuery", "HTML", "CSS"]
+      "fintel": {
+        "title": "Fintel - AI Finansal Asistan",
+        "description": "Gemini 3.0 ve 'Vibecoding' yaklaşımıyla iskeleti oluşturulan, ardından kapsamlı mimari geliştirmelerle profesyonel bir SaaS ürününe dönüştürülen hibrit (LocalStorage + Firestore) finans aracı. Gücünü Gemini 2.5 Flash modelinden alan 'Nova AI' entegrasyonu ile harcama analizi, PDF/Fiş işleme (OCR) ve akıllı tasarruf stratejileri sunar.",        
+        "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Vibecoding"]
       },
       "gghub": {
-        "title": "GGHub - Oyuncu Sosyal Platformu",
-        "description": "Türkiye'nin oyun odaklı sosyal platformu. Oyunları keşfet, listeler oluştur, yorum yap ve diğer oyuncularla etkileşime geç. .NET 8 ve Next.js ile geliştirilmiş monorepo yapısında tam kapsamlı full-stack proje.",
-        "tags": [".NET 8", "Next.js", "PostgreSQL", "React Query", "Tailwind CSS"]
+        "title": "GGHub - Oyuncu Sosyal Platformu (Beta)",
+        "description": "Aktif geliştirme sürecindeki bu Monorepo projesi, .NET 8 ve Next.js 15 teknolojilerini Clean Architecture çatısı altında buluşturuyor. Backend tarafı Unit of Work deseniyle ölçeklenebilirken, arayüz Radix UI ve Compound Components ile modern bir deneyim sunuyor. Mesajlaşma, profil ve liste yönetiminin canlı olduğu sistemde, gelişmiş admin paneli entegrasyonu sürmektedir.",
+        "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL"]
       }
     }
   },

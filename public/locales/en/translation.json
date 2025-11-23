@@ -109,36 +109,36 @@
   },
   "projects_page": {
     "main_title": "My Projects",
-    "subtitle": "Works I have developed throughout my journey and showcased my skills.",
+    "subtitle": "Works I have developed throughout my journey, showcasing my skills.",
     "featured_badge": "FEATURED PROJECT",
     "view_live_button": "View Live",
     "view_github_button": "GitHub",
     "view_github_button_long": "View on GitHub",
     "projects": {
       "rent_a_car": {
-        "title": "Rent A Car Full-Stack Website",
-        "description": "A comprehensive car rental site. Developed using C#, ASP.NET Core, Entity Framework, and SQL Server. It is a Neos Software Academy internship project.",
-        "tags": ["C#", ".NET Core", "Entity Framework", "SQL Server"]
+        "title": "Rent A Car Full-Stack Platform",
+        "description": "A scalable car rental platform built on modern .NET 8 and ASP.NET Core MVC architecture. Features relational database management via Entity Framework Core, Role-Based Access Control (RBAC) using Identity, and secure CRUD operations. Developed during the Neos Software Academy internship, strictly adhering to clean code principles.",
+        "tags": ["ASP.NET Core MVC", ".NET 8", "EF Core", "Identity", "SQL Server"]
       },
       "butce_360": {
-        "title": "Budget360° Expense Tracker App",
-        "description": "A modern web application for credit card cycle tracking and expense management. Developed with Vue.js 3.0 and Firebase Realtime Database.",
+        "title": "Budget360° Expense Tracker",
+        "description": "First prototype developed for credit card cycle tracking and expense management. Built with Vue.js 3.0 and Firebase Realtime Database, it served as the experimental foundation for the Fintel project (V2).",
         "tags": ["Vue.js", "Firebase", "JavaScript"]
       },
       "not_defteri": {
         "title": "Interactive Notebook App",
-        "description": "Provides users with a dynamic notebook experience. Developed using HTML, CSS, and Vue.js 3.0.",
+        "description": "Offers users a dynamic notebook experience. Developed using HTML, CSS, and Vue.js 3.0.",
         "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
       },
-      "simon_game": {
-        "title": "Simon Memory Game",
-        "description": "A fun and interactive game based on following the color sequence on the screen, developed to practice JavaScript and jQuery.",
-        "tags": ["JavaScript", "jQuery", "HTML", "CSS"]
+      "fintel": {
+        "title": "Fintel - AI Financial Assistant",
+        "description": "A hybrid financial tool (LocalStorage + Firestore) initially prototyped with Gemini 3.0 using 'Vibecoding', then professionally engineered and refined into a complete SaaS product. Powered by the Gemini 2.5 Flash model, 'Nova AI' offers spending analysis, OCR receipt processing, and personalized savings strategies.",
+        "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Vibecoding"]
       },
       "gghub": {
-        "title": "GGHub - Gaming Social Platform",
-        "description": "Turkey's game-focused social platform. Discover games, create lists, comment, and interact with other gamers. Full-stack monorepo project built with .NET 8 and Next.js.",
-        "tags": [".NET 8", "Next.js", "PostgreSQL", "React Query", "Tailwind CSS"]
+        "title": "GGHub - Gamer Social Platform (Beta)",
+        "description": "This Monorepo project, currently under active development, unites .NET 8 and Next.js 15 within a Clean Architecture framework. The backend ensures scalability via the Unit of Work pattern, while the frontend offers a modern experience using Radix UI and Compound Components. Live features include messaging, profiles, and list management, with advanced admin panel integration ongoing.",
+        "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL", "SignalR"]
       }
     }
   },

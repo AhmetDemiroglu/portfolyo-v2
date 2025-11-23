@@ -109,36 +109,36 @@
   },
   "projects_page": {
     "main_title": "Mis Proyectos",
-    "subtitle": "Trabajos que he desarrollado a lo largo de mi viaje y que demuestran mis habilidades.",
+    "subtitle": "Trabajos que he desarrollado a lo largo de mi trayectoria mostrando mis habilidades.",
     "featured_badge": "PROYECTO DESTACADO",
-    "view_live_button": "Ver en vivo",
+    "view_live_button": "Ver en Vivo",
     "view_github_button": "GitHub",
     "view_github_button_long": "Ver en GitHub",
     "projects": {
       "rent_a_car": {
-        "title": "Sitio Web Full-Stack de Alquiler de Coches",
-        "description": "Un sitio web de alquiler de coches totalmente funcional. Desarrollado con C#, ASP.NET Core, Entity Framework y SQL Server. Proyecto de prácticas de la Academia de Software Neos.",
-        "tags": ["C#", ".NET Core", "Entity Framework", "SQL Server"]
+        "title": "Plataforma Full-Stack de Rent A Car",
+        "description": "Una plataforma de alquiler de coches escalable construida sobre la moderna arquitectura .NET 8 y ASP.NET Core MVC. Cuenta con gestión de bases de datos relacionales a través de Entity Framework Core, Control de Acceso Basado en Roles (RBAC) mediante Identity y operaciones CRUD seguras. Desarrollado durante las prácticas en la Academia de Software Neos, siguiendo estrictamente los principios de código limpio.",
+        "tags": ["ASP.NET Core MVC", ".NET 8", "EF Core", "Identity", "SQL Server"]
       },
       "butce_360": {
-        "title": "Aplicación de Seguimiento de Gastos Bütçe360°",
-        "description": "Una aplicación web moderna para el seguimiento de extractos de tarjetas de crédito y la gestión de gastos. Desarrollada con Vue.js 3.0 y Firebase Realtime Database.",
+        "title": "Presupuesto360° Seguimiento de Gastos",
+        "description": "Primer prototipo desarrollado para el seguimiento de ciclos de tarjetas de crédito y gestión de gastos. Creado con Vue.js 3.0 y Firebase Realtime Database, sirvió como base experimental para el proyecto Fintel (V2).",
         "tags": ["Vue.js", "Firebase", "JavaScript"]
       },
       "not_defteri": {
-        "title": "Aplicación de Bloc de Notas Interactivo",
-        "description": "Ofrece a los usuarios una experiencia dinámica de bloc de notas. Desarrollada con HTML, CSS y Vue.js 3.0.",
+        "title": "Aplicación de Cuaderno Interactivo",
+        "description": "Ofrece a los usuarios una experiencia de cuaderno dinámico. Desarrollado utilizando HTML, CSS y Vue.js 3.0.",
         "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
       },
-      "simon_game": {
-        "title": "Juego de Memoria Simon",
-        "description": "Un juego divertido e interactivo basado en seguir una secuencia de colores en la pantalla, desarrollado para practicar JavaScript y jQuery.",
-        "tags": ["JavaScript", "jQuery", "HTML", "CSS"]
+      "fintel": {
+        "title": "Fintel - Asistente Financiero con IA",
+        "description": "Una herramienta financiera híbrida (LocalStorage + Firestore) prototipada inicialmente con Gemini 3.0 y 'Vibecoding', luego refinada profesionalmente hasta convertirse en un producto SaaS completo. Impulsada por Gemini 2.5 Flash, 'Nova AI' ofrece análisis de gastos, procesamiento de recibos (OCR) y estrategias de ahorro personalizadas.",
+        "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Vibecoding"]
       },
       "gghub": {
-        "title": "GGHub - Plataforma Social de Jugadores",
-        "description": "Plataforma social centrada en videojuegos de Turquía. Descubre juegos, crea listas, comenta e interactúa con otros jugadores. Proyecto full-stack monorepo desarrollado con .NET 8 y Next.js.",
-        "tags": [".NET 8", "Next.js", "PostgreSQL", "React Query", "Tailwind CSS"]
+        "title": "GGHub - Plataforma Social para Gamers (Beta)",
+        "description": "Este proyecto Monorepo, en desarrollo activo, une .NET 8 y Next.js 15 bajo un marco de Clean Architecture. El backend asegura escalabilidad mediante el patrón Unit of Work, mientras que el frontend ofrece una experiencia moderna usando Radix UI y Componentes Compuestos. Funciones como mensajería, perfiles y gestión de listas están activas, con la integración del panel de administración en curso.",
+        "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL", "SignalR"]
       }
     }
   },
