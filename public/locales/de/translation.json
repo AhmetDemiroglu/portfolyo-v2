@@ -1,177 +1,185 @@
 {
-  "seo": {
-    "home_title": "Ahmet Demiroğlu | Full-Stack Web-Entwickler",
-    "home_description": "Full-Stack-Entwickler aus Izmir, der benutzerorientierte moderne Weberlebnisse schafft. React, Vue.js, .NET Core und mehr.",
-    "about_title": "Über mich | Ahmet Demiroğlu",
-    "about_description": "Erfahren Sie mehr über meinen Hintergrund, meine Ziele und meine Reise in die Welt der Webentwicklung.",
-    "skills_title": "Meine Fähigkeiten | Ahmet Demiroğlu",
-    "skills_description": "Entdecken Sie meine Fähigkeiten in Front-End- und Back-End-Technologien: React, Vue, C#, .NET, SQL und mehr.",
-    "projects_title": "Meine Projekte | Ahmet Demiroğlu",
-    "projects_description": "Werfen Sie einen Blick auf die Webanwendungen und Projekte, die ich entwickelt habe.",
-    "contact_title": "Kontakt | Ahmet Demiroğlu",
-    "contact_description": "Haben Sie eine Projektidee oder möchten Sie einfach nur Hallo sagen? Nehmen Sie Kontakt mit mir auf.",
-    "404_title": "Seite nicht gefunden | Ahmet Demiroğlu",
-    "404_description": "Die von Ihnen gesuchte Seite existiert nicht. Bitte überprüfen Sie die Adresse oder kehren Sie zur Startseite zurück."
-  },
-  "nav": {
-    "home": "Startseite",
-    "about": "Über mich",
-    "skills": "Fähigkeiten",
-    "projects": "Projekte",
-    "contact": "Kontakt"
-  },
-  "home": {
-    "greeting": "Ahmet Demiroğlu",
-    "description": "Ich verbinde Code und Design, um moderne Weberlebnisse zu schaffen, die sowohl ästhetisch als auch funktional sind.",
-    "button": "Meine Projekte ansehen",
-    "typing_sequences": [
-      "Full-Stack Entwickler", 2000,
-      "UI/UX-Enthusiast", 2000,
-      "Benutzerorientierte Lösungen", 2000
-    ],
-    "career_section_background": "KARRIERE",
-    "career_section_title": "Ein Interdisziplinärer Ansatz",
-    "career_section_p1": "Meine Karriere basiert auf einem 9-jährigen Fundament in der Stadtplanung und Immobilienbewertung. Die Fähigkeiten, die ich in dieser Zeit im analytischen Denken, detaillierten Berichtswesen und der Dateninterpretation erworben habe, sind die Eckpfeiler meines heutigen Ansatzes in der Softwareentwicklung.",
-    "career_section_p2": "Während ich meine Leidenschaft für Technologie in eine professionelle Karriere umwandle, übertrage ich diese Disziplin aus meiner Vergangenheit in meinen Code. Für mich bedeutet Softwareentwicklung nicht nur, funktionale Werkzeuge zu schaffen, sondern auch benutzerorientierte, saubere und nachhaltige Lösungen zu produzieren. Meine Hingabe zum Detail ist mein stärkster Leitfaden in diesem neuen Bereich."
-  },
-  "about": {
-    "background_text": "ÜBER MICH",
-    "title": "Meine Geschichte",
-    "timeline_1_title": "Gazi-Universität",
-    "timeline_1_subtitle": "Stadt- und Regionalplanung",
-    "timeline_2_title": "Immobilienbewertung",
-    "timeline_2_subtitle": "9 Jahre Erfahrung",
-    "timeline_3_title": "Neos Software Academy",
-    "timeline_3_subtitle": "Full-Stack-Ausbildung",
-    "timeline_4_title": "SedBim Bilişim",
-    "timeline_4_subtitle": "Front-end-Entwickler",
-    "timeline_5_title": "GGHub",
-    "timeline_5_subtitle": "Gaming Social Platform",
-    "p1": "Ich bin Ahmet Demiroğlu. Als Stadtplaner, Absolvent der Fakultät für Architektur, Abteilung für Stadt- und Regionalplanung der Gazi-Universität, und als Immobilienbewerter mit neun Jahren Feld- und Kontrollerfahrung. In dieser Zeit habe ich nicht nur meine Planungs- und Analysefähigkeiten entwickelt, sondern auch Erfahrung in der Detailgenauigkeit und Berichterstattung gesammelt. Mit dem Erwerb der Lizenz als Verantwortlicher Bewerter habe ich meine berufliche Erfahrung einen Schritt weiter gebracht.",
-    "p2": "Seit meiner Kindheit habe ich ein großes Interesse und eine Neugier für Computer und Technologie. Während meines Studiums hatte ich die Möglichkeit, mich in den Zeichen- und Designprogrammen weiterzuentwickeln, die ich für mein Fachgebiet aktiv nutzte. Doch mein starkes Interesse an der Softwareentwicklung führte mich im Laufe der Zeit zu einer bedeutenden beruflichen Veränderung. Ich beschloss, den Immobiliensektor, in dem ich umfangreiche Erfahrung gesammelt hatte, zu verlassen und mich im Bereich der Full-Stack-Webentwicklung weiterzuentwickeln.",
-    "p3": "In diesem Sinne habe ich die Ausbildung zum Software-Spezialisten an der Neos Software Academy erfolgreich abgeschlossen. Diese Ausbildung umfasste Programmiersprachen wie HTML, CSS, JavaScript und C# sowie beliebte Bibliotheken und Frameworks wie Bootstrap, React.js und .NET. Dank eines intensiven 7-wöchigen Praktikumsprogramms, das ich im Juli 2023 abschloss, konnte ich mein theoretisches Wissen durch praktische Anwendungen festigen und ein voll funktionsfähiges Website-Projekt für eine Autovermietung erfolgreich umsetzen. In diesem Projekt war ich sowohl an der Front-End- als auch an der Back-End-Entwicklung aktiv beteiligt und sammelte Erfahrungen in allen Schichten von Webanwendungen. Während des Praktikums war ich auch an der Entwicklung einer lokalen Open-Source-CSS- und JS-Bibliothek bei Neos Software beteiligt.",
-    "p4": "Im Mai 2025 begann ich meine Tätigkeit als Front-end Developer bei SedBim Bilişim. In dieser Rolle wirke ich aktiv an der Entwicklung und Wartung bestehender Unternehmensprojekte mit Vue.js mit und erweitere gleichzeitig meine Kompetenzen im React-Ökosystem durch neue Projekte. Bei Bedarf unterstütze ich auch C#-basierte Back-end-Dienste mit .NET Core und achte darauf, meine Full-Stack-Perspektive beizubehalten.",
-    "p5": "Während ich meine Front-end-Expertise in meiner aktuellen Rolle vertiefe, festige ich gleichzeitig mein Wissen über React (sowohl durch Projekte bei der Arbeit als auch durch persönliche Projekte, die ich in meiner Freizeit entwickle). Meine lösungsorientierte Denkweise, kombiniert mit der analytischen Perspektive aus meiner früheren Karriere, ermöglicht es mir, mich schnell an neue Technologien anzupassen. Mein Ziel ist es, mich durch die genaue Beobachtung von Brancheninnovationen kontinuierlich weiterzuentwickeln und den Projekten, an denen ich arbeite, einen Mehrwert zu bieten."
-  },
-  "skills_page": {
-    "main_title": "Meine Fähigkeiten",
-    "subtitle": "Die grundlegenden Technologien und Werkzeuge, die ich im Laufe meiner Karriere erworben und in meinen Projekten eingesetzt habe.",
-    "skill_categories": [
-      {
-        "category": "Technische Fähigkeiten",
-        "subCategories": [
-          {
-            "title": "Front-End",
-            "skills": [
-              { "name": "HTML", "description": "Semantische, barrierefreie und SEO-freundliche HTML5-Strukturen." },
-              { "name": "CSS", "description": "Moderne, responsive Designs, Animationen und Erfahrung in der Entwicklung von CSS-Bibliotheken." },
-              { "name": "JavaScript", "description": "ES6+ Syntax, asynchrone Programmierung und DOM-Kompetenz." },
-              { "name": "TypeScript", "description": "Robusterer und skalierbarerer Code durch statische Typisierung." },
-              { "name": "React", "description": "Komponentenbasierte Architektur und grundlegende Hooks." },
-              { "name": "Vue.js", "description": "Umfassende Projekterfahrung, Zustandsverwaltung (Pinia) und Routing." },
-              { "name": "jQuery", "description": "Grundlegende DOM-Manipulation und Ereignisverwaltung." },
-              { "name": "Bootstrap", "description": "Effiziente Nutzung zur Entwicklung schneller und responsiver Oberflächen." },
-              { "name": "Tailwind CSS", "description": "Anpassbare Designs mit dem Utility-First-Ansatz." }
-            ]
-          },
-          {
-            "title": "Back-End",
-            "skills": [
-              { "name": "C#", "description": "Mittlere Kenntnisse der OOP-Prinzipien und Sprachkompetenz." },
-              { "name": ".NET Core", "description": "Praktikumsprojekterfahrung in der API-Entwicklung und Framework-Nutzung." },
-              { "name": "Entity Framework", "description": "Grundlegende Datenbankoperationen mit dem ORM-Tool." },
-              { "name": "SQL Server", "description": "Datenbankdesign, Abfragen und grundlegende Optimierung." }
-            ]
-          }
-        ]
-      },
-      {
-        "category": "Weitere Werkzeuge und Technologien",
-        "skills": {
-          "github": { "name": "GitHub", "description": "Versionskontrolle, Branch-Management und Teamarbeit." },
-          "photoshop": { "name": "Photoshop", "description": "Bildbearbeitung und Gestaltung von UI-Elementen." },
-          "autocad": { "name": "AutoCAD", "description": "Expertise in Architektur- und technischen Zeichnungen." },
-          "netcad": { "name": "Netcad", "description": "Effiziente Nutzung in Stadtplanungs- und Kartierungsprojekten." },
-          "gis_systems": { "name": "GIS-Systeme", "description": "Räumliche Analyse und Visualisierung geografischer Daten." }
-        }
-      },
-      {
-        "category": "Nicht-technische Fähigkeiten",
-        "skills": {
-          "real_estate_appraisal": { "name": "Immobilienbewertung", "description": "9 Jahre Feld- und Kontrollerfahrung, lizenzierter verantwortlicher Bewerter (SPK)." },
-          "reporting_analysis": { "name": "Berichterstattung und Analyse", "description": "Interpretation von Daten und Erstellung detaillierter Berichte." },
-          "problem_solving": { "name": "Problemlösung", "description": "Analyse komplexer Probleme und Entwicklung pragmatischer Lösungen." },
-          "teamwork": { "name": "Teamfähigkeit", "description": "Harmonische Zusammenarbeit im Team und effektive Kommunikation." },
-          "time_management": { "name": "Zeitmanagement", "description": "Planung, Priorisierung und rechtzeitige Erledigung von Aufgaben." }
-        }
-      }
-    ]
-  },
-  "projects_page": {
-    "main_title": "Meine Projekte",
-    "subtitle": "Arbeiten, die ich im Laufe meiner Reise entwickelt habe und meine Fähigkeiten zeigen.",
-    "featured_badge": "HERVORGEHOBENES PROJEKT",
-    "view_live_button": "Ansehen",
-    "view_github_button": "GitHub",
-    "view_github_button_long": "Auf GitHub ansehen",
-    "projects": {
-      "rent_a_car": {
-        "title": "Rent A Car Full-Stack Plattform",
-        "description": "Eine skalierbare Autovermietungsplattform, die auf moderner .NET 8 und ASP.NET Core MVC Architektur basiert. Verfügt über relationales Datenbankmanagement via Entity Framework Core, rollenbasierte Zugriffskontrolle (RBAC) mittels Identity und sichere CRUD-Operationen. Entwickelt während des Praktikums an der Neos Software Academy unter strikter Einhaltung von Clean-Code-Prinzipien.",
-        "tags": ["ASP.NET Core MVC", ".NET 8", "EF Core", "Identity", "SQL Server"]
-      },
-      "butce_360": {
-        "title": "Budget360° Ausgaben-Tracker",
-        "description": "Erster Prototyp für Kreditkarten-Zyklus-Tracking und Ausgabenmanagement. Erstellt mit Vue.js 3.0 und Firebase Realtime Database, diente es als experimentelle Grundlage für das Fintel-Projekt (V2).",
-        "tags": ["Vue.js", "Firebase", "JavaScript"]
-      },
-      "not_defteri": {
-        "title": "Interaktive Notizbuch-App",
-        "description": "Bietet Benutzern ein dynamisches Notizbuch-Erlebnis. Entwickelt mit HTML, CSS und Vue.js 3.0.",
-        "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
-      },
-      "fintel": {
-        "title": "Fintel - KI Finanzassistent",
-        "description": "Ein hybrides Finanztool (LocalStorage + Firestore), das ursprünglich mit Gemini 3.0 und 'Vibecoding' prototypisiert und anschließend professionell zu einem vollwertigen SaaS-Produkt weiterentwickelt wurde. Angetrieben von Gemini 2.5 Flash bietet 'Nova AI' Ausgabenanalysen, OCR-Belegverarbeitung und personalisierte Sparstrategien.",
-        "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Vibecoding"]
-      },
-      "gghub": {
-        "title": "GGHub - Gamer Sozialplattform (Beta)",
-        "description": "Dieses Monorepo-Projekt befindet sich in aktiver Entwicklung und vereint .NET 8 und Next.js 15 unter einer Clean Architecture. Das Backend gewährleistet Skalierbarkeit durch das Unit-of-Work-Muster, während das Frontend mit Radix UI und Compound Components ein modernes Erlebnis bietet. Messaging, Profile und Listenverwaltung sind live, die Integration des Admin-Panels läuft.",
-        "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL", "SignalR"]
-      }
-    }
-  },
-  "contact_page": {
-    "main_title": "Kontakt aufnehmen",
-    "subtitle": "Haben Sie eine Projektidee oder möchten Sie einfach nur Hallo sagen? Sie können mich über die folgenden Kanäle erreichen.",
-    "direct_contact_title": "Direkter Kontakt",
-    "location_title": "Standort",
-    "location_popup": "Ich lebe in Izmir. <br /> Kommen Sie gerne auf einen Kaffee vorbei!",
-    "form_title": "Oder füllen Sie das Formular aus",
-    "form_placeholder_name": "Ihr Name",
-    "form_placeholder_email": "Ihre E-Mail-Adresse",
-    "form_placeholder_message": "Ihre Nachricht...",
-    "form_button_submit": "Nachricht senden",
-    "form_button_submitting": "Wird gesendet...",
-    "form_status_success": "Ihre Nachricht wurde erfolgreich gesendet!",
-    "form_status_error": "Ein Fehler ist aufgetreten: ",
-    "social_title": "Meine Social-Media-Konten",
-    "direct_links": {
-      "email": { "label": "E-Mail" },
-      "whatsapp": { "label": "WhatsApp" }
+    "seo": {
+        "home_title": "Ahmet Demiroğlu | Full-Stack Web-Entwickler",
+        "home_description": "Full-Stack-Entwickler aus Izmir, der benutzerorientierte moderne Weberlebnisse schafft. React, Vue.js, .NET Core und mehr.",
+        "about_title": "Über mich | Ahmet Demiroğlu",
+        "about_description": "Erfahren Sie mehr über meinen Hintergrund, meine Ziele und meine Reise in die Welt der Webentwicklung.",
+        "skills_title": "Meine Fähigkeiten | Ahmet Demiroğlu",
+        "skills_description": "Entdecken Sie meine Fähigkeiten in Front-End- und Back-End-Technologien: React, Vue, C#, .NET, SQL und mehr.",
+        "projects_title": "Meine Projekte | Ahmet Demiroğlu",
+        "projects_description": "Werfen Sie einen Blick auf die Webanwendungen und Projekte, die ich entwickelt habe.",
+        "contact_title": "Kontakt | Ahmet Demiroğlu",
+        "contact_description": "Haben Sie eine Projektidee oder möchten Sie einfach nur Hallo sagen? Nehmen Sie Kontakt mit mir auf.",
+        "404_title": "Seite nicht gefunden | Ahmet Demiroğlu",
+        "404_description": "Die von Ihnen gesuchte Seite existiert nicht. Bitte überprüfen Sie die Adresse oder kehren Sie zur Startseite zurück."
     },
-    "social_links": {
-      "github": { "label": "GitHub" },
-      "linkedin": { "label": "LinkedIn" },
-      "instagram": { "label": "Instagram" },
-      "twitter": { "label": "X (Twitter)" }
+    "nav": {
+        "home": "Startseite",
+        "about": "Über mich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    },
+    "home": {
+        "greeting": "Ahmet Demiroğlu",
+        "description": "Ich verbinde Code und Design, um moderne Weberlebnisse zu schaffen, die sowohl ästhetisch als auch funktional sind.",
+        "button": "Meine Projekte ansehen",
+        "typing_sequences": ["Full-Stack Entwickler", 2000, "UI/UX-Enthusiast", 2000, "Benutzerorientierte Lösungen", 2000],
+        "career_section_background": "KARRIERE",
+        "career_section_title": "Ein Interdisziplinärer Ansatz",
+        "career_section_p1": "Meine Karriere basiert auf einem 9-jährigen Fundament in der Stadtplanung und Immobilienbewertung. Die Fähigkeiten, die ich in dieser Zeit im analytischen Denken, detaillierten Berichtswesen und der Dateninterpretation erworben habe, sind die Eckpfeiler meines heutigen Ansatzes in der Softwareentwicklung.",
+        "career_section_p2": "Während ich meine Leidenschaft für Technologie in eine professionelle Karriere umwandle, übertrage ich diese Disziplin aus meiner Vergangenheit in meinen Code. Für mich bedeutet Softwareentwicklung nicht nur, funktionale Werkzeuge zu schaffen, sondern auch benutzerorientierte, saubere und nachhaltige Lösungen zu produzieren. Meine Hingabe zum Detail ist mein stärkster Leitfaden in diesem neuen Bereich."
+    },
+    "about": {
+        "background_text": "ÜBER MICH",
+        "title": "Meine Geschichte",
+        "timeline_1_title": "Gazi-Universität",
+        "timeline_1_subtitle": "Stadt- und Regionalplanung",
+        "timeline_2_title": "Immobilienbewertung",
+        "timeline_2_subtitle": "9 Jahre Erfahrung",
+        "timeline_3_title": "Neos Software Academy",
+        "timeline_3_subtitle": "Full-Stack-Ausbildung",
+        "timeline_4_title": "SedBim Bilişim",
+        "timeline_4_subtitle": "Front-end-Entwickler",
+        "timeline_5_title": "GGHub",
+        "timeline_5_subtitle": "Gaming Social Platform",
+        "p1": "Ich bin Ahmet Demiroğlu. Als Stadtplaner, Absolvent der Fakultät für Architektur, Abteilung für Stadt- und Regionalplanung der Gazi-Universität, und als Immobilienbewerter mit neun Jahren Feld- und Kontrollerfahrung. In dieser Zeit habe ich nicht nur meine Planungs- und Analysefähigkeiten entwickelt, sondern auch Erfahrung in der Detailgenauigkeit und Berichterstattung gesammelt. Mit dem Erwerb der Lizenz als Verantwortlicher Bewerter habe ich meine berufliche Erfahrung einen Schritt weiter gebracht.",
+        "p2": "Seit meiner Kindheit habe ich ein großes Interesse und eine Neugier für Computer und Technologie. Während meines Studiums hatte ich die Möglichkeit, mich in den Zeichen- und Designprogrammen weiterzuentwickeln, die ich für mein Fachgebiet aktiv nutzte. Doch mein starkes Interesse an der Softwareentwicklung führte mich im Laufe der Zeit zu einer bedeutenden beruflichen Veränderung. Ich beschloss, den Immobiliensektor, in dem ich umfangreiche Erfahrung gesammelt hatte, zu verlassen und mich im Bereich der Full-Stack-Webentwicklung weiterzuentwickeln.",
+        "p3": "In diesem Sinne habe ich die Ausbildung zum Software-Spezialisten an der Neos Software Academy erfolgreich abgeschlossen. Diese Ausbildung umfasste Programmiersprachen wie HTML, CSS, JavaScript und C# sowie beliebte Bibliotheken und Frameworks wie Bootstrap, React.js und .NET. Dank eines intensiven 7-wöchigen Praktikumsprogramms, das ich im Juli 2023 abschloss, konnte ich mein theoretisches Wissen durch praktische Anwendungen festigen und ein voll funktionsfähiges Website-Projekt für eine Autovermietung erfolgreich umsetzen. In diesem Projekt war ich sowohl an der Front-End- als auch an der Back-End-Entwicklung aktiv beteiligt und sammelte Erfahrungen in allen Schichten von Webanwendungen. Während des Praktikums war ich auch an der Entwicklung einer lokalen Open-Source-CSS- und JS-Bibliothek bei Neos Software beteiligt.",
+        "p4": "Im Mai 2025 begann ich meine Tätigkeit als Front-end Developer bei SedBim Bilişim. In dieser Rolle wirke ich aktiv an der Entwicklung und Wartung bestehender Unternehmensprojekte mit Vue.js mit und erweitere gleichzeitig meine Kompetenzen im React-Ökosystem durch neue Projekte. Bei Bedarf unterstütze ich auch C#-basierte Back-end-Dienste mit .NET Core und achte darauf, meine Full-Stack-Perspektive beizubehalten.",
+        "p5": "Während ich meine Front-end-Expertise in meiner aktuellen Rolle vertiefe, festige ich gleichzeitig mein Wissen über React (sowohl durch Projekte bei der Arbeit als auch durch persönliche Projekte, die ich in meiner Freizeit entwickle). Meine lösungsorientierte Denkweise, kombiniert mit der analytischen Perspektive aus meiner früheren Karriere, ermöglicht es mir, mich schnell an neue Technologien anzupassen. Mein Ziel ist es, mich durch die genaue Beobachtung von Brancheninnovationen kontinuierlich weiterzuentwickeln und den Projekten, an denen ich arbeite, einen Mehrwert zu bieten."
+    },
+    "skills_page": {
+        "main_title": "Meine Fähigkeiten",
+        "subtitle": "Die grundlegenden Technologien und Werkzeuge, die ich im Laufe meiner Karriere erworben und in meinen Projekten eingesetzt habe.",
+        "skill_categories": [
+            {
+                "category": "Technische Fähigkeiten",
+                "subCategories": [
+                    {
+                        "title": "Front-End",
+                        "skills": [
+                            { "name": "HTML", "description": "Semantische, barrierefreie und SEO-freundliche HTML5-Strukturen." },
+                            { "name": "CSS", "description": "Moderne, responsive Designs, Animationen und Erfahrung in der Entwicklung von CSS-Bibliotheken." },
+                            { "name": "JavaScript", "description": "ES6+ Syntax, asynchrone Programmierung und DOM-Kompetenz." },
+                            { "name": "TypeScript", "description": "Robusterer und skalierbarerer Code durch statische Typisierung." },
+                            { "name": "React", "description": "Komponentenbasierte Architektur und grundlegende Hooks." },
+                            { "name": "Vue.js", "description": "Umfassende Projekterfahrung, Zustandsverwaltung (Pinia) und Routing." },
+                            { "name": "jQuery", "description": "Grundlegende DOM-Manipulation und Ereignisverwaltung." },
+                            { "name": "Bootstrap", "description": "Effiziente Nutzung zur Entwicklung schneller und responsiver Oberflächen." },
+                            { "name": "Tailwind CSS", "description": "Anpassbare Designs mit dem Utility-First-Ansatz." }
+                        ]
+                    },
+                    {
+                        "title": "Back-End",
+                        "skills": [
+                            { "name": "C#", "description": "Mittlere Kenntnisse der OOP-Prinzipien und Sprachkompetenz." },
+                            { "name": ".NET Core", "description": "Praktikumsprojekterfahrung in der API-Entwicklung und Framework-Nutzung." },
+                            { "name": "Entity Framework", "description": "Grundlegende Datenbankoperationen mit dem ORM-Tool." },
+                            { "name": "SQL Server", "description": "Datenbankdesign, Abfragen und grundlegende Optimierung." }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "Weitere Werkzeuge und Technologien",
+                "skills": {
+                    "github": { "name": "GitHub", "description": "Versionskontrolle, Branch-Management und Teamarbeit." },
+                    "photoshop": { "name": "Photoshop", "description": "Bildbearbeitung und Gestaltung von UI-Elementen." },
+                    "autocad": { "name": "AutoCAD", "description": "Expertise in Architektur- und technischen Zeichnungen." },
+                    "netcad": { "name": "Netcad", "description": "Effiziente Nutzung in Stadtplanungs- und Kartierungsprojekten." },
+                    "gis_systems": { "name": "GIS-Systeme", "description": "Räumliche Analyse und Visualisierung geografischer Daten." }
+                }
+            },
+            {
+                "category": "Nicht-technische Fähigkeiten",
+                "skills": {
+                    "real_estate_appraisal": { "name": "Immobilienbewertung", "description": "9 Jahre Feld- und Kontrollerfahrung, lizenzierter verantwortlicher Bewerter (SPK)." },
+                    "reporting_analysis": { "name": "Berichterstattung und Analyse", "description": "Interpretation von Daten und Erstellung detaillierter Berichte." },
+                    "problem_solving": { "name": "Problemlösung", "description": "Analyse komplexer Probleme und Entwicklung pragmatischer Lösungen." },
+                    "teamwork": { "name": "Teamfähigkeit", "description": "Harmonische Zusammenarbeit im Team und effektive Kommunikation." },
+                    "time_management": { "name": "Zeitmanagement", "description": "Planung, Priorisierung und rechtzeitige Erledigung von Aufgaben." }
+                }
+            }
+        ]
+    },
+    "projects_page": {
+        "main_title": "Meine Projekte",
+        "subtitle": "Arbeiten, die ich im Laufe meiner Reise entwickelt habe und meine Fähigkeiten zeigen.",
+        "featured_badge": "HERVORGEHOBENES PROJEKT",
+        "view_live_button": "Ansehen",
+        "view_github_button": "GitHub",
+        "view_github_button_long": "Auf GitHub ansehen",
+        "badges": {
+            "live": "Live",
+            "beta": "Beta",
+            "apk": "APK",
+            "new": "Neu"
+        },
+        "download_apk_button": "APK Herunterladen",
+        "projects": {
+            "rent_a_car": {
+                "title": "Rent A Car Full-Stack Plattform",
+                "description": "Eine skalierbare Autovermietungsplattform, die auf moderner .NET 8 und ASP.NET Core MVC Architektur basiert. Verfügt über relationales Datenbankmanagement via Entity Framework Core, rollenbasierte Zugriffskontrolle (RBAC) mittels Identity und sichere CRUD-Operationen. Entwickelt während des Praktikums an der Neos Software Academy unter strikter Einhaltung von Clean-Code-Prinzipien.",
+                "tags": ["ASP.NET Core MVC", ".NET 8", "EF Core", "Identity", "SQL Server"]
+            },
+            "purescan": {
+                "title": "PureScan - Kosmetik-Inhaltsstoff-Analysator",
+                "description": "KI-gestützter Analysator für kosmetische Produktinhaltsstoffe. Analysiert Inhaltsstoffe per Kamera-OCR, Barcode-Scan (OpenBeautyFacts DB) oder manuelle Texteingabe. Bietet Risikobewertung (grün/gelb/rot) mit Gemini 2.5 Flash, Hauttyp-Kompatibilitätsbewertung, TTS-Audio-Zusammenfassungen und einen KI-Chat-Assistenten. Als Android-Anwendung konzipiert und mit Capacitor konvertiert. Die Veröffentlichung im Google Play Store ist in Kürze geplant.",
+                "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS"]
+            },
+            "butce_360": {
+                "title": "Budget360° Ausgaben-Tracker",
+                "description": "Erster Prototyp für Kreditkarten-Zyklus-Tracking und Ausgabenmanagement. Erstellt mit Vue.js 3.0 und Firebase Realtime Database, diente es als experimentelle Grundlage für das Fintel-Projekt (V2).",
+                "tags": ["Vue.js", "Firebase", "JavaScript"]
+            },
+            "not_defteri": {
+                "title": "Interaktive Notizbuch-App",
+                "description": "Bietet Benutzern ein dynamisches Notizbuch-Erlebnis. Entwickelt mit HTML, CSS und Vue.js 3.0.",
+                "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
+            },
+            "fintel": {
+                "title": "Fintel - KI Finanzassistent",
+                "description": "Ein hybrides Finanztool (LocalStorage + Firestore), das ursprünglich mit Gemini 3.0 und 'Vibecoding' prototypisiert und anschließend professionell zu einem vollwertigen SaaS-Produkt weiterentwickelt wurde. Angetrieben von Gemini 2.5 Flash bietet 'Nova AI' Ausgabenanalysen, OCR-Belegverarbeitung und personalisierte Sparstrategien. Mit Capacitor in eine Android-Anwendung konvertiert, mit geplanter Veröffentlichung im Google Play Store in Kürze.",
+                "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Android", "Capacitor"]
+            },
+            "gghub": {
+                "title": "GGHub - Gamer Sozialplattform (Beta)",
+                "description": "Dieses Monorepo-Projekt befindet sich in aktiver Entwicklung und vereint .NET 8 und Next.js 15 unter einer Clean Architecture. Das Backend gewährleistet Skalierbarkeit durch das Unit-of-Work-Muster, während das Frontend mit Radix UI und Compound Components ein modernes Erlebnis bietet. Messaging, Profile und Listenverwaltung sind live, die Integration des Admin-Panels läuft.",
+                "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL", "SignalR"]
+            }
+        }
+    },
+    "contact_page": {
+        "main_title": "Kontakt aufnehmen",
+        "subtitle": "Haben Sie eine Projektidee oder möchten Sie einfach nur Hallo sagen? Sie können mich über die folgenden Kanäle erreichen.",
+        "direct_contact_title": "Direkter Kontakt",
+        "location_title": "Standort",
+        "location_popup": "Ich lebe in Izmir. <br /> Kommen Sie gerne auf einen Kaffee vorbei!",
+        "form_title": "Oder füllen Sie das Formular aus",
+        "form_placeholder_name": "Ihr Name",
+        "form_placeholder_email": "Ihre E-Mail-Adresse",
+        "form_placeholder_message": "Ihre Nachricht...",
+        "form_button_submit": "Nachricht senden",
+        "form_button_submitting": "Wird gesendet...",
+        "form_status_success": "Ihre Nachricht wurde erfolgreich gesendet!",
+        "form_status_error": "Ein Fehler ist aufgetreten: ",
+        "social_title": "Meine Social-Media-Konten",
+        "direct_links": {
+            "email": { "label": "E-Mail" },
+            "whatsapp": { "label": "WhatsApp" }
+        },
+        "social_links": {
+            "github": { "label": "GitHub" },
+            "linkedin": { "label": "LinkedIn" },
+            "instagram": { "label": "Instagram" },
+            "twitter": { "label": "X (Twitter)" }
+        }
+    },
+    "404_page": {
+        "title": "Seite nicht gefunden",
+        "subtitle": "Die von Ihnen gesuchte Seite wurde entweder entfernt oder hat nie existiert.",
+        "home_link": "Zurück zur Startseite",
+        "error_code": "Fehlercode: 404"
     }
-  },
-  "404_page": {
-    "title": "Seite nicht gefunden",
-    "subtitle": "Die von Ihnen gesuchte Seite wurde entweder entfernt oder hat nie existiert.",
-    "home_link": "Zurück zur Startseite",
-    "error_code": "Fehlercode: 404"
-  }
 }

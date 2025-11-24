@@ -1,177 +1,185 @@
 {
-  "seo": {
-    "home_title": "Ahmet Demiroğlu | Full-Stack Web Developer",
-    "home_description": "Izmir-based Full-Stack Developer creating user-focused modern web experiences. React, Vue.js, .NET Core, and more.",
-    "about_title": "About Me | Ahmet Demiroğlu",
-    "about_description": "Learn more about my background, my goals, and my journey into the world of web development.",
-    "skills_title": "My Skills | Ahmet Demiroğlu",
-    "skills_description": "Explore my skills in front-end and back-end technologies: React, Vue, C#, .NET, SQL, and more.",
-    "projects_title": "My Projects | Ahmet Demiroğlu",
-    "projects_description": "Take a look at the web applications and projects I have developed.",
-    "contact_title": "Contact | Ahmet Demiroğlu",
-    "contact_description": "Have a project idea or just want to say hello? Get in touch with me.",
-    "404_title": "Page Not Found | Ahmet Demiroğlu",
-    "404_description": "The page you are looking for does not exist. Please check the address or return to the homepage."
-  },
-  "nav": {
-    "home": "Home",
-    "about": "About",
-    "skills": "Skills",
-    "projects": "Projects",
-    "contact": "Contact"
-  },
-  "home": {
-    "greeting": "Ahmet Demiroğlu",
-    "description": "I create modern web experiences that are both aesthetic and functional by combining code and design.",
-    "button": "Explore My Projects",
-    "typing_sequences": [
-      "Full-Stack Developer", 2000,
-      "UI/UX Enthusiast", 2000,
-      "User-Focused Solutions", 2000
-    ],
-    "career_section_background": "CAREER",
-    "career_section_title": "An Interdisciplinary Approach",
-    "career_section_p1": "My career is built on a 9-year foundation in Urban Planning and Real Estate Appraisal. The skills I acquired in analytical thinking, detailed reporting, and data interpretation during this time are the cornerstones of my software development approach today.",
-    "career_section_p2": "As I transform my passion for technology into a professional career, I carry this discipline from my past into my code. For me, software development isn't just about creating functional tools; it's about producing user-centric, clean, and sustainable solutions. My commitment to detail is my strongest guide in this new field."
-  },
-  "about": {
-    "background_text": "ABOUT ME",
-    "title": "My Story",
-    "timeline_1_title": "Gazi University",
-    "timeline_1_subtitle": "City and Regional Planning",
-    "timeline_2_title": "Real Estate Appraisal",
-    "timeline_2_subtitle": "9 years of experience",
-    "timeline_3_title": "Neos Software Academy",
-    "timeline_3_subtitle": "Full-Stack Training",
-    "timeline_4_title": "SedBim Bilişim",
-    "timeline_4_subtitle": "Front-end Developer",
-    "timeline_5_title": "GGHub",
-    "timeline_5_subtitle": "Gaming Social Platform",
-    "p1": "I am Ahmet Demiroğlu. I am an Urban Planner, a graduate of Gazi University, Faculty of Architecture, Department of City and Regional Planning, and a Real Estate Appraiser with nine years of field and inspection experience. During this time, I improved my planning and analysis skills and gained experience in paying attention to detail and reporting. I took my professional experience one step further by obtaining the Certified Appraiser license.",
-    "p2": "I have been deeply curious about computers and technology since my childhood. During my university years, I had the opportunity to improve myself in the drawing and design programs that I actively used for my department. However, my strong interest in software development eventually led me to make a significant shift in my career. I decided to leave the real estate sector, where I had gained substantial experience, and focus on developing myself in the field of full-stack web development.",
-    "p3": "In line with this goal, I successfully completed the Software Specialization Training at Neos Software Academy. This training covered programming languages such as HTML, CSS, JavaScript, and C#, as well as popular libraries and frameworks like Bootstrap, React.js, and .NET. Thanks to the 7-week intensive internship program I completed in July 2023, I reinforced my theoretical knowledge with practical applications and successfully launched a fully functional rent a car website project from start to finish. In this project, I took an active role in both front-end and back-end development, gaining experience in all layers of web applications. During my internship, I also took part in the process of preparing a domestic and open-source CSS and JS library within Neos Software.",
-    "p4": "In May 2025, I began working as a Front-end Developer at SedBim Bilişim. In this role, I actively participate in the development and maintenance of existing corporate projects using Vue.js, while also enhancing my skills in the React ecosystem through new projects. When needed, I also support C#-based back-end services with .NET Core, making sure to maintain my full-stack perspective.",
-    "p5": "While deepening my front-end expertise in my current role, I am also strengthening my knowledge of React (both through projects at work and personal projects I develop in my spare time). My problem-solving mindset, combined with the analytical perspective from my previous career, enables me to adapt quickly to new technologies. I aim to continuously improve myself by closely following industry innovations and adding value to the projects I work on."
-  },
-  "skills_page": {
-    "main_title": "My Skills",
-    "subtitle": "The core technologies and tools I've acquired throughout my career and used in my projects.",
-    "skill_categories": [
-      {
-        "category": "Technical Skills",
-        "subCategories": [
-          {
-            "title": "Front-End",
-            "skills": [
-              { "name": "HTML", "description": "Semantic, accessible, and SEO-friendly HTML5 structures." },
-              { "name": "CSS", "description": "Experience in modern, responsive designs, animations, and CSS library development." },
-              { "name": "JavaScript", "description": "ES6+ syntax, asynchronous programming, and DOM proficiency." },
-              { "name": "TypeScript", "description": "Writing more robust and scalable code with static typing." },
-              { "name": "React", "description": "Component-based architecture and fundamental hooks." },
-              { "name": "Vue.js", "description": "Comprehensive project experience, state management (Pinia), and routing." },
-              { "name": "jQuery", "description": "Basic level of DOM manipulation and event management." },
-              { "name": "Bootstrap", "description": "Effective use for developing fast and responsive interfaces." },
-              { "name": "Tailwind CSS", "description": "Customizable designs with a utility-first approach." }
-            ]
-          },
-          {
-            "title": "Back-End",
-            "skills": [
-              { "name": "C#", "description": "Intermediate level of OOP principles and language proficiency." },
-              { "name": ".NET Core", "description": "Internship project experience in API development and framework usage." },
-              { "name": "Entity Framework", "description": "Basic level database operations with an ORM tool." },
-              { "name": "SQL Server", "description": "Database design, querying, and basic optimization." }
-            ]
-          }
-        ]
-      },
-      {
-        "category": "Other Tools and Technologies",
-        "skills": {
-          "github": { "name": "GitHub", "description": "Version control, branch management, and teamwork." },
-          "photoshop": { "name": "Photoshop", "description": "Image editing and designing UI elements." },
-          "autocad": { "name": "AutoCAD", "description": "Expertise in architectural and technical drawings." },
-          "netcad": { "name": "Netcad", "description": "Effective use in urban planning and mapping projects." },
-          "gis_systems": { "name": "GIS Systems", "description": "Spatial analysis and geographic data visualization." }
-        }
-      },
-      {
-        "category": "Soft Skills",
-        "skills": {
-          "real_estate_appraisal": { "name": "Real Estate Appraisal", "description": "9 years of field and inspection experience, CMB Licensed Certified Appraiser." },
-          "reporting_analysis": { "name": "Reporting and Analysis", "description": "Interpreting data and preparing detailed reports." },
-          "problem_solving": { "name": "Problem Solving", "description": "Analyzing complex problems and producing pragmatic solutions." },
-          "teamwork": { "name": "Teamwork", "description": "Harmonious work within a team and effective communication." },
-          "time_management": { "name": "Time Management", "description": "Planning, prioritizing, and completing tasks on time." }
-        }
-      }
-    ]
-  },
-  "projects_page": {
-    "main_title": "My Projects",
-    "subtitle": "Works I have developed throughout my journey, showcasing my skills.",
-    "featured_badge": "FEATURED PROJECT",
-    "view_live_button": "View Live",
-    "view_github_button": "GitHub",
-    "view_github_button_long": "View on GitHub",
-    "projects": {
-      "rent_a_car": {
-        "title": "Rent A Car Full-Stack Platform",
-        "description": "A scalable car rental platform built on modern .NET 8 and ASP.NET Core MVC architecture. Features relational database management via Entity Framework Core, Role-Based Access Control (RBAC) using Identity, and secure CRUD operations. Developed during the Neos Software Academy internship, strictly adhering to clean code principles.",
-        "tags": ["ASP.NET Core MVC", ".NET 8", "EF Core", "Identity", "SQL Server"]
-      },
-      "butce_360": {
-        "title": "Budget360° Expense Tracker",
-        "description": "First prototype developed for credit card cycle tracking and expense management. Built with Vue.js 3.0 and Firebase Realtime Database, it served as the experimental foundation for the Fintel project (V2).",
-        "tags": ["Vue.js", "Firebase", "JavaScript"]
-      },
-      "not_defteri": {
-        "title": "Interactive Notebook App",
-        "description": "Offers users a dynamic notebook experience. Developed using HTML, CSS, and Vue.js 3.0.",
-        "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
-      },
-      "fintel": {
-        "title": "Fintel - AI Financial Assistant",
-        "description": "A hybrid financial tool (LocalStorage + Firestore) initially prototyped with Gemini 3.0 using 'Vibecoding', then professionally engineered and refined into a complete SaaS product. Powered by the Gemini 2.5 Flash model, 'Nova AI' offers spending analysis, OCR receipt processing, and personalized savings strategies.",
-        "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Vibecoding"]
-      },
-      "gghub": {
-        "title": "GGHub - Gamer Social Platform (Beta)",
-        "description": "This Monorepo project, currently under active development, unites .NET 8 and Next.js 15 within a Clean Architecture framework. The backend ensures scalability via the Unit of Work pattern, while the frontend offers a modern experience using Radix UI and Compound Components. Live features include messaging, profiles, and list management, with advanced admin panel integration ongoing.",
-        "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL", "SignalR"]
-      }
-    }
-  },
-  "contact_page": {
-    "main_title": "Get In Touch",
-    "subtitle": "Have a project idea or just want to say hello? You can reach me through the channels below.",
-    "direct_contact_title": "Contact Me Directly",
-    "location_title": "Location",
-    "location_popup": "I live in Izmir. <br /> Let's grab a coffee!",
-    "form_title": "Or Fill Out The Form",
-    "form_placeholder_name": "Your Name",
-    "form_placeholder_email": "Your Email Address",
-    "form_placeholder_message": "Your Message...",
-    "form_button_submit": "Send Message",
-    "form_button_submitting": "Sending...",
-    "form_status_success": "Your message has been sent successfully!",
-    "form_status_error": "An error occurred: ",
-    "social_title": "My Social Media Accounts",
-    "direct_links": {
-      "email": { "label": "Email" },
-      "whatsapp": { "label": "WhatsApp" }
+    "seo": {
+        "home_title": "Ahmet Demiroğlu | Full-Stack Web Developer",
+        "home_description": "Izmir-based Full-Stack Developer creating user-focused modern web experiences. React, Vue.js, .NET Core, and more.",
+        "about_title": "About Me | Ahmet Demiroğlu",
+        "about_description": "Learn more about my background, my goals, and my journey into the world of web development.",
+        "skills_title": "My Skills | Ahmet Demiroğlu",
+        "skills_description": "Explore my skills in front-end and back-end technologies: React, Vue, C#, .NET, SQL, and more.",
+        "projects_title": "My Projects | Ahmet Demiroğlu",
+        "projects_description": "Take a look at the web applications and projects I have developed.",
+        "contact_title": "Contact | Ahmet Demiroğlu",
+        "contact_description": "Have a project idea or just want to say hello? Get in touch with me.",
+        "404_title": "Page Not Found | Ahmet Demiroğlu",
+        "404_description": "The page you are looking for does not exist. Please check the address or return to the homepage."
     },
-    "social_links": {
-      "github": { "label": "GitHub" },
-      "linkedin": { "label": "LinkedIn" },
-      "instagram": { "label": "Instagram" },
-      "twitter": { "label": "X (Twitter)" }
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "home": {
+        "greeting": "Ahmet Demiroğlu",
+        "description": "I create modern web experiences that are both aesthetic and functional by combining code and design.",
+        "button": "Explore My Projects",
+        "typing_sequences": ["Full-Stack Developer", 2000, "UI/UX Enthusiast", 2000, "User-Focused Solutions", 2000],
+        "career_section_background": "CAREER",
+        "career_section_title": "An Interdisciplinary Approach",
+        "career_section_p1": "My career is built on a 9-year foundation in Urban Planning and Real Estate Appraisal. The skills I acquired in analytical thinking, detailed reporting, and data interpretation during this time are the cornerstones of my software development approach today.",
+        "career_section_p2": "As I transform my passion for technology into a professional career, I carry this discipline from my past into my code. For me, software development isn't just about creating functional tools; it's about producing user-centric, clean, and sustainable solutions. My commitment to detail is my strongest guide in this new field."
+    },
+    "about": {
+        "background_text": "ABOUT ME",
+        "title": "My Story",
+        "timeline_1_title": "Gazi University",
+        "timeline_1_subtitle": "City and Regional Planning",
+        "timeline_2_title": "Real Estate Appraisal",
+        "timeline_2_subtitle": "9 years of experience",
+        "timeline_3_title": "Neos Software Academy",
+        "timeline_3_subtitle": "Full-Stack Training",
+        "timeline_4_title": "SedBim Bilişim",
+        "timeline_4_subtitle": "Front-end Developer",
+        "timeline_5_title": "GGHub",
+        "timeline_5_subtitle": "Gaming Social Platform",
+        "p1": "I am Ahmet Demiroğlu. I am an Urban Planner, a graduate of Gazi University, Faculty of Architecture, Department of City and Regional Planning, and a Real Estate Appraiser with nine years of field and inspection experience. During this time, I improved my planning and analysis skills and gained experience in paying attention to detail and reporting. I took my professional experience one step further by obtaining the Certified Appraiser license.",
+        "p2": "I have been deeply curious about computers and technology since my childhood. During my university years, I had the opportunity to improve myself in the drawing and design programs that I actively used for my department. However, my strong interest in software development eventually led me to make a significant shift in my career. I decided to leave the real estate sector, where I had gained substantial experience, and focus on developing myself in the field of full-stack web development.",
+        "p3": "In line with this goal, I successfully completed the Software Specialization Training at Neos Software Academy. This training covered programming languages such as HTML, CSS, JavaScript, and C#, as well as popular libraries and frameworks like Bootstrap, React.js, and .NET. Thanks to the 7-week intensive internship program I completed in July 2023, I reinforced my theoretical knowledge with practical applications and successfully launched a fully functional rent a car website project from start to finish. In this project, I took an active role in both front-end and back-end development, gaining experience in all layers of web applications. During my internship, I also took part in the process of preparing a domestic and open-source CSS and JS library within Neos Software.",
+        "p4": "In May 2025, I began working as a Front-end Developer at SedBim Bilişim. In this role, I actively participate in the development and maintenance of existing corporate projects using Vue.js, while also enhancing my skills in the React ecosystem through new projects. When needed, I also support C#-based back-end services with .NET Core, making sure to maintain my full-stack perspective.",
+        "p5": "While deepening my front-end expertise in my current role, I am also strengthening my knowledge of React (both through projects at work and personal projects I develop in my spare time). My problem-solving mindset, combined with the analytical perspective from my previous career, enables me to adapt quickly to new technologies. I aim to continuously improve myself by closely following industry innovations and adding value to the projects I work on."
+    },
+    "skills_page": {
+        "main_title": "My Skills",
+        "subtitle": "The core technologies and tools I've acquired throughout my career and used in my projects.",
+        "skill_categories": [
+            {
+                "category": "Technical Skills",
+                "subCategories": [
+                    {
+                        "title": "Front-End",
+                        "skills": [
+                            { "name": "HTML", "description": "Semantic, accessible, and SEO-friendly HTML5 structures." },
+                            { "name": "CSS", "description": "Experience in modern, responsive designs, animations, and CSS library development." },
+                            { "name": "JavaScript", "description": "ES6+ syntax, asynchronous programming, and DOM proficiency." },
+                            { "name": "TypeScript", "description": "Writing more robust and scalable code with static typing." },
+                            { "name": "React", "description": "Component-based architecture and fundamental hooks." },
+                            { "name": "Vue.js", "description": "Comprehensive project experience, state management (Pinia), and routing." },
+                            { "name": "jQuery", "description": "Basic level of DOM manipulation and event management." },
+                            { "name": "Bootstrap", "description": "Effective use for developing fast and responsive interfaces." },
+                            { "name": "Tailwind CSS", "description": "Customizable designs with a utility-first approach." }
+                        ]
+                    },
+                    {
+                        "title": "Back-End",
+                        "skills": [
+                            { "name": "C#", "description": "Intermediate level of OOP principles and language proficiency." },
+                            { "name": ".NET Core", "description": "Internship project experience in API development and framework usage." },
+                            { "name": "Entity Framework", "description": "Basic level database operations with an ORM tool." },
+                            { "name": "SQL Server", "description": "Database design, querying, and basic optimization." }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "Other Tools and Technologies",
+                "skills": {
+                    "github": { "name": "GitHub", "description": "Version control, branch management, and teamwork." },
+                    "photoshop": { "name": "Photoshop", "description": "Image editing and designing UI elements." },
+                    "autocad": { "name": "AutoCAD", "description": "Expertise in architectural and technical drawings." },
+                    "netcad": { "name": "Netcad", "description": "Effective use in urban planning and mapping projects." },
+                    "gis_systems": { "name": "GIS Systems", "description": "Spatial analysis and geographic data visualization." }
+                }
+            },
+            {
+                "category": "Soft Skills",
+                "skills": {
+                    "real_estate_appraisal": { "name": "Real Estate Appraisal", "description": "9 years of field and inspection experience, CMB Licensed Certified Appraiser." },
+                    "reporting_analysis": { "name": "Reporting and Analysis", "description": "Interpreting data and preparing detailed reports." },
+                    "problem_solving": { "name": "Problem Solving", "description": "Analyzing complex problems and producing pragmatic solutions." },
+                    "teamwork": { "name": "Teamwork", "description": "Harmonious work within a team and effective communication." },
+                    "time_management": { "name": "Time Management", "description": "Planning, prioritizing, and completing tasks on time." }
+                }
+            }
+        ]
+    },
+    "projects_page": {
+        "main_title": "My Projects",
+        "subtitle": "Works I have developed throughout my journey, showcasing my skills.",
+        "featured_badge": "FEATURED PROJECT",
+        "view_live_button": "View Live",
+        "view_github_button": "GitHub",
+        "view_github_button_long": "View on GitHub",
+        "badges": {
+            "live": "Live",
+            "beta": "Beta",
+            "apk": "APK",
+            "new": "New"
+        },
+        "download_apk_button": "Download APK",
+        "projects": {
+            "rent_a_car": {
+                "title": "Rent A Car Full-Stack Platform",
+                "description": "A scalable car rental platform built on modern .NET 8 and ASP.NET Core MVC architecture. Features relational database management via Entity Framework Core, Role-Based Access Control (RBAC) using Identity, and secure CRUD operations. Developed during the Neos Software Academy internship, strictly adhering to clean code principles.",
+                "tags": ["ASP.NET Core MVC", ".NET 8", "EF Core", "Identity", "SQL Server"]
+            },
+            "purescan": {
+                "title": "PureScan - Cosmetic Ingredient Analyzer",
+                "description": "AI-powered cosmetic product ingredient analyzer. Analyzes ingredients via camera OCR, barcode scanning (OpenBeautyFacts DB), or manual text input. Features risk assessment (green/yellow/red) powered by Gemini 2.5 Flash, skin type compatibility scoring, TTS audio summaries, and an AI chat assistant. Designed as an Android application and converted using Capacitor. Planned for release on Google Play Store soon.",
+                "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS"]
+            },
+            "butce_360": {
+                "title": "Budget360° Expense Tracker",
+                "description": "First prototype developed for credit card cycle tracking and expense management. Built with Vue.js 3.0 and Firebase Realtime Database, it served as the experimental foundation for the Fintel project (V2).",
+                "tags": ["Vue.js", "Firebase", "JavaScript"]
+            },
+            "not_defteri": {
+                "title": "Interactive Notebook App",
+                "description": "Offers users a dynamic notebook experience. Developed using HTML, CSS, and Vue.js 3.0.",
+                "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
+            },
+            "fintel": {
+                "title": "Fintel - AI Financial Assistant",
+                "description": "A hybrid financial tool (LocalStorage + Firestore) initially prototyped with Gemini 3.0 using 'Vibecoding', then professionally engineered and refined into a complete SaaS product. Powered by the Gemini 2.5 Flash model, 'Nova AI' offers spending analysis, OCR receipt processing, and personalized savings strategies. Converted also to an Android application using Capacitor, with a planned release on Google Play Store soon.",
+                "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Android", "Capacitor"]
+            },
+            "gghub": {
+                "title": "GGHub - Gamer Social Platform (Beta)",
+                "description": "This Monorepo project, currently under active development, unites .NET 8 and Next.js 15 within a Clean Architecture framework. The backend ensures scalability via the Unit of Work pattern, while the frontend offers a modern experience using Radix UI and Compound Components. Live features include messaging, profiles, and list management, with advanced admin panel integration ongoing.",
+                "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL", "SignalR"]
+            }
+        }
+    },
+    "contact_page": {
+        "main_title": "Get In Touch",
+        "subtitle": "Have a project idea or just want to say hello? You can reach me through the channels below.",
+        "direct_contact_title": "Contact Me Directly",
+        "location_title": "Location",
+        "location_popup": "I live in Izmir. <br /> Let's grab a coffee!",
+        "form_title": "Or Fill Out The Form",
+        "form_placeholder_name": "Your Name",
+        "form_placeholder_email": "Your Email Address",
+        "form_placeholder_message": "Your Message...",
+        "form_button_submit": "Send Message",
+        "form_button_submitting": "Sending...",
+        "form_status_success": "Your message has been sent successfully!",
+        "form_status_error": "An error occurred: ",
+        "social_title": "My Social Media Accounts",
+        "direct_links": {
+            "email": { "label": "Email" },
+            "whatsapp": { "label": "WhatsApp" }
+        },
+        "social_links": {
+            "github": { "label": "GitHub" },
+            "linkedin": { "label": "LinkedIn" },
+            "instagram": { "label": "Instagram" },
+            "twitter": { "label": "X (Twitter)" }
+        }
+    },
+    "404_page": {
+        "title": "Page Not Found",
+        "subtitle": "The page you are looking for has either been removed or never existed.",
+        "home_link": "Return to Homepage",
+        "error_code": "Error Code: 404"
     }
-  },
-  "404_page": {
-    "title": "Page Not Found",
-    "subtitle": "The page you are looking for has either been removed or never existed.",
-    "home_link": "Return to Homepage",
-    "error_code": "Error Code: 404"
-  }
 }

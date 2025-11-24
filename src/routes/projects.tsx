@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaAndroid } from "react-icons/fa";
 import { BsPinAngleFill } from "react-icons/bs";
 import { projectsData, type ProjectBase } from "../data/projects";
 import { AnimatedGridBackground } from "../components/GridBackground";
@@ -17,6 +17,14 @@ interface ProjectTranslation {
 type FullProject = ProjectBase & ProjectTranslation;
 
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } };
+
+const badgeConfig: Record<string, { bg: string; text: string; dot: string }> = {
+    live: { bg: "bg-emerald-100 dark:bg-emerald-900/50", text: "text-emerald-700 dark:text-emerald-300", dot: "bg-emerald-500" },
+    beta: { bg: "bg-amber-100 dark:bg-amber-900/50", text: "text-amber-700 dark:text-amber-300", dot: "bg-amber-500" },
+    apk: { bg: "bg-violet-100 dark:bg-violet-900/50", text: "text-violet-700 dark:text-violet-300", dot: "bg-violet-500" },
+    new: { bg: "bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/50 dark:to-pink-900/50", text: "text-purple-700 dark:text-purple-300", dot: "bg-purple-500" },
+};
+
 const itemVariants = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1 } };
 
 export const Route = createFileRoute("/projects")({
@@ -26,7 +34,7 @@ export const Route = createFileRoute("/projects")({
 function ProjectsPage() {
     const { t, i18n } = useTranslation();
 
-const translatedProjects = (t('projects_page.projects', { returnObjects: true, defaultValue: {} }) || {}) as Record<string, ProjectTranslation>;
+    const translatedProjects = (t('projects_page.projects', { returnObjects: true, defaultValue: {} }) || {}) as Record<string, ProjectTranslation>;
     const fullProjectsData: FullProject[] = projectsData.map((projectBase) => ({
         ...projectBase,
         ...(translatedProjects[projectBase.id] || {}),
@@ -73,8 +81,24 @@ function ProjectCard({ project, t }: { project: FullProject; t: TFunction }) {
             </div>
             <div className="p-6 flex flex-col flex-grow dark:bg-slate-800/50">
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{project.title}</h3>
+                {project.badges && project.badges.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 mb-0 mt-1">
+                        {project.badges.map((badge) => (
+                            <span
+                                key={badge}
+                                className={`${badgeConfig[badge].bg} ${badgeConfig[badge].text} text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded inline-flex items-center gap-1`}
+                            >
+                                <div className={`relative flex h-2 w-2`}>
+                                    <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${badgeConfig[badge].dot}`}></span>
+                                    <span className={`relative inline-flex rounded-full h-2 w-2 ${badgeConfig[badge].dot}`}></span>
+                                </div>
+                                {t(`projects_page.badges.${badge}`)}
+                            </span>
+                        ))}
+                    </div>
+                )}
                 <div className="flex flex-wrap gap-2 my-4">
-                    {project.tags.map((tag) => (
+                    {(project.tags || []).map((tag) => (
                         <span key={tag} className="bg-sky-100 text-sky-800 dark:bg-sky-900/50 dark:text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">
                             {tag}
                         </span>
@@ -102,9 +126,18 @@ function ProjectCard({ project, t }: { project: FullProject; t: TFunction }) {
                             <FaGithub /> {t("projects_page.view_github_button")}
                         </a>
                     )}
+                    {project.apkLink && (
+                        <a
+                            href={project.apkLink}
+                            download
+                            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-violet-600 rounded-md hover:bg-violet-700 transition"
+                        >
+                            <FaAndroid /> {t("projects_page.download_apk_button")}
+                        </a>
+                    )}
                 </div>
             </div>
-        </motion.div>
+        </motion.div >
     );
 }
 
@@ -125,9 +158,27 @@ function PinnedProjectCard({ project, t }: { project: FullProject; t: TFunction 
                 </div>
                 <div className="md:w-3/5 flex flex-col justify-center">
                     <span className="text-sm font-bold text-sky-600 dark:text-sky-400">{t("projects_page.featured_badge")}</span>
-                    <h2 className="text-4xl font-bold text-slate-900 dark:text-white mt-2">{project.title}</h2>
+                    <div className="flex items-start gap-3 flex-wrap mt-2">
+                        <h2 className="text-4xl font-bold text-slate-900 dark:text-white">{project.title}</h2>
+                        {project.badges && project.badges.length > 0 && (
+                            <div className="flex flex-wrap gap-1.5 mt-2">
+                                {project.badges.map((badge) => (
+                                    <span
+                                        key={badge}
+                                        className={`${badgeConfig[badge].bg} ${badgeConfig[badge].text} text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded inline-flex items-center gap-1`}
+                                    >
+                                        <span className="relative flex h-2 w-2">
+                                            <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${badgeConfig[badge].dot}`}></span>
+                                            <span className={`relative inline-flex rounded-full h-2 w-2 ${badgeConfig[badge].dot}`}></span>
+                                        </span>
+                                        {t(`projects_page.badges.${badge}`)}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                     <div className="flex flex-wrap gap-2 my-4">
-                        {project.tags.map((tag) => (
+                        {(project.tags || []).map((tag) => (
                             <span key={tag} className="bg-sky-100 text-sky-800 dark:bg-sky-900/50 dark:text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">
                                 {tag}
                             </span>
