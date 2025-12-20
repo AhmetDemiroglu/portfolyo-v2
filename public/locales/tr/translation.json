@@ -118,6 +118,7 @@
             "new": "Yeni"
         },
         "download_apk_button": "APK İndir",
+        "view_google_play_button": "Google Play'den İndir",
         "projects": {
             "rent_a_car": {
                 "title": "Rent A Car Full-Stack Platform",
@@ -141,13 +142,13 @@
             },
             "fintel": {
                 "title": "Fintel - AI Finansal Asistan",
-                "description": "Gemini 3.0 ve 'Vibecoding' yaklaşımıyla iskeleti oluşturulan, ardından kapsamlı mimari geliştirmelerle profesyonel bir SaaS ürününe dönüştürülen hibrit (LocalStorage + Firestore) finans aracı. Gücünü Gemini 2.5 Flash modelinden alan 'Nova AI' entegrasyonu ile harcama analizi, PDF/Fiş işleme (OCR) ve akıllı tasarruf stratejileri sunar. Capacitor ile Android uygulamasına da dönüştürülmüş olup, yakın zamanda Google Play Store'da yayınlanması planlanmaktadır.",
+                "description": "Gemini 3.0 ve 'Vibecoding' yaklaşımıyla iskeleti oluşturulan, ardından kapsamlı mimari geliştirmelerle profesyonel bir SaaS ürününe dönüştürülen hibrit (LocalStorage + Firestore) finans aracı. Gücünü Gemini 2.5 Flash modelinden alan 'Nova AI' entegrasyonu ile harcama analizi, PDF/Fiş işleme (OCR) ve akıllı tasarruf stratejileri sunar. Capacitor ile Android uygulamasına dönüştürülmüştür ve şu anda Google Play Store üzerinden indirilebilir.",
                 "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Android", "Capacitor"]
             },
             "gghub": {
                 "title": "GGHub - Oyuncu Sosyal Platformu (Beta)",
-                "description": "Aktif geliştirme sürecindeki bu Monorepo projesi, .NET 8 ve Next.js 15 teknolojilerini Clean Architecture çatısı altında buluşturuyor. Backend tarafı Unit of Work deseniyle ölçeklenebilirken, arayüz Radix UI ve Compound Components ile modern bir deneyim sunuyor. Mesajlaşma, profil ve liste yönetiminin canlı olduğu sistemde, gelişmiş admin paneli entegrasyonu sürmektedir.",
-                "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL"]
+                "description": "Aktif geliştirme sürecindeki bu Monorepo projesi, .NET 8 ve Next.js 15 teknolojilerini Clean Architecture çatısı altında buluşturuyor. Versiyon 1 (V1) olarak tamamen kullanılabilir durumda olan platform; listeleme, oyun arama, detaylı inceleme, ana sayfa akışı, gamification (rozet/seviye), leaderboard ve mesajlaşma (polling) gibi özellikleri eksiksiz sunmaktadır. Admin paneli ve kullanıcı profil algoritmalarının da tamamlandığı sistemde, şu an V2 çalışmaları kapsamında Steam, Epic ve Google OAuth entegrasyonları ile gerçek zamanlı iletişim için SignalR altyapısı üzerine çalışılmaktadır.",
+                "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL", "SignalR"]
             }
         }
     },

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaAndroid } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaAndroid, FaGooglePlay } from "react-icons/fa";
 import { BsPinAngleFill } from "react-icons/bs";
 import { projectsData, type ProjectBase } from "../data/projects";
 import { AnimatedGridBackground } from "../components/GridBackground";
@@ -58,7 +58,7 @@ function ProjectsPage() {
 
                 {pinnedProject && <PinnedProjectCard project={pinnedProject} t={t} />}
 
-                <motion.div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8" variants={containerVariants} initial="hidden" animate="visible">
+                <motion.div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8" variants={containerVariants} initial="hidden" animate="visible">
                     {otherProjects.map((project) => (
                         <ProjectCard key={project.id} project={project} t={t} />
                     ))}
@@ -133,6 +133,16 @@ function ProjectCard({ project, t }: { project: FullProject; t: TFunction }) {
                             className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-violet-600 rounded-md hover:bg-violet-700 transition"
                         >
                             <FaAndroid /> {t("projects_page.download_apk_button")}
+                        </a>
+                    )}
+                    {project.googlePlayLink && (
+                        <a
+                            href={project.googlePlayLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700 transition"
+                        >
+                            <FaGooglePlay /> {t("projects_page.view_google_play_button")}
                         </a>
                     )}
                 </div>

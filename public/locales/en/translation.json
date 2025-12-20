@@ -117,6 +117,7 @@
             "new": "New"
         },
         "download_apk_button": "Download APK",
+        "view_google_play_button": "Get it on Google Play",
         "projects": {
             "rent_a_car": {
                 "title": "Rent A Car Full-Stack Platform",
@@ -140,12 +141,12 @@
             },
             "fintel": {
                 "title": "Fintel - AI Financial Assistant",
-                "description": "A hybrid financial tool (LocalStorage + Firestore) initially prototyped with Gemini 3.0 using 'Vibecoding', then professionally engineered and refined into a complete SaaS product. Powered by the Gemini 2.5 Flash model, 'Nova AI' offers spending analysis, OCR receipt processing, and personalized savings strategies. Converted also to an Android application using Capacitor, with a planned release on Google Play Store soon.",
+                "description": "A hybrid financial tool (LocalStorage + Firestore) initially prototyped with Gemini 3.0 using 'Vibecoding', then professionally engineered and refined into a complete SaaS product. Powered by the Gemini 2.5 Flash model, 'Nova AI' offers spending analysis, OCR receipt processing, and personalized savings strategies. Converted also to an Android application using Capacitor, and is now available for download on the Google Play Store.",
                 "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Android", "Capacitor"]
             },
             "gghub": {
                 "title": "GGHub - Gamer Social Platform (Beta)",
-                "description": "This Monorepo project, currently under active development, unites .NET 8 and Next.js 15 within a Clean Architecture framework. The backend ensures scalability via the Unit of Work pattern, while the frontend offers a modern experience using Radix UI and Compound Components. Live features include messaging, profiles, and list management, with advanced admin panel integration ongoing.",
+                "description": "This Monorepo project, currently under active development, unites .NET 8 and Next.js 15 within a Clean Architecture framework. Fully usable as Version 1 (V1), the platform offers comprehensive features including listing, game search, detailed views, home feed, gamification (badges/levels), leaderboards, and messaging (polling). With the admin panel and user profile algorithms also complete, current work focusses on Steam, Epic, and Google OAuth integrations and implementing SignalR for real-time communication as part of the V2 roadmap.",
                 "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL", "SignalR"]
             }
         }

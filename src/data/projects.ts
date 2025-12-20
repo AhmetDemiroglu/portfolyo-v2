@@ -4,6 +4,7 @@ export interface ProjectBase {
     liveLink: string | null;
     githubLink: string;
     apkLink?: string | null;
+    googlePlayLink?: string | null;
     badges?: ("live" | "beta" | "apk" | "new")[];
     pinned: boolean;
 }
@@ -22,8 +23,8 @@ export const projectsData: ProjectBase[] = [
         image: "fintel-placeholder.svg",
         liveLink: "https://expense-tracker-v2-f5a0b.web.app/",
         githubLink: "https://github.com/AhmetDemiroglu/expense-tracker-v2",
-        apkLink: "/fintel.apk",
-        badges: ["live", "apk", "new"],
+        googlePlayLink: "https://play.google.com/store/apps/details?id=com.fintel.app",
+        badges: ["live", "new"],
         pinned: false,
     },
     {

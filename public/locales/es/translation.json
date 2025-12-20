@@ -117,6 +117,7 @@
             "new": "Nuevo"
         },
         "download_apk_button": "Descargar APK",
+        "view_google_play_button": "Descargar en Google Play",
         "projects": {
             "rent_a_car": {
                 "title": "Plataforma Full-Stack de Rent A Car",
@@ -140,12 +141,12 @@
             },
             "fintel": {
                 "title": "Fintel - Asistente Financiero con IA",
-                "description": "Una herramienta financiera híbrida (LocalStorage + Firestore) prototipada inicialmente con Gemini 3.0 y 'Vibecoding', luego refinada profesionalmente hasta convertirse en un producto SaaS completo. Impulsada por Gemini 2.5 Flash, 'Nova AI' ofrece análisis de gastos, procesamiento de recibos (OCR) y estrategias de ahorro personalizadas. Convertido a aplicación Android mediante Capacitor, con publicación planificada en Google Play Store próximamente.",
+                "description": "Una herramienta financiera híbrida (LocalStorage + Firestore) prototipada inicialmente con Gemini 3.0 y 'Vibecoding', luego refinada profesionalmente hasta convertirse en un producto SaaS completo. Impulsada por Gemini 2.5 Flash, 'Nova AI' ofrece análisis de gastos, procesamiento de recibos (OCR) y estrategias de ahorro personalizadas. Convertido a aplicación Android mediante Capacitor, y ahora está disponible para su descarga en Google Play Store.",
                 "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Android", "Capacitor"]
             },
             "gghub": {
                 "title": "GGHub - Plataforma Social para Gamers (Beta)",
-                "description": "Este proyecto Monorepo, en desarrollo activo, une .NET 8 y Next.js 15 bajo un marco de Clean Architecture. El backend asegura escalabilidad mediante el patrón Unit of Work, mientras que el frontend ofrece una experiencia moderna usando Radix UI y Componentes Compuestos. Funciones como mensajería, perfiles y gestión de listas están activas, con la integración del panel de administración en curso.",
+                "description": "Este proyecto Monorepo, en desarrollo activo, une .NET 8 y Next.js 15 bajo un marco de Clean Architecture. Totalmente utilizable como Versión 1 (V1), la plataforma ofrece características completas que incluyen listados, búsqueda de juegos, vistas detalladas, feed de inicio, gamificación (insignias/niveles), tablas de clasificación y mensajería (polling). Con el panel de administración y los algoritmos de perfil de usuario también completados, el trabajo actual se centra en las integraciones OAuth de Steam, Epic y Google y en la implementación de SignalR para la comunicación en tiempo real como parte de la hoja de ruta de la V2.",
                 "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL", "SignalR"]
             }
         }

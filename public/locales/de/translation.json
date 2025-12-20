@@ -140,12 +140,12 @@
             },
             "fintel": {
                 "title": "Fintel - KI Finanzassistent",
-                "description": "Ein hybrides Finanztool (LocalStorage + Firestore), das ursprünglich mit Gemini 3.0 und 'Vibecoding' prototypisiert und anschließend professionell zu einem vollwertigen SaaS-Produkt weiterentwickelt wurde. Angetrieben von Gemini 2.5 Flash bietet 'Nova AI' Ausgabenanalysen, OCR-Belegverarbeitung und personalisierte Sparstrategien. Mit Capacitor in eine Android-Anwendung konvertiert, mit geplanter Veröffentlichung im Google Play Store in Kürze.",
+                "description": "Ein hybrides Finanztool (LocalStorage + Firestore), das ursprünglich mit Gemini 3.0 und 'Vibecoding' prototypisiert und anschließend professionell zu einem vollwertigen SaaS-Produkt weiterentwickelt wurde. Angetrieben von Gemini 2.5 Flash bietet 'Nova AI' Ausgabenanalysen, OCR-Belegverarbeitung und personalisierte Sparstrategien. Mit Capacitor in eine Android-Anwendung konvertiert und ist jetzt im Google Play Store zum Download verfügbar.",
                 "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Android", "Capacitor"]
             },
             "gghub": {
                 "title": "GGHub - Gamer Sozialplattform (Beta)",
-                "description": "Dieses Monorepo-Projekt befindet sich in aktiver Entwicklung und vereint .NET 8 und Next.js 15 unter einer Clean Architecture. Das Backend gewährleistet Skalierbarkeit durch das Unit-of-Work-Muster, während das Frontend mit Radix UI und Compound Components ein modernes Erlebnis bietet. Messaging, Profile und Listenverwaltung sind live, die Integration des Admin-Panels läuft.",
+                "description": "Dieses Monorepo-Projekt befindet sich in aktiver Entwicklung und vereint .NET 8 und Next.js 15 unter einer Clean Architecture. Die Plattform ist als Version 1 (V1) vollständig nutzbar und bietet umfassende Funktionen wie Listen, Spielsuche, Detailansichten, Home-Feed, Gamification (Abzeichen/Level), Bestenlisten und Messaging (Polling). Nachdem auch das Admin-Panel und die Benutzerprofil-Algorithmen fertiggestellt sind, konzentriert sich die aktuelle Arbeit im Rahmen der V2-Roadmap auf Steam-, Epic- und Google-OAuth-Integrationen sowie die Implementierung von SignalR für Echtzeitkommunikation.",
                 "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL", "SignalR"]
             }
         }
