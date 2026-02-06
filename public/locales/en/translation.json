@@ -125,9 +125,9 @@
                 "tags": ["ASP.NET Core MVC", ".NET 8", "EF Core", "Identity", "SQL Server"]
             },
             "purescan": {
-                "title": "PureScan - Cosmetic Ingredient Analyzer",
-                "description": "AI-powered cosmetic product ingredient analyzer. Analyzes ingredients via camera OCR, barcode scanning (OpenBeautyFacts DB), or manual text input. Features risk assessment (green/yellow/red) powered by Gemini 2.5 Flash, skin type compatibility scoring, TTS audio summaries, and an AI chat assistant. Designed as an Android application and converted using Capacitor. Planned for release on Google Play Store soon.",
-                "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS"]
+                "title": "PureScan - Cosmetic Analyzer",
+                "description": "AI-powered cosmetic product ingredient analyzer. Analyzes ingredients via camera OCR, barcode scanning (OpenBeautyFacts DB), or manual text input. Features risk assessment powered by Gemini 2.5 Flash, skin type compatibility scoring, TTS audio summaries, and an AI chat assistant. Virtual Cabinet feature allows adding analyzed items to inventory and checking cross-product compatibility using conflict engine technology. Supports a freemium model with RevenueCat-powered Pro subscriptions and AdMob integration (banner/reward). Converted to an Android application using Capacitor, available for download on Google Play Store.",
+                "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS", "RevenueCat", "AddMob"]
             },
             "butce_360": {
                 "title": "Budget360° Expense Tracker",
@@ -141,8 +141,8 @@
             },
             "fintel": {
                 "title": "Fintel - AI Financial Assistant",
-                "description": "A hybrid financial tool (LocalStorage + Firestore) initially prototyped with Gemini 3.0 using 'Vibecoding', then professionally engineered and refined into a complete SaaS product. Powered by the Gemini 2.5 Flash model, 'Nova AI' offers spending analysis, OCR receipt processing, and personalized savings strategies. Converted also to an Android application using Capacitor, and is now available for download on the Google Play Store.",
-                "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Android", "Capacitor"]
+                "description": "Initially prototyped with Gemini 3.0 using a 'Vibecoding' approach, then professionally engineered and refined into a complete SaaS product. A hybrid financial tool (LocalStorage + Firestore) featuring 'Nova AI' integration powered by Groq infrastructure and Llama 3.3 70B model, combined with GLM-OCR technology for high-accuracy PDF and receipt processing, offering expense analysis and personalized savings strategies. Converted to an Android application using Capacitor, available for download on Google Play Store.",
+                "tags": ["React", "TypeScript", "Llama 3.3 70B", "GLM-OCR", "Firebase", "Capacitor"]
             },
             "gghub": {
                 "title": "GGHub - Gamer Social Platform (Beta)",

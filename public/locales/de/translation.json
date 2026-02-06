@@ -125,8 +125,8 @@
             },
             "purescan": {
                 "title": "PureScan - Kosmetik-Inhaltsstoff-Analysator",
-                "description": "KI-gestützter Analysator für kosmetische Produktinhaltsstoffe. Analysiert Inhaltsstoffe per Kamera-OCR, Barcode-Scan (OpenBeautyFacts DB) oder manuelle Texteingabe. Bietet Risikobewertung (grün/gelb/rot) mit Gemini 2.5 Flash, Hauttyp-Kompatibilitätsbewertung, TTS-Audio-Zusammenfassungen und einen KI-Chat-Assistenten. Als Android-Anwendung konzipiert und mit Capacitor konvertiert. Die Veröffentlichung im Google Play Store ist in Kürze geplant.",
-                "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS"]
+                "description": "KI-gestützter Analysator für kosmetische Produktinhaltsstoffe. Analysiert Inhaltsstoffe per Kamera-OCR, Barcode-Scan (OpenBeautyFacts DB) oder manuelle Texteingabe. Bietet Risikobewertung mit Gemini 2.5 Flash, Hauttyp-Kompatibilitätsbewertung, TTS-Audio-Zusammenfassungen und einen KI-Chat-Assistenten. Die Virtual Cabinet-Funktion ermöglicht das Hinzufügen analysierter Inhalte zum Inventar und die Überprüfung der Kompatibilität zwischen Produkten mithilfe von Conflict-Engine-Technologie. Unterstützt Freemium-Modell mit Pro-Abonnements über RevenueCat und AdMob-Integration (Banner/Reward). Mit Capacitor in eine Android-Anwendung konvertiert und im Google Play Store zum Download verfügbar.",
+                "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS", "RevenueCat", "AddMob"]
             },
             "butce_360": {
                 "title": "Budget360° Ausgaben-Tracker",
@@ -141,7 +141,7 @@
             "fintel": {
                 "title": "Fintel - KI Finanzassistent",
                 "description": "Ein hybrides Finanztool (LocalStorage + Firestore), das ursprünglich mit Gemini 3.0 und 'Vibecoding' prototypisiert und anschließend professionell zu einem vollwertigen SaaS-Produkt weiterentwickelt wurde. Angetrieben von Gemini 2.5 Flash bietet 'Nova AI' Ausgabenanalysen, OCR-Belegverarbeitung und personalisierte Sparstrategien. Mit Capacitor in eine Android-Anwendung konvertiert und ist jetzt im Google Play Store zum Download verfügbar.",
-                "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Android", "Capacitor"]
+                "tags": ["React", "TypeScript", "Llama 3.3 70B", "GLM-OCR", "Firebase", "Capacitor"]
             },
             "gghub": {
                 "title": "GGHub - Gamer Sozialplattform (Beta)",

@@ -132,8 +132,8 @@
             },
             "purescan": {
                 "title": "PureScan - Kozmetik İçerik Analizi",
-                "description": "Yapay zeka destekli kozmetik ürün içerik analizörü. Kamera ile OCR, barkod tarama (OpenBeautyFacts DB) veya manuel metin girişi ile içerikleri analiz eder. Gemini 2.5 Flash ile risk değerlendirmesi (yeşil/sarı/kırmızı), cilt tipine göre uyumluluk skoru, TTS ile sesli özet ve AI chat asistanı sunar. Android uygulaması olarak planlanmış ve Capacitor ile dönüştürülmüştür. Yakın zamanda Google Play Store'da yayınlanması planlanmaktadır.",
-                "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS"]
+                "description": "Yapay zeka destekli kozmetik ürün içerik analizörü. Kamera ile OCR, barkod tarama (OpenBeautyFacts DB) veya manuel metin girişi ile içerikleri analiz eder. Gemini 2.5 Flash ile risk değerlendirmesi, cilt tipine göre uyumluluk skoru, TTS ile sesli özet ve AI chat asistanı sunar. Sanal Dolap özelliği ile analiz edilen içerikleri envantere ekleme ve conflict engine teknolojisiyle ürünler arası uyumluluk kontrolü yapma imkanı tanır. RevenueCat altyapısıyla Pro abonelik ve AdMob entegrasyonu (banner/reward) ile freemium model desteği bulunur. Capacitor ile Android uygulamasına dönüştürülmüştür ve Google Play Store'dan indirilebilir.",
+                "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS", "RevenueCat", "AddMob"]
             },
             "not_defteri": {
                 "title": "İnteraktif NotDefteri Uygulaması",
@@ -141,9 +141,9 @@
                 "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
             },
             "fintel": {
-                "title": "Fintel - AI Finansal Asistan",
-                "description": "Gemini 3.0 ve 'Vibecoding' yaklaşımıyla iskeleti oluşturulan, ardından kapsamlı mimari geliştirmelerle profesyonel bir SaaS ürününe dönüştürülen hibrit (LocalStorage + Firestore) finans aracı. Gücünü Gemini 2.5 Flash modelinden alan 'Nova AI' entegrasyonu ile harcama analizi, PDF/Fiş işleme (OCR) ve akıllı tasarruf stratejileri sunar. Capacitor ile Android uygulamasına dönüştürülmüştür ve şu anda Google Play Store üzerinden indirilebilir.",
-                "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Android", "Capacitor"]
+                "title": "Fintel - AI Finans Asistanı",
+                "description": "Gemini 3.0 ve 'Vibecoding' yaklaşımıyla iskeleti oluşturulan, ardından kapsamlı mimari geliştirmelerle profesyonel bir SaaS ürününe dönüştürülen hibrit (LocalStorage + Firestore) finans aracı. Groq altyapısı ve Llama 3.3 70B modeliyle güçlendirilmiş 'Nova AI' entegrasyonuna sahip uygulama GLM-OCR teknolojisiyle birlikte yüksek doğrulukla PDF ve fiş işleme, harcama analizi ve kişiselleştirilmiş tasarruf stratejileri sunar. Capacitor ile Android uygulamasına dönüştürülmüştür ve Google Play Store'dan indirilebilir.",
+                "tags": ["React", "TypeScript", "Llama 3.3 70B", "GLM-OCR", "Firebase", "Capacitor"]
             },
             "gghub": {
                 "title": "GGHub - Oyuncu Sosyal Platformu (Beta)",

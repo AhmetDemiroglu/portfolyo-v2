@@ -105,7 +105,7 @@ function ProjectCard({ project, t }: { project: FullProject; t: TFunction }) {
                     ))}
                 </div>
                 <p className="text-slate-600 dark:text-slate-400 flex-grow">{project.description}</p>
-                <div className="mt-6 flex items-center gap-4">
+                <div className="mt-6 flex flex-wrap items-center gap-3">
                     {project.liveLink && (
                         <a
                             href={project.liveLink}
@@ -195,7 +195,7 @@ function PinnedProjectCard({ project, t }: { project: FullProject; t: TFunction 
                         ))}
                     </div>
                     <p className="text-slate-600 dark:text-slate-400 text-lg">{project.description}</p>
-                    <div className="mt-6 flex items-center gap-4">
+                    <div className="mt-6 flex flex-wrap items-center gap-3">
                         {project.liveLink && (
                             <a
                                 href={project.liveLink}

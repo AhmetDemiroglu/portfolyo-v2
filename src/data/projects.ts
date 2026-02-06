@@ -20,7 +20,7 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "fintel",
-        image: "fintel-placeholder.svg",
+        image: "fintel.png",
         liveLink: "https://expense-tracker-v2-f5a0b.web.app/",
         githubLink: "https://github.com/AhmetDemiroglu/expense-tracker-v2",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.fintel.app",
@@ -29,11 +29,11 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "purescan",
-        image: "purescan-placeholder.svg",
+        image: "purescan.png",
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/PureScan",
-        apkLink: "/purescan.apk",
-        badges: ["apk", "new"],
+        googlePlayLink: "https://play.google.com/store/apps/details?id=com.septimuslab.purescan",
+        badges: ["live", "new"],
         pinned: false,
     },
     {

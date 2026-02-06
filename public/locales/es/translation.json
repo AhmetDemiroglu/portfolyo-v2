@@ -126,8 +126,8 @@
             },
             "purescan": {
                 "title": "PureScan - Analizador de Ingredientes Cosméticos",
-                "description": "Analizador de ingredientes de productos cosméticos impulsado por IA. Analiza ingredientes mediante OCR de cámara, escaneo de código de barras (OpenBeautyFacts DB) o entrada de texto manual. Ofrece evaluación de riesgos (verde/amarillo/rojo) con Gemini 2.5 Flash, puntuación de compatibilidad según tipo de piel, resúmenes de audio TTS y un asistente de chat con IA. Diseñado como aplicación Android y convertido mediante Capacitor. Se planea su publicación en Google Play Store próximamente.",
-                "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS"]
+                "description": "Analizador de ingredientes de productos cosméticos impulsado por IA. Analiza ingredientes mediante OCR de cámara, escaneo de códigos de barras (OpenBeautyFacts DB) o entrada de texto manual. Ofrece evaluación de riesgos potenciada por Gemini 2.5 Flash, puntuación de compatibilidad según tipo de piel, resúmenes de audio TTS y un asistente de chat con IA. La función de Armario Virtual permite añadir contenidos analizados al inventario y verificar la compatibilidad entre productos usando tecnología de motor de conflictos. Soporta modelo freemium con suscripciones Pro mediante RevenueCat e integración AdMob (banner/recompensa). Convertido a aplicación Android usando Capacitor, disponible para descarga en Google Play Store.",
+                "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS", "RevenueCat", "AddMob"]
             },
             "butce_360": {
                 "title": "Presupuesto360° Seguimiento de Gastos",
@@ -141,8 +141,8 @@
             },
             "fintel": {
                 "title": "Fintel - Asistente Financiero con IA",
-                "description": "Una herramienta financiera híbrida (LocalStorage + Firestore) prototipada inicialmente con Gemini 3.0 y 'Vibecoding', luego refinada profesionalmente hasta convertirse en un producto SaaS completo. Impulsada por Gemini 2.5 Flash, 'Nova AI' ofrece análisis de gastos, procesamiento de recibos (OCR) y estrategias de ahorro personalizadas. Convertido a aplicación Android mediante Capacitor, y ahora está disponible para su descarga en Google Play Store.",
-                "tags": ["React", "TypeScript", "Gemini AI", "Firebase", "Android", "Capacitor"]
+                "description": "Ursprünglich mit Gemini 3.0 und einem 'Vibecoding'-Ansatz prototypisiert, anschließend professionell weiterentwickelt und zu einem vollständigen SaaS-Produkt verfeinert. Ein hybrides Finanztool (LocalStorage + Firestore) mit 'Nova AI'-Integration, angetrieben durch Groq-Infrastruktur und Llama 3.3 70B Modell, zusammen mit GLM-OCR-Technologie zur hochgenauen Verarbeitung von PDFs und Belegen, bietet Ausgabenanalysen und personalisierte Sparstrategien. Mit Capacitor in eine Android-Anwendung konvertiert und im Google Play Store zum Download verfügbar.",
+                "tags": ["React", "TypeScript", "Llama 3.3 70B", "GLM-OCR", "Firebase", "Capacitor"]
             },
             "gghub": {
                 "title": "GGHub - Plataforma Social para Gamers (Beta)",
