@@ -126,7 +126,7 @@
             },
             "purescan": {
                 "title": "PureScan - Cosmetic Analyzer",
-                "description": "AI-powered cosmetic product ingredient analyzer. Analyzes ingredients via camera OCR, barcode scanning (OpenBeautyFacts DB), or manual text input. Features risk assessment powered by Gemini 2.5 Flash, skin type compatibility scoring, TTS audio summaries, and an AI chat assistant. Virtual Cabinet feature allows adding analyzed items to inventory and checking cross-product compatibility using conflict engine technology. Supports a freemium model with RevenueCat-powered Pro subscriptions and AdMob integration (banner/reward). Converted to an Android application using Capacitor, available for download on Google Play Store.",
+                "description": "AI-powered cosmetic product ingredient analyzer. Analyzes ingredients via camera OCR, barcode scanning (OpenBeautyFacts DB), or manual text input. Features risk assessment powered by Gemini 2.5 Flash, skin type compatibility scoring, TTS audio summaries, and an AI chat assistant. Virtual Cabinet feature allows adding analyzed items to inventory and checking cross-product compatibility using conflict engine technology. Supports a freemium model with RevenueCat-powered Pro subscriptions and AdMob integration (banner/reward). Converted to a native application using Capacitor, it is actively published on Google Play Store and available for download.",
                 "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS", "RevenueCat", "AddMob"]
             },
             "butce_360": {

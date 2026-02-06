@@ -132,7 +132,7 @@
             },
             "purescan": {
                 "title": "PureScan - Kozmetik İçerik Analizi",
-                "description": "Yapay zeka destekli kozmetik ürün içerik analizörü. Kamera ile OCR, barkod tarama (OpenBeautyFacts DB) veya manuel metin girişi ile içerikleri analiz eder. Gemini 2.5 Flash ile risk değerlendirmesi, cilt tipine göre uyumluluk skoru, TTS ile sesli özet ve AI chat asistanı sunar. Sanal Dolap özelliği ile analiz edilen içerikleri envantere ekleme ve conflict engine teknolojisiyle ürünler arası uyumluluk kontrolü yapma imkanı tanır. RevenueCat altyapısıyla Pro abonelik ve AdMob entegrasyonu (banner/reward) ile freemium model desteği bulunur. Capacitor ile Android uygulamasına dönüştürülmüştür ve Google Play Store'dan indirilebilir.",
+                "description": "Yapay zeka destekli kozmetik ürün içerik analizörü. Kamera ile OCR, barkod tarama (OpenBeautyFacts DB) veya manuel metin girişi ile içerikleri analiz eder. Gemini 2.5 Flash ile risk değerlendirmesi, cilt tipine göre uyumluluk skoru, TTS ile sesli özet ve AI chat asistanı sunar. Sanal Dolap özelliği ile analiz edilen içerikleri envantere ekleme ve conflict engine teknolojisiyle ürünler arası uyumluluk kontrolü yapma imkanı tanır. RevenueCat altyapısıyla Pro abonelik ve AdMob entegrasyonu (banner/reward) ile freemium model desteği bulunur. Capacitor kullanılarak native uygulamaya dönüştürülmüş olup, Google Play Store'da aktif olarak yayında ve indirilebilir durumdadır.",
                 "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS", "RevenueCat", "AddMob"]
             },
             "not_defteri": {
