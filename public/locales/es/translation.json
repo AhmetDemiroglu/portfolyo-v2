@@ -24,7 +24,14 @@
         "greeting": "Ahmet Demiroğlu",
         "description": "Combino código y diseño para crear experiencias web modernas que son tanto estéticas como funcionales.",
         "button": "Ver mis proyectos",
-        "typing_sequences": ["Desarrollador Full-Stack", 2000, "Entusiasta de UI/UX", 2000, "Soluciones Centradas en el Usuario", 2000],
+        "typing_sequences": [
+            "Desarrollador Full-Stack",
+            2000,
+            "Entusiasta de UI/UX",
+            2000,
+            "Soluciones Centradas en el Usuario",
+            2000
+        ],
         "career_section_background": "CARRERA",
         "career_section_title": "Un Enfoque Interdisciplinario",
         "career_section_p1": "Mi carrera se basa en una base de 9 años en Planificación Urbana y Valoración Inmobiliaria. Las habilidades que adquirí en pensamiento analítico, informes detallados e interpretación de datos durante este tiempo son las piedras angulares de mi enfoque actual en el desarrollo de software.",
@@ -33,21 +40,37 @@
     "about": {
         "background_text": "SOBRE MÍ",
         "title": "Mi Historia",
+        "hero_label": "Historia del Desarrollador",
+        "hero_title_line1": "Creando Experiencias",
+        "hero_title_line2": "Digitales",
+        "hero_subtitle": "Un viaje de software desde Esmirna al mundo. Cada línea de código cuenta una historia.",
+        "scroll_hint": "Desplazar",
+        "closing_quote": "El mejor código es el que cuenta una historia.",
+        "timeline_1_year": "2013",
         "timeline_1_title": "Universidad de Gazi",
         "timeline_1_subtitle": "Planificación Urbana y Regional",
+        "timeline_1_content": "Me gradué de la Universidad de Gazi, Facultad de Arquitectura, Departamento de Planificación Urbana y Regional. Durante este período, construí una base sólida en atención al detalle y elaboración de informes mediante un trabajo intensivo en software de planificación, análisis y diseño.",
+        "timeline_2_year": "2014–2023",
         "timeline_2_title": "Valoración Inmobiliaria",
-        "timeline_2_subtitle": "9 años de experiencia",
+        "timeline_2_subtitle": "9 años de experiencia en campo",
+        "timeline_2_content": "Trabajé durante nueve años como especialista de campo e inspección en el sector de valoración inmobiliaria. Avancé en mi carrera obteniendo la licencia de Tasador Certificado. La mentalidad analítica y las habilidades de resolución de problemas que adquirí en este período sentaron las bases de mi carrera en software.",
+        "timeline_3_year": "2023",
         "timeline_3_title": "Neos Software Academy",
         "timeline_3_subtitle": "Formación Full-Stack",
+        "timeline_3_content": "Con la decisión de cambiar de carrera, completé la Formación de Especialización en Software en Neos Software Academy. Recibí formación intensiva en HTML, CSS, JavaScript, C#, Bootstrap, React.js y .NET. Durante el programa de prácticas de 7 semanas, desarrollé un sitio web de alquiler de coches desde cero, ganando experiencia tanto en front-end como en back-end.",
+        "timeline_4_year": "2025",
         "timeline_4_title": "SedBim Bilişim",
         "timeline_4_subtitle": "Front-end Developer",
+        "timeline_4_content": "Comencé mi carrera profesional en software como Front-end Developer. Mientras desarrollo y mantengo activamente proyectos corporativos con Vue.js, amplío mis competencias en el ecosistema React a través de nuevos proyectos. Cuando es necesario, también doy soporte a servicios back-end con .NET Core, manteniendo mi perspectiva full-stack.",
+        "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Plataforma Social de Jugadores",
-        "p1": "Soy Ahmet Demiroğlu. Un Planificador Urbano graduado del Departamento de Planificación Urbana y Regional de la Facultad de Arquitectura de la Universidad de Gazi, y un Tasador de Bienes Raíces con nueve años de experiencia en campo y control. Durante este tiempo, no solo desarrollé mis habilidades de planificación y análisis, sino que también gané experiencia en la atención al detalle y la elaboración de informes. Llevé mi experiencia profesional un paso más allá al obtener la licencia de Tasador Responsable.",
-        "p2": "Desde mi infancia, he sentido un gran interés y curiosidad por los ordenadores y la tecnología. Durante mis años universitarios, tuve la oportunidad de mejorar mis habilidades en los programas de dibujo y diseño que utilizaba activamente en mi especialidad. Sin embargo, mi fuerte interés por el desarrollo de software me llevó con el tiempo a realizar un cambio significativo en mi carrera. Decidí dejar el sector inmobiliario, donde había adquirido una experiencia considerable, y enfocarme en desarrollarme en el campo del desarrollo web full-stack.",
-        "p3": "Con este objetivo en mente, completé con éxito la Formación de Especialista en Software en la Academia de Software Neos. Esta formación abarcó lenguajes de programación como HTML, CSS, JavaScript y C#, así como bibliotecas y frameworks populares como Bootstrap, React.js y .NET. Gracias a un intenso programa de prácticas de 7 semanas que completé en julio de 2023, pude consolidar mis conocimientos teóricos con aplicaciones prácticas y llevar a cabo con éxito un proyecto de sitio web de alquiler de coches totalmente funcional. En este proyecto, participé activamente tanto en el desarrollo del front-end como del back-end, ganando experiencia en todas las capas de las aplicaciones web. Durante las prácticas, también participé en el desarrollo de una biblioteca local de CSS y JS de código abierto en Neos Software.",
-        "p4": "En mayo de 2025, comencé a trabajar como Front-end Developer en SedBim Bilişim. En este puesto, participo activamente en el desarrollo y mantenimiento de los proyectos corporativos existentes usando Vue.js, al mismo tiempo que mejoro mis competencias en el ecosistema de React a través de nuevos proyectos. Cuando es necesario, también brindo soporte a los servicios de back-end basados en C# con .NET Core, asegurándome de mantener mi perspectiva full-stack.",
-        "p5": "Mientras profundizo mi experiencia en front-end en mi rol actual, también estoy fortaleciendo mi conocimiento de React (tanto a través de proyectos en el trabajo como de proyectos personales que desarrollo en mi tiempo libre). Mi enfoque orientado a la resolución de problemas, combinado con la perspectiva analítica de mi carrera anterior, me permite adaptarme rápidamente a las nuevas tecnologías. Mi objetivo es mejorar continuamente siguiendo de cerca las innovaciones de la industria y aportar valor a los proyectos en los que trabajo."
+        "timeline_5_content": "Desarrollé y lancé GGHub - una plataforma social de gaming - como proyecto personal. La primera versión completamente funcional fue construida con Next.js y .NET Core. Las integraciones de Steam, Epic y Google OAuth junto con funciones de comunicación en tiempo real basadas en SignalR están planificadas para la segunda versión.",
+        "timeline_6_year": "2026",
+        "timeline_6_title": "SeptimusLab",
+        "timeline_6_subtitle": "Aplicaciones Móviles con IA",
+        "timeline_6_content": "A través de mi estudio independiente de software móvil SeptimusLab, desarrollo y publico aplicaciones impulsadas por IA. Fintel para el seguimiento periódico de gastos y PureScan Cosmetics para el análisis de ingredientes cosméticos están en producción. El trabajo en PureScan Foods está en gran parte completado. Continúo expandiendo mi stack tecnológico con React Native.",
+        "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
         "main_title": "Mis Habilidades",
@@ -59,24 +82,63 @@
                     {
                         "title": "Front-End",
                         "skills": [
-                            { "name": "HTML", "description": "Estructuras HTML5 semánticas, accesibles y amigables para SEO." },
-                            { "name": "CSS", "description": "Diseños modernos y responsivos, animaciones y experiencia en el desarrollo de bibliotecas CSS." },
-                            { "name": "JavaScript", "description": "Sintaxis ES6+, programación asíncrona y competencia en DOM." },
-                            { "name": "TypeScript", "description": "Código más robusto y escalable con tipado estático." },
-                            { "name": "React", "description": "Arquitectura basada en componentes y hooks básicos." },
-                            { "name": "Vue.js", "description": "Amplia experiencia en proyectos, gestión de estado (Pinia) y enrutamiento." },
-                            { "name": "jQuery", "description": "Manipulación básica del DOM y gestión de eventos." },
-                            { "name": "Bootstrap", "description": "Uso eficiente para desarrollar interfaces rápidas y responsivas." },
-                            { "name": "Tailwind CSS", "description": "Diseños personalizables con el enfoque 'utility-first'." }
+                            {
+                                "name": "HTML",
+                                "description": "Estructuras HTML5 semánticas, accesibles y amigables para SEO."
+                            },
+                            {
+                                "name": "CSS",
+                                "description": "Diseños modernos y responsivos, animaciones y experiencia en el desarrollo de bibliotecas CSS."
+                            },
+                            {
+                                "name": "JavaScript",
+                                "description": "Sintaxis ES6+, programación asíncrona y competencia en DOM."
+                            },
+                            {
+                                "name": "TypeScript",
+                                "description": "Código más robusto y escalable con tipado estático."
+                            },
+                            {
+                                "name": "React",
+                                "description": "Arquitectura basada en componentes y hooks básicos."
+                            },
+                            {
+                                "name": "Vue.js",
+                                "description": "Amplia experiencia en proyectos, gestión de estado (Pinia) y enrutamiento."
+                            },
+                            {
+                                "name": "jQuery",
+                                "description": "Manipulación básica del DOM y gestión de eventos."
+                            },
+                            {
+                                "name": "Bootstrap",
+                                "description": "Uso eficiente para desarrollar interfaces rápidas y responsivas."
+                            },
+                            {
+                                "name": "Tailwind CSS",
+                                "description": "Diseños personalizables con el enfoque 'utility-first'."
+                            }
                         ]
                     },
                     {
                         "title": "Back-End",
                         "skills": [
-                            { "name": "C#", "description": "Conocimiento intermedio de los principios de POO y competencia en el lenguaje." },
-                            { "name": ".NET Core", "description": "Experiencia en proyectos de prácticas en desarrollo de API y uso de frameworks." },
-                            { "name": "Entity Framework", "description": "Operaciones básicas de base de datos con la herramienta ORM." },
-                            { "name": "SQL Server", "description": "Diseño de bases de datos, consultas y optimización básica." }
+                            {
+                                "name": "C#",
+                                "description": "Conocimiento intermedio de los principios de POO y competencia en el lenguaje."
+                            },
+                            {
+                                "name": ".NET Core",
+                                "description": "Experiencia en proyectos de prácticas en desarrollo de API y uso de frameworks."
+                            },
+                            {
+                                "name": "Entity Framework",
+                                "description": "Operaciones básicas de base de datos con la herramienta ORM."
+                            },
+                            {
+                                "name": "SQL Server",
+                                "description": "Diseño de bases de datos, consultas y optimización básica."
+                            }
                         ]
                     }
                 ]
@@ -84,21 +146,51 @@
             {
                 "category": "Otras Herramientas y Tecnologías",
                 "skills": {
-                    "github": { "name": "GitHub", "description": "Control de versiones, gestión de ramas y trabajo en equipo." },
-                    "photoshop": { "name": "Photoshop", "description": "Edición de imágenes y diseño de elementos de interfaz de usuario." },
-                    "autocad": { "name": "AutoCAD", "description": "Experiencia en dibujos técnicos y de arquitectura." },
-                    "netcad": { "name": "Netcad", "description": "Uso eficiente en proyectos de planificación urbana y cartografía." },
-                    "gis_systems": { "name": "Sistemas GIS", "description": "Análisis espacial y visualización de datos geográficos." }
+                    "github": {
+                        "name": "GitHub",
+                        "description": "Control de versiones, gestión de ramas y trabajo en equipo."
+                    },
+                    "photoshop": {
+                        "name": "Photoshop",
+                        "description": "Edición de imágenes y diseño de elementos de interfaz de usuario."
+                    },
+                    "autocad": {
+                        "name": "AutoCAD",
+                        "description": "Experiencia en dibujos técnicos y de arquitectura."
+                    },
+                    "netcad": {
+                        "name": "Netcad",
+                        "description": "Uso eficiente en proyectos de planificación urbana y cartografía."
+                    },
+                    "gis_systems": {
+                        "name": "Sistemas GIS",
+                        "description": "Análisis espacial y visualización de datos geográficos."
+                    }
                 }
             },
             {
                 "category": "Habilidades No Técnicas",
                 "skills": {
-                    "real_estate_appraisal": { "name": "Valoración Inmobiliaria", "description": "9 años de experiencia en campo y control, Tasador Responsable con licencia (SPK)." },
-                    "reporting_analysis": { "name": "Informes y Análisis", "description": "Interpretación de datos y preparación de informes detallados." },
-                    "problem_solving": { "name": "Resolución de Problemas", "description": "Análisis de problemas complejos y producción de soluciones pragmáticas." },
-                    "teamwork": { "name": "Trabajo en Equipo", "description": "Colaboración armoniosa en equipo y comunicación efectiva." },
-                    "time_management": { "name": "Gestión del Tiempo", "description": "Planificación, priorización y finalización de tareas a tiempo." }
+                    "real_estate_appraisal": {
+                        "name": "Valoración Inmobiliaria",
+                        "description": "9 años de experiencia en campo y control, Tasador Responsable con licencia (SPK)."
+                    },
+                    "reporting_analysis": {
+                        "name": "Informes y Análisis",
+                        "description": "Interpretación de datos y preparación de informes detallados."
+                    },
+                    "problem_solving": {
+                        "name": "Resolución de Problemas",
+                        "description": "Análisis de problemas complejos y producción de soluciones pragmáticas."
+                    },
+                    "teamwork": {
+                        "name": "Trabajo en Equipo",
+                        "description": "Colaboración armoniosa en equipo y comunicación efectiva."
+                    },
+                    "time_management": {
+                        "name": "Gestión del Tiempo",
+                        "description": "Planificación, priorización y finalización de tareas a tiempo."
+                    }
                 }
             }
         ]
@@ -122,32 +214,69 @@
             "rent_a_car": {
                 "title": "Plataforma Full-Stack de Rent A Car",
                 "description": "Una plataforma de alquiler de coches escalable construida sobre la moderna arquitectura .NET 8 y ASP.NET Core MVC. Cuenta con gestión de bases de datos relacionales a través de Entity Framework Core, Control de Acceso Basado en Roles (RBAC) mediante Identity y operaciones CRUD seguras. Desarrollado durante las prácticas en la Academia de Software Neos, siguiendo estrictamente los principios de código limpio.",
-                "tags": ["ASP.NET Core MVC", ".NET 8", "EF Core", "Identity", "SQL Server"]
+                "tags": [
+                    "ASP.NET Core MVC",
+                    ".NET 8",
+                    "EF Core",
+                    "Identity",
+                    "SQL Server"
+                ]
             },
             "purescan": {
                 "title": "PureScan - Analizador de Ingredientes Cosméticos",
                 "description": "Analizador de ingredientes de productos cosméticos impulsado por IA. Analiza ingredientes mediante OCR de cámara, escaneo de códigos de barras (OpenBeautyFacts DB) o entrada de texto manual. Ofrece evaluación de riesgos potenciada por Gemini 2.5 Flash, puntuación de compatibilidad según tipo de piel, resúmenes de audio TTS y un asistente de chat con IA. La función de Armario Virtual permite añadir contenidos analizados al inventario y verificar la compatibilidad entre productos usando tecnología de motor de conflictos. Soporta modelo freemium con suscripciones Pro mediante RevenueCat e integración AdMob (banner/recompensa). Convertido a aplicación Android usando Capacitor, disponible para descarga en Google Play Store.",
-                "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS", "RevenueCat", "AddMob"]
+                "tags": [
+                    "React",
+                    "Capacitor",
+                    "Gemini AI",
+                    "Firebase",
+                    "TailwindCSS",
+                    "RevenueCat",
+                    "AddMob"
+                ]
             },
             "butce_360": {
                 "title": "Presupuesto360° Seguimiento de Gastos",
                 "description": "Primer prototipo desarrollado para el seguimiento de ciclos de tarjetas de crédito y gestión de gastos. Creado con Vue.js 3.0 y Firebase Realtime Database, sirvió como base experimental para el proyecto Fintel (V2).",
-                "tags": ["Vue.js", "Firebase", "JavaScript"]
+                "tags": [
+                    "Vue.js",
+                    "Firebase",
+                    "JavaScript"
+                ]
             },
             "not_defteri": {
                 "title": "Aplicación de Cuaderno Interactivo",
                 "description": "Ofrece a los usuarios una experiencia de cuaderno dinámico. Desarrollado utilizando HTML, CSS y Vue.js 3.0.",
-                "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
+                "tags": [
+                    "Vue.js",
+                    "JavaScript",
+                    "HTML",
+                    "CSS"
+                ]
             },
             "fintel": {
                 "title": "Fintel - Asistente Financiero con IA",
                 "description": "Ursprünglich mit Gemini 3.0 und einem 'Vibecoding'-Ansatz prototypisiert, anschließend professionell weiterentwickelt und zu einem vollständigen SaaS-Produkt verfeinert. Ein hybrides Finanztool (LocalStorage + Firestore) mit 'Nova AI'-Integration, angetrieben durch Groq-Infrastruktur und Llama 3.3 70B Modell, zusammen mit GLM-OCR-Technologie zur hochgenauen Verarbeitung von PDFs und Belegen, bietet Ausgabenanalysen und personalisierte Sparstrategien. Mit Capacitor in eine Android-Anwendung konvertiert und im Google Play Store zum Download verfügbar.",
-                "tags": ["React", "TypeScript", "Llama 3.3 70B", "GLM-OCR", "Firebase", "Capacitor"]
+                "tags": [
+                    "React",
+                    "TypeScript",
+                    "Llama 3.3 70B",
+                    "GLM-OCR",
+                    "Firebase",
+                    "Capacitor"
+                ]
             },
             "gghub": {
                 "title": "GGHub - Plataforma Social para Gamers (Beta)",
                 "description": "Este proyecto Monorepo, en desarrollo activo, une .NET 8 y Next.js 15 bajo un marco de Clean Architecture. Totalmente utilizable como Versión 1 (V1), la plataforma ofrece características completas que incluyen listados, búsqueda de juegos, vistas detalladas, feed de inicio, gamificación (insignias/niveles), tablas de clasificación y mensajería (polling). Con el panel de administración y los algoritmos de perfil de usuario también completados, el trabajo actual se centra en las integraciones OAuth de Steam, Epic y Google y en la implementación de SignalR para la comunicación en tiempo real como parte de la hoja de ruta de la V2.",
-                "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL", "SignalR"]
+                "tags": [
+                    ".NET 8",
+                    "Next.js 15",
+                    "Active Dev",
+                    "Clean Architecture",
+                    "PostgreSQL",
+                    "SignalR"
+                ]
             }
         }
     },
@@ -167,14 +296,26 @@
         "form_status_error": "Ocurrió un error: ",
         "social_title": "Mis Cuentas de Redes Sociales",
         "direct_links": {
-            "email": { "label": "Correo Electrónico" },
-            "whatsapp": { "label": "WhatsApp" }
+            "email": {
+                "label": "Correo Electrónico"
+            },
+            "whatsapp": {
+                "label": "WhatsApp"
+            }
         },
         "social_links": {
-            "github": { "label": "GitHub" },
-            "linkedin": { "label": "LinkedIn" },
-            "instagram": { "label": "Instagram" },
-            "twitter": { "label": "X (Twitter)" }
+            "github": {
+                "label": "GitHub"
+            },
+            "linkedin": {
+                "label": "LinkedIn"
+            },
+            "instagram": {
+                "label": "Instagram"
+            },
+            "twitter": {
+                "label": "X (Twitter)"
+            }
         }
     },
     "404_page": {

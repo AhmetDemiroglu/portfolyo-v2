@@ -24,7 +24,14 @@
         "greeting": "Ahmet Demiroğlu",
         "description": "Kod ve tasarımı birleştirerek, hem estetik hem de işlevsel modern web deneyimleri yaratıyorum.",
         "button": "Projelerimi İncele",
-        "typing_sequences": ["Full-Stack Developer", 2000, "UI/UX Meraklısı", 2000, "Kullanıcı Odaklı Çözümler", 2000],
+        "typing_sequences": [
+            "Full-Stack Developer",
+            2000,
+            "UI/UX Meraklısı",
+            2000,
+            "Kullanıcı Odaklı Çözümler",
+            2000
+        ],
         "career_section_background": "KARİYER",
         "career_section_title": "Disiplinler Arası Bir Yaklaşım",
         "career_section_p1": "Kariyerimin temelini 9 yıllık Şehir Planlama ve Gayrimenkul Değerleme tecrübesi oluşturuyor. Bu süreçte edindiğim analitik düşünme, detaylı raporlama ve veri yorumlama becerileri, bugünkü yazılım geliştirme yaklaşımımın temel taşlarıdır.",
@@ -33,22 +40,37 @@
     "about": {
         "background_text": "HAKKIMDA",
         "title": "Benim Hikayem",
+        "hero_label": "Geliştirici Hikayesi",
+        "hero_title_line1": "Dijital Deneyimler",
+        "hero_title_line2": "Tasarlıyorum",
+        "hero_subtitle": "İzmir'den dünyaya uzanan bir yazılım yolculuğu. Her satır kod, bir hikaye anlatır.",
+        "scroll_hint": "Kaydır",
+        "closing_quote": "En iyi kod, bir hikaye anlatandır.",
+        "timeline_1_year": "2013",
         "timeline_1_title": "Gazi Üniversitesi",
         "timeline_1_subtitle": "Şehir ve Bölge Planlama",
+        "timeline_1_content": "Gazi Üniversitesi Mimarlık Fakültesi, Şehir ve Bölge Planlama Bölümü'nden mezun oldum. Bu dönemde planlama, analiz ve tasarım programları üzerine yoğun çalışarak detaylara özen gösterme ve raporlama konularında güçlü bir temel oluşturdum.",
+        "timeline_2_year": "2014–2023",
         "timeline_2_title": "Gayrimenkul Değerleme",
-        "timeline_2_subtitle": "9 yıllık tecrübe",
+        "timeline_2_subtitle": "9 yıllık saha tecrübesi",
+        "timeline_2_content": "Dokuz yıl boyunca gayrimenkul değerleme sektöründe saha ve kontrol uzmanı olarak çalıştım. Sorumlu Değerleme Uzmanı yetki belgesini alarak mesleki kariyerimi ilerlettim. Bu süreçte kazandığım analitik bakış açısı ve problem çözme yetkinliği, yazılım kariyerimin temelini oluşturdu.",
+        "timeline_3_year": "2023",
         "timeline_3_title": "Neos Yazılım Akademi",
         "timeline_3_subtitle": "Full-Stack Eğitim",
+        "timeline_3_content": "Kariyer değişikliği kararıyla Neos Yazılım Akademi'nin Yazılım Uzmanlığı Eğitimi'ni tamamladım. HTML, CSS, JavaScript, C#, Bootstrap, React.js ve .NET üzerine yoğun bir eğitim aldım. 7 haftalık staj programında sıfırdan bir araç kiralama web sitesi geliştirerek hem front-end hem back-end deneyimi kazandım.",
+        "timeline_4_year": "2025",
         "timeline_4_title": "SedBim Bilişim",
         "timeline_4_subtitle": "Front-end Developer",
+        "timeline_4_content": "Front-end Developer olarak profesyonel yazılım kariyerime başladım. Vue.js ile kurumsal projelerin geliştirilmesi ve bakımında aktif rol alırken, React ekosistemindeki yetkinliklerimi yeni projelerle genişletiyorum. İhtiyaç halinde .NET Core ile back-end servislerine de destek vererek full-stack perspektifimi koruyorum.",
+        "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Oyuncu Sosyal Platformu",
-
-        "p1": "Ben Ahmet Demiroğlu. Gazi Üniversitesi Mimarlık Fakültesi, Şehir ve Bölge Planlama Bölümü'nden mezun bir Şehir Plancısı ve dokuz yıllık saha ile kontrol tecrübesine sahip bir Gayrimenkul Değerleme Uzmanıyım. Bu süreçte, planlama ve analiz becerilerimi geliştirmenin yanı sıra, detaylara özen gösterme ve raporlama konusunda tecrübe kazandım. Sorumlu Değerleme Uzmanı yetki belgesini de alarak mesleki tecrübemi bir adım öteye taşıdım.",
-        "p2": "Çocukluğumdan beri bilgisayarlara ve teknolojiye büyük bir ilgi duydum. Üniversite yıllarımda, bölümüm gereği aktif olarak kullandığım çizim ve tasarım programlarında kendimi geliştirme fırsatı buldum. Ancak, içimdeki yazılım geliştirme isteği zamanla beni kariyerimde önemli bir değişikliğe yönlendirdi. Hatırı sayılır bir tecrübeye sahip olduğum gayrimenkul sektöründen ayrılarak, full-stack web geliştirme alanında kendimi geliştirmeye karar verdim.",
-        "p3": "Bu hedef doğrultusunda, Neos Yazılım Akademi'nin Yazılım Uzmanlığı Eğitimi'ni başarıyla tamamladım. Bu eğitim, HTML, CSS, JavaScript ve C# gibi programlama dillerinin yanı sıra, Bootstrap, React.js ve .NET gibi popüler kütüphane ve framework'leri de kapsıyordu. Temmuz 2023'te tamamladığım 7 haftalık yoğun staj programı sayesinde, teorik bilgilerimi pratik uygulamalarla pekiştirdim ve baştan sona çalışır durumda olan bir araç kiralama (rent a car) web sitesi projesini başarıyla hayata geçirdim. Bu projede, hem front-end hem de back-end geliştirmelerinde aktif rol alarak, web uygulamalarının tüm katmanlarında deneyim kazandım. Staj süresince ayrıca Neos Yazılım bünyesinde yerli ve açık kaynak bir CSS ve JS kütüphanesinin hazırlanması sürecinde yer aldım.",
-        "p4": "Mayıs 2025'te SedBim Bilişim'de Front-end Developer olarak çalışmaya başladım. Bu rolde, hem Vue.js kullanarak mevcut kurumsal projelerin geliştirilmesinde ve bakımında aktif rol alıyor hem de React ekosistemindeki yetkinliklerimi yeni projelerle artırıyorum. İhtiyaç halinde .NET Core ile C# tabanlı back-end servislerine de destek vererek, full-stack bakış açımı korumaya özen gösteriyorum.",
-        "p5": "Mevcut rolümde front-end teknolojilerindeki uzmanlığımı derinleştirirken, aynı zamanda React konusundaki bilgimi (hem şirketteki projelerle hem de boş vakitlerimde geliştirdiğim kişisel projelerle) pekiştiriyorum. Problem çözme kabiliyetim, eski kariyerimden gelen analitik bakış açısıyla birleşerek yeni teknolojilere hızla adapte olmamı sağlıyor. Sektördeki yenilikleri yakından takip ederek kendimi sürekli geliştirmeyi ve çalıştığım projelere değer katmayı hedefliyorum."
+        "timeline_5_content": "Kişisel projelerimden GGHub'ı - oyuncu sosyal platformunu - geliştirip yayına aldım. Next.js ve .NET Core altyapısıyla tam fonksiyonel ilk versiyonu tamamlandı. Steam, Epic ve Google OAuth entegrasyonları ile SignalR tabanlı gerçek zamanlı iletişim özellikleri ikinci versiyon için planlanıyor.",
+        "timeline_6_year": "2026",
+        "timeline_6_title": "SeptimusLab",
+        "timeline_6_subtitle": "Yapay Zeka Destekli Mobil Uygulamalar",
+        "timeline_6_content": "Bağımsız mobil yazılım stüdyom SeptimusLab ile yapay zeka destekli uygulamalar geliştirip yayınlıyorum. Fintel ile dönemsel harcama takibi ve PureScan Cosmetics ile kozmetik içerik analizi kullanıcılara sunuldu. PureScan Foods üzerindeki çalışmalar büyük ölçüde tamamlandı. React Native ile teknoloji yığınımı genişletmeye devam ediyorum.",
+        "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
         "main_title": "Yeteneklerim",
@@ -60,24 +82,63 @@
                     {
                         "title": "Front-End",
                         "skills": [
-                            { "name": "HTML", "description": "Semantik, erişilebilir ve SEO dostu HTML5 yapıları." },
-                            { "name": "CSS", "description": "Modern, duyarlı tasarımlar, animasyonlar ve CSS kütüphanesi geliştirme deneyimi." },
-                            { "name": "JavaScript", "description": "ES6+ syntax, asenkron programlama ve DOM yetkinliği." },
-                            { "name": "TypeScript", "description": "Statik tipleme ile daha sağlam ve ölçeklenebilir kod yazımı." },
-                            { "name": "React", "description": "Bileşen bazlı mimari ve temel hook'lar." },
-                            { "name": "Vue.js", "description": "Kapsamlı proje deneyimi, state yönetimi (Pinia) ve yönlendirme." },
-                            { "name": "jQuery", "description": "Temel düzeyde DOM manipülasyonu ve event yönetimi." },
-                            { "name": "Bootstrap", "description": "Hızlı ve duyarlı arayüzler geliştirmek için etkin kullanım." },
-                            { "name": "Tailwind CSS", "description": "Utility-first yaklaşımıyla özelleştirilebilir tasarımlar." }
+                            {
+                                "name": "HTML",
+                                "description": "Semantik, erişilebilir ve SEO dostu HTML5 yapıları."
+                            },
+                            {
+                                "name": "CSS",
+                                "description": "Modern, duyarlı tasarımlar, animasyonlar ve CSS kütüphanesi geliştirme deneyimi."
+                            },
+                            {
+                                "name": "JavaScript",
+                                "description": "ES6+ syntax, asenkron programlama ve DOM yetkinliği."
+                            },
+                            {
+                                "name": "TypeScript",
+                                "description": "Statik tipleme ile daha sağlam ve ölçeklenebilir kod yazımı."
+                            },
+                            {
+                                "name": "React",
+                                "description": "Bileşen bazlı mimari ve temel hook'lar."
+                            },
+                            {
+                                "name": "Vue.js",
+                                "description": "Kapsamlı proje deneyimi, state yönetimi (Pinia) ve yönlendirme."
+                            },
+                            {
+                                "name": "jQuery",
+                                "description": "Temel düzeyde DOM manipülasyonu ve event yönetimi."
+                            },
+                            {
+                                "name": "Bootstrap",
+                                "description": "Hızlı ve duyarlı arayüzler geliştirmek için etkin kullanım."
+                            },
+                            {
+                                "name": "Tailwind CSS",
+                                "description": "Utility-first yaklaşımıyla özelleştirilebilir tasarımlar."
+                            }
                         ]
                     },
                     {
                         "title": "Back-End",
                         "skills": [
-                            { "name": "C#", "description": "Orta düzeyde OOP prensipleri ve dil yetkinliği." },
-                            { "name": ".NET Core", "description": "API geliştirme ve framework kullanımı konusunda staj projesi deneyimi." },
-                            { "name": "Entity Framework", "description": "Temel düzeyde ORM aracı ile veritabanı işlemleri." },
-                            { "name": "SQL Server", "description": "Veritabanı tasarımı, sorgulama ve temel optimizasyon." }
+                            {
+                                "name": "C#",
+                                "description": "Orta düzeyde OOP prensipleri ve dil yetkinliği."
+                            },
+                            {
+                                "name": ".NET Core",
+                                "description": "API geliştirme ve framework kullanımı konusunda staj projesi deneyimi."
+                            },
+                            {
+                                "name": "Entity Framework",
+                                "description": "Temel düzeyde ORM aracı ile veritabanı işlemleri."
+                            },
+                            {
+                                "name": "SQL Server",
+                                "description": "Veritabanı tasarımı, sorgulama ve temel optimizasyon."
+                            }
                         ]
                     }
                 ]
@@ -85,21 +146,51 @@
             {
                 "category": "Diğer Araçlar ve Teknolojiler",
                 "skills": {
-                    "github": { "name": "GitHub", "description": "Versiyon kontrolü, branch yönetimi ve ekip çalışması." },
-                    "photoshop": { "name": "Photoshop", "description": "Görsel düzenleme ve UI elementleri tasarlama." },
-                    "autocad": { "name": "AutoCAD", "description": "Mimari ve teknik çizimler konusunda uzmanlık." },
-                    "netcad": { "name": "Netcad", "description": "Şehir planlama ve haritacılık projelerinde etkin kullanım." },
-                    "gis_systems": { "name": "GIS Sistemleri", "description": "Mekansal analiz ve coğrafi veri görselleştirme." }
+                    "github": {
+                        "name": "GitHub",
+                        "description": "Versiyon kontrolü, branch yönetimi ve ekip çalışması."
+                    },
+                    "photoshop": {
+                        "name": "Photoshop",
+                        "description": "Görsel düzenleme ve UI elementleri tasarlama."
+                    },
+                    "autocad": {
+                        "name": "AutoCAD",
+                        "description": "Mimari ve teknik çizimler konusunda uzmanlık."
+                    },
+                    "netcad": {
+                        "name": "Netcad",
+                        "description": "Şehir planlama ve haritacılık projelerinde etkin kullanım."
+                    },
+                    "gis_systems": {
+                        "name": "GIS Sistemleri",
+                        "description": "Mekansal analiz ve coğrafi veri görselleştirme."
+                    }
                 }
             },
             {
                 "category": "Yazılımsal Olmayan Beceriler",
                 "skills": {
-                    "real_estate_appraisal": { "name": "Gayrimenkul Değerleme", "description": "9 yıllık saha ve kontrol tecrübesi, SPK Lisanslı Sorumlu Değerleme Uzmanı." },
-                    "reporting_analysis": { "name": "Raporlama ve Analiz", "description": "Verileri yorumlama ve detaylı raporlar hazırlama." },
-                    "problem_solving": { "name": "Problem Çözme", "description": "Karmaşık sorunları analiz etme ve pragmatik çözümler üretme." },
-                    "teamwork": { "name": "Takım Çalışması", "description": "Ekip içinde uyumlu çalışma ve etkili iletişim." },
-                    "time_management": { "name": "Zaman Yönetimi", "description": "Görevleri planlama, önceliklendirme ve zamanında tamamlama." }
+                    "real_estate_appraisal": {
+                        "name": "Gayrimenkul Değerleme",
+                        "description": "9 yıllık saha ve kontrol tecrübesi, SPK Lisanslı Sorumlu Değerleme Uzmanı."
+                    },
+                    "reporting_analysis": {
+                        "name": "Raporlama ve Analiz",
+                        "description": "Verileri yorumlama ve detaylı raporlar hazırlama."
+                    },
+                    "problem_solving": {
+                        "name": "Problem Çözme",
+                        "description": "Karmaşık sorunları analiz etme ve pragmatik çözümler üretme."
+                    },
+                    "teamwork": {
+                        "name": "Takım Çalışması",
+                        "description": "Ekip içinde uyumlu çalışma ve etkili iletişim."
+                    },
+                    "time_management": {
+                        "name": "Zaman Yönetimi",
+                        "description": "Görevleri planlama, önceliklendirme ve zamanında tamamlama."
+                    }
                 }
             }
         ]
@@ -123,32 +214,70 @@
             "rent_a_car": {
                 "title": "Rent A Car Full-Stack Platform",
                 "description": "Modern .NET 8 ve ASP.NET Core MVC mimarisi üzerine inşa edilmiş, ölçeklenebilir araç kiralama platformu. Entity Framework Core ile ilişkisel veritabanı (SQL Server) yönetimi, Identity kütüphanesi ile Rol Tabanlı Erişim Kontrolü (RBAC) ve güvenli CRUD operasyonları içerir. Neos Yazılım Akademi stajı kapsamında, temiz kod prensiplerine sadık kalınarak geliştirilmiştir.",
-                "tags": ["ASP.NET Core MVC", ".NET 8", "EF Core", "Identity", "SQL Server", "Bootstrap"]
+                "tags": [
+                    "ASP.NET Core MVC",
+                    ".NET 8",
+                    "EF Core",
+                    "Identity",
+                    "SQL Server",
+                    "Bootstrap"
+                ]
             },
             "butce_360": {
                 "title": "Bütçe360° Harcama Takip Uygulaması",
                 "description": "Kredi kartı dönem takibi ve harcama yönetimi için geliştirilen ilk prototip. Vue.js 3.0 ve Firebase Realtime Database ile oluşturulmuş olup, Fintel projesinin (V2) temelini oluşturan deneysel çalışmadır.",
-                "tags": ["Vue.js", "Firebase", "JavaScript"]
+                "tags": [
+                    "Vue.js",
+                    "Firebase",
+                    "JavaScript"
+                ]
             },
             "purescan": {
                 "title": "PureScan - Kozmetik İçerik Analizi",
                 "description": "Yapay zeka destekli kozmetik ürün içerik analizörü. Kamera ile OCR, barkod tarama (OpenBeautyFacts DB) veya manuel metin girişi ile içerikleri analiz eder. Gemini 2.5 Flash ile risk değerlendirmesi, cilt tipine göre uyumluluk skoru, TTS ile sesli özet ve AI chat asistanı sunar. Sanal Dolap özelliği ile analiz edilen içerikleri envantere ekleme ve conflict engine teknolojisiyle ürünler arası uyumluluk kontrolü yapma imkanı tanır. RevenueCat altyapısıyla Pro abonelik ve AdMob entegrasyonu (banner/reward) ile freemium model desteği bulunur. Capacitor kullanılarak native uygulamaya dönüştürülmüş olup, Google Play Store'da aktif olarak yayında ve indirilebilir durumdadır.",
-                "tags": ["React", "Capacitor", "Gemini AI", "Firebase", "TailwindCSS", "RevenueCat", "AddMob"]
+                "tags": [
+                    "React",
+                    "Capacitor",
+                    "Gemini AI",
+                    "Firebase",
+                    "TailwindCSS",
+                    "RevenueCat",
+                    "AddMob"
+                ]
             },
             "not_defteri": {
                 "title": "İnteraktif NotDefteri Uygulaması",
                 "description": "Kullanıcılara dinamik bir not defteri deneyimi sunar. HTML, CSS ve Vue.js 3.0 kullanılarak geliştirilmiştir.",
-                "tags": ["Vue.js", "JavaScript", "HTML", "CSS"]
+                "tags": [
+                    "Vue.js",
+                    "JavaScript",
+                    "HTML",
+                    "CSS"
+                ]
             },
             "fintel": {
                 "title": "Fintel - AI Finans Asistanı",
                 "description": "Gemini 3.0 ve 'Vibecoding' yaklaşımıyla iskeleti oluşturulan, ardından kapsamlı mimari geliştirmelerle profesyonel bir SaaS ürününe dönüştürülen hibrit (LocalStorage + Firestore) finans aracı. Groq altyapısı ve Llama 3.3 70B modeliyle güçlendirilmiş 'Nova AI' entegrasyonuna sahip uygulama GLM-OCR teknolojisiyle birlikte yüksek doğrulukla PDF ve fiş işleme, harcama analizi ve kişiselleştirilmiş tasarruf stratejileri sunar. Capacitor ile Android uygulamasına dönüştürülmüştür ve Google Play Store'dan indirilebilir.",
-                "tags": ["React", "TypeScript", "Llama 3.3 70B", "GLM-OCR", "Firebase", "Capacitor"]
+                "tags": [
+                    "React",
+                    "TypeScript",
+                    "Llama 3.3 70B",
+                    "GLM-OCR",
+                    "Firebase",
+                    "Capacitor"
+                ]
             },
             "gghub": {
                 "title": "GGHub - Oyuncu Sosyal Platformu (Beta)",
                 "description": "Aktif geliştirme sürecindeki bu Monorepo projesi, .NET 8 ve Next.js 15 teknolojilerini Clean Architecture çatısı altında buluşturuyor. Versiyon 1 (V1) olarak tamamen kullanılabilir durumda olan platform; listeleme, oyun arama, detaylı inceleme, ana sayfa akışı, gamification (rozet/seviye), leaderboard ve mesajlaşma (polling) gibi özellikleri eksiksiz sunmaktadır. Admin paneli ve kullanıcı profil algoritmalarının da tamamlandığı sistemde, şu an V2 çalışmaları kapsamında Steam, Epic ve Google OAuth entegrasyonları ile gerçek zamanlı iletişim için SignalR altyapısı üzerine çalışılmaktadır.",
-                "tags": [".NET 8", "Next.js 15", "Active Dev", "Clean Architecture", "PostgreSQL", "SignalR"]
+                "tags": [
+                    ".NET 8",
+                    "Next.js 15",
+                    "Active Dev",
+                    "Clean Architecture",
+                    "PostgreSQL",
+                    "SignalR"
+                ]
             }
         }
     },
@@ -168,14 +297,26 @@
         "form_status_error": "Bir hata oluştu: ",
         "social_title": "Sosyal Medya Hesaplarım",
         "direct_links": {
-            "email": { "label": "E-posta" },
-            "whatsapp": { "label": "WhatsApp" }
+            "email": {
+                "label": "E-posta"
+            },
+            "whatsapp": {
+                "label": "WhatsApp"
+            }
         },
         "social_links": {
-            "github": { "label": "GitHub" },
-            "linkedin": { "label": "LinkedIn" },
-            "instagram": { "label": "Instagram" },
-            "twitter": { "label": "X (Twitter)" }
+            "github": {
+                "label": "GitHub"
+            },
+            "linkedin": {
+                "label": "LinkedIn"
+            },
+            "instagram": {
+                "label": "Instagram"
+            },
+            "twitter": {
+                "label": "X (Twitter)"
+            }
         }
     },
     "404_page": {
