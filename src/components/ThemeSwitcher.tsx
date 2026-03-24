@@ -1,5 +1,5 @@
 import { useTheme } from '../contexts/ThemeContext';
-import { FiSun, FiMoon } from 'react-icons/fi';
+import { CloudSun, MoonStar } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function ThemeSwitcher() {
@@ -12,19 +12,19 @@ export function ThemeSwitcher() {
   return (
     <button
       onClick={toggleTheme}
-      className="relative flex h-9 w-9 items-center justify-center rounded-lg text-slate-500 transition-colors hover:bg-slate-200 dark:text-slate-400 dark:hover:bg-slate-700"
+      className="relative flex h-9 w-9 items-center justify-center rounded-lg text-slate-500 transition-colors hover:bg-slate-200 dark:text-slate-400 dark:hover:bg-slate-700 overflow-hidden"
       aria-label="Temayı değiştir"
     >
       <AnimatePresence initial={false} mode="wait">
         <motion.div
           key={theme} 
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 20, opacity: 0 }}
-          transition={{ duration: 0.2 }}
+          initial={{ y: -20, opacity: 0, scale: 0.8, rotate: -30 }}
+          animate={{ y: 0, opacity: 1, scale: 1, rotate: 0 }}
+          exit={{ y: 20, opacity: 0, scale: 0.8, rotate: 30 }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
           className="absolute" 
         >
-          {theme === 'light' ? <FiSun size={20} /> : <FiMoon size={20} />}
+          {theme === 'light' ? <CloudSun size={20} strokeWidth={1.5} /> : <MoonStar size={20} strokeWidth={1.5} />}
         </motion.div>
       </AnimatePresence>
     </button>

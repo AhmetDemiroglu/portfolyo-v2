@@ -35,7 +35,11 @@
         "career_section_background": "KARRIERE",
         "career_section_title": "Ein Interdisziplinärer Ansatz",
         "career_section_p1": "Meine Karriere basiert auf einem 9-jährigen Fundament in der Stadtplanung und Immobilienbewertung. Die Fähigkeiten, die ich in dieser Zeit im analytischen Denken, detaillierten Berichtswesen und der Dateninterpretation erworben habe, sind die Eckpfeiler meines heutigen Ansatzes in der Softwareentwicklung.",
-        "career_section_p2": "Während ich meine Leidenschaft für Technologie in eine professionelle Karriere umwandle, übertrage ich diese Disziplin aus meiner Vergangenheit in meinen Code. Für mich bedeutet Softwareentwicklung nicht nur, funktionale Werkzeuge zu schaffen, sondern auch benutzerorientierte, saubere und nachhaltige Lösungen zu produzieren. Meine Hingabe zum Detail ist mein stärkster Leitfaden in diesem neuen Bereich."
+        "career_section_p2": "Während ich meine Leidenschaft für Technologie in eine professionelle Karriere umwandle, übertrage ich diese Disziplin aus meiner Vergangenheit in meinen Code. Für mich bedeutet Softwareentwicklung nicht nur, funktionale Werkzeuge zu schaffen, sondern auch benutzerorientierte, saubere und nachhaltige Lösungen zu produzieren. Meine Hingabe zum Detail ist mein stärkster Leitfaden in diesem neuen Bereich.",
+        "studio_section_title": "Unabhängiges Studio",
+        "studio_section_description": "Mein unabhängiges Software-Studio, das KI-gestützte mobile Anwendungen entwickelt.",
+        "studio_section_visit": "Studio Besuchen",
+        "studio_section_apps_label": "Veröffentlichte Apps"
     },
     "about": {
         "background_text": "ÜBER MICH",
@@ -69,7 +73,7 @@
         "timeline_6_year": "2026",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "KI-gestützte Mobile Anwendungen",
-        "timeline_6_content": "Mit meinem unabhängigen mobilen Softwarestudio SeptimusLab entwickle und veröffentliche ich KI-gestützte Anwendungen. Fintel für periodische Ausgabenverfolgung und PureScan Cosmetics für Kosmetik-Inhaltsstoffanalyse sind live. Die Arbeiten an PureScan Foods sind weitgehend abgeschlossen. Ich erweitere meinen Technologie-Stack mit React Native.",
+        "timeline_6_content": "Mit meinem unabhängigen mobilen Softwarestudio SeptimusLab entwickle und veröffentliche ich KI-gestützte Anwendungen. Fintel für periodische Ausgabenverfolgung und PureScan Cosmetics für Kosmetik-Inhaltsstoffanalyse sind live. PureScan Foods ist jetzt im Google Play Store veröffentlicht. Eine Erweiterung auf den App Store ist in Kürze geplant. Ich erweitere meinen Technologie-Stack mit React Native.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
@@ -117,6 +121,10 @@
                             {
                                 "name": "Tailwind CSS",
                                 "description": "Anpassbare Designs mit dem Utility-First-Ansatz."
+                            },
+                            {
+                                "name": "React Native",
+                                "description": "Plattformübergreifende mobile App-Entwicklung mit React Native. Erfahrung mit Expo und Bare Workflow."
                             }
                         ]
                     },
@@ -138,6 +146,10 @@
                             {
                                 "name": "SQL Server",
                                 "description": "Datenbankdesign, Abfragen und grundlegende Optimierung."
+                            },
+                            {
+                                "name": "Python",
+                                "description": "Backend-Entwicklung und Automatisierungsskripte. Grundkenntnisse in Flask/FastAPI."
                             }
                         ]
                     }
@@ -165,6 +177,22 @@
                     "gis_systems": {
                         "name": "GIS-Systeme",
                         "description": "Räumliche Analyse und Visualisierung geografischer Daten."
+                    },
+                    "firebase": {
+                        "name": "Firebase",
+                        "description": "Authentication, Firestore, Cloud Functions und Hosting. Aktive Nutzung in mehreren Projekten."
+                    },
+                    "capacitor": {
+                        "name": "Capacitor",
+                        "description": "Erstellung und Verteilung nativer mobiler Apps mit Webtechnologien."
+                    },
+                    "docker": {
+                        "name": "Docker",
+                        "description": "Verwaltung von Entwicklungs- und Bereitstellungsumgebungen mit Containerisierung."
+                    },
+                    "figma": {
+                        "name": "Figma",
+                        "description": "UI/UX-Design und Prototyping. Zusammenarbeit zwischen Entwickler und Designer."
                     }
                 }
             },
@@ -206,8 +234,11 @@
             "live": "Live",
             "beta": "Beta",
             "apk": "APK",
-            "new": "Neu"
+            "new": "Neu",
+            "experimental": "Experimentell"
         },
+        "show_more": "Mehr Anzeigen",
+        "show_less": "Weniger Anzeigen",
         "download_apk_button": "APK Herunterladen",
         "projects": {
             "rent_a_car": {
@@ -223,7 +254,7 @@
             },
             "purescan": {
                 "title": "PureScan - Kosmetik-Inhaltsstoff-Analysator",
-                "description": "KI-gestützter Analysator für kosmetische Produktinhaltsstoffe. Analysiert Inhaltsstoffe per Kamera-OCR, Barcode-Scan (OpenBeautyFacts DB) oder manuelle Texteingabe. Bietet Risikobewertung mit Gemini 2.5 Flash, Hauttyp-Kompatibilitätsbewertung, TTS-Audio-Zusammenfassungen und einen KI-Chat-Assistenten. Die Virtual Cabinet-Funktion ermöglicht das Hinzufügen analysierter Inhalte zum Inventar und die Überprüfung der Kompatibilität zwischen Produkten mithilfe von Conflict-Engine-Technologie. Unterstützt Freemium-Modell mit Pro-Abonnements über RevenueCat und AdMob-Integration (Banner/Reward). Mit Capacitor in eine Android-Anwendung konvertiert und im Google Play Store zum Download verfügbar.",
+                "description": "KI-gestützter Analysator für kosmetische Produktinhaltsstoffe. Analysiert Inhaltsstoffe per Kamera-OCR, Barcode-Scan (OpenBeautyFacts DB) oder manuelle Texteingabe. Bietet Risikobewertung mit Gemini 3.1 Flash-Lite, Hauttyp-Kompatibilitätsbewertung, TTS-Audio-Zusammenfassungen und einen KI-Chat-Assistenten. Die Virtual Cabinet-Funktion ermöglicht das Hinzufügen analysierter Inhalte zum Inventar und die Überprüfung der Kompatibilität zwischen Produkten mithilfe von Conflict-Engine-Technologie. Unterstützt Freemium-Modell mit Pro-Abonnements über RevenueCat und AdMob-Integration (Banner/Reward). Mit Capacitor in eine Android-Anwendung konvertiert und im Google Play Store zum Download verfügbar.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -254,7 +285,7 @@
             },
             "fintel": {
                 "title": "Fintel - KI Finanzassistent",
-                "description": "Ein hybrides Finanztool (LocalStorage + Firestore), das ursprünglich mit Gemini 3.0 und 'Vibecoding' prototypisiert und anschließend professionell zu einem vollwertigen SaaS-Produkt weiterentwickelt wurde. Angetrieben von Gemini 2.5 Flash bietet 'Nova AI' Ausgabenanalysen, OCR-Belegverarbeitung und personalisierte Sparstrategien. Mit Capacitor in eine Android-Anwendung konvertiert und ist jetzt im Google Play Store zum Download verfügbar.",
+                "description": "Ein hybrides Finanztool (LocalStorage + Firestore), das ursprünglich mit Gemini 3.0 und 'Vibecoding' prototypisiert und anschließend professionell zu einem vollwertigen SaaS-Produkt weiterentwickelt wurde. Angetrieben von Gemini 3.1 Flash-Lite bietet 'Nova AI' Ausgabenanalysen, OCR-Belegverarbeitung und personalisierte Sparstrategien. Mit Capacitor in eine Android-Anwendung konvertiert und ist jetzt im Google Play Store zum Download verfügbar.",
                 "tags": [
                     "React",
                     "TypeScript",
@@ -263,6 +294,16 @@
                     "Firebase",
                     "Capacitor"
                 ]
+            },
+            "purescan_foods": {
+                "title": "PureScan Foods - Lebensmittel-Inhaltsstoff-Analysator",
+                "description": "Plattformübergreifender Lebensmitteletikett-Analysator, entwickelt mit React Native und Expo auf Firebase-Infrastruktur. Liest Produktetiketten durch Barcode-Scanning und kamerabasierte OCR und nutzt das Gemini 3.1 Flash-Lite-Modell für Allergenerkennung, Zusatzstoff-Risikoanalyse und Diätverträglichkeitsbewertung. Das Familienprofilsystem berechnet Produktverträglichkeitswerte basierend auf den Allergien und Ernährungspräferenzen jedes Mitglieds. Bietet ein E-Code-basiertes Lebensmittelzusatzstoff-Wörterbuch, den Guru-AI-Chat-Assistenten und mehrsprachige Unterstützung. Alle API-Kommunikationen werden über Firebase Cloud Functions geleitet, um die Privatsphäre der Benutzer zu schützen. Im Google Play Store verfügbar, App Store-Erweiterung geplant.",
+                "tags": ["React Native", "Expo", "Firebase", "Gemini AI", "OCR"]
+            },
+            "openworld": {
+                "title": "OpenWorld - Lokaler KI-Superagent",
+                "description": "Ein Windows-basierter lokaler KI-Superagent mit 4-Schichten-Sicherheit. Bietet über 100 integrierte Werkzeuge für Bildschirmsteuerung, Dateiverwaltung, OCR, Recherche, Codeverwaltung und mehr. Funktioniert mit Ollama oder Cloud-LLM-Integration (Groq, Z.AI). Beinhaltet Fernsteuerung über Telegram-Bot, semantisches Tool-Routing und ein Notebook-System. Derzeit in der experimentellen Phase, in aktiver Entwicklung mit Arbeit an verschiedenen Modellen.",
+                "tags": ["Python", "Electron", "Ollama", "Groq", "Telegram Bot", "LLM"]
             },
             "gghub": {
                 "title": "GGHub - Gamer Sozialplattform (Beta)",

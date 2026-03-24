@@ -1,7 +1,7 @@
 import { Menu, Transition, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
 import { Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
-import { FiGlobe, FiChevronDown } from 'react-icons/fi'
+import { FiChevronDown } from 'react-icons/fi'
 import ReactCountryFlag from 'react-country-flag'
 
 const languageOptions = [
@@ -19,10 +19,21 @@ export function LanguageSwitcher() {
   return (
     <Menu as="div" className="relative inline-block text-left over">
       <div>
-        <MenuButton className="inline-flex w-full justify-center items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors ...">
-          <FiGlobe />
-          {currentLanguage?.code.toUpperCase()}
-          <FiChevronDown className="-mr-1 h-5 w-5 text-slate-500 dark:text-slate-400" aria-hidden="true" />
+        <MenuButton className="group inline-flex items-center justify-center gap-1.5 rounded-full p-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300 focus:outline-none">
+          <div className="relative flex items-center justify-center w-6 h-6 overflow-hidden rounded-full ring-2 ring-slate-200 dark:ring-slate-700 group-hover:ring-sky-500/50 transition-all duration-300 shadow-sm shrink-0">
+            <ReactCountryFlag
+              countryCode={currentLanguage?.country || 'GB'}
+              svg
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+              className="absolute inset-0 w-full h-full object-cover"
+              title={currentLanguage?.name}
+            />
+          </div>
+          <FiChevronDown className="h-4 w-4 text-slate-500 dark:text-slate-400 transition-transform duration-300 group-data-[open]:rotate-180" aria-hidden="true" />
         </MenuButton>
       </div>
       <Transition
@@ -42,12 +53,19 @@ export function LanguageSwitcher() {
                   onClick={() => i18n.changeLanguage(lang.code)}
                   className="group flex w-full items-center rounded-md px-2 py-2 text-sm text-slate-700 dark:text-slate-300 transition-colors data-[active]:bg-sky-500 data-[active]:text-white"
                 >
-                  <ReactCountryFlag
-                    countryCode={lang.country}
-                    svg
-                    className="mr-2 text-lg"
-                    title={lang.country}
-                  />
+                  <div className="relative flex items-center justify-center w-5 h-5 overflow-hidden rounded-full mr-2 shrink-0 bg-slate-100 dark:bg-slate-700">
+                    <ReactCountryFlag
+                      countryCode={lang.country}
+                      svg
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                      }}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      title={lang.country}
+                    />
+                  </div>
                   {lang.name}
                 </button>
               </MenuItem>

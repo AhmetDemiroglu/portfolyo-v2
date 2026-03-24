@@ -1,10 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
 import type { IconType } from 'react-icons'
-import { FaHtml5, FaCss3Alt, FaJs, FaVuejs, FaReact, FaGithub, FaBuilding, FaChartLine, FaPuzzlePiece, FaUsers, FaClock, FaBootstrap, FaMapMarkedAlt, FaDraftingCompass } from 'react-icons/fa'
-import { SiSharp, SiDotnet, SiAdobephotoshop, SiJquery, SiTypescript, SiTailwindcss } from 'react-icons/si'
+import { FaHtml5, FaCss3Alt, FaJs, FaVuejs, FaReact, FaGithub, FaBuilding, FaChartLine, FaPuzzlePiece, FaUsers, FaClock, FaBootstrap, FaMapMarkedAlt, FaDraftingCompass, FaPython, FaDocker, FaFigma } from 'react-icons/fa'
+import { SiSharp, SiDotnet, SiAdobephotoshop, SiJquery, SiTypescript, SiTailwindcss, SiFirebase, SiCapacitor } from 'react-icons/si'
 import { DiNetmagazine } from "react-icons/di";
-import { TbSql } from 'react-icons/tb'
+import { TbSql, TbBrandReactNative } from 'react-icons/tb'
 import { useTranslation } from 'react-i18next';
 import { AnimatedGridBackground } from "../components/GridBackground";
 import { Helmet } from 'react-helmet-async';
@@ -41,10 +41,16 @@ const skillDetails: { [key: string]: { icon: IconType; level: number } } = {
     '.NET Core': { icon: SiDotnet, level: 3 },
     'Entity Framework': { icon: DiNetmagazine, level: 3 },
     'SQL Server': { icon: TbSql, level: 4 },
+    'Python': { icon: FaPython, level: 2 },
+    'React Native': { icon: TbBrandReactNative, level: 3 },
+    'firebase': { icon: SiFirebase, level: 4 },
+    'capacitor': { icon: SiCapacitor, level: 3 },
+    'docker': { icon: FaDocker, level: 1 },
+    'figma': { icon: FaFigma, level: 1 },
     'github': { icon: FaGithub, level: 4 },
     'photoshop': { icon: SiAdobephotoshop, level: 4 },
-    'autocad': { icon: FaDraftingCompass, level: 5 },
-    'netcad': { icon: FaMapMarkedAlt, level: 4 },
+    'autocad': { icon: FaDraftingCompass, level: 2 },
+    'netcad': { icon: FaMapMarkedAlt, level: 3 },
     'gis_systems': { icon: FaMapMarkedAlt, level: 3 },
     'real_estate_appraisal': { icon: FaBuilding, level: 5 },
     'reporting_analysis': { icon: FaChartLine, level: 5 },
@@ -148,10 +154,10 @@ function SkillsPage() {
         <meta name="description" content={t('seo.skills_description') ?? ''} />
       </Helmet>
       <AnimatedGridBackground />
-        <div className="relative z-10 container mx-auto px-8 py-16">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16">
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} >
-          <h1 className="text-center text-5xl font-bold text-slate-900 dark:text-white">{mainTitle}</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-xl text-slate-600 dark:text-slate-400">{subtitle}</p>
+          <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">{mainTitle}</h1>
+          <p className="mx-auto mt-3 sm:mt-4 max-w-2xl text-center text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400">{subtitle}</p>
         </motion.div>
 
         <div className="mt-16 space-y-16">

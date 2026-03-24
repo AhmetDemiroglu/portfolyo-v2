@@ -20,3 +20,44 @@ html {
         flex-direction: column;
     }
 }
+
+/* GridBackground particle drift - CSS animation instead of Framer Motion */
+@keyframes particle-drift {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(var(--drift-x), var(--drift-y));
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.animate-particle-drift {
+    animation: particle-drift linear infinite;
+    will-change: transform;
+}
+
+/* FloatingCode fall animation - CSS animation instead of Framer Motion */
+@keyframes float-down {
+    0% {
+        transform: translateY(-60px);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(105vh);
+        opacity: 0;
+    }
+}
+
+.animate-float-down {
+    animation: float-down linear infinite;
+    will-change: transform;
+}

@@ -99,14 +99,14 @@ function ContactPage() {
         <meta name="description" content={t('seo.contact_description') ?? ''} />
       </Helmet>
       <AnimatedGridBackground />
-      <div className="relative z-10 container mx-auto px-8 py-16">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-center text-5xl font-bold text-slate-900 dark:text-white">{t('contact_page.main_title')}</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-xl text-slate-600 dark:text-slate-400">{t('contact_page.subtitle')}</p>
+          <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">{t('contact_page.main_title')}</h1>
+          <p className="mx-auto mt-3 sm:mt-4 max-w-2xl text-center text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400">{t('contact_page.subtitle')}</p>
         </motion.div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">

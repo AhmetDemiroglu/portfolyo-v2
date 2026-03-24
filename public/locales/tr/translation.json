@@ -35,7 +35,11 @@
         "career_section_background": "KARİYER",
         "career_section_title": "Disiplinler Arası Bir Yaklaşım",
         "career_section_p1": "Kariyerimin temelini 9 yıllık Şehir Planlama ve Gayrimenkul Değerleme tecrübesi oluşturuyor. Bu süreçte edindiğim analitik düşünme, detaylı raporlama ve veri yorumlama becerileri, bugünkü yazılım geliştirme yaklaşımımın temel taşlarıdır.",
-        "career_section_p2": "Teknoloji tutkumu profesyonel bir kariyere dönüştürürken, geçmişimden getirdiğim bu disiplini koda yansıtıyorum. Benim için yazılım geliştirme, sadece fonksiyonel araçlar yaratmak değil, aynı zamanda kullanıcı odaklı, temiz ve sürdürülebilir çözümler üretmektir. Detaylara olan bağlılığım, bu yeni alandaki en güçlü rehberim."
+        "career_section_p2": "Teknoloji tutkumu profesyonel bir kariyere dönüştürürken, geçmişimden getirdiğim bu disiplini koda yansıtıyorum. Benim için yazılım geliştirme, sadece fonksiyonel araçlar yaratmak değil, aynı zamanda kullanıcı odaklı, temiz ve sürdürülebilir çözümler üretmektir. Detaylara olan bağlılığım, bu yeni alandaki en güçlü rehberim.",
+        "studio_section_title": "Bağımsız Stüdyo",
+        "studio_section_description": "Yapay zeka destekli mobil uygulamalar geliştiren bağımsız yazılım stüdyom.",
+        "studio_section_visit": "Stüdyoyu Ziyaret Et",
+        "studio_section_apps_label": "Yayınlanan Uygulamalar"
     },
     "about": {
         "background_text": "HAKKIMDA",
@@ -69,7 +73,7 @@
         "timeline_6_year": "2026",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "Yapay Zeka Destekli Mobil Uygulamalar",
-        "timeline_6_content": "Bağımsız mobil yazılım stüdyom SeptimusLab ile yapay zeka destekli uygulamalar geliştirip yayınlıyorum. Fintel ile dönemsel harcama takibi ve PureScan Cosmetics ile kozmetik içerik analizi kullanıcılara sunuldu. PureScan Foods üzerindeki çalışmalar büyük ölçüde tamamlandı. React Native ile teknoloji yığınımı genişletmeye devam ediyorum.",
+        "timeline_6_content": "Bağımsız mobil yazılım stüdyom SeptimusLab ile yapay zeka destekli uygulamalar geliştirip yayınlıyorum. Fintel ile dönemsel harcama takibi ve PureScan Cosmetics ile kozmetik içerik analizi kullanıcılara sunuldu. PureScan Foods artık Google Play'de yayında; App Store'a genişleme en kısa zamanda planlanıyor. React Native ile teknoloji yığınımı genişletmeye devam ediyorum.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
@@ -117,6 +121,10 @@
                             {
                                 "name": "Tailwind CSS",
                                 "description": "Utility-first yaklaşımıyla özelleştirilebilir tasarımlar."
+                            },
+                            {
+                                "name": "React Native",
+                                "description": "React Native ile cross-platform mobil uygulama geliştirme. Expo ve bare workflow deneyimi."
                             }
                         ]
                     },
@@ -138,6 +146,10 @@
                             {
                                 "name": "SQL Server",
                                 "description": "Veritabanı tasarımı, sorgulama ve temel optimizasyon."
+                            },
+                            {
+                                "name": "Python",
+                                "description": "Backend geliştirme ve otomasyon scriptleri. Temel düzeyde Flask/FastAPI bilgisi."
                             }
                         ]
                     }
@@ -165,6 +177,22 @@
                     "gis_systems": {
                         "name": "GIS Sistemleri",
                         "description": "Mekansal analiz ve coğrafi veri görselleştirme."
+                    },
+                    "firebase": {
+                        "name": "Firebase",
+                        "description": "Authentication, Firestore, Cloud Functions ve hosting. Birçok projede aktif kullanım."
+                    },
+                    "capacitor": {
+                        "name": "Capacitor",
+                        "description": "Web teknolojileriyle native mobil uygulama derleme ve dağıtım."
+                    },
+                    "docker": {
+                        "name": "Docker",
+                        "description": "Konteynerleştirme ile geliştirme ve dağıtım ortamları yönetimi."
+                    },
+                    "figma": {
+                        "name": "Figma",
+                        "description": "UI/UX tasarım ve prototipleme. Geliştirici-tasarımcı iş birliği."
                     }
                 }
             },
@@ -206,8 +234,11 @@
             "live": "Yayında",
             "beta": "Beta",
             "apk": "APK",
-            "new": "Yeni"
+            "new": "Yeni",
+            "experimental": "Deneysel"
         },
+        "show_more": "Devamını Gör",
+        "show_less": "Daha Az Göster",
         "download_apk_button": "APK İndir",
         "view_google_play_button": "Google Play'den İndir",
         "projects": {
@@ -234,7 +265,7 @@
             },
             "purescan": {
                 "title": "PureScan - Kozmetik İçerik Analizi",
-                "description": "Yapay zeka destekli kozmetik ürün içerik analizörü. Kamera ile OCR, barkod tarama (OpenBeautyFacts DB) veya manuel metin girişi ile içerikleri analiz eder. Gemini 2.5 Flash ile risk değerlendirmesi, cilt tipine göre uyumluluk skoru, TTS ile sesli özet ve AI chat asistanı sunar. Sanal Dolap özelliği ile analiz edilen içerikleri envantere ekleme ve conflict engine teknolojisiyle ürünler arası uyumluluk kontrolü yapma imkanı tanır. RevenueCat altyapısıyla Pro abonelik ve AdMob entegrasyonu (banner/reward) ile freemium model desteği bulunur. Capacitor kullanılarak native uygulamaya dönüştürülmüş olup, Google Play Store'da aktif olarak yayında ve indirilebilir durumdadır.",
+                "description": "Yapay zeka destekli kozmetik ürün içerik analizörü. Kamera ile OCR, barkod tarama (OpenBeautyFacts DB) veya manuel metin girişi ile içerikleri analiz eder. Gemini 3.1 Flash-Lite ile risk değerlendirmesi, cilt tipine göre uyumluluk skoru, TTS ile sesli özet ve AI chat asistanı sunar. Sanal Dolap özelliği ile analiz edilen içerikleri envantere ekleme ve conflict engine teknolojisiyle ürünler arası uyumluluk kontrolü yapma imkanı tanır. RevenueCat altyapısıyla Pro abonelik ve AdMob entegrasyonu (banner/reward) ile freemium model desteği bulunur. Capacitor kullanılarak native uygulamaya dönüştürülmüş olup, Google Play Store'da aktif olarak yayında ve indirilebilir durumdadır.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -265,6 +296,16 @@
                     "Firebase",
                     "Capacitor"
                 ]
+            },
+            "purescan_foods": {
+                "title": "PureScan Foods - Gıda İçerik Analizi",
+                "description": "React Native ve Expo ile geliştirilen, Firebase altyapısı üzerinde çalışan cross-platform gıda etiketi analizörü. Barkod tarama ve kamera tabanlı OCR ile ürün etiketlerini okuyarak Gemini 3.1 Flash-Lite modeliyle alerjen tespiti, katkı maddesi risk analizi ve diyet uyumluluk değerlendirmesi yapar. Aile profilleri sistemi sayesinde her bireyin alerji ve diyet tercihlerine göre ürün uygunluk skoru hesaplanır. E-kod veritabanına dayalı gıda katkı maddeleri sözlüğü, Guru AI chat asistanı ve çoklu dil desteği sunar. Tüm API iletişimleri Firebase Cloud Functions üzerinden yönlendirilerek kullanıcı gizliliği korunur. Google Play'de yayında, App Store genişlemesi planlanmaktadır.",
+                "tags": ["React Native", "Expo", "Firebase", "Gemini AI", "OCR"]
+            },
+            "openworld": {
+                "title": "OpenWorld - Lokal AI Süper Ajan",
+                "description": "4 katmanlı güvenlik sistemine sahip Windows tabanlı lokal AI süper ajan. 100+ yerleşik araç ile ekran kontrolü, dosya yönetimi, OCR, araştırma, kod yönetimi ve daha fazlasını sunar. Ollama veya bulut LLM entegrasyonu (Groq, Z.AI) ile çalışır. Telegram bot üzerinden uzaktan kontrol, semantik araç yönlendirme ve notebook sistemi içerir. Deneysel aşamada olup aktif olarak geliştirilmekte ve muhtelif modeller üzerinde çalışılmaktadır.",
+                "tags": ["Python", "Electron", "Ollama", "Groq", "Telegram Bot", "LLM"]
             },
             "gghub": {
                 "title": "GGHub - Oyuncu Sosyal Platformu (Beta)",

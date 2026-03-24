@@ -35,7 +35,11 @@
         "career_section_background": "CARRERA",
         "career_section_title": "Un Enfoque Interdisciplinario",
         "career_section_p1": "Mi carrera se basa en una base de 9 años en Planificación Urbana y Valoración Inmobiliaria. Las habilidades que adquirí en pensamiento analítico, informes detallados e interpretación de datos durante este tiempo son las piedras angulares de mi enfoque actual en el desarrollo de software.",
-        "career_section_p2": "Al transformar mi pasión por la tecnología en una carrera profesional, traslado esta disciplina de mi pasado a mi código. Para mí, el desarrollo de software no se trata solo de crear herramientas funcionales; se trata de producir soluciones centradas en el usuario, limpias y sostenibles. Mi compromiso con el detalle es mi guía más fuerte en este nuevo campo."
+        "career_section_p2": "Al transformar mi pasión por la tecnología en una carrera profesional, traslado esta disciplina de mi pasado a mi código. Para mí, el desarrollo de software no se trata solo de crear herramientas funcionales; se trata de producir soluciones centradas en el usuario, limpias y sostenibles. Mi compromiso con el detalle es mi guía más fuerte en este nuevo campo.",
+        "studio_section_title": "Estudio Independiente",
+        "studio_section_description": "Mi estudio de software independiente que desarrolla aplicaciones móviles impulsadas por IA.",
+        "studio_section_visit": "Visitar Estudio",
+        "studio_section_apps_label": "Apps Publicadas"
     },
     "about": {
         "background_text": "SOBRE MÍ",
@@ -69,7 +73,7 @@
         "timeline_6_year": "2026",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "Aplicaciones Móviles con IA",
-        "timeline_6_content": "A través de mi estudio independiente de software móvil SeptimusLab, desarrollo y publico aplicaciones impulsadas por IA. Fintel para el seguimiento periódico de gastos y PureScan Cosmetics para el análisis de ingredientes cosméticos están en producción. El trabajo en PureScan Foods está en gran parte completado. Continúo expandiendo mi stack tecnológico con React Native.",
+        "timeline_6_content": "A través de mi estudio independiente de software móvil SeptimusLab, desarrollo y publico aplicaciones impulsadas por IA. Fintel para el seguimiento periódico de gastos y PureScan Cosmetics para el análisis de ingredientes cosméticos están en producción. PureScan Foods ya está publicada en Google Play. La expansión al App Store está planificada próximamente. Continúo expandiendo mi stack tecnológico con React Native.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
@@ -117,6 +121,10 @@
                             {
                                 "name": "Tailwind CSS",
                                 "description": "Diseños personalizables con el enfoque 'utility-first'."
+                            },
+                            {
+                                "name": "React Native",
+                                "description": "Desarrollo de aplicaciones móviles multiplataforma con React Native. Experiencia con Expo y bare workflow."
                             }
                         ]
                     },
@@ -138,6 +146,10 @@
                             {
                                 "name": "SQL Server",
                                 "description": "Diseño de bases de datos, consultas y optimización básica."
+                            },
+                            {
+                                "name": "Python",
+                                "description": "Desarrollo backend y scripts de automatización. Conocimientos básicos de Flask/FastAPI."
                             }
                         ]
                     }
@@ -165,6 +177,22 @@
                     "gis_systems": {
                         "name": "Sistemas GIS",
                         "description": "Análisis espacial y visualización de datos geográficos."
+                    },
+                    "firebase": {
+                        "name": "Firebase",
+                        "description": "Authentication, Firestore, Cloud Functions y hosting. Uso activo en múltiples proyectos."
+                    },
+                    "capacitor": {
+                        "name": "Capacitor",
+                        "description": "Creación y distribución de aplicaciones móviles nativas con tecnologías web."
+                    },
+                    "docker": {
+                        "name": "Docker",
+                        "description": "Gestión de entornos de desarrollo y despliegue con contenedores."
+                    },
+                    "figma": {
+                        "name": "Figma",
+                        "description": "Diseño y prototipado UI/UX. Colaboración entre desarrollador y diseñador."
                     }
                 }
             },
@@ -206,8 +234,11 @@
             "live": "En Vivo",
             "beta": "Beta",
             "apk": "APK",
-            "new": "Nuevo"
+            "new": "Nuevo",
+            "experimental": "Experimental"
         },
+        "show_more": "Ver Más",
+        "show_less": "Ver Menos",
         "download_apk_button": "Descargar APK",
         "view_google_play_button": "Descargar en Google Play",
         "projects": {
@@ -224,7 +255,7 @@
             },
             "purescan": {
                 "title": "PureScan - Analizador de Ingredientes Cosméticos",
-                "description": "Analizador de ingredientes de productos cosméticos impulsado por IA. Analiza ingredientes mediante OCR de cámara, escaneo de códigos de barras (OpenBeautyFacts DB) o entrada de texto manual. Ofrece evaluación de riesgos potenciada por Gemini 2.5 Flash, puntuación de compatibilidad según tipo de piel, resúmenes de audio TTS y un asistente de chat con IA. La función de Armario Virtual permite añadir contenidos analizados al inventario y verificar la compatibilidad entre productos usando tecnología de motor de conflictos. Soporta modelo freemium con suscripciones Pro mediante RevenueCat e integración AdMob (banner/recompensa). Convertido a aplicación Android usando Capacitor, disponible para descarga en Google Play Store.",
+                "description": "Analizador de ingredientes de productos cosméticos impulsado por IA. Analiza ingredientes mediante OCR de cámara, escaneo de códigos de barras (OpenBeautyFacts DB) o entrada de texto manual. Ofrece evaluación de riesgos potenciada por Gemini 3.1 Flash-Lite, puntuación de compatibilidad según tipo de piel, resúmenes de audio TTS y un asistente de chat con IA. La función de Armario Virtual permite añadir contenidos analizados al inventario y verificar la compatibilidad entre productos usando tecnología de motor de conflictos. Soporta modelo freemium con suscripciones Pro mediante RevenueCat e integración AdMob (banner/recompensa). Convertido a aplicación Android usando Capacitor, disponible para descarga en Google Play Store.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -255,7 +286,7 @@
             },
             "fintel": {
                 "title": "Fintel - Asistente Financiero con IA",
-                "description": "Ursprünglich mit Gemini 3.0 und einem 'Vibecoding'-Ansatz prototypisiert, anschließend professionell weiterentwickelt und zu einem vollständigen SaaS-Produkt verfeinert. Ein hybrides Finanztool (LocalStorage + Firestore) mit 'Nova AI'-Integration, angetrieben durch Groq-Infrastruktur und Llama 3.3 70B Modell, zusammen mit GLM-OCR-Technologie zur hochgenauen Verarbeitung von PDFs und Belegen, bietet Ausgabenanalysen und personalisierte Sparstrategien. Mit Capacitor in eine Android-Anwendung konvertiert und im Google Play Store zum Download verfügbar.",
+                "description": "Inicialmente prototipado con Gemini 3.0 usando un enfoque de 'Vibecoding', luego refinado profesionalmente hasta convertirse en un producto SaaS completo. Una herramienta financiera híbrida (LocalStorage + Firestore) con integración 'Nova AI' impulsada por la infraestructura Groq y el modelo Llama 3.3 70B, junto con tecnología GLM-OCR para el procesamiento de alta precisión de PDFs y recibos, ofreciendo análisis de gastos y estrategias de ahorro personalizadas. Convertido a aplicación Android usando Capacitor y disponible para descarga en Google Play Store.",
                 "tags": [
                     "React",
                     "TypeScript",
@@ -264,6 +295,16 @@
                     "Firebase",
                     "Capacitor"
                 ]
+            },
+            "purescan_foods": {
+                "title": "PureScan Foods - Analizador de Ingredientes Alimentarios",
+                "description": "Analizador de etiquetas alimentarias multiplataforma desarrollado con React Native y Expo sobre infraestructura Firebase. Lee etiquetas de productos mediante escaneo de códigos de barras y OCR basado en cámara, aprovechando el modelo Gemini 3.1 Flash-Lite para detección de alérgenos, análisis de riesgo de aditivos y evaluación de compatibilidad dietética. El sistema de perfiles familiares calcula puntuaciones de compatibilidad de productos según las alergias y preferencias dietéticas de cada miembro. Incluye un diccionario de aditivos alimentarios basado en códigos E, asistente de chat Guru AI y soporte multilingüe. Todas las comunicaciones API se enrutan a través de Firebase Cloud Functions para proteger la privacidad del usuario. Disponible en Google Play, con expansión al App Store planificada.",
+                "tags": ["React Native", "Expo", "Firebase", "Gemini AI", "OCR"]
+            },
+            "openworld": {
+                "title": "OpenWorld - Superagente IA Local",
+                "description": "Un superagente de IA local basado en Windows con seguridad de 4 capas. Ofrece más de 100 herramientas integradas para control de pantalla, gestión de archivos, OCR, investigación, gestión de código y más. Funciona con integración Ollama o LLM en la nube (Groq, Z.AI). Incluye control remoto a través de bot de Telegram, enrutamiento semántico de herramientas y un sistema de cuaderno. Actualmente en fase experimental, en desarrollo activo con trabajo en diversos modelos.",
+                "tags": ["Python", "Electron", "Ollama", "Groq", "Telegram Bot", "LLM"]
             },
             "gghub": {
                 "title": "GGHub - Plataforma Social para Gamers (Beta)",

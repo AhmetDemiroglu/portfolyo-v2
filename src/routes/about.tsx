@@ -51,7 +51,7 @@ function AboutPage() {
     const progressWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
     return (
-        <div ref={containerRef} className="relative min-h-screen bg-slate-50 dark:bg-[#0a0f1a] transition-colors duration-300">
+        <div ref={containerRef} className="relative min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
             <Helmet key={`${i18n.language}`} defer={false} prioritizeSeoTags>
                 <title>{t("seo.about_title")}</title>
                 <meta name="description" content={t("seo.about_description") ?? ""} />

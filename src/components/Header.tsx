@@ -91,7 +91,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="container mx-auto mt-4 rounded-lg border border-slate-200 bg-white/80 p-3 shadow-lg backdrop-blur-lg dark:border-slate-700/50 dark:bg-slate-900/50">
+      <div className="container mx-2 sm:mx-auto mt-2 sm:mt-4 rounded-lg border border-slate-200 bg-white/80 p-2 sm:p-3 shadow-lg backdrop-blur-lg dark:border-slate-700/50 dark:bg-slate-900/50">
         <nav className="flex items-center justify-between">
           <Link to="/" preload="intent" onClick={() => setIsOpen(false)}>
             <Logo />

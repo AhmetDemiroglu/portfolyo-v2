@@ -35,7 +35,11 @@
         "career_section_background": "CAREER",
         "career_section_title": "An Interdisciplinary Approach",
         "career_section_p1": "My career is built on a 9-year foundation in Urban Planning and Real Estate Appraisal. The skills I acquired in analytical thinking, detailed reporting, and data interpretation during this time are the cornerstones of my software development approach today.",
-        "career_section_p2": "As I transform my passion for technology into a professional career, I carry this discipline from my past into my code. For me, software development isn't just about creating functional tools; it's about producing user-centric, clean, and sustainable solutions. My commitment to detail is my strongest guide in this new field."
+        "career_section_p2": "As I transform my passion for technology into a professional career, I carry this discipline from my past into my code. For me, software development isn't just about creating functional tools; it's about producing user-centric, clean, and sustainable solutions. My commitment to detail is my strongest guide in this new field.",
+        "studio_section_title": "Independent Studio",
+        "studio_section_description": "My independent software studio developing AI-powered mobile applications.",
+        "studio_section_visit": "Visit Studio",
+        "studio_section_apps_label": "Published Apps"
     },
     "about": {
         "background_text": "ABOUT ME",
@@ -69,7 +73,7 @@
         "timeline_6_year": "2026",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "AI-Powered Mobile Applications",
-        "timeline_6_content": "Through my independent mobile software studio SeptimusLab, I develop and publish AI-powered applications. Fintel for periodic expense tracking and PureScan Cosmetics for cosmetic ingredient analysis are live. Work on PureScan Foods is largely complete. I continue expanding my tech stack with React Native.",
+        "timeline_6_content": "Through my independent mobile software studio SeptimusLab, I develop and publish AI-powered applications. Fintel for periodic expense tracking and PureScan Cosmetics for cosmetic ingredient analysis are live. PureScan Foods is now live on Google Play (Android). App Store expansion is planned soon. I continue expanding my tech stack with React Native.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
@@ -117,6 +121,10 @@
                             {
                                 "name": "Tailwind CSS",
                                 "description": "Customizable designs with a utility-first approach."
+                            },
+                            {
+                                "name": "React Native",
+                                "description": "Cross-platform mobile app development with React Native. Experience with Expo and bare workflow."
                             }
                         ]
                     },
@@ -138,6 +146,10 @@
                             {
                                 "name": "SQL Server",
                                 "description": "Database design, querying, and basic optimization."
+                            },
+                            {
+                                "name": "Python",
+                                "description": "Backend development and automation scripts. Basic knowledge of Flask/FastAPI."
                             }
                         ]
                     }
@@ -165,6 +177,22 @@
                     "gis_systems": {
                         "name": "GIS Systems",
                         "description": "Spatial analysis and geographic data visualization."
+                    },
+                    "firebase": {
+                        "name": "Firebase",
+                        "description": "Authentication, Firestore, Cloud Functions and hosting. Active use across multiple projects."
+                    },
+                    "capacitor": {
+                        "name": "Capacitor",
+                        "description": "Building and distributing native mobile apps with web technologies."
+                    },
+                    "docker": {
+                        "name": "Docker",
+                        "description": "Managing development and deployment environments with containerization."
+                    },
+                    "figma": {
+                        "name": "Figma",
+                        "description": "UI/UX design and prototyping. Developer-designer collaboration."
                     }
                 }
             },
@@ -206,8 +234,11 @@
             "live": "Live",
             "beta": "Beta",
             "apk": "APK",
-            "new": "New"
+            "new": "New",
+            "experimental": "Experimental"
         },
+        "show_more": "Show More",
+        "show_less": "Show Less",
         "download_apk_button": "Download APK",
         "view_google_play_button": "Get it on Google Play",
         "projects": {
@@ -224,7 +255,7 @@
             },
             "purescan": {
                 "title": "PureScan - Cosmetic Analyzer",
-                "description": "AI-powered cosmetic product ingredient analyzer. Analyzes ingredients via camera OCR, barcode scanning (OpenBeautyFacts DB), or manual text input. Features risk assessment powered by Gemini 2.5 Flash, skin type compatibility scoring, TTS audio summaries, and an AI chat assistant. Virtual Cabinet feature allows adding analyzed items to inventory and checking cross-product compatibility using conflict engine technology. Supports a freemium model with RevenueCat-powered Pro subscriptions and AdMob integration (banner/reward). Converted to a native application using Capacitor, it is actively published on Google Play Store and available for download.",
+                "description": "AI-powered cosmetic product ingredient analyzer. Analyzes ingredients via camera OCR, barcode scanning (OpenBeautyFacts DB), or manual text input. Features risk assessment powered by Gemini 3.1 Flash-Lite, skin type compatibility scoring, TTS audio summaries, and an AI chat assistant. Virtual Cabinet feature allows adding analyzed items to inventory and checking cross-product compatibility using conflict engine technology. Supports a freemium model with RevenueCat-powered Pro subscriptions and AdMob integration (banner/reward). Converted to a native application using Capacitor, it is actively published on Google Play Store and available for download.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -264,6 +295,16 @@
                     "Firebase",
                     "Capacitor"
                 ]
+            },
+            "purescan_foods": {
+                "title": "PureScan Foods - Food Ingredient Analyzer",
+                "description": "Cross-platform food label analyzer built with React Native and Expo, running on Firebase infrastructure. Reads product labels through barcode scanning and camera-based OCR, leveraging the Gemini 3.1 Flash-Lite model for allergen detection, additive risk analysis, and dietary compatibility assessment. The family profiles system calculates product compatibility scores based on each member's allergies and dietary preferences. Features an E-code-based food additive dictionary, Guru AI chat assistant, and multi-language support. All API communications are routed through Firebase Cloud Functions to protect user privacy. Live on Google Play, with App Store expansion planned.",
+                "tags": ["React Native", "Expo", "Firebase", "Gemini AI", "OCR"]
+            },
+            "openworld": {
+                "title": "OpenWorld - Local AI Super Agent",
+                "description": "A Windows-based local AI super agent with 4-layer security. Offers 100+ built-in tools for screen control, file management, OCR, research, code management, and more. Works with Ollama or cloud LLM integration (Groq, Z.AI). Includes remote control via Telegram bot, semantic tool routing, and a notebook system. Currently in experimental stage, under active development with work being done on various models.",
+                "tags": ["Python", "Electron", "Ollama", "Groq", "Telegram Bot", "LLM"]
             },
             "gghub": {
                 "title": "GGHub - Gamer Social Platform (Beta)",
