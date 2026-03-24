@@ -52,11 +52,12 @@ function HomePage() {
                 </div>
 
                 {/* Content */}
-                <div className="container z-10 mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-4 sm:px-6 md:px-8">
+                <div className="container z-10 mx-auto flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-4 md:gap-0 px-6 sm:px-8 md:px-8 lg:px-12">
+                    {/* Text */}
                     <motion.div
-                        className="w-full md:w-3/5 mt-6 md:mt-0"
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: isHeroInView ? 1 : 0, x: isHeroInView ? 0 : -100 }}
+                        className="w-full md:w-1/2 mt-4 md:mt-0"
+                        initial={{ opacity: 0, x: -80 }}
+                        animate={{ opacity: isHeroInView ? 1 : 0, x: isHeroInView ? 0 : -80 }}
                         transition={{ duration: 0.8 }}
                         style={{ x: heroTextX, opacity: heroOpacity }}
                     >
@@ -91,28 +92,30 @@ function HomePage() {
                             </a>
                         </div>
                     </motion.div>
+
+                    {/* Portrait */}
                     <motion.div
-                        className="w-[65%] sm:w-[45%] md:w-[32%] lg:w-[30%] md:-mr-4"
-                        initial={{ opacity: 0, y: 40 }}
-                        animate={{ opacity: isHeroInView ? 1 : 0, y: isHeroInView ? 0 : 40 }}
-                        transition={{ duration: 1, delay: 0.2 }}
+                        className="w-[70%] sm:w-[55%] md:w-[36%] lg:w-[32%]"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: isHeroInView ? 1 : 0, scale: isHeroInView ? 1 : 0.9 }}
+                        transition={{ duration: 1, delay: 0.3 }}
                         style={{ opacity: heroOpacity }}
                     >
                         <div className="relative mx-auto">
-                            {/* Soft ambient glow */}
-                            <div className="absolute -inset-6 bg-gradient-to-b from-sky-400/15 to-transparent dark:from-sky-500/10 dark:to-transparent blur-2xl rounded-full" />
-                            {/* Portrait - all edges fade smoothly */}
+                            {/* Subtle glow - barely visible in light, soft in dark */}
+                            <div className="absolute -inset-6 rounded-full blur-2xl bg-sky-400/5 dark:bg-sky-500/8" />
+                            {/* Portrait with tight edge fade */}
                             <div
                                 className="relative"
                                 style={{
-                                    WebkitMaskImage: "radial-gradient(ellipse 90% 85% at 50% 40%, black 45%, transparent 75%)",
-                                    maskImage: "radial-gradient(ellipse 90% 85% at 50% 40%, black 45%, transparent 75%)",
+                                    WebkitMaskImage: "radial-gradient(ellipse 82% 78% at 50% 38%, black 55%, transparent 80%)",
+                                    maskImage: "radial-gradient(ellipse 82% 78% at 50% 38%, black 55%, transparent 80%)",
                                 }}
                             >
                                 <img
                                     src="ahmet-.webp"
                                     alt="Ahmet Demiroğlu"
-                                    className="w-full h-auto object-contain"
+                                    className="w-full h-auto"
                                 />
                             </div>
                         </div>
