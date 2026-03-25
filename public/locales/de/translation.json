@@ -69,7 +69,7 @@
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Gaming Social Platform",
-        "timeline_5_content": "Ich habe GGHub — eine türkische Gaming-Sozialplattform — als persönliches Projekt entwickelt und veröffentlicht. Die erste voll funktionsfähige Version wurde mit Next.js und .NET Core erstellt. Steam-, Epic- und Google-OAuth-Integrationen sowie SignalR-basierte Echtzeit-Kommunikationsfunktionen sind für die zweite Version geplant.",
+        "timeline_5_content": "Ich habe GGHub — eine Gaming-Sozialplattform — als persönliches Projekt entwickelt und veröffentlicht. Die mit Next.js und .NET Core erstellte Plattform hat ihr V2-Release erreicht und bietet mehrsprachige Unterstützung, SignalR-basierte Echtzeit-Kommunikation und Performance-Verbesserungen. Die V3-Entwicklung mit OAuth-Integrationen und Funktionen für nutzergenerierte Inhalte ist im Gange.",
         "timeline_6_year": "2026",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "KI-gestützte Mobile Anwendungen",
@@ -307,14 +307,14 @@
             },
             "gghub": {
                 "title": "GGHub - Gamer Sozialplattform (Beta)",
-                "description": "Dieses Monorepo-Projekt befindet sich in aktiver Entwicklung und vereint .NET 8 und Next.js 15 unter einer Clean Architecture. Die Plattform ist als Version 1 (V1) vollständig nutzbar und bietet umfassende Funktionen wie Listen, Spielsuche, Detailansichten, Home-Feed, Gamification (Abzeichen/Level), Bestenlisten und Messaging (Polling). Nachdem auch das Admin-Panel und die Benutzerprofil-Algorithmen fertiggestellt sind, konzentriert sich die aktuelle Arbeit im Rahmen der V2-Roadmap auf Steam-, Epic- und Google-OAuth-Integrationen sowie die Implementierung von SignalR für Echtzeitkommunikation.",
+                "description": "Dieses Monorepo-Projekt, das .NET 8 und Next.js 15 unter einer Clean Architecture vereint, hat sein V2-Release erreicht. Die Plattform bietet umfassende Funktionen wie Auflistung, Spielsuche, detaillierte Bewertungen, Home-Feed, Gamification (Abzeichen/Level), Bestenlisten, Admin-Panel und Benutzerprofil-Algorithmen sowie mehrsprachige Unterstützung (EN/TR), SignalR-basierte Echtzeit-Kommunikation und erhebliche Performance-Verbesserungen. Die V3-Roadmap umfasst Steam-, Epic- und Google-OAuth-Integrationen sowie nutzergenerierte Inhaltsbearbeitung und Sharing-Funktionen (unter Admin-Genehmigung, mit Auswirkung auf Punkte und Abzeichen).",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
-                    "Active Dev",
                     "Clean Architecture",
+                    "SignalR",
                     "PostgreSQL",
-                    "SignalR"
+                    "i18n"
                 ]
             }
         }

@@ -69,7 +69,7 @@
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Oyuncu Sosyal Platformu",
-        "timeline_5_content": "Kişisel projelerimden GGHub'ı - oyuncu sosyal platformunu - geliştirip yayına aldım. Next.js ve .NET Core altyapısıyla tam fonksiyonel ilk versiyonu tamamlandı. Steam, Epic ve Google OAuth entegrasyonları ile SignalR tabanlı gerçek zamanlı iletişim özellikleri ikinci versiyon için planlanıyor.",
+        "timeline_5_content": "Kişisel projelerimden GGHub'ı - oyuncu sosyal platformunu - geliştirip yayına aldım. Next.js ve .NET Core altyapısıyla V2 sürümüne ulaşan platform; çoklu dil desteği, SignalR tabanlı gerçek zamanlı mesajlaşma ve performans iyileştirmeleri sunmaktadır. V3 kapsamında OAuth entegrasyonları ve kullanıcı içerik paylaşım özellikleri üzerinde çalışılmaktadır.",
         "timeline_6_year": "2026",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "Yapay Zeka Destekli Mobil Uygulamalar",
@@ -309,14 +309,14 @@
             },
             "gghub": {
                 "title": "GGHub - Oyuncu Sosyal Platformu (Beta)",
-                "description": "Aktif geliştirme sürecindeki bu Monorepo projesi, .NET 8 ve Next.js 15 teknolojilerini Clean Architecture çatısı altında buluşturuyor. Versiyon 1 (V1) olarak tamamen kullanılabilir durumda olan platform; listeleme, oyun arama, detaylı inceleme, ana sayfa akışı, gamification (rozet/seviye), leaderboard ve mesajlaşma (polling) gibi özellikleri eksiksiz sunmaktadır. Admin paneli ve kullanıcı profil algoritmalarının da tamamlandığı sistemde, şu an V2 çalışmaları kapsamında Steam, Epic ve Google OAuth entegrasyonları ile gerçek zamanlı iletişim için SignalR altyapısı üzerine çalışılmaktadır.",
+                "description": ".NET 8 ve Next.js 15 teknolojilerini Clean Architecture çatısı altında birleştiren bu Monorepo projesi, V2 sürümüne ulaştı. Platform; listeleme, oyun arama, detaylı inceleme, ana sayfa akışı, gamification (rozet/seviye), leaderboard, admin paneli ve kullanıcı profil algoritmaları gibi kapsamlı özelliklerin yanı sıra; çoklu dil desteği (EN/TR), SignalR tabanlı gerçek zamanlı mesajlaşma ve ciddi performans iyileştirmeleri sunmaktadır. V3 yol haritasında Steam, Epic ve Google OAuth entegrasyonları, kullanıcı tarafından içerik düzenleme/paylaşım özellikleri (admin onayına tabi, puan ve rozetlere yansıyacak) yer almaktadır.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
-                    "Active Dev",
                     "Clean Architecture",
+                    "SignalR",
                     "PostgreSQL",
-                    "SignalR"
+                    "i18n"
                 ]
             }
         }

@@ -69,7 +69,7 @@
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Plataforma Social de Jugadores",
-        "timeline_5_content": "Desarrollé y lancé GGHub - una plataforma social de gaming - como proyecto personal. La primera versión completamente funcional fue construida con Next.js y .NET Core. Las integraciones de Steam, Epic y Google OAuth junto con funciones de comunicación en tiempo real basadas en SignalR están planificadas para la segunda versión.",
+        "timeline_5_content": "Desarrollé y lancé GGHub - una plataforma social de gaming - como proyecto personal. Construida con Next.js y .NET Core, la plataforma ha alcanzado su versión V2 con soporte multilingüe, mensajería en tiempo real basada en SignalR y mejoras de rendimiento. El desarrollo de V3 está en marcha con integraciones OAuth y funciones de publicación de contenido por usuarios.",
         "timeline_6_year": "2026",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "Aplicaciones Móviles con IA",
@@ -308,14 +308,14 @@
             },
             "gghub": {
                 "title": "GGHub - Plataforma Social para Gamers (Beta)",
-                "description": "Este proyecto Monorepo, en desarrollo activo, une .NET 8 y Next.js 15 bajo un marco de Clean Architecture. Totalmente utilizable como Versión 1 (V1), la plataforma ofrece características completas que incluyen listados, búsqueda de juegos, vistas detalladas, feed de inicio, gamificación (insignias/niveles), tablas de clasificación y mensajería (polling). Con el panel de administración y los algoritmos de perfil de usuario también completados, el trabajo actual se centra en las integraciones OAuth de Steam, Epic y Google y en la implementación de SignalR para la comunicación en tiempo real como parte de la hoja de ruta de la V2.",
+                "description": "Este proyecto Monorepo, que une .NET 8 y Next.js 15 bajo un marco de Clean Architecture, ha alcanzado su versión V2. La plataforma ofrece funciones completas como listados, búsqueda de juegos, reseñas detalladas, feed de inicio, gamificación (insignias/niveles), tablas de clasificación, panel de administración y algoritmos de perfil de usuario, además de soporte multilingüe (EN/TR), mensajería en tiempo real basada en SignalR y mejoras significativas de rendimiento. La hoja de ruta V3 incluye integraciones OAuth de Steam, Epic y Google, funciones de edición y publicación de contenido por usuarios (sujetas a aprobación del administrador, reflejadas en puntos e insignias).",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
-                    "Active Dev",
                     "Clean Architecture",
+                    "SignalR",
                     "PostgreSQL",
-                    "SignalR"
+                    "i18n"
                 ]
             }
         }

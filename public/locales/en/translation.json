@@ -69,7 +69,7 @@
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Gaming Social Platform",
-        "timeline_5_content": "I developed and launched GGHub - a gaming social platform - as a personal project. The first fully functional version was built with Next.js and .NET Core. Steam, Epic, and Google OAuth integrations along with SignalR-based real-time communication features are planned for the second version.",
+        "timeline_5_content": "I developed and launched GGHub - a gaming social platform - as a personal project. Built with Next.js and .NET Core, the platform has reached its V2 release featuring multilingual support, SignalR-based real-time messaging, and performance improvements. V3 development is underway with OAuth integrations and user content sharing features.",
         "timeline_6_year": "2026",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "AI-Powered Mobile Applications",
@@ -308,14 +308,14 @@
             },
             "gghub": {
                 "title": "GGHub - Gamer Social Platform (Beta)",
-                "description": "This Monorepo project, currently under active development, unites .NET 8 and Next.js 15 within a Clean Architecture framework. Fully usable as Version 1 (V1), the platform offers comprehensive features including listing, game search, detailed views, home feed, gamification (badges/levels), leaderboards, and messaging (polling). With the admin panel and user profile algorithms also complete, current work focusses on Steam, Epic, and Google OAuth integrations and implementing SignalR for real-time communication as part of the V2 roadmap.",
+                "description": "This Monorepo project, uniting .NET 8 and Next.js 15 within a Clean Architecture framework, has reached its V2 release. The platform delivers comprehensive features including listing, game search, detailed reviews, home feed, gamification (badges/levels), leaderboards, admin panel, and user profile algorithms, along with multilingual support (EN/TR), SignalR-based real-time messaging, and significant performance improvements. The V3 roadmap includes Steam, Epic, and Google OAuth integrations, user-driven content editing and sharing features (subject to admin approval, reflected in points and badges).",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
-                    "Active Dev",
                     "Clean Architecture",
+                    "SignalR",
                     "PostgreSQL",
-                    "SignalR"
+                    "i18n"
                 ]
             }
         }
