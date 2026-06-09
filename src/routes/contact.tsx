@@ -35,7 +35,7 @@ const directContactLinks = [
 
 const socialLinks = [
     { id: 'github', href: 'https://github.com/AhmetDemiroglu', icon: FaGithub },
-    { id: 'linkedin', href: 'https://www.linkedin.com/in/ahmet-d-a11b8853/', icon: FaLinkedin },
+    { id: 'linkedin', href: 'https://www.linkedin.com/in/ahmetdemiroglu/', icon: FaLinkedin },
     { id: 'instagram', href: 'https://www.instagram.com/ahmetdemiroglu___/', icon: FaInstagram },
     { id: 'twitter', href: 'https://twitter.com/a__demiroglu', icon: BsTwitterX },
 ];

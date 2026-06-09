@@ -61,3 +61,28 @@ html {
     animation: float-down linear infinite;
     will-change: transform;
 }
+
+/* ─── Liquid Glass PoC (nav only) ───────────────────────────────────────────
+   Base look is Tailwind's `backdrop-blur-lg` (still on the element as fallback).
+   The real feDisplacementMap refraction is layered on ONLY when: a fine-pointer
+   desktop, reduced-motion not requested, and the browser supports url() in
+   backdrop-filter. Anything else (mobile, Safari url() gaps, reduced-motion)
+   silently keeps the existing glass — zero regression. Filter id: #nav-liquid-glass */
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+    @supports (backdrop-filter: url("#nav-liquid-glass")) {
+        .liquid-glass-nav {
+            backdrop-filter: url("#nav-liquid-glass") blur(7px) saturate(1.35);
+            /* specular edge highlight to sell the glass */
+            box-shadow:
+                0 10px 30px -10px rgba(15, 23, 42, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.45),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+        }
+        .dark .liquid-glass-nav {
+            box-shadow:
+                0 12px 34px -12px rgba(0, 0, 0, 0.55),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+    }
+}

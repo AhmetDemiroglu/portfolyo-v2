@@ -2,7 +2,7 @@ export interface ProjectBase {
     id: string;
     image: string;
     liveLink: string | null;
-    githubLink: string;
+    githubLink: string | null;
     apkLink?: string | null;
     googlePlayLink?: string | null;
     badges?: ("live" | "beta" | "apk" | "new" | "experimental")[];
@@ -62,6 +62,26 @@ export const projectsData: ProjectBase[] = [
         pinned: false,
         mockupType: "laptop",
         accentColor: "rgba(139,92,246,0.15)",
+    },
+    {
+        id: "multimind",
+        image: "multimind.png",
+        liveLink: null,
+        githubLink: "https://github.com/AhmetDemiroglu/MultiMind",
+        badges: ["experimental"],
+        pinned: false,
+        mockupType: "laptop",
+        accentColor: "rgba(168,85,247,0.15)",
+    },
+    {
+        id: "sip",
+        image: "sip.png",
+        liveLink: null,
+        githubLink: null,
+        badges: ["beta"],
+        pinned: false,
+        mockupType: "laptop",
+        accentColor: "rgba(56,189,248,0.15)",
     },
     {
         id: "rent_a_car",

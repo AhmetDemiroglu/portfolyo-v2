@@ -90,8 +90,21 @@ export function Header() {
   }, [updateActiveIndicator, updateHoverIndicator])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="container mx-2 sm:mx-auto mt-2 sm:mt-4 rounded-lg border border-slate-200 bg-white/80 p-2 sm:p-3 shadow-lg backdrop-blur-lg dark:border-slate-700/50 dark:bg-slate-900/50">
+    <>
+      {/* Liquid Glass filter (PoC) — refracts the backdrop behind the nav.
+          Applied via .liquid-glass-nav only on supported desktop browsers; see index.css. */}
+      <svg aria-hidden="true" width="0" height="0" className="absolute" style={{ position: 'absolute' }}>
+        <defs>
+          <filter id="nav-liquid-glass" x="-20%" y="-20%" width="140%" height="140%" colorInterpolationFilters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves={2} seed={7} result="noise" />
+            <feGaussianBlur in="noise" stdDeviation="1.4" result="smoothNoise" />
+            <feDisplacementMap in="SourceGraphic" in2="smoothNoise" scale="16" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs>
+      </svg>
+
+      <header className="fixed top-0 left-0 right-0 z-50">
+        <div className="liquid-glass-nav container mx-2 sm:mx-auto mt-2 sm:mt-4 rounded-lg border border-slate-200 bg-white/80 p-2 sm:p-3 shadow-lg backdrop-blur-lg dark:border-slate-700/50 dark:bg-slate-900/50">
         <nav className="flex items-center justify-between">
           <Link to="/" preload="intent" onClick={() => setIsOpen(false)}>
             <Logo />
@@ -202,5 +215,6 @@ export function Header() {
         </AnimatePresence>
       </div>
     </header>
+    </>
   )
 }

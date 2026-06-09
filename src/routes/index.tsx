@@ -87,7 +87,7 @@ function HomePage() {
                             <a href="https://github.com/AhmetDemiroglu" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-all hover:text-sky-500 hover:scale-110">
                                 <FaGithub size={28} />
                             </a>
-                            <a href="https://www.linkedin.com/in/ahmet-d-a11b8853/" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-all hover:text-sky-500 hover:scale-110">
+                            <a href="https://www.linkedin.com/in/ahmetdemiroglu/" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-all hover:text-sky-500 hover:scale-110">
                                 <FaLinkedin size={28} />
                             </a>
                         </div>

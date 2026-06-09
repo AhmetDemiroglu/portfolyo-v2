@@ -35,7 +35,7 @@
         "career_section_background": "CAREER",
         "career_section_title": "An Interdisciplinary Approach",
         "career_section_p1": "My career is built on a 9-year foundation in Urban Planning and Real Estate Appraisal. The skills I acquired in analytical thinking, detailed reporting, and data interpretation during this time are the cornerstones of my software development approach today.",
-        "career_section_p2": "As I transform my passion for technology into a professional career, I carry this discipline from my past into my code. For me, software development isn't just about creating functional tools; it's about producing user-centric, clean, and sustainable solutions. My commitment to detail is my strongest guide in this new field.",
+        "career_section_p2": "As I transform my passion for technology into a professional career, I carry this discipline from my past into my code. For me, software development isn't just about creating functional tools; it's about producing user-centric, clean, and sustainable solutions. My commitment to detail is my strongest guide in everything I build.",
         "studio_section_title": "Independent Studio",
         "studio_section_description": "My independent software studio developing AI-powered mobile applications.",
         "studio_section_visit": "Visit Studio",
@@ -62,18 +62,18 @@
         "timeline_3_title": "Neos Software Academy",
         "timeline_3_subtitle": "Full-Stack Training",
         "timeline_3_content": "With the decision to change careers, I completed the Software Specialization Training at Neos Software Academy. I received intensive training in HTML, CSS, JavaScript, C#, Bootstrap, React.js, and .NET. During the 7-week internship program, I developed a car rental website from scratch, gaining both front-end and back-end experience.",
-        "timeline_4_year": "2025",
+        "timeline_4_year": "2024",
         "timeline_4_title": "SedBim Bilişim",
-        "timeline_4_subtitle": "Front-end Developer",
-        "timeline_4_content": "I began my professional software career as a Front-end Developer. While actively developing and maintaining corporate projects with Vue.js, I'm expanding my skills in the React ecosystem through new projects. When needed, I also support back-end services with .NET Core, maintaining my full-stack perspective.",
+        "timeline_4_subtitle": "Full-Stack Developer",
+        "timeline_4_content": "As a Full-Stack Developer, I build end-to-end business workflow systems for manufacturing and retail clients: B2B commerce portals with ERP (Netsis) integration that automate order, inventory, and invoicing flows; payment and POS integrations with collection automation (virtual POS and third-party financial APIs); and CRM, logistics/TMS, and production-planning modules delivered from SQL Server schema to API to UI. On the front-end I build component-driven Vue.js and React interfaces; on the back-end I design resilient REST API services with rate-limiting and retry/backoff for high-volume external APIs.",
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Gaming Social Platform",
         "timeline_5_content": "I developed and launched GGHub - a gaming social platform - as a personal project. Built with Next.js and .NET Core, the platform has reached its V2 release featuring multilingual support, SignalR-based real-time messaging, and performance improvements. V3 development is underway with OAuth integrations and user content sharing features.",
-        "timeline_6_year": "2026",
+        "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "AI-Powered Mobile Applications",
-        "timeline_6_content": "Through my independent mobile software studio SeptimusLab, I develop and publish AI-powered applications. Fintel for periodic expense tracking and PureScan Cosmetics for cosmetic ingredient analysis are live. PureScan Foods is now live on Google Play (Android). App Store expansion is planned soon. I continue expanding my tech stack with React Native.",
+        "timeline_6_content": "Through my independent mobile software studio SeptimusLab, I develop and publish AI-powered applications. Fintel for periodic expense tracking and PureScan Cosmetics for cosmetic ingredient analysis are live. PureScan Foods is now live on Google Play (Android), and its iOS version is currently under Apple review. I continue expanding my tech stack with React Native.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
@@ -104,7 +104,7 @@
                             },
                             {
                                 "name": "React",
-                                "description": "Component-based architecture and fundamental hooks."
+                                "description": "Component-driven architecture with Smart Parent / Dumb Child patterns, hooks, and centralized core components in production apps."
                             },
                             {
                                 "name": "Vue.js",
@@ -125,6 +125,10 @@
                             {
                                 "name": "React Native",
                                 "description": "Cross-platform mobile app development with React Native. Experience with Expo and bare workflow."
+                            },
+                            {
+                                "name": "Next.js",
+                                "description": "SSR/SSG production apps (App Router, React 19) — powering GGHub."
                             }
                         ]
                     },
@@ -133,23 +137,31 @@
                         "skills": [
                             {
                                 "name": "C#",
-                                "description": "Intermediate level of OOP principles and language proficiency."
+                                "description": "Solid OOP and language proficiency across production .NET backends."
                             },
                             {
                                 "name": ".NET Core",
-                                "description": "Internship project experience in API development and framework usage."
+                                "description": "Production REST API services on SQL Server backends, with rate-limiting, retry/backoff, and resilience for high-volume external APIs."
+                            },
+                            {
+                                "name": "ASP.NET Core",
+                                "description": "REST and MVC services with Clean Architecture, Identity, and role-based access control (RBAC)."
                             },
                             {
                                 "name": "Entity Framework",
-                                "description": "Basic level database operations with an ORM tool."
+                                "description": "ORM-based data access and relational modeling in .NET projects."
                             },
                             {
                                 "name": "SQL Server",
-                                "description": "Database design, querying, and basic optimization."
+                                "description": "Database design, querying, and optimization for high-volume workloads."
+                            },
+                            {
+                                "name": "PostgreSQL",
+                                "description": "Relational schema design and querying; production database powering GGHub."
                             },
                             {
                                 "name": "Python",
-                                "description": "Backend development and automation scripts. Basic knowledge of Flask/FastAPI."
+                                "description": "Backend services and AI tooling with FastAPI; used across SIP, MultiMind, and OpenWorld."
                             }
                         ]
                     }
@@ -193,6 +205,18 @@
                     "figma": {
                         "name": "Figma",
                         "description": "UI/UX design and prototyping. Developer-designer collaboration."
+                    },
+                    "revenuecat": {
+                        "name": "RevenueCat",
+                        "description": "In-app subscription and freemium monetization for mobile apps."
+                    },
+                    "admob": {
+                        "name": "AdMob",
+                        "description": "Banner and rewarded ad monetization in mobile apps."
+                    },
+                    "mcp": {
+                        "name": "LLM / MCP",
+                        "description": "LLM integration and Model Context Protocol (MCP) tooling for AI-powered features."
                     }
                 }
             },
@@ -262,7 +286,7 @@
                     "Gemini",
                     "TailwindCSS",
                     "RevenueCat",
-                    "AddMob"
+                    "AdMob"
                 ]
             },
             "butce_360": {
@@ -298,13 +322,23 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Food Ingredient Analyzer",
-                "description": "Cross-platform food label analyzer built with React Native and Expo, running on Firebase infrastructure. Reads product labels through barcode scanning and camera-based OCR, leveraging the Gemini 3.1 Flash-Lite model for allergen detection, additive risk analysis, and dietary compatibility assessment. The family profiles system calculates product compatibility scores based on each member's allergies and dietary preferences. Features an E-code-based food additive dictionary, Guru AI chat assistant, and multi-language support. All API communications are routed through Firebase Cloud Functions to protect user privacy. Live on Google Play, with App Store expansion planned.",
+                "description": "Cross-platform food label analyzer built with React Native and Expo, running on Firebase infrastructure. Reads product labels through barcode scanning and camera-based OCR, leveraging the Gemini 3.1 Flash-Lite model for allergen detection, additive risk analysis, and dietary compatibility assessment. The family profiles system calculates product compatibility scores based on each member's allergies and dietary preferences. Features an E-code-based food additive dictionary, Guru AI chat assistant, and multi-language support. All API communications are routed through Firebase Cloud Functions to protect user privacy. Live on Google Play, with the iOS version currently under Apple review.",
                 "tags": ["React Native", "Expo", "Firebase", "Gemini AI", "OCR"]
             },
             "openworld": {
                 "title": "OpenWorld - Local AI Super Agent",
                 "description": "A Windows-based local AI super agent with 4-layer security. Offers 100+ built-in tools for screen control, file management, OCR, research, code management, and more. Works with Ollama or cloud LLM integration (Groq, Z.AI). Includes remote control via Telegram bot, semantic tool routing, and a notebook system. Currently in experimental stage, under active development with work being done on various models.",
-                "tags": ["Python", "Electron", "Ollama", "Groq", "Telegram Bot", "LLM"]
+                "tags": ["Python", "FastAPI", "React", "ChromaDB", "Ollama", "Telegram Bot"]
+            },
+            "multimind": {
+                "title": "MultiMind - Autonomous Multi-Agent System",
+                "description": "An autonomous multi-agent system that takes a prompt and plans, codes, tests, and self-corrects until it delivers working software. A central orchestrator coordinates five specialized agents (engineer, backup engineer, tester, and a vision agent that visually verifies the UI against the original prompt), each running in isolated sandboxes, with a self-healing loop that detects failures and feeds them back for automatic recovery. Includes live Telegram progress reporting.",
+                "tags": ["Python", "Multi-LLM", "React", "Telegram"]
+            },
+            "sip": {
+                "title": "SIP - Sales Intelligence Platform",
+                "description": "A multi-tenant analytics engine for any field-sales (plasiyer-based) operation, scoring leads, surfacing cross-sell opportunities, and predicting customer churn, with a natural-language interface that turns business questions into SQL queries. Built on .NET 8, React, and Python/FastAPI using CQRS, background job pipelines, and a hybrid local and cloud LLM strategy. Currently in testing with a live enterprise client.",
+                "tags": [".NET 8", "React", "Python/FastAPI", "SQL Server", "LLM"]
             },
             "gghub": {
                 "title": "GGHub - Gamer Social Platform (Beta)",

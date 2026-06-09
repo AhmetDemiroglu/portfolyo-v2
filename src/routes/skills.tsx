@@ -1,8 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
 import type { IconType } from 'react-icons'
-import { FaHtml5, FaCss3Alt, FaJs, FaVuejs, FaReact, FaGithub, FaBuilding, FaChartLine, FaPuzzlePiece, FaUsers, FaClock, FaBootstrap, FaMapMarkedAlt, FaDraftingCompass, FaPython, FaDocker, FaFigma } from 'react-icons/fa'
-import { SiSharp, SiDotnet, SiAdobephotoshop, SiJquery, SiTypescript, SiTailwindcss, SiFirebase, SiCapacitor } from 'react-icons/si'
+import { FaHtml5, FaCss3Alt, FaJs, FaVuejs, FaReact, FaGithub, FaBuilding, FaChartLine, FaPuzzlePiece, FaUsers, FaClock, FaBootstrap, FaMapMarkedAlt, FaDraftingCompass, FaPython, FaDocker, FaFigma, FaCreditCard, FaBullhorn, FaRobot } from 'react-icons/fa'
+import { SiSharp, SiDotnet, SiAdobephotoshop, SiJquery, SiTypescript, SiTailwindcss, SiFirebase, SiCapacitor, SiNextdotjs, SiPostgresql } from 'react-icons/si'
 import { DiNetmagazine } from "react-icons/di";
 import { TbSql, TbBrandReactNative } from 'react-icons/tb'
 import { useTranslation } from 'react-i18next';
@@ -32,22 +32,28 @@ const skillDetails: { [key: string]: { icon: IconType; level: number } } = {
     'CSS': { icon: FaCss3Alt, level: 5 },
     'JavaScript': { icon: FaJs, level: 4 },
     'TypeScript': { icon: SiTypescript, level: 4 },
-    'React': { icon: FaReact, level: 3 },
+    'React': { icon: FaReact, level: 4 },
     'Vue.js': { icon: FaVuejs, level: 4 },
+    'Next.js': { icon: SiNextdotjs, level: 4 },
     'jQuery': { icon: SiJquery, level: 2 },
     'Bootstrap': { icon: FaBootstrap, level: 4 },
     'Tailwind CSS': { icon: SiTailwindcss, level: 3 },
     'C#': { icon: SiSharp, level: 4 },
-    '.NET Core': { icon: SiDotnet, level: 3 },
+    '.NET Core': { icon: SiDotnet, level: 4 },
+    'ASP.NET Core': { icon: SiDotnet, level: 4 },
     'Entity Framework': { icon: DiNetmagazine, level: 3 },
     'SQL Server': { icon: TbSql, level: 4 },
-    'Python': { icon: FaPython, level: 2 },
+    'PostgreSQL': { icon: SiPostgresql, level: 4 },
+    'Python': { icon: FaPython, level: 3 },
     'React Native': { icon: TbBrandReactNative, level: 3 },
     'firebase': { icon: SiFirebase, level: 4 },
     'capacitor': { icon: SiCapacitor, level: 3 },
-    'docker': { icon: FaDocker, level: 1 },
+    'docker': { icon: FaDocker, level: 3 },
     'figma': { icon: FaFigma, level: 1 },
     'github': { icon: FaGithub, level: 4 },
+    'revenuecat': { icon: FaCreditCard, level: 3 },
+    'admob': { icon: FaBullhorn, level: 3 },
+    'mcp': { icon: FaRobot, level: 3 },
     'photoshop': { icon: SiAdobephotoshop, level: 4 },
     'autocad': { icon: FaDraftingCompass, level: 2 },
     'netcad': { icon: FaMapMarkedAlt, level: 3 },

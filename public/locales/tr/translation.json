@@ -35,7 +35,7 @@
         "career_section_background": "KARİYER",
         "career_section_title": "Disiplinler Arası Bir Yaklaşım",
         "career_section_p1": "Kariyerimin temelini 9 yıllık Şehir Planlama ve Gayrimenkul Değerleme tecrübesi oluşturuyor. Bu süreçte edindiğim analitik düşünme, detaylı raporlama ve veri yorumlama becerileri, bugünkü yazılım geliştirme yaklaşımımın temel taşlarıdır.",
-        "career_section_p2": "Teknoloji tutkumu profesyonel bir kariyere dönüştürürken, geçmişimden getirdiğim bu disiplini koda yansıtıyorum. Benim için yazılım geliştirme, sadece fonksiyonel araçlar yaratmak değil, aynı zamanda kullanıcı odaklı, temiz ve sürdürülebilir çözümler üretmektir. Detaylara olan bağlılığım, bu yeni alandaki en güçlü rehberim.",
+        "career_section_p2": "Teknoloji tutkumu profesyonel bir kariyere dönüştürürken, geçmişimden getirdiğim bu disiplini koda yansıtıyorum. Benim için yazılım geliştirme, sadece fonksiyonel araçlar yaratmak değil, aynı zamanda kullanıcı odaklı, temiz ve sürdürülebilir çözümler üretmektir. Detaylara olan bağlılığım, ürettiğim her işte en güçlü rehberim.",
         "studio_section_title": "Bağımsız Stüdyo",
         "studio_section_description": "Yapay zeka destekli mobil uygulamalar geliştiren bağımsız yazılım stüdyom.",
         "studio_section_visit": "Stüdyoyu Ziyaret Et",
@@ -62,18 +62,18 @@
         "timeline_3_title": "Neos Yazılım Akademi",
         "timeline_3_subtitle": "Full-Stack Eğitim",
         "timeline_3_content": "Kariyer değişikliği kararıyla Neos Yazılım Akademi'nin Yazılım Uzmanlığı Eğitimi'ni tamamladım. HTML, CSS, JavaScript, C#, Bootstrap, React.js ve .NET üzerine yoğun bir eğitim aldım. 7 haftalık staj programında sıfırdan bir araç kiralama web sitesi geliştirerek hem front-end hem back-end deneyimi kazandım.",
-        "timeline_4_year": "2025",
+        "timeline_4_year": "2024",
         "timeline_4_title": "SedBim Bilişim",
-        "timeline_4_subtitle": "Front-end Developer",
-        "timeline_4_content": "Front-end Developer olarak profesyonel yazılım kariyerime başladım. Vue.js ile kurumsal projelerin geliştirilmesi ve bakımında aktif rol alırken, React ekosistemindeki yetkinliklerimi yeni projelerle genişletiyorum. İhtiyaç halinde .NET Core ile back-end servislerine de destek vererek full-stack perspektifimi koruyorum.",
+        "timeline_4_subtitle": "Full-Stack Developer",
+        "timeline_4_content": "Full-Stack Developer olarak üretim ve perakende müşterileri için uçtan uca iş akışı sistemleri geliştiriyorum: sipariş, stok ve faturalama süreçlerini otomatikleştiren ERP (Netsis) entegrasyonlu B2B ticaret portalları; tahsilat otomasyonlu ödeme ve POS entegrasyonları (sanal POS ve üçüncü parti finansal API'ler); SQL Server şemasından API'ye ve arayüze kadar uçtan uca CRM, lojistik/TMS ve üretim planlama modülleri. Front-end'de bileşen bazlı Vue.js ve React arayüzleri, back-end'de yüksek hacimli dış API'ler için rate-limiting ve retry/backoff içeren dayanıklı REST API servisleri tasarlıyorum.",
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Oyuncu Sosyal Platformu",
         "timeline_5_content": "Kişisel projelerimden GGHub'ı - oyuncu sosyal platformunu - geliştirip yayına aldım. Next.js ve .NET Core altyapısıyla V2 sürümüne ulaşan platform; çoklu dil desteği, SignalR tabanlı gerçek zamanlı mesajlaşma ve performans iyileştirmeleri sunmaktadır. V3 kapsamında OAuth entegrasyonları ve kullanıcı içerik paylaşım özellikleri üzerinde çalışılmaktadır.",
-        "timeline_6_year": "2026",
+        "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "Yapay Zeka Destekli Mobil Uygulamalar",
-        "timeline_6_content": "Bağımsız mobil yazılım stüdyom SeptimusLab ile yapay zeka destekli uygulamalar geliştirip yayınlıyorum. Fintel ile dönemsel harcama takibi ve PureScan Cosmetics ile kozmetik içerik analizi kullanıcılara sunuldu. PureScan Foods artık Google Play'de yayında; App Store'a genişleme en kısa zamanda planlanıyor. React Native ile teknoloji yığınımı genişletmeye devam ediyorum.",
+        "timeline_6_content": "Bağımsız mobil yazılım stüdyom SeptimusLab ile yapay zeka destekli uygulamalar geliştirip yayınlıyorum. Fintel ile dönemsel harcama takibi ve PureScan Cosmetics ile kozmetik içerik analizi kullanıcılara sunuldu. PureScan Foods artık Google Play'de yayında ve iOS sürümü şu anda Apple incelemesinde. React Native ile teknoloji yığınımı genişletmeye devam ediyorum.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
@@ -104,7 +104,7 @@
                             },
                             {
                                 "name": "React",
-                                "description": "Bileşen bazlı mimari ve temel hook'lar."
+                                "description": "Bileşen bazlı mimari; üretim uygulamalarında Smart Parent / Dumb Child desenleri, hook'lar ve merkezi çekirdek bileşenler."
                             },
                             {
                                 "name": "Vue.js",
@@ -125,6 +125,10 @@
                             {
                                 "name": "React Native",
                                 "description": "React Native ile cross-platform mobil uygulama geliştirme. Expo ve bare workflow deneyimi."
+                            },
+                            {
+                                "name": "Next.js",
+                                "description": "SSR/SSG üretim uygulamaları (App Router, React 19) — GGHub'ın altyapısı."
                             }
                         ]
                     },
@@ -133,23 +137,31 @@
                         "skills": [
                             {
                                 "name": "C#",
-                                "description": "Orta düzeyde OOP prensipleri ve dil yetkinliği."
+                                "description": "Üretim .NET backend'lerinde sağlam OOP ve dil yetkinliği."
                             },
                             {
                                 "name": ".NET Core",
-                                "description": "API geliştirme ve framework kullanımı konusunda staj projesi deneyimi."
+                                "description": "SQL Server backend'lerinde üretim REST API servisleri; yüksek hacimli dış API'ler için rate-limiting, retry/backoff ve dayanıklılık."
+                            },
+                            {
+                                "name": "ASP.NET Core",
+                                "description": "Clean Architecture, Identity ve rol tabanlı erişim kontrolü (RBAC) ile REST/MVC servisleri."
                             },
                             {
                                 "name": "Entity Framework",
-                                "description": "Temel düzeyde ORM aracı ile veritabanı işlemleri."
+                                "description": "ORM tabanlı veri erişimi ve .NET projelerinde ilişkisel modelleme."
                             },
                             {
                                 "name": "SQL Server",
-                                "description": "Veritabanı tasarımı, sorgulama ve temel optimizasyon."
+                                "description": "Yüksek hacimli yükler için veritabanı tasarımı, sorgulama ve optimizasyon."
+                            },
+                            {
+                                "name": "PostgreSQL",
+                                "description": "İlişkisel şema tasarımı ve sorgulama; GGHub'ın üretim veritabanı."
                             },
                             {
                                 "name": "Python",
-                                "description": "Backend geliştirme ve otomasyon scriptleri. Temel düzeyde Flask/FastAPI bilgisi."
+                                "description": "FastAPI ile backend servisleri ve AI araçları; SIP, MultiMind ve OpenWorld'de kullanıldı."
                             }
                         ]
                     }
@@ -193,6 +205,18 @@
                     "figma": {
                         "name": "Figma",
                         "description": "UI/UX tasarım ve prototipleme. Geliştirici-tasarımcı iş birliği."
+                    },
+                    "revenuecat": {
+                        "name": "RevenueCat",
+                        "description": "Mobil uygulamalarda uygulama içi abonelik ve freemium gelir modeli."
+                    },
+                    "admob": {
+                        "name": "AdMob",
+                        "description": "Mobil uygulamalarda banner ve ödüllü reklam gelir modeli."
+                    },
+                    "mcp": {
+                        "name": "LLM / MCP",
+                        "description": "Yapay zeka destekli özellikler için LLM entegrasyonu ve Model Context Protocol (MCP) araçları."
                     }
                 }
             },
@@ -272,7 +296,7 @@
                     "Gemini",
                     "TailwindCSS",
                     "RevenueCat",
-                    "AddMob"
+                    "AdMob"
                 ]
             },
             "not_defteri": {
@@ -299,13 +323,23 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Gıda İçerik Analizi",
-                "description": "React Native ve Expo ile geliştirilen, Firebase altyapısı üzerinde çalışan cross-platform gıda etiketi analizörü. Barkod tarama ve kamera tabanlı OCR ile ürün etiketlerini okuyarak Gemini 3.1 Flash-Lite modeliyle alerjen tespiti, katkı maddesi risk analizi ve diyet uyumluluk değerlendirmesi yapar. Aile profilleri sistemi sayesinde her bireyin alerji ve diyet tercihlerine göre ürün uygunluk skoru hesaplanır. E-kod veritabanına dayalı gıda katkı maddeleri sözlüğü, Guru AI chat asistanı ve çoklu dil desteği sunar. Tüm API iletişimleri Firebase Cloud Functions üzerinden yönlendirilerek kullanıcı gizliliği korunur. Google Play'de yayında, App Store genişlemesi planlanmaktadır.",
+                "description": "React Native ve Expo ile geliştirilen, Firebase altyapısı üzerinde çalışan cross-platform gıda etiketi analizörü. Barkod tarama ve kamera tabanlı OCR ile ürün etiketlerini okuyarak Gemini 3.1 Flash-Lite modeliyle alerjen tespiti, katkı maddesi risk analizi ve diyet uyumluluk değerlendirmesi yapar. Aile profilleri sistemi sayesinde her bireyin alerji ve diyet tercihlerine göre ürün uygunluk skoru hesaplanır. E-kod veritabanına dayalı gıda katkı maddeleri sözlüğü, Guru AI chat asistanı ve çoklu dil desteği sunar. Tüm API iletişimleri Firebase Cloud Functions üzerinden yönlendirilerek kullanıcı gizliliği korunur. Google Play'de yayında, iOS sürümü ise şu anda Apple incelemesinde.",
                 "tags": ["React Native", "Expo", "Firebase", "Gemini AI", "OCR"]
             },
             "openworld": {
                 "title": "OpenWorld - Lokal AI Süper Ajan",
                 "description": "4 katmanlı güvenlik sistemine sahip Windows tabanlı lokal AI süper ajan. 100+ yerleşik araç ile ekran kontrolü, dosya yönetimi, OCR, araştırma, kod yönetimi ve daha fazlasını sunar. Ollama veya bulut LLM entegrasyonu (Groq, Z.AI) ile çalışır. Telegram bot üzerinden uzaktan kontrol, semantik araç yönlendirme ve notebook sistemi içerir. Deneysel aşamada olup aktif olarak geliştirilmekte ve muhtelif modeller üzerinde çalışılmaktadır.",
-                "tags": ["Python", "Electron", "Ollama", "Groq", "Telegram Bot", "LLM"]
+                "tags": ["Python", "FastAPI", "React", "ChromaDB", "Ollama", "Telegram Bot"]
+            },
+            "multimind": {
+                "title": "MultiMind - Otonom Çoklu-Ajan Sistemi",
+                "description": "Bir prompt alıp çalışan yazılım teslim edene kadar planlayan, kod yazan, test eden ve kendini düzelten otonom bir çoklu-ajan sistemi. Merkezi bir orkestratör, her biri izole sandbox'larda çalışan beş özelleşmiş ajanı (mühendis, yedek mühendis, test uzmanı ve UI'yi orijinal prompt'a göre görsel olarak doğrulayan bir vision ajanı) koordine eder; hataları tespit edip otomatik kurtarma için geri besleyen kendi kendini onaran bir döngü içerir. Canlı Telegram ilerleme raporlaması sunar.",
+                "tags": ["Python", "Multi-LLM", "React", "Telegram"]
+            },
+            "sip": {
+                "title": "SIP - Satış Zekâsı Platformu",
+                "description": "Her türlü saha satış (plasiyer bazlı) operasyonu için çok kiracılı (multi-tenant) bir analitik motoru: müşteri adaylarını skorlar, çapraz satış fırsatlarını ortaya çıkarır ve müşteri kaybını (churn) öngörür; iş sorularını SQL sorgularına çeviren doğal dil arayüzü içerir. .NET 8, React ve Python/FastAPI üzerine CQRS, arka plan iş hatları ve hibrit lokal+bulut LLM stratejisiyle inşa edildi. Şu anda canlı bir kurumsal müşteriyle test aşamasında.",
+                "tags": [".NET 8", "React", "Python/FastAPI", "SQL Server", "LLM"]
             },
             "gghub": {
                 "title": "GGHub - Oyuncu Sosyal Platformu (Beta)",

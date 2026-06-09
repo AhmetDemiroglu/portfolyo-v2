@@ -35,7 +35,7 @@
         "career_section_background": "KARRIERE",
         "career_section_title": "Ein Interdisziplinärer Ansatz",
         "career_section_p1": "Meine Karriere basiert auf einem 9-jährigen Fundament in der Stadtplanung und Immobilienbewertung. Die Fähigkeiten, die ich in dieser Zeit im analytischen Denken, detaillierten Berichtswesen und der Dateninterpretation erworben habe, sind die Eckpfeiler meines heutigen Ansatzes in der Softwareentwicklung.",
-        "career_section_p2": "Während ich meine Leidenschaft für Technologie in eine professionelle Karriere umwandle, übertrage ich diese Disziplin aus meiner Vergangenheit in meinen Code. Für mich bedeutet Softwareentwicklung nicht nur, funktionale Werkzeuge zu schaffen, sondern auch benutzerorientierte, saubere und nachhaltige Lösungen zu produzieren. Meine Hingabe zum Detail ist mein stärkster Leitfaden in diesem neuen Bereich.",
+        "career_section_p2": "Während ich meine Leidenschaft für Technologie in eine professionelle Karriere umwandle, übertrage ich diese Disziplin aus meiner Vergangenheit in meinen Code. Für mich bedeutet Softwareentwicklung nicht nur, funktionale Werkzeuge zu schaffen, sondern auch benutzerorientierte, saubere und nachhaltige Lösungen zu produzieren. Meine Hingabe zum Detail ist mein stärkster Leitfaden bei allem, was ich entwickle.",
         "studio_section_title": "Unabhängiges Studio",
         "studio_section_description": "Mein unabhängiges Software-Studio, das KI-gestützte mobile Anwendungen entwickelt.",
         "studio_section_visit": "Studio Besuchen",
@@ -62,18 +62,18 @@
         "timeline_3_title": "Neos Software Academy",
         "timeline_3_subtitle": "Full-Stack-Ausbildung",
         "timeline_3_content": "Mit der Entscheidung zum Karrierewechsel absolvierte ich die Software-Spezialisierungsausbildung an der Neos Software Academy. Ich erhielt intensive Schulungen in HTML, CSS, JavaScript, C#, Bootstrap, React.js und .NET. Während des 7-wöchigen Praktikums entwickelte ich eine Autovermietungs-Website von Grund auf und sammelte Front-End- und Back-End-Erfahrung.",
-        "timeline_4_year": "2025",
+        "timeline_4_year": "2024",
         "timeline_4_title": "SedBim Bilişim",
-        "timeline_4_subtitle": "Front-end-Entwickler",
-        "timeline_4_content": "Ich begann meine professionelle Softwarekarriere als Front-end-Entwickler. Während ich aktiv Unternehmensprojekte mit Vue.js entwickle und warte, erweitere ich meine Kompetenzen im React-Ökosystem durch neue Projekte. Bei Bedarf unterstütze ich auch Back-End-Dienste mit .NET Core und behalte meine Full-Stack-Perspektive bei.",
+        "timeline_4_subtitle": "Full-Stack-Entwickler",
+        "timeline_4_content": "Als Full-Stack-Entwickler entwickle ich End-to-End-Geschäftsworkflow-Systeme für Fertigungs- und Einzelhandelskunden: B2B-Handelsportale mit ERP-Integration (Netsis), die Bestell-, Bestands- und Rechnungsprozesse automatisieren; Zahlungs- und POS-Integrationen mit Inkasso-Automatisierung (virtuelle POS und Finanz-APIs von Drittanbietern); sowie CRM-, Logistik-/TMS- und Produktionsplanungsmodule, vom SQL-Server-Schema über die API bis zur Oberfläche. Im Front-End baue ich komponentenbasierte Vue.js- und React-Oberflächen; im Back-End entwerfe ich resiliente REST-API-Dienste mit Rate-Limiting und Retry/Backoff für Hochvolumen-APIs von Drittanbietern.",
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Gaming Social Platform",
         "timeline_5_content": "Ich habe GGHub — eine Gaming-Sozialplattform — als persönliches Projekt entwickelt und veröffentlicht. Die mit Next.js und .NET Core erstellte Plattform hat ihr V2-Release erreicht und bietet mehrsprachige Unterstützung, SignalR-basierte Echtzeit-Kommunikation und Performance-Verbesserungen. Die V3-Entwicklung mit OAuth-Integrationen und Funktionen für nutzergenerierte Inhalte ist im Gange.",
-        "timeline_6_year": "2026",
+        "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "KI-gestützte Mobile Anwendungen",
-        "timeline_6_content": "Mit meinem unabhängigen mobilen Softwarestudio SeptimusLab entwickle und veröffentliche ich KI-gestützte Anwendungen. Fintel für periodische Ausgabenverfolgung und PureScan Cosmetics für Kosmetik-Inhaltsstoffanalyse sind live. PureScan Foods ist jetzt im Google Play Store veröffentlicht. Eine Erweiterung auf den App Store ist in Kürze geplant. Ich erweitere meinen Technologie-Stack mit React Native.",
+        "timeline_6_content": "Mit meinem unabhängigen mobilen Softwarestudio SeptimusLab entwickle und veröffentliche ich KI-gestützte Anwendungen. Fintel für periodische Ausgabenverfolgung und PureScan Cosmetics für Kosmetik-Inhaltsstoffanalyse sind live. PureScan Foods ist jetzt im Google Play Store veröffentlicht, und die iOS-Version befindet sich derzeit in der Apple-Prüfung. Ich erweitere meinen Technologie-Stack mit React Native.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
@@ -104,7 +104,7 @@
                             },
                             {
                                 "name": "React",
-                                "description": "Komponentenbasierte Architektur und grundlegende Hooks."
+                                "description": "Komponentenbasierte Architektur mit Smart Parent / Dumb Child-Mustern, Hooks und zentralen Kernkomponenten in Produktionsanwendungen."
                             },
                             {
                                 "name": "Vue.js",
@@ -125,6 +125,10 @@
                             {
                                 "name": "React Native",
                                 "description": "Plattformübergreifende mobile App-Entwicklung mit React Native. Erfahrung mit Expo und Bare Workflow."
+                            },
+                            {
+                                "name": "Next.js",
+                                "description": "SSR/SSG-Produktionsanwendungen (App Router, React 19) — Basis von GGHub."
                             }
                         ]
                     },
@@ -133,23 +137,31 @@
                         "skills": [
                             {
                                 "name": "C#",
-                                "description": "Mittlere Kenntnisse der OOP-Prinzipien und Sprachkompetenz."
+                                "description": "Solide OOP- und Sprachkompetenz in Produktions-.NET-Backends."
                             },
                             {
                                 "name": ".NET Core",
-                                "description": "Praktikumsprojekterfahrung in der API-Entwicklung und Framework-Nutzung."
+                                "description": "Produktions-REST-API-Dienste auf SQL-Server-Backends; Rate-Limiting, Retry/Backoff und Resilienz für Hochvolumen-APIs von Drittanbietern."
+                            },
+                            {
+                                "name": "ASP.NET Core",
+                                "description": "REST-/MVC-Dienste mit Clean Architecture, Identity und rollenbasierter Zugriffskontrolle (RBAC)."
                             },
                             {
                                 "name": "Entity Framework",
-                                "description": "Grundlegende Datenbankoperationen mit dem ORM-Tool."
+                                "description": "ORM-basierter Datenzugriff und relationale Modellierung in .NET-Projekten."
                             },
                             {
                                 "name": "SQL Server",
-                                "description": "Datenbankdesign, Abfragen und grundlegende Optimierung."
+                                "description": "Datenbankdesign, Abfragen und Optimierung für Hochvolumen-Workloads."
+                            },
+                            {
+                                "name": "PostgreSQL",
+                                "description": "Relationales Schemadesign und Abfragen; Produktionsdatenbank von GGHub."
                             },
                             {
                                 "name": "Python",
-                                "description": "Backend-Entwicklung und Automatisierungsskripte. Grundkenntnisse in Flask/FastAPI."
+                                "description": "Backend-Dienste und KI-Tooling mit FastAPI; eingesetzt in SIP, MultiMind und OpenWorld."
                             }
                         ]
                     }
@@ -193,6 +205,18 @@
                     "figma": {
                         "name": "Figma",
                         "description": "UI/UX-Design und Prototyping. Zusammenarbeit zwischen Entwickler und Designer."
+                    },
+                    "revenuecat": {
+                        "name": "RevenueCat",
+                        "description": "In-App-Abonnements und Freemium-Monetarisierung für mobile Apps."
+                    },
+                    "admob": {
+                        "name": "AdMob",
+                        "description": "Banner- und belohnungsbasierte Werbemonetarisierung in mobilen Apps."
+                    },
+                    "mcp": {
+                        "name": "LLM / MCP",
+                        "description": "LLM-Integration und Model-Context-Protocol-(MCP)-Tooling für KI-gestützte Funktionen."
                     }
                 }
             },
@@ -240,6 +264,7 @@
         "show_more": "Mehr Anzeigen",
         "show_less": "Weniger Anzeigen",
         "download_apk_button": "APK Herunterladen",
+        "view_google_play_button": "Bei Google Play",
         "projects": {
             "rent_a_car": {
                 "title": "Rent A Car Full-Stack Plattform",
@@ -261,7 +286,7 @@
                     "Gemini",
                     "TailwindCSS",
                     "RevenueCat",
-                    "AddMob"
+                    "AdMob"
                 ]
             },
             "butce_360": {
@@ -297,13 +322,23 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Lebensmittel-Inhaltsstoff-Analysator",
-                "description": "Plattformübergreifender Lebensmitteletikett-Analysator, entwickelt mit React Native und Expo auf Firebase-Infrastruktur. Liest Produktetiketten durch Barcode-Scanning und kamerabasierte OCR und nutzt das Gemini 3.1 Flash-Lite-Modell für Allergenerkennung, Zusatzstoff-Risikoanalyse und Diätverträglichkeitsbewertung. Das Familienprofilsystem berechnet Produktverträglichkeitswerte basierend auf den Allergien und Ernährungspräferenzen jedes Mitglieds. Bietet ein E-Code-basiertes Lebensmittelzusatzstoff-Wörterbuch, den Guru-AI-Chat-Assistenten und mehrsprachige Unterstützung. Alle API-Kommunikationen werden über Firebase Cloud Functions geleitet, um die Privatsphäre der Benutzer zu schützen. Im Google Play Store verfügbar, App Store-Erweiterung geplant.",
+                "description": "Plattformübergreifender Lebensmitteletikett-Analysator, entwickelt mit React Native und Expo auf Firebase-Infrastruktur. Liest Produktetiketten durch Barcode-Scanning und kamerabasierte OCR und nutzt das Gemini 3.1 Flash-Lite-Modell für Allergenerkennung, Zusatzstoff-Risikoanalyse und Diätverträglichkeitsbewertung. Das Familienprofilsystem berechnet Produktverträglichkeitswerte basierend auf den Allergien und Ernährungspräferenzen jedes Mitglieds. Bietet ein E-Code-basiertes Lebensmittelzusatzstoff-Wörterbuch, den Guru-AI-Chat-Assistenten und mehrsprachige Unterstützung. Alle API-Kommunikationen werden über Firebase Cloud Functions geleitet, um die Privatsphäre der Benutzer zu schützen. Im Google Play Store verfügbar, die iOS-Version befindet sich derzeit in der Apple-Prüfung.",
                 "tags": ["React Native", "Expo", "Firebase", "Gemini AI", "OCR"]
             },
             "openworld": {
                 "title": "OpenWorld - Lokaler KI-Superagent",
                 "description": "Ein Windows-basierter lokaler KI-Superagent mit 4-Schichten-Sicherheit. Bietet über 100 integrierte Werkzeuge für Bildschirmsteuerung, Dateiverwaltung, OCR, Recherche, Codeverwaltung und mehr. Funktioniert mit Ollama oder Cloud-LLM-Integration (Groq, Z.AI). Beinhaltet Fernsteuerung über Telegram-Bot, semantisches Tool-Routing und ein Notebook-System. Derzeit in der experimentellen Phase, in aktiver Entwicklung mit Arbeit an verschiedenen Modellen.",
-                "tags": ["Python", "Electron", "Ollama", "Groq", "Telegram Bot", "LLM"]
+                "tags": ["Python", "FastAPI", "React", "ChromaDB", "Ollama", "Telegram Bot"]
+            },
+            "multimind": {
+                "title": "MultiMind - Autonomes Multi-Agenten-System",
+                "description": "Ein autonomes Multi-Agenten-System, das einen Prompt entgegennimmt und plant, programmiert, testet und sich selbst korrigiert, bis es funktionierende Software liefert. Ein zentraler Orchestrator koordiniert fünf spezialisierte Agenten (Engineer, Backup-Engineer, Tester und einen Vision-Agenten, der die UI visuell gegen den ursprünglichen Prompt verifiziert), die jeweils in isolierten Sandboxes laufen, mit einer selbstheilenden Schleife, die Fehler erkennt und zur automatischen Wiederherstellung zurückführt. Enthält Live-Fortschrittsberichte über Telegram.",
+                "tags": ["Python", "Multi-LLM", "React", "Telegram"]
+            },
+            "sip": {
+                "title": "SIP - Sales-Intelligence-Plattform",
+                "description": "Eine mandantenfähige (multi-tenant) Analyse-Engine für jeden Außendienstvertrieb (plasiyer-basiert): bewertet Leads, deckt Cross-Selling-Chancen auf und prognostiziert die Kundenabwanderung (Churn), mit einer natürlichsprachlichen Schnittstelle, die Geschäftsfragen in SQL-Abfragen übersetzt. Aufgebaut auf .NET 8, React und Python/FastAPI mit CQRS, Hintergrund-Job-Pipelines und einer hybriden lokalen und Cloud-LLM-Strategie. Derzeit in Tests mit einem realen Unternehmenskunden.",
+                "tags": [".NET 8", "React", "Python/FastAPI", "SQL Server", "LLM"]
             },
             "gghub": {
                 "title": "GGHub - Gamer Sozialplattform (Beta)",
