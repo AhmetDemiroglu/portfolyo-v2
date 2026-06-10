@@ -27,7 +27,7 @@ if (!rootElement.innerHTML) {
     <React.StrictMode>
       
       <HelmetProvider>
-        <Helmet defaultTitle="Ahmet Demiroğlu | Portfolyo" titleTemplate="%s | Ahmet Demiroğlu" />
+        <Helmet defaultTitle="Ahmet Demiroğlu | Full-Stack Developer" />
         <Suspense fallback={<div>Yükleniyor...</div>}>
           <RouterProvider router={router} />
         </Suspense>

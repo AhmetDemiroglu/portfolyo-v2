@@ -139,7 +139,7 @@ function ContactPage() {
                 </Reveal>
 
                 <div className="mt-16 grid items-start gap-8 lg:grid-cols-2">
-                    {/* Left column — direct contact + map */}
+                    {/* Left column: direct contact + map */}
                     <div className="space-y-8">
                         <Reveal delay={0.15}>
                             <div className="space-y-4">
@@ -223,7 +223,7 @@ function ContactPage() {
                         </Reveal>
                     </div>
 
-                    {/* Right column — form */}
+                    {/* Right column: form */}
                     <Reveal delay={0.2}>
                         <form
                             ref={formRef}

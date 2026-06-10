@@ -16,7 +16,7 @@ const wrap = (min: number, max: number, v: number) => {
 };
 
 /* Infinite text band that follows scroll velocity: scrolling down pushes it
-   forward, scrolling up reverses it — the bidirectional recap-style effect. */
+   forward, scrolling up reverses it, creating a bidirectional recap-style effect. */
 export function VelocityMarquee({
     children,
     baseVelocity = 2.4,

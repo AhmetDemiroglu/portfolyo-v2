@@ -1,6 +1,6 @@
 import { ParallaxY } from "../motion/primitives";
 
-/* Topographic contour lines — a quiet echo of the map-making years.
+/* Topographic contour lines, a quiet echo of the map-making years.
    Dropped behind sections, drifting slowly against the scroll. */
 export function Contours({ className }: { className?: string }) {
     return (

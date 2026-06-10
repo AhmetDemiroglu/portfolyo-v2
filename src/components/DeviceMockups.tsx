@@ -13,7 +13,7 @@ export function PhoneMockup({ src, alt, accentColor = "rgba(226,84,14,0.18)" }: 
                 style={{ background: `radial-gradient(ellipse at center, ${accentColor}, transparent 70%)` }}
             />
 
-            {/* Phone — anchored top, overflowing bottom, faded by the overlay below */}
+            {/* Phone: anchored top, overflowing bottom, faded by the overlay below */}
             <div className="absolute left-1/2 top-4 w-[160px] -translate-x-1/2 sm:top-5 sm:w-[180px]">
                 <div className="overflow-hidden rounded-[1.4rem] border-[3px] border-ink/70 bg-black shadow-xl sm:rounded-[1.6rem] dark:border-line">
                     <div className="flex justify-center bg-black pb-1 pt-1.5">

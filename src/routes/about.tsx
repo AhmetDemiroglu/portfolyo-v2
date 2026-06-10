@@ -74,7 +74,7 @@ function AboutPage() {
     const reduce = useReducedMotion();
     const timelineRef = useRef<HTMLDivElement>(null);
 
-    // Spine grows and shrinks with scroll — fully bidirectional.
+    // Spine grows and shrinks with scroll, fully bidirectional.
     const { scrollYProgress } = useScroll({
         target: timelineRef,
         offset: ["start 0.7", "end 0.6"],

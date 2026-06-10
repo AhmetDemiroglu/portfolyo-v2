@@ -34,7 +34,7 @@ export function ParallaxY({
     );
 }
 
-/* Horizontal scroll-linked drift — used for oversized ghost words. */
+/* Horizontal scroll-linked drift used for oversized ghost words. */
 export function ParallaxX({
     children,
     from = 60,

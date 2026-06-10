@@ -34,7 +34,7 @@ function MidSkyline() {
         >
             <g fill="rgb(var(--c-sky-mid))">
                 <path d="M0 320 L0 170 L70 170 L70 120 L130 120 L130 200 L196 200 L196 92 L210 92 L210 78 L246 78 L246 92 L260 92 L260 176 L330 176 L330 140 L396 140 L396 214 L470 214 L470 100 L540 100 L540 188 L600 188 L600 150 L668 150 L668 220 L740 220 L740 124 L808 124 L808 196 L880 196 L880 84 L900 84 L900 64 L912 64 L912 84 L932 84 L932 168 L1080 168 L1080 210 L1158 210 L1158 116 L1226 116 L1226 184 L1296 184 L1296 142 L1366 142 L1366 206 L1440 206 L1440 320 Z" />
-                {/* construction crane — a small nod to the planning years */}
+                {/* Construction crane, a small nod to the planning years */}
                 <g>
                     <rect x="1006" y="96" width="7" height="180" />
                     <rect x="948" y="96" width="148" height="7" />
