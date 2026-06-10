@@ -1,273 +1,337 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { TypeAnimation } from "react-type-animation";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { FiArrowDownCircle, FiExternalLink } from "react-icons/fi";
+import { Link, createFileRoute } from "@tanstack/react-router";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { FiArrowDown, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+import { CityScene } from "../components/scenery/CityScene";
+import { Contours } from "../components/scenery/Contours";
+import { TechRibbon } from "../components/Marquee";
+import { SectionHeading } from "../components/SectionHeading";
+import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
+import { PhoneMockup, LaptopMockup } from "../components/DeviceMockups";
+import { projectsData } from "../data/projects";
 
 export const Route = createFileRoute("/")({
     component: HomePage,
 });
 
+const RIBBON = [
+    "React",
+    "Vue.js",
+    ".NET Core",
+    "TypeScript",
+    "Next.js",
+    "React Native",
+    "PostgreSQL",
+    "SQL Server",
+    "Python",
+    "UI / UX",
+];
+
+const FEATURED_IDS = ["gghub", "purescan_foods", "purescan"] as const;
+
+function Hero() {
+    const { t } = useTranslation();
+    const heroRef = useRef<HTMLElement>(null);
+    const reduce = useReducedMotion();
+    const { scrollYProgress } = useScroll({
+        target: heroRef,
+        offset: ["start start", "end start"],
+    });
+    const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "-36%"]);
+    const contentOpacity = useTransform(scrollYProgress, [0, 0.65], [1, 0]);
+
+    return (
+        <section
+            ref={heroRef}
+            className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden"
+        >
+            <CityScene heroRef={heroRef} />
+
+            <motion.div
+                style={reduce ? undefined : { y: contentY, opacity: contentOpacity }}
+                className="relative z-10 mx-auto -mt-16 max-w-4xl px-5 text-center sm:px-8"
+            >
+                <motion.div
+                    initial={reduce ? false : { opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                    className="flex min-h-[3.75rem] items-end justify-center"
+                >
+                    <p className="font-mono text-sm uppercase tracking-[0.3em] text-accent sm:text-base">
+                        {t("home.kicker")}
+                    </p>
+                </motion.div>
+
+                <h1 className="mt-5 font-display text-[2.6rem] font-bold leading-[1.04] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+                    <motion.span
+                        className="block"
+                        initial={reduce ? false : { opacity: 0, y: 34 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                        {t("home.line1")}
+                    </motion.span>
+                    <motion.span
+                        className="block"
+                        initial={reduce ? false : { opacity: 0, y: 34 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                        {t("home.line2a")}
+                        <span className="text-accent">{t("home.line2b")}</span>
+                    </motion.span>
+                </h1>
+
+                <motion.p
+                    initial={reduce ? false : { opacity: 0, y: 24 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg"
+                >
+                    {t("home.description")}
+                </motion.p>
+
+                <motion.div
+                    initial={reduce ? false : { opacity: 0, y: 24 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                    className="mt-10 flex flex-wrap items-center justify-center gap-4"
+                >
+                    <Link
+                        to="/projects"
+                        className="group inline-flex items-center gap-3 rounded-full bg-ink px-7 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-colors hover:bg-accent hover:text-white sm:text-sm"
+                    >
+                        {t("home.cta_projects")}
+                        <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
+                    <Link
+                        to="/contact"
+                        className="inline-flex items-center gap-3 rounded-full border border-line bg-surface/60 px-7 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-ink backdrop-blur-sm transition-colors hover:border-accent hover:text-accent sm:text-sm"
+                    >
+                        {t("home.cta_contact")}
+                    </Link>
+                </motion.div>
+            </motion.div>
+
+            <div className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2">
+                <div className="flex flex-col items-center gap-2 text-muted">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.3em]">
+                        {t("common.scroll")}
+                    </span>
+                    <FiArrowDown className="animate-scroll-dot" />
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function CareerSection() {
+    const { t } = useTranslation();
+    const stats = t("home.stats", { returnObjects: true }) as Array<{
+        value: string;
+        label: string;
+    }>;
+
+    return (
+        <section className="relative overflow-hidden pb-16 pt-24 sm:pb-20 sm:pt-32">
+            <GhostWord word={t("home.career_ghost")} className="top-8" from={100} to={-160} />
+
+            <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+                <SectionHeading label={t("home.career_label")} title={t("home.career_title")} />
+
+                <div className="mt-14 grid gap-12 lg:grid-cols-2 lg:gap-20">
+                    <Reveal delay={0.1}>
+                        <p className="border-l-2 border-accent pl-6 text-lg leading-relaxed text-ink-soft">
+                            {t("home.career_p1")}
+                        </p>
+                    </Reveal>
+                    <Reveal delay={0.2}>
+                        <p className="text-lg leading-relaxed text-ink-soft">{t("home.career_p2")}</p>
+                    </Reveal>
+                </div>
+
+                <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line/70 bg-line/70 lg:grid-cols-4">
+                    {stats.map((stat, i) => (
+                        <Reveal key={stat.label} delay={0.08 * i} className="bg-surface">
+                            <div className="p-7 sm:p-9">
+                                <p className="font-display text-4xl font-bold text-accent sm:text-5xl">
+                                    {stat.value}
+                                </p>
+                                <p className="mt-3 text-sm leading-snug text-muted">{stat.label}</p>
+                            </div>
+                        </Reveal>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function StudioSection() {
+    const { t } = useTranslation();
+
+    return (
+        <section className="relative py-12 sm:py-16">
+            <Contours />
+            <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+                <div className="overflow-hidden rounded-3xl border border-line/70 bg-surface shadow-sm">
+                    <div className="grid items-center lg:grid-cols-2">
+                        <div className="p-9 sm:p-14">
+                            <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-accent">
+                                <span className="inline-block h-px w-8 bg-accent" />
+                                {t("home.studio_label")}
+                            </p>
+                            <h2 className="mt-5 flex items-center gap-4 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+                                <img
+                                    src="/septimuslab.png"
+                                    alt="SeptimusLab"
+                                    className="h-12 w-12 rounded-xl object-contain sm:h-14 sm:w-14"
+                                />
+                                SeptimusLab
+                            </h2>
+                            <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft sm:text-lg">
+                                {t("home.studio_desc")}
+                            </p>
+                            <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+                                {t("home.studio_apps_label")}: Fintel · PureScan Foods · PureScan Cosmetics
+                            </p>
+                            <a
+                                href="https://septimuslab.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group mt-9 inline-flex items-center gap-3 rounded-full border border-line px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] text-ink transition-colors hover:border-accent hover:text-accent"
+                            >
+                                {t("home.studio_cta")}
+                                <FiArrowUpRight className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                            </a>
+                        </div>
+
+                        <div className="relative hidden h-[420px] overflow-hidden bg-soft lg:block">
+                            <div className="blueprint-grid absolute inset-0" />
+                            <ParallaxY from={50} to={-30} className="absolute left-6 top-16 w-44">
+                                <img
+                                    src="/fintel-screen.png"
+                                    alt="Fintel"
+                                    loading="lazy"
+                                    className="rounded-2xl border-4 border-ink/70 shadow-2xl dark:border-line"
+                                />
+                            </ParallaxY>
+                            <ParallaxY from={-30} to={40} className="absolute left-52 top-6 w-44">
+                                <img
+                                    src="/purescan-screen.png"
+                                    alt="PureScan"
+                                    loading="lazy"
+                                    className="rounded-2xl border-4 border-ink/70 shadow-2xl dark:border-line"
+                                />
+                            </ParallaxY>
+                            <ParallaxY from={70} to={-50} className="absolute left-[24rem] top-24 w-44">
+                                <img
+                                    src="/purescan-foods-screen.png"
+                                    alt="PureScan Foods"
+                                    loading="lazy"
+                                    className="rounded-2xl border-4 border-ink/70 shadow-2xl dark:border-line"
+                                />
+                            </ParallaxY>
+                            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-soft to-transparent" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function FeaturedSection() {
+    const { t } = useTranslation();
+    const featured = FEATURED_IDS.map((id) => projectsData.find((p) => p.id === id)!);
+
+    return (
+        <section className="relative py-24 sm:py-28">
+            <div className="mx-auto max-w-6xl px-5 sm:px-8">
+                <div className="flex flex-wrap items-end justify-between gap-6">
+                    <SectionHeading
+                        label={t("home.featured_label")}
+                        title={t("home.featured_title")}
+                    />
+                    <Reveal delay={0.15}>
+                        <Link
+                            to="/projects"
+                            className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-ink-soft transition-colors hover:text-accent"
+                        >
+                            {t("home.featured_link")}
+                            <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                        </Link>
+                    </Reveal>
+                </div>
+
+                <div className="mt-14 grid items-stretch gap-6 md:grid-cols-3">
+                    {featured.map((project, i) => (
+                        <Reveal key={project.id} delay={0.1 * i} className="h-full">
+                            <Link
+                                to="/projects"
+                                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line/70 bg-surface transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/60 hover:shadow-xl"
+                            >
+                                <div className="relative h-60 shrink-0 overflow-hidden bg-soft">
+                                    {project.mockupType === "phone" ? (
+                                        <PhoneMockup
+                                            src={`/${project.image}`}
+                                            alt={t(`projects_page.projects.${project.id}.title`)}
+                                            accentColor={project.accentColor}
+                                        />
+                                    ) : (
+                                        <div className="flex h-full items-center justify-center p-6">
+                                            <LaptopMockup
+                                                src={`/${project.image}`}
+                                                alt={t(`projects_page.projects.${project.id}.title`)}
+                                                accentColor={project.accentColor}
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                                <div className="flex flex-grow items-start justify-between gap-4 p-6">
+                                    <div>
+                                        <h3 className="font-display text-lg font-bold text-ink transition-colors group-hover:text-accent">
+                                            {t(`projects_page.projects.${project.id}.title`)}
+                                        </h3>
+                                        <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
+                                            {(
+                                                t(`projects_page.projects.${project.id}.tags`, {
+                                                    returnObjects: true,
+                                                }) as string[]
+                                            )
+                                                .slice(0, 3)
+                                                .join(" · ")}
+                                        </p>
+                                    </div>
+                                    <FiArrowUpRight className="mt-1 shrink-0 text-muted transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
+                                </div>
+                            </Link>
+                        </Reveal>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
+
 function HomePage() {
     const { t, i18n } = useTranslation();
-    const heroSectionRef = useRef(null);
-    const aboutSectionRef = useRef(null);
-    const studioSectionRef = useRef(null);
-
-    const isHeroInView = useInView(heroSectionRef, { once: true, amount: 0.2 });
-    const isStudioInView = useInView(studioSectionRef, { once: false, amount: 0.3 });
-
-    const { scrollYProgress: windowScrollYProgress } = useScroll();
-
-    const { scrollYProgress: aboutSectionScrollYProgress } = useScroll({
-        target: aboutSectionRef,
-        offset: ["start end", "end start"],
-    });
-
-    const heroOpacity = useTransform(windowScrollYProgress, [0.1, 0.3], [1, 0]);
-    const heroTextX = useTransform(windowScrollYProgress, [0.1, 0.3], ["0%", "-100%"]);
-
-    const opacity = useTransform(aboutSectionScrollYProgress, [0, 0.4], [0, 1]);
-    const scale = useTransform(aboutSectionScrollYProgress, [0, 0.4], [0.8, 1]);
-    const rotate = useTransform(aboutSectionScrollYProgress, [0, 0.4], [-15, 0]);
-    const backgroundTextY = useTransform(aboutSectionScrollYProgress, [0, 1], ["-60%", "-40%"]);
 
     return (
         <div>
-            <Helmet key={`${location.pathname}-${i18n.language}`} defer={false} prioritizeSeoTags>
+            <Helmet key={i18n.language} defer={false} prioritizeSeoTags>
                 <title>{t("seo.home_title")}</title>
                 <meta name="description" content={t("seo.home_description") ?? ""} />
             </Helmet>
 
-            {/* HERO SECTION */}
-            <section ref={heroSectionRef} className="relative flex min-h-screen items-center justify-center overflow-hidden">
-                {/* Aurora gradient mesh background */}
-                <div className="absolute inset-0 overflow-hidden">
-                    <div className="absolute -top-1/2 -left-1/4 w-[80vw] h-[80vw] rounded-full bg-gradient-to-br from-sky-500/10 via-cyan-400/5 to-transparent blur-3xl animate-pulse" style={{ animationDuration: "8s" }} />
-                    <div className="absolute -bottom-1/3 -right-1/4 w-[70vw] h-[70vw] rounded-full bg-gradient-to-tl from-purple-500/10 via-violet-400/5 to-transparent blur-3xl animate-pulse" style={{ animationDuration: "10s" }} />
-                    <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[50vw] h-[30vw] rounded-full bg-gradient-to-r from-teal-400/5 via-sky-300/5 to-purple-400/5 blur-3xl animate-pulse" style={{ animationDuration: "12s" }} />
-                </div>
-
-                {/* Content */}
-                <div className="container z-10 mx-auto flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-4 md:gap-0 px-6 sm:px-8 md:px-8 lg:px-12">
-                    {/* Text */}
-                    <motion.div
-                        className="w-full md:w-1/2 mt-4 md:mt-0"
-                        initial={{ opacity: 0, x: -80 }}
-                        animate={{ opacity: isHeroInView ? 1 : 0, x: isHeroInView ? 0 : -80 }}
-                        transition={{ duration: 0.8 }}
-                        style={{ x: heroTextX, opacity: heroOpacity }}
-                    >
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold drop-shadow-lg z-50">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-800 via-slate-700 to-slate-600 dark:from-white dark:via-slate-200 dark:to-slate-400">
-                                {t("home.greeting")}
-                            </span>
-                        </h1>
-                        <TypeAnimation
-                            key={i18n.language}
-                            sequence={t("home.typing_sequences", { returnObjects: true }) as (string | number)[]}
-                            wrapper="span"
-                            speed={50}
-                            className="mt-3 sm:mt-4 block text-xl sm:text-2xl md:text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400"
-                            repeat={Infinity}
-                        />
-                        <p className="mt-4 sm:mt-6 max-w-xl text-base sm:text-lg text-slate-500 dark:text-slate-400">{t("home.description")}</p>
-                        <div className="mt-8 flex flex-wrap gap-4">
-                            <Link
-                                to="/projects"
-                                className="group relative transform rounded-lg bg-gradient-to-r from-sky-500 to-cyan-500 px-6 py-3 font-semibold text-white transition-all hover:scale-105 hover:shadow-lg hover:shadow-sky-500/25"
-                            >
-                                {t("home.button")}
-                            </Link>
-                        </div>
-                        <div className="mt-8 flex items-center gap-6">
-                            <a href="https://github.com/AhmetDemiroglu" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-all hover:text-sky-500 hover:scale-110">
-                                <FaGithub size={28} />
-                            </a>
-                            <a href="https://www.linkedin.com/in/ahmetdemiroglu/" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-all hover:text-sky-500 hover:scale-110">
-                                <FaLinkedin size={28} />
-                            </a>
-                        </div>
-                    </motion.div>
-
-                    {/* Portrait */}
-                    <motion.div
-                        className="w-[70%] sm:w-[55%] md:w-[36%] lg:w-[32%]"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: isHeroInView ? 1 : 0, scale: isHeroInView ? 1 : 0.9 }}
-                        transition={{ duration: 1, delay: 0.3 }}
-                        style={{ opacity: heroOpacity }}
-                    >
-                        <div className="relative mx-auto">
-                            {/* Subtle glow - barely visible in light, soft in dark */}
-                            <div className="absolute -inset-6 rounded-full blur-2xl bg-sky-400/5 dark:bg-sky-500/8" />
-                            {/* Portrait with tight edge fade */}
-                            <div
-                                className="relative"
-                                style={{
-                                    WebkitMaskImage: "radial-gradient(ellipse 82% 78% at 50% 38%, black 55%, transparent 80%)",
-                                    maskImage: "radial-gradient(ellipse 82% 78% at 50% 38%, black 55%, transparent 80%)",
-                                }}
-                            >
-                                <img
-                                    src="ahmet-.webp"
-                                    alt="Ahmet Demiroğlu"
-                                    className="w-full h-auto"
-                                />
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-
-                {/* Scroll indicator */}
-                <div className="absolute bottom-10 z-20">
-                    <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
-                        <FiArrowDownCircle size={32} className="text-slate-400 dark:text-slate-500" />
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* CAREER SECTION */}
-            <section ref={aboutSectionRef} className="relative flex min-h-[70vh] md:min-h-screen items-center bg-slate-100 dark:bg-slate-800 py-16 sm:py-20 overflow-hidden transition-colors duration-300">
-                <motion.h1
-                    style={{
-                        position: "absolute",
-                        left: "50%",
-                        top: "50%",
-                        x: "-50%",
-                        y: backgroundTextY,
-                    }}
-                    className="whitespace-nowrap text-[20vw] md:text-[18vw] font-extrabold text-slate-200 dark:text-slate-700/50 pointer-events-none"
-                >
-                    {t("home.career_section_background")}
-                </motion.h1>
-
-                <div className="container z-10 mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-0 md:justify-between px-4 sm:px-6 md:px-8">
-                    <motion.div
-                        className="hidden md:block w-full md:w-1/3"
-                        style={{ opacity, scale, rotate }}
-                    >
-                        <img src="career_change.png" alt="Ahmet Demiroğlu" loading="lazy" className="max-h-[70vh] w-full object-contain opacity-25" />
-                    </motion.div>
-                    <motion.div className="w-full md:w-2/3" style={{ opacity }}>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">{t("home.career_section_title")}</h2>
-                        <div className="mt-3 sm:mt-4 max-w-2xl space-y-3 sm:space-y-4 text-base sm:text-lg text-slate-600 dark:text-slate-300">
-                            <p>{t("home.career_section_p1")}</p>
-                            <p>{t("home.career_section_p2")}</p>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* SEPTIMUSLAB STUDIO SECTION */}
-            <section
-                ref={studioSectionRef}
-                className="relative py-16 sm:py-20 md:py-24 bg-white dark:bg-slate-900 overflow-hidden transition-colors duration-300"
-            >
-                {/* Subtle background accent */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-gradient-to-br from-sky-500/5 via-teal-400/3 to-purple-500/5 blur-3xl" />
-                </div>
-
-                <div className="container relative z-10 mx-auto px-4 sm:px-6 md:px-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        animate={isStudioInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-                        transition={{ duration: 0.8 }}
-                        className="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-5xl mx-auto"
-                    >
-                        {/* Logo */}
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={isStudioInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                            className="flex-shrink-0"
-                        >
-                            <div className="relative">
-                                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-400/10 to-teal-400/10 blur-2xl scale-150" />
-                                <img
-                                    src="septimuslab.png"
-                                    alt="SeptimusLab"
-                                    loading="lazy"
-                                    className="relative w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-lg"
-                                />
-                            </div>
-                        </motion.div>
-
-                        {/* Content */}
-                        <div className="flex-1 text-center md:text-left">
-                            <motion.p
-                                initial={{ opacity: 0 }}
-                                animate={isStudioInView ? { opacity: 1 } : { opacity: 0 }}
-                                transition={{ duration: 0.5, delay: 0.3 }}
-                                className="text-sm font-semibold uppercase tracking-widest text-sky-600 dark:text-sky-400 mb-2"
-                            >
-                                {t("home.studio_section_title")}
-                            </motion.p>
-                            <motion.h2
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={isStudioInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                transition={{ duration: 0.6, delay: 0.4 }}
-                                className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white"
-                            >
-                                SeptimusLab
-                            </motion.h2>
-                            <motion.p
-                                initial={{ opacity: 0 }}
-                                animate={isStudioInView ? { opacity: 1 } : { opacity: 0 }}
-                                transition={{ duration: 0.5, delay: 0.5 }}
-                                className="mt-3 text-lg text-slate-600 dark:text-slate-400 max-w-lg"
-                            >
-                                {t("home.studio_section_description")}
-                            </motion.p>
-
-                            {/* App showcase pills */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={isStudioInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                                transition={{ duration: 0.5, delay: 0.6 }}
-                                className="mt-5"
-                            >
-                                <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
-                                    {t("home.studio_section_apps_label")}
-                                </p>
-                                <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                                    <Link to="/projects" className="px-3 py-1.5 text-sm font-medium rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-sky-500 transition">
-                                        Fintel
-                                    </Link>
-                                    <Link to="/projects" className="px-3 py-1.5 text-sm font-medium rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-teal-500 transition">
-                                        PureScan Cosmetics
-                                    </Link>
-                                    <Link to="/projects" className="px-3 py-1.5 text-sm font-medium rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-orange-500 transition">
-                                        PureScan Foods
-                                    </Link>
-                                </div>
-                            </motion.div>
-
-                            {/* Visit studio link */}
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={isStudioInView ? { opacity: 1 } : { opacity: 0 }}
-                                transition={{ duration: 0.5, delay: 0.7 }}
-                                className="mt-6"
-                            >
-                                <a
-                                    href="https://www.septimuslab.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-sky-600 dark:text-sky-400 font-medium hover:underline transition"
-                                >
-                                    {t("home.studio_section_visit")}
-                                    <FiExternalLink size={16} />
-                                </a>
-                            </motion.div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+            <Hero />
+            <TechRibbon items={RIBBON} />
+            <CareerSection />
+            <StudioSection />
+            <TechRibbon items={RIBBON} flip />
+            <FeaturedSection />
         </div>
     );
 }

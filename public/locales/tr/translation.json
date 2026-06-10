@@ -1,15 +1,14 @@
 {
     "seo": {
-        "home_title": "Ahmet Demiroğlu | Full-Stack Web Developer",
-        "home_description": "Kullanıcı odaklı modern web deneyimleri yaratan İzmir merkezli Full-Stack Geliştirici. React, Vue.js, .NET Core ve daha fazlası.",
-        "about_title": "Hakkımda | Ahmet Demiroğlu",
-        "about_description": "Geçmişim, hedeflerim ve web geliştirme dünyasındaki yolculuğum hakkında daha fazlasını öğrenin.",
+        "home_title": "Ahmet Demiroğlu | Full-Stack Developer",
+        "home_description": "Şehir planlamadan yazılıma: dijital ürünleri şehir kurar gibi inşa eden Full-Stack Developer. React, Vue ve .NET ile web ve mobil ürünler.",        "about_title": "Hakkımda | Ahmet Demiroğlu",
+        "about_description": "Şehir plancılığından full-stack geliştiriciliğe uzanan hikâyem, hedeflerim ve yazılım yolculuğum.",
         "skills_title": "Yeteneklerim | Ahmet Demiroğlu",
-        "skills_description": "Front-end ve back-end teknolojilerindeki yeteneklerimi keşfedin: React, Vue, C#, .NET, SQL ve daha fazlası.",
+        "skills_description": "Üretimde kullandığım front-end ve back-end teknolojileri: React, Vue, C#, .NET, SQL ve daha fazlası.",
         "projects_title": "Projelerim | Ahmet Demiroğlu",
-        "projects_description": "Geliştirdiğim web uygulamalarını ve projelerimi inceleyin.",
+        "projects_description": "Fikirden yayına: geliştirdiğim web ve mobil uygulamalar, ürünler ve deneysel projeler.",
         "contact_title": "İletişim | Ahmet Demiroğlu",
-        "contact_description": "Bir proje fikriniz mi var veya sadece merhaba mı demek istiyorsunuz? Benimle iletişime geçin.",
+        "contact_description": "Bir proje fikriniz mi var, yoksa sadece merhaba mı demek istiyorsunuz? Benimle iletişime geçin.",
         "404_title": "Sayfa Bulunamadı | Ahmet Demiroğlu",
         "404_description": "Aradığınız sayfa mevcut değil. Lütfen adresi kontrol edin veya ana sayfaya dönün."
     },
@@ -20,65 +19,88 @@
         "projects": "Projeler",
         "contact": "İletişim"
     },
+    "common": {
+        "scroll": "Kaydır",
+        "location": "İzmir, Türkiye"
+    },
     "home": {
-        "greeting": "Ahmet Demiroğlu",
-        "description": "Kod ve tasarımı birleştirerek, hem estetik hem de işlevsel modern web deneyimleri yaratıyorum.",
-        "button": "Projelerimi İncele",
-        "typing_sequences": [
-            "Full-Stack Developer",
-            2000,
-            "UI/UX Meraklısı",
-            2000,
-            "Kullanıcı Odaklı Çözümler",
-            2000
+        "kicker": "Merhaba, ben Ahmet Demiroğlu",
+        "line1": "Dijital ürünleri,",
+        "line2a": "şehir kurar gibi ",
+        "line2b": "inşa ediyorum.",
+        "description": "Plansız yapı ayakta kalmaz. Şehir planlamadan yazılıma taşıdığım disiplinle; temeli sağlam, detayı düşünülmüş ve büyümeye hazır ürünler geliştiriyorum. Bugün üç uygulamam markette, kurumsal sistemlerim her gün sahada.",
+        "cta_projects": "Projelerimi İncele",
+        "cta_contact": "Birlikte Çalışalım",
+        "career_label": "Hikâyem",
+        "career_title": "Disiplinler arası bir bakış",
+        "career_ghost": "KARİYER",
+        "career_p1": "Yazılıma alışılmış bir yoldan gelmedim. Eğitimim şehir planlama, mesleğimse dokuz yıl boyunca gayrimenkul değerlemeydi. Veriyi okumayı, detayın değerini ve karmaşık bir problemi yönetilebilir parçalara ayırmayı bana saha yılları öğretti.",
+        "career_p2": "Bugün aynı disiplini koda taşıyorum. Benim için iyi yazılım yalnızca çalışan bir araç değil; kullanıcısını düşünen, temiz ve yıllar sonra da ayakta kalacak bir ürün demek. Detaya gösterdiğim özen, ürettiğim her işin imzasıdır.",
+        "stats": [
+            {
+                "value": "9+",
+                "label": "yıl saha ve analiz tecrübesi"
+            },
+            {
+                "value": "2+",
+                "label": "yıl profesyonel yazılım geliştirme"
+            },
+            {
+                "value": "10+",
+                "label": "hayata geçirilmiş proje"
+            },
+            {
+                "value": "3",
+                "label": "markette yayında mobil uygulama"
+            }
         ],
-        "career_section_background": "KARİYER",
-        "career_section_title": "Disiplinler Arası Bir Yaklaşım",
-        "career_section_p1": "Kariyerimin temelini 9 yıllık Şehir Planlama ve Gayrimenkul Değerleme tecrübesi oluşturuyor. Bu süreçte edindiğim analitik düşünme, detaylı raporlama ve veri yorumlama becerileri, bugünkü yazılım geliştirme yaklaşımımın temel taşlarıdır.",
-        "career_section_p2": "Teknoloji tutkumu profesyonel bir kariyere dönüştürürken, geçmişimden getirdiğim bu disiplini koda yansıtıyorum. Benim için yazılım geliştirme, sadece fonksiyonel araçlar yaratmak değil, aynı zamanda kullanıcı odaklı, temiz ve sürdürülebilir çözümler üretmektir. Detaylara olan bağlılığım, ürettiğim her işte en güçlü rehberim.",
-        "studio_section_title": "Bağımsız Stüdyo",
-        "studio_section_description": "Yapay zeka destekli mobil uygulamalar geliştiren bağımsız yazılım stüdyom.",
-        "studio_section_visit": "Stüdyoyu Ziyaret Et",
-        "studio_section_apps_label": "Yayınlanan Uygulamalar"
+        "studio_label": "Bağımsız Stüdyo",
+        "studio_desc": "Yapay zekâ destekli mobil uygulamalar geliştirdiğim bağımsız yazılım stüdyom. Fikirden tasarıma, geliştirmeden markete: tüm süreç tek çatı altında.",
+        "studio_apps_label": "Yayındaki uygulamalar",
+        "studio_cta": "Stüdyoyu Ziyaret Et",
+        "featured_label": "Seçilmiş İşler",
+        "featured_title": "Öne çıkan projeler",
+        "featured_link": "Tüm projeler",
+        "role": "Full-Stack Developer · İzmir"
     },
     "about": {
-        "background_text": "HAKKIMDA",
-        "title": "Benim Hikayem",
-        "hero_label": "Geliştirici Hikayesi",
-        "hero_title_line1": "Dijital Deneyimler",
-        "hero_title_line2": "Tasarlıyorum",
-        "hero_subtitle": "İzmir'den dünyaya uzanan bir yazılım yolculuğu. Her satır kod, bir hikaye anlatır.",
-        "scroll_hint": "Kaydır",
-        "closing_quote": "En iyi kod, bir hikaye anlatandır.",
+        "label": "Hakkımda",
+        "title_line1": "Bir kariyer,",
+        "title_line2": "üç disiplin.",
+        "subtitle": "Şehir planlamadan gayrimenkul değerlemeye, oradan yazılıma uzanan bir yolculuk. Her satır kodun arkasında bir hikâye var.",
+        "ghost": "YOLCULUK",
+        "closing_quote": "En iyi kod, bir hikâye anlatandır.",
         "timeline_1_year": "2013",
         "timeline_1_title": "Gazi Üniversitesi",
         "timeline_1_subtitle": "Şehir ve Bölge Planlama",
-        "timeline_1_content": "Gazi Üniversitesi Mimarlık Fakültesi, Şehir ve Bölge Planlama Bölümü'nden mezun oldum. Bu dönemde planlama, analiz ve tasarım programları üzerine yoğun çalışarak detaylara özen gösterme ve raporlama konularında güçlü bir temel oluşturdum.",
+        "timeline_1_content": "Gazi Üniversitesi Mimarlık Fakültesi Şehir ve Bölge Planlama Bölümü'nden mezun oldum. Planlama, analiz ve tasarım yazılımlarıyla geçen bu yıllar; detaya özen göstermeyi ve düzenli raporlamayı bana ilk öğreten dönem oldu.",
         "timeline_2_year": "2014–2023",
         "timeline_2_title": "Gayrimenkul Değerleme",
         "timeline_2_subtitle": "9 yıllık saha tecrübesi",
-        "timeline_2_content": "Dokuz yıl boyunca gayrimenkul değerleme sektöründe saha ve kontrol uzmanı olarak çalıştım. Sorumlu Değerleme Uzmanı yetki belgesini alarak mesleki kariyerimi ilerlettim. Bu süreçte kazandığım analitik bakış açısı ve problem çözme yetkinliği, yazılım kariyerimin temelini oluşturdu.",
+        "timeline_2_content": "Dokuz yıl boyunca gayrimenkul değerleme sektöründe saha ve kontrol uzmanı olarak çalıştım; Sorumlu Değerleme Uzmanı lisansını alarak kariyerimi ilerlettim. Bu dönemde kazandığım analitik bakış ve problem çözme alışkanlığı, bugün yazdığım her kodun temelinde duruyor.",
         "timeline_3_year": "2023",
         "timeline_3_title": "Neos Yazılım Akademi",
         "timeline_3_subtitle": "Full-Stack Eğitim",
-        "timeline_3_content": "Kariyer değişikliği kararıyla Neos Yazılım Akademi'nin Yazılım Uzmanlığı Eğitimi'ni tamamladım. HTML, CSS, JavaScript, C#, Bootstrap, React.js ve .NET üzerine yoğun bir eğitim aldım. 7 haftalık staj programında sıfırdan bir araç kiralama web sitesi geliştirerek hem front-end hem back-end deneyimi kazandım.",
+        "timeline_3_content": "Kariyer değişikliği kararımın ardından Neos Yazılım Akademi'de Yazılım Uzmanlığı Eğitimi'ni tamamladım. HTML, CSS, JavaScript, C#, Bootstrap, React.js ve .NET üzerine yoğun bir eğitim aldım; 7 haftalık staj programında sıfırdan bir araç kiralama sitesi geliştirerek hem front-end hem back-end tarafında ilk üretim deneyimimi kazandım.",
         "timeline_4_year": "2024",
         "timeline_4_title": "SedBim Bilişim",
         "timeline_4_subtitle": "Full-Stack Developer",
-        "timeline_4_content": "Full-Stack Developer olarak üretim ve perakende müşterileri için uçtan uca iş akışı sistemleri geliştiriyorum: sipariş, stok ve faturalama süreçlerini otomatikleştiren ERP (Netsis) entegrasyonlu B2B ticaret portalları; tahsilat otomasyonlu ödeme ve POS entegrasyonları (sanal POS ve üçüncü parti finansal API'ler); SQL Server şemasından API'ye ve arayüze kadar uçtan uca CRM, lojistik/TMS ve üretim planlama modülleri. Front-end'de bileşen bazlı Vue.js ve React arayüzleri, back-end'de yüksek hacimli dış API'ler için rate-limiting ve retry/backoff içeren dayanıklı REST API servisleri tasarlıyorum.",
+        "timeline_4_content": "Full-Stack Developer olarak üretim ve perakende müşterileri için uçtan uca iş akışı sistemleri geliştiriyorum: sipariş, stok ve faturalama süreçlerini otomatikleştiren ERP (Netsis) entegrasyonlu B2B ticaret portalları; tahsilat otomasyonlu ödeme ve POS entegrasyonları; SQL Server şemasından API'ye ve arayüze uzanan CRM, lojistik/TMS ve üretim planlama modülleri. Front-end'de bileşen bazlı Vue.js ve React arayüzleri kuruyor, back-end'de yüksek hacimli dış API'ler için rate-limiting ve retry/backoff içeren dayanıklı REST servisleri tasarlıyorum.",
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Oyuncu Sosyal Platformu",
-        "timeline_5_content": "Kişisel projelerimden GGHub'ı - oyuncu sosyal platformunu - geliştirip yayına aldım. Next.js ve .NET Core altyapısıyla V2 sürümüne ulaşan platform; çoklu dil desteği, SignalR tabanlı gerçek zamanlı mesajlaşma ve performans iyileştirmeleri sunmaktadır. V3 kapsamında OAuth entegrasyonları ve kullanıcı içerik paylaşım özellikleri üzerinde çalışılmaktadır.",
+        "timeline_5_content": "Oyunculara özel sosyal platformum GGHub'ı geliştirip yayına aldım. Next.js ve .NET Core altyapısıyla V2 sürümüne ulaşan platform; çoklu dil desteği, SignalR tabanlı gerçek zamanlı mesajlaşma ve ciddi performans iyileştirmeleri sunuyor. V3 kapsamında OAuth entegrasyonları ve kullanıcı içerik paylaşım özellikleri üzerinde çalışıyorum.",
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
-        "timeline_6_subtitle": "Yapay Zeka Destekli Mobil Uygulamalar",
-        "timeline_6_content": "Bağımsız mobil yazılım stüdyom SeptimusLab ile yapay zeka destekli uygulamalar geliştirip yayınlıyorum. Fintel ile dönemsel harcama takibi ve PureScan Cosmetics ile kozmetik içerik analizi kullanıcılara sunuldu. PureScan Foods artık Google Play'de yayında ve iOS sürümü şu anda Apple incelemesinde. React Native ile teknoloji yığınımı genişletmeye devam ediyorum.",
+        "timeline_6_subtitle": "Yapay Zekâ Destekli Mobil Uygulamalar",
+        "timeline_6_content": "Bağımsız mobil yazılım stüdyom SeptimusLab çatısı altında yapay zekâ destekli uygulamalar geliştirip yayınlıyorum. Dönemsel harcama takibi için Fintel ve kozmetik içerik analizi için PureScan Cosmetics yayında. PureScan Foods Google Play'de kullanıcılarla buluştu; iOS sürümü şu anda Apple incelemesinde. React Native ile teknoloji yığınımı genişletmeye devam ediyorum.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
+        "label": "Yetkinlikler",
+        "ghost": "STACK",
         "main_title": "Yeteneklerim",
-        "subtitle": "Kariyerim boyunca edindiğim ve projelerimde kullandığım temel teknolojiler ve araçlar.",
+        "subtitle": "Ürün geliştirirken güvendiğim teknolojiler ve onları anlamlı kılan alışkanlıklar. Hepsi gerçek projelerde, üretim ortamında kullanıldı.",
         "skill_categories": [
             {
                 "category": "Teknik Beceriler",
@@ -128,7 +150,7 @@
                             },
                             {
                                 "name": "Next.js",
-                                "description": "SSR/SSG üretim uygulamaları (App Router, React 19) — GGHub'ın altyapısı."
+                                "description": "SSR/SSG üretim uygulamaları (App Router, React 19); GGHub'ın altyapısı."
                             }
                         ]
                     },
@@ -216,12 +238,12 @@
                     },
                     "mcp": {
                         "name": "LLM / MCP",
-                        "description": "Yapay zeka destekli özellikler için LLM entegrasyonu ve Model Context Protocol (MCP) araçları."
+                        "description": "Yapay zekâ destekli özellikler için LLM entegrasyonu ve Model Context Protocol (MCP) araçları."
                     }
                 }
             },
             {
-                "category": "Yazılımsal Olmayan Beceriler",
+                "category": "Yazılım Ötesi Beceriler",
                 "skills": {
                     "real_estate_appraisal": {
                         "name": "Gayrimenkul Değerleme",
@@ -248,12 +270,14 @@
         ]
     },
     "projects_page": {
+        "label": "Portfolyo",
+        "ghost": "PROJELER",
         "main_title": "Projelerim",
-        "subtitle": "Yolculuğum boyunca geliştirdiğim ve yeteneklerimi sergilediğim çalışmalar.",
+        "subtitle": "Fikirden yayına: geliştirdiğim ürünler, denemeler ve kişisel projeler. Her biri gerçek bir problemi çözmek için doğdu.",
         "featured_badge": "ÖNE ÇIKAN PROJE",
-        "view_live_button": "İncele",
-        "view_github_button": "GitHub",
-        "view_github_button_long": "GitHub'da İncele",
+        "view_live_button": "Canlı İncele",
+        "archive_label": "Arşiv",
+        "archive_title": "İlk adımlar",
         "badges": {
             "live": "Yayında",
             "beta": "Beta",
@@ -263,24 +287,21 @@
         },
         "show_more": "Devamını Gör",
         "show_less": "Daha Az Göster",
-        "download_apk_button": "APK İndir",
-        "view_google_play_button": "Google Play'den İndir",
         "projects": {
             "rent_a_car": {
                 "title": "Rent A Car Full-Stack Platform",
-                "description": "Modern .NET 8 ve ASP.NET Core MVC mimarisi üzerine inşa edilmiş, ölçeklenebilir araç kiralama platformu. Entity Framework Core ile ilişkisel veritabanı (SQL Server) yönetimi, Identity kütüphanesi ile Rol Tabanlı Erişim Kontrolü (RBAC) ve güvenli CRUD operasyonları içerir. Neos Yazılım Akademi stajı kapsamında, temiz kod prensiplerine sadık kalınarak geliştirilmiştir.",
+                "description": ".NET 8 ve ASP.NET Core MVC üzerine kurduğum ölçeklenebilir bir araç kiralama platformu. Entity Framework Core ile ilişkisel veritabanı yönetimi, Identity ile rol tabanlı erişim kontrolü (RBAC) ve güvenli CRUD operasyonları içeriyor. Neos Yazılım Akademi stajında, temiz kod prensiplerine bağlı kalarak geliştirdim.",
                 "tags": [
                     "ASP.NET Core MVC",
                     ".NET 8",
                     "EF Core",
                     "Identity",
-                    "SQL Server",
-                    "Bootstrap"
+                    "SQL Server"
                 ]
             },
             "butce_360": {
-                "title": "Bütçe360° Harcama Takip Uygulaması",
-                "description": "Kredi kartı dönem takibi ve harcama yönetimi için geliştirilen ilk prototip. Vue.js 3.0 ve Firebase Realtime Database ile oluşturulmuş olup, Fintel projesinin (V2) temelini oluşturan deneysel çalışmadır.",
+                "title": "Bütçe360° Harcama Takibi",
+                "description": "Kredi kartı dönem takibi ve harcama yönetimi için geliştirdiğim ilk prototip. Vue.js 3 ve Firebase Realtime Database ile kurdum; sonradan Fintel'e dönüşecek fikrin deneysel temelini burada attım.",
                 "tags": [
                     "Vue.js",
                     "Firebase",
@@ -289,7 +310,7 @@
             },
             "purescan": {
                 "title": "PureScan - Kozmetik İçerik Analizi",
-                "description": "Yapay zeka destekli kozmetik ürün içerik analizörü. Kamera ile OCR, barkod tarama (OpenBeautyFacts DB) veya manuel metin girişi ile içerikleri analiz eder. Gemini 3.1 Flash-Lite ile risk değerlendirmesi, cilt tipine göre uyumluluk skoru, TTS ile sesli özet ve AI chat asistanı sunar. Sanal Dolap özelliği ile analiz edilen içerikleri envantere ekleme ve conflict engine teknolojisiyle ürünler arası uyumluluk kontrolü yapma imkanı tanır. RevenueCat altyapısıyla Pro abonelik ve AdMob entegrasyonu (banner/reward) ile freemium model desteği bulunur. Capacitor kullanılarak native uygulamaya dönüştürülmüş olup, Google Play Store'da aktif olarak yayında ve indirilebilir durumdadır.",
+                "description": "Yapay zekâ destekli kozmetik içerik analizörü. İçerikleri kamera (OCR), barkod (OpenBeautyFacts) veya elle giriş yoluyla okur; Gemini 3.1 Flash-Lite destekli risk değerlendirmesi, cilt tipine göre uyumluluk skoru, sesli özet (TTS) ve yapay zekâ sohbet asistanı sunar. Sanal Dolap özelliğiyle analiz edilen ürünler envantere eklenir ve conflict engine ile ürünler arası uyumluluk kontrol edilir. RevenueCat ile Pro abonelik ve AdMob entegrasyonu içeren freemium modeliyle, Capacitor üzerinden Android'e derlenmiş hâlde Google Play'de yayında.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -300,8 +321,8 @@
                 ]
             },
             "not_defteri": {
-                "title": "İnteraktif NotDefteri Uygulaması",
-                "description": "Kullanıcılara dinamik bir not defteri deneyimi sunar. HTML, CSS ve Vue.js 3.0 kullanılarak geliştirilmiştir.",
+                "title": "İnteraktif Not Defteri",
+                "description": "Kullanıcılara dinamik bir not defteri deneyimi sunan küçük ama keyifli bir uygulama. HTML, CSS ve Vue.js 3 ile geliştirdim.",
                 "tags": [
                     "Vue.js",
                     "JavaScript",
@@ -311,7 +332,7 @@
             },
             "fintel": {
                 "title": "Fintel - AI Finans Asistanı",
-                "description": "Gemini 3.0 ve 'Vibecoding' yaklaşımıyla iskeleti oluşturulan, ardından kapsamlı mimari geliştirmelerle profesyonel bir SaaS ürününe dönüştürülen hibrit (LocalStorage + Firestore) finans aracı. Groq altyapısı ve Llama 3.3 70B modeliyle güçlendirilmiş 'Nova AI' entegrasyonuna sahip uygulama GLM-OCR teknolojisiyle birlikte yüksek doğrulukla PDF ve fiş işleme, harcama analizi ve kişiselleştirilmiş tasarruf stratejileri sunar. Capacitor ile Android uygulamasına dönüştürülmüştür ve Google Play Store'dan indirilebilir.",
+                "description": "Gemini ile hızlıca prototiplenen, ardından kapsamlı mimari geliştirmelerle profesyonel bir SaaS ürününe dönüştürdüğüm hibrit (LocalStorage + Firestore) finans asistanı. Groq altyapısında Llama 3.3 70B ile çalışan 'Nova AI', GLM-OCR desteğiyle PDF ve fişleri yüksek doğrulukla işler; harcama analizi ve kişiselleştirilmiş tasarruf önerileri sunar. Capacitor ile Android'e taşıdım; Google Play'de yayında.",
                 "tags": [
                     "React",
                     "TypeScript",
@@ -323,27 +344,51 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Gıda İçerik Analizi",
-                "description": "React Native ve Expo ile geliştirilen, Firebase altyapısı üzerinde çalışan cross-platform gıda etiketi analizörü. Barkod tarama ve kamera tabanlı OCR ile ürün etiketlerini okuyarak Gemini 3.1 Flash-Lite modeliyle alerjen tespiti, katkı maddesi risk analizi ve diyet uyumluluk değerlendirmesi yapar. Aile profilleri sistemi sayesinde her bireyin alerji ve diyet tercihlerine göre ürün uygunluk skoru hesaplanır. E-kod veritabanına dayalı gıda katkı maddeleri sözlüğü, Guru AI chat asistanı ve çoklu dil desteği sunar. Tüm API iletişimleri Firebase Cloud Functions üzerinden yönlendirilerek kullanıcı gizliliği korunur. Google Play'de yayında, iOS sürümü ise şu anda Apple incelemesinde.",
-                "tags": ["React Native", "Expo", "Firebase", "Gemini AI", "OCR"]
+                "description": "React Native ve Expo ile geliştirdiğim, Firebase üzerinde çalışan cross-platform gıda etiketi analizörü. Barkod ve kamera (OCR) ile etiketleri okur; Gemini 3.1 Flash-Lite ile alerjen tespiti, katkı maddesi risk analizi ve diyet uyumluluğu değerlendirmesi yapar. Aile profilleri sayesinde her bireyin alerji ve tercihlerine göre ürün uygunluk skoru hesaplanır. E-kod sözlüğü, Guru AI sohbet asistanı ve çoklu dil desteği içerir; kullanıcı gizliliği için tüm API trafiği Firebase Cloud Functions üzerinden yönetilir. Google Play'de yayında, iOS sürümü Apple incelemesinde.",
+                "tags": [
+                    "React Native",
+                    "Expo",
+                    "Firebase",
+                    "Gemini AI",
+                    "OCR"
+                ]
             },
             "openworld": {
                 "title": "OpenWorld - Lokal AI Süper Ajan",
-                "description": "4 katmanlı güvenlik sistemine sahip Windows tabanlı lokal AI süper ajan. 100+ yerleşik araç ile ekran kontrolü, dosya yönetimi, OCR, araştırma, kod yönetimi ve daha fazlasını sunar. Ollama veya bulut LLM entegrasyonu (Groq, Z.AI) ile çalışır. Telegram bot üzerinden uzaktan kontrol, semantik araç yönlendirme ve notebook sistemi içerir. Deneysel aşamada olup aktif olarak geliştirilmekte ve muhtelif modeller üzerinde çalışılmaktadır.",
-                "tags": ["Python", "FastAPI", "React", "ChromaDB", "Ollama", "Telegram Bot"]
+                "description": "Windows üzerinde çalışan, 4 katmanlı güvenliğe sahip lokal bir yapay zekâ süper ajanı. Ekran kontrolü, dosya yönetimi, OCR, araştırma ve kod yönetimi için 100'den fazla yerleşik araç sunar; Ollama veya bulut LLM'lerle (Groq, Z.AI) çalışır. Telegram bot üzerinden uzaktan kontrol, semantik araç yönlendirme ve notebook sistemi içerir. Aktif geliştirme sürecinde, deneysel bir proje.",
+                "tags": [
+                    "Python",
+                    "FastAPI",
+                    "React",
+                    "ChromaDB",
+                    "Ollama",
+                    "Telegram Bot"
+                ]
             },
             "multimind": {
                 "title": "MultiMind - Otonom Çoklu-Ajan Sistemi",
-                "description": "Bir prompt alıp çalışan yazılım teslim edene kadar planlayan, kod yazan, test eden ve kendini düzelten otonom bir çoklu-ajan sistemi. Merkezi bir orkestratör, her biri izole sandbox'larda çalışan beş özelleşmiş ajanı (mühendis, yedek mühendis, test uzmanı ve UI'yi orijinal prompt'a göre görsel olarak doğrulayan bir vision ajanı) koordine eder; hataları tespit edip otomatik kurtarma için geri besleyen kendi kendini onaran bir döngü içerir. Canlı Telegram ilerleme raporlaması sunar.",
-                "tags": ["Python", "Multi-LLM", "React", "Telegram"]
+                "description": "Tek bir prompt alıp çalışan yazılım teslim edene kadar planlayan, kodlayan, test eden ve kendini düzelten otonom bir çoklu-ajan sistemi. Merkezi orkestratör; her biri izole sandbox'larda çalışan beş özelleşmiş ajanı (mühendis, yedek mühendis, test uzmanı ve arayüzü orijinal prompt'a göre görsel olarak doğrulayan bir vision ajanı) koordine eder. Hataları yakalayıp otomatik kurtarma için geri besleyen kendini onaran bir döngüye ve canlı Telegram raporlamasına sahip.",
+                "tags": [
+                    "Python",
+                    "Multi-LLM",
+                    "React",
+                    "Telegram"
+                ]
             },
             "sip": {
                 "title": "SIP - Satış Zekâsı Platformu",
-                "description": "Her türlü saha satış (plasiyer bazlı) operasyonu için çok kiracılı (multi-tenant) bir analitik motoru: müşteri adaylarını skorlar, çapraz satış fırsatlarını ortaya çıkarır ve müşteri kaybını (churn) öngörür; iş sorularını SQL sorgularına çeviren doğal dil arayüzü içerir. .NET 8, React ve Python/FastAPI üzerine CQRS, arka plan iş hatları ve hibrit lokal+bulut LLM stratejisiyle inşa edildi. Şu anda canlı bir kurumsal müşteriyle test aşamasında.",
-                "tags": [".NET 8", "React", "Python/FastAPI", "SQL Server", "LLM"]
+                "description": "Saha satış (plasiyer) operasyonları için çok kiracılı (multi-tenant) bir analitik motoru: müşteri adaylarını skorlar, çapraz satış fırsatlarını ortaya çıkarır ve müşteri kaybını (churn) öngörür. İş sorularını SQL sorgularına çeviren doğal dil arayüzü içerir. .NET 8, React ve Python/FastAPI üzerine CQRS ve arka plan iş hatlarıyla kurdum; hibrit lokal+bulut LLM stratejisiyle çalışıyor. Şu anda gerçek bir kurumsal müşteriyle test aşamasında.",
+                "tags": [
+                    ".NET 8",
+                    "React",
+                    "Python/FastAPI",
+                    "SQL Server",
+                    "LLM"
+                ]
             },
             "gghub": {
-                "title": "GGHub - Oyuncu Sosyal Platformu (Beta)",
-                "description": ".NET 8 ve Next.js 15 teknolojilerini Clean Architecture çatısı altında birleştiren bu Monorepo projesi, V2 sürümüne ulaştı. Platform; listeleme, oyun arama, detaylı inceleme, ana sayfa akışı, gamification (rozet/seviye), leaderboard, admin paneli ve kullanıcı profil algoritmaları gibi kapsamlı özelliklerin yanı sıra; çoklu dil desteği (EN/TR), SignalR tabanlı gerçek zamanlı mesajlaşma ve ciddi performans iyileştirmeleri sunmaktadır. V3 yol haritasında Steam, Epic ve Google OAuth entegrasyonları, kullanıcı tarafından içerik düzenleme/paylaşım özellikleri (admin onayına tabi, puan ve rozetlere yansıyacak) yer almaktadır.",
+                "title": "GGHub - Oyuncu Sosyal Platformu",
+                "description": ".NET 8 ve Next.js 15'i Clean Architecture çatısı altında birleştiren monorepo projem, V2 sürümüne ulaştı. Oyun arama, detaylı incelemeler, ana sayfa akışı, rozet/seviye sistemi, liderlik tabloları, admin paneli ve kullanıcı profil algoritmalarının yanında; çoklu dil desteği (EN/TR), SignalR tabanlı gerçek zamanlı mesajlaşma ve ciddi performans iyileştirmeleri sunuyor. V3 yol haritasında Steam, Epic ve Google OAuth entegrasyonları ile admin onaylı kullanıcı içerik paylaşımı yer alıyor.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
@@ -353,15 +398,16 @@
                     "i18n"
                 ]
             }
-        }
+        },
+        "app_store_review": "iOS sürümü Apple incelemesinde"
     },
     "contact_page": {
-        "main_title": "İletişime Geçin",
-        "subtitle": "Bir proje fikriniz mi var veya sadece merhaba mı demek istiyorsunuz? Bana aşağıdaki kanallardan ulaşabilirsiniz.",
-        "direct_contact_title": "Doğrudan Ulaşın",
+        "label": "İletişim",
+        "main_title": "İletişime geçin",
+        "subtitle": "Bir proje fikri, bir iş birliği ya da sadece bir merhaba. Yazmaktan çekinmeyin.",
         "location_title": "Konum",
         "location_popup": "İzmir'de yaşıyorum. <br /> Bir kahveye beklerim!",
-        "form_title": "Veya Formu Doldurun",
+        "form_title": "Mesaj bırakın",
         "form_placeholder_name": "Adınız Soyadınız",
         "form_placeholder_email": "E-posta Adresiniz",
         "form_placeholder_message": "Mesajınız...",
@@ -369,7 +415,7 @@
         "form_button_submitting": "Gönderiliyor...",
         "form_status_success": "Mesajınız başarıyla gönderildi!",
         "form_status_error": "Bir hata oluştu: ",
-        "social_title": "Sosyal Medya Hesaplarım",
+        "social_title": "Sosyal Medya",
         "direct_links": {
             "email": {
                 "label": "E-posta"
@@ -393,9 +439,17 @@
             }
         }
     },
+    "footer": {
+        "cta_kicker": "Sıradaki proje",
+        "cta_title": "Aklında bir fikir mi var? Birlikte hayata geçirelim.",
+        "cta_button": "İletişime Geç",
+        "rights": "Tüm hakları saklıdır.",
+        "made_in": "İzmir'de tasarlandı ve kodlandı.",
+        "cta_button_email": "E-posta Gönder"
+    },
     "404_page": {
         "title": "Sayfa Bulunamadı",
-        "subtitle": "Aradığınız sayfa ya kaldırılmış ya da hiç var olmamış.",
+        "subtitle": "Aradığınız sayfa ya kaldırılmış ya da hiç var olmamış; imar planında olmayan bir parsel gibi.",
         "home_link": "Ana Sayfaya Dön",
         "error_code": "Hata Kodu: 404"
     }

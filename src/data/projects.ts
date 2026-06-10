@@ -5,6 +5,8 @@ export interface ProjectBase {
     githubLink: string | null;
     apkLink?: string | null;
     googlePlayLink?: string | null;
+    /* App Store sürümü henüz incelemede: buton görünür ama pasif kalır. */
+    appStoreSoon?: boolean;
     badges?: ("live" | "beta" | "apk" | "new" | "experimental")[];
     pinned: boolean;
     mockupType?: "phone" | "laptop";
@@ -17,7 +19,7 @@ export const projectsData: ProjectBase[] = [
         image: "gghub-placeholder.webp",
         liveLink: "https://gghub.social",
         githubLink: "https://github.com/AhmetDemiroglu/GGHub",
-        badges: ["live", "beta", "new"],
+        badges: ["live", "beta"],
         pinned: true,
     },
     {
@@ -26,7 +28,7 @@ export const projectsData: ProjectBase[] = [
         liveLink: "https://expense-tracker-v2-f5a0b.web.app/",
         githubLink: "https://github.com/AhmetDemiroglu/expense-tracker-v2",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.fintel.app",
-        badges: ["live", "new"],
+        badges: ["live"],
         pinned: false,
         mockupType: "phone",
         accentColor: "rgba(99,102,241,0.2)",
@@ -37,7 +39,7 @@ export const projectsData: ProjectBase[] = [
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/PureScan",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.septimuslab.purescan",
-        badges: ["live", "new"],
+        badges: ["live"],
         pinned: false,
         mockupType: "phone",
         accentColor: "rgba(20,184,166,0.2)",
@@ -48,7 +50,8 @@ export const projectsData: ProjectBase[] = [
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/PureScanFoods",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.purescan.foods",
-        badges: ["live", "new"],
+        appStoreSoon: true,
+        badges: ["live"],
         pinned: false,
         mockupType: "phone",
         accentColor: "rgba(249,115,22,0.2)",

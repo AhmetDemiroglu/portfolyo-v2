@@ -1,23 +1,29 @@
-import { Outlet, createRootRoute } from "@tanstack/react-router";
-import { Header } from "../components/Header";
-import { ThemeProvider } from "../contexts/ThemeContext";
+import { Outlet, createRootRoute, useRouterState } from "@tanstack/react-router";
 import { useEffect } from "react";
-import { useRouterState } from "@tanstack/react-router";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import { ThemeProvider } from "../contexts/ThemeContext";
 import { trackPageView } from "../lib/analytics";
 
 function RootLayout() {
     const routerState = useRouterState();
+    const pathname = routerState.location.pathname;
 
     useEffect(() => {
         trackPageView();
     }, [routerState.location.href]);
 
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+    }, [pathname]);
+
     return (
         <ThemeProvider>
             <Header />
-            <main className="min-h-screen bg-white text-slate-800 dark:bg-slate-900 dark:text-white transition-colors duration-300">
+            <main className="min-h-screen bg-paper text-ink">
                 <Outlet />
             </main>
+            <Footer />
         </ThemeProvider>
     );
 }

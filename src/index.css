@@ -2,8 +2,111 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Design tokens ──────────────────────────────────────────────────────────
+   RGB triplets so Tailwind can apply alpha: rgb(var(--c-x) / <alpha-value>).
+   Light: warm paper + ink + signal orange. Dark: deep night blue + glow. */
+:root {
+    --c-base: 245 243 238;
+    --c-soft: 236 233 225;
+    --c-surface: 252 251 248;
+    --c-ink: 26 28 33;
+    --c-ink-soft: 73 78 90;
+    --c-muted: 124 130 142;
+    --c-line: 213 209 199;
+    --c-accent: 226 84 14;
+    --c-accent2: 41 88 209;
+    --c-sky-far: 196 204 218;
+    --c-sky-mid: 138 150 171;
+    --c-sky-near: 76 86 105;
+    --c-sky-top: 224 231 240;
+}
+
+.dark {
+    --c-base: 10 13 19;
+    --c-soft: 18 24 35;
+    --c-surface: 24 31 45;
+    --c-ink: 236 238 243;
+    --c-ink-soft: 178 185 198;
+    --c-muted: 118 126 142;
+    --c-line: 52 61 79;
+    --c-accent: 255 122 61;
+    --c-accent2: 118 163 255;
+    --c-sky-far: 36 46 66;
+    --c-sky-mid: 25 33 49;
+    --c-sky-near: 13 17 26;
+    --c-sky-top: 16 22 35;
+}
+
 html {
     scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    @apply bg-paper font-sans text-ink antialiased;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+    background: rgb(var(--c-accent) / 0.85);
+    color: rgb(var(--c-surface));
+}
+
+/* Subtle paper grain over everything (non-interactive) */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+/* Big ghost/outline display text */
+.text-stroke {
+    -webkit-text-stroke: 1.5px rgb(var(--c-ink) / 0.16);
+    color: transparent;
+}
+
+.dark .text-stroke {
+    -webkit-text-stroke: 1.5px rgb(var(--c-ink) / 0.13);
+}
+
+/* Blueprint grid panel background */
+.blueprint-grid {
+    background-image:
+        linear-gradient(rgb(var(--c-ink) / 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(var(--c-ink) / 0.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+}
+
+/* Thin elegant scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(var(--c-base));
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(var(--c-line));
+    border-radius: 8px;
+    border: 2px solid rgb(var(--c-base));
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--c-muted));
+}
+
+/* Leaflet theming */
+.leaflet-container {
+    z-index: 0;
+    font-family: inherit;
 }
 
 .dark .leaflet-control-attribution {
@@ -13,76 +116,4 @@ html {
 
 .dark .leaflet-control-attribution a {
     color: #a7d7ff !important;
-}
-
-@media (max-width: 767px) {
-    .hero-main-container {
-        flex-direction: column;
-    }
-}
-
-/* GridBackground particle drift - CSS animation instead of Framer Motion */
-@keyframes particle-drift {
-    0% {
-        transform: translate(0, 0);
-    }
-    50% {
-        transform: translate(var(--drift-x), var(--drift-y));
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
-.animate-particle-drift {
-    animation: particle-drift linear infinite;
-    will-change: transform;
-}
-
-/* FloatingCode fall animation - CSS animation instead of Framer Motion */
-@keyframes float-down {
-    0% {
-        transform: translateY(-60px);
-        opacity: 0;
-    }
-    5% {
-        opacity: 0.5;
-    }
-    90% {
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateY(105vh);
-        opacity: 0;
-    }
-}
-
-.animate-float-down {
-    animation: float-down linear infinite;
-    will-change: transform;
-}
-
-/* ─── Liquid Glass PoC (nav only) ───────────────────────────────────────────
-   Base look is Tailwind's `backdrop-blur-lg` (still on the element as fallback).
-   The real feDisplacementMap refraction is layered on ONLY when: a fine-pointer
-   desktop, reduced-motion not requested, and the browser supports url() in
-   backdrop-filter. Anything else (mobile, Safari url() gaps, reduced-motion)
-   silently keeps the existing glass — zero regression. Filter id: #nav-liquid-glass */
-@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
-    @supports (backdrop-filter: url("#nav-liquid-glass")) {
-        .liquid-glass-nav {
-            backdrop-filter: url("#nav-liquid-glass") blur(7px) saturate(1.35);
-            /* specular edge highlight to sell the glass */
-            box-shadow:
-                0 10px 30px -10px rgba(15, 23, 42, 0.25),
-                inset 0 1px 0 rgba(255, 255, 255, 0.45),
-                inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-        }
-        .dark .liquid-glass-nav {
-            box-shadow:
-                0 12px 34px -12px rgba(0, 0, 0, 0.55),
-                inset 0 1px 0 rgba(255, 255, 255, 0.12),
-                inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-        }
-    }
 }

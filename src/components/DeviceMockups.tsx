@@ -4,37 +4,29 @@ interface PhoneMockupProps {
     accentColor?: string;
 }
 
-export function PhoneMockup({ src, alt, accentColor = "rgba(14,165,233,0.15)" }: PhoneMockupProps) {
+export function PhoneMockup({ src, alt, accentColor = "rgba(226,84,14,0.18)" }: PhoneMockupProps) {
     return (
-        <div className="relative w-full h-full flex justify-center">
+        <div className="relative flex h-full w-full justify-center">
             {/* Soft glow */}
             <div
-                className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-56 sm:w-48 sm:h-64 rounded-[50%] blur-3xl opacity-40 pointer-events-none"
+                className="pointer-events-none absolute left-1/2 top-1/3 h-56 w-40 -translate-x-1/2 -translate-y-1/2 rounded-[50%] opacity-50 blur-3xl sm:h-64 sm:w-48"
                 style={{ background: `radial-gradient(ellipse at center, ${accentColor}, transparent 70%)` }}
             />
 
-            {/* Phone - positioned from top, overflows bottom, faded at bottom via parent */}
-            <div className="absolute top-4 sm:top-5 left-1/2 -translate-x-1/2 w-[160px] sm:w-[180px]">
-                {/* Phone shell */}
-                <div className="rounded-[1.4rem] sm:rounded-[1.6rem] border-[3px] border-slate-700 dark:border-slate-500 bg-black shadow-xl overflow-hidden">
-                    {/* Notch */}
-                    <div className="flex justify-center pt-1.5 pb-1 bg-black">
-                        <div className="w-12 sm:w-14 h-[5px] bg-slate-800 rounded-full" />
+            {/* Phone — anchored top, overflowing bottom, faded by the overlay below */}
+            <div className="absolute left-1/2 top-4 w-[160px] -translate-x-1/2 sm:top-5 sm:w-[180px]">
+                <div className="overflow-hidden rounded-[1.4rem] border-[3px] border-ink/70 bg-black shadow-xl sm:rounded-[1.6rem] dark:border-line">
+                    <div className="flex justify-center bg-black pb-1 pt-1.5">
+                        <div className="h-[5px] w-12 rounded-full bg-zinc-800 sm:w-14" />
                     </div>
-                    {/* Screen */}
-                    <div className="w-full aspect-[9/19] overflow-hidden">
-                        <img
-                            src={src}
-                            alt={alt}
-                            loading="lazy"
-                            className="w-full h-full object-cover object-top"
-                        />
+                    <div className="aspect-[9/19] w-full overflow-hidden">
+                        <img src={src} alt={alt} loading="lazy" className="h-full w-full object-cover object-top" />
                     </div>
                 </div>
             </div>
 
-            {/* Bottom fade overlay - matches ProjectImageArea bg */}
-            <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-24 pointer-events-none z-10 bg-gradient-to-t from-white via-white/80 to-transparent dark:from-slate-900 dark:via-slate-900/80 dark:to-transparent" />
+            {/* Bottom fade into the card background */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-20 bg-gradient-to-t from-soft via-soft/80 to-transparent sm:h-24" />
         </div>
     );
 }
@@ -45,39 +37,29 @@ interface LaptopMockupProps {
     accentColor?: string;
 }
 
-export function LaptopMockup({ src, alt, accentColor = "rgba(14,165,233,0.12)" }: LaptopMockupProps) {
+export function LaptopMockup({ src, alt, accentColor = "rgba(226,84,14,0.14)" }: LaptopMockupProps) {
     return (
-        <div className="relative flex flex-col items-center w-full h-full justify-center">
-            {/* Soft glow */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="relative flex h-full w-full flex-col items-center justify-center">
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
                 <div
-                    className="absolute w-56 h-40 sm:w-64 sm:h-44 rounded-[40%] blur-3xl opacity-35"
+                    className="absolute h-40 w-56 rounded-[40%] opacity-40 blur-3xl sm:h-44 sm:w-64"
                     style={{ background: `radial-gradient(ellipse at center, ${accentColor}, transparent 70%)` }}
                 />
             </div>
 
-            {/* Screen */}
-            <div className="relative w-full max-w-[280px] sm:max-w-[320px] rounded-t-lg border-[3px] sm:border-[4px] border-b-0 border-slate-700 dark:border-slate-500 bg-slate-900 shadow-xl overflow-hidden">
-                {/* Browser bar */}
-                <div className="flex items-center gap-1 px-2 py-1 sm:py-1.5 bg-slate-800 border-b border-slate-700">
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-500/70" />
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-yellow-500/70" />
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-500/70" />
-                    <div className="ml-1.5 sm:ml-2 flex-1 h-3 sm:h-4 rounded-md bg-slate-700/60 max-w-[120px] sm:max-w-[160px]" />
+            <div className="relative w-full max-w-[280px] overflow-hidden rounded-t-lg border-[3px] border-b-0 border-ink/70 bg-zinc-900 shadow-xl sm:max-w-[320px] sm:border-[4px] dark:border-line">
+                <div className="flex items-center gap-1 border-b border-zinc-700 bg-zinc-800 px-2 py-1 sm:py-1.5">
+                    <span className="h-1.5 w-1.5 rounded-full bg-red-500/70 sm:h-2 sm:w-2" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-yellow-500/70 sm:h-2 sm:w-2" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-green-500/70 sm:h-2 sm:w-2" />
+                    <div className="ml-1.5 h-3 max-w-[120px] flex-1 rounded-md bg-zinc-700/60 sm:ml-2 sm:h-4 sm:max-w-[160px]" />
                 </div>
-                {/* Screen content */}
-                <div className="w-full aspect-[16/10] overflow-hidden">
-                    <img
-                        src={src}
-                        alt={alt}
-                        loading="lazy"
-                        className="w-full h-full object-cover object-top"
-                    />
+                <div className="aspect-[16/10] w-full overflow-hidden">
+                    <img src={src} alt={alt} loading="lazy" className="h-full w-full object-cover object-top" />
                 </div>
             </div>
-            {/* Keyboard base */}
-            <div className="w-[108%] max-w-[305px] sm:max-w-[346px] h-2 sm:h-3 bg-slate-700 dark:bg-slate-500 rounded-b-md" />
-            <div className="w-[40%] max-w-[120px] sm:max-w-[140px] h-[3px] sm:h-1 bg-slate-600 dark:bg-slate-400 rounded-b-sm" />
+            <div className="h-2 w-[108%] max-w-[305px] rounded-b-md bg-ink/70 sm:h-3 sm:max-w-[346px] dark:bg-line" />
+            <div className="h-[3px] w-[40%] max-w-[120px] rounded-b-sm bg-ink/50 sm:h-1 sm:max-w-[140px] dark:bg-line/70" />
         </div>
     );
 }

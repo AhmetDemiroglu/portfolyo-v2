@@ -1,211 +1,207 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import { TimelineSection, CinematicDivider } from "../components/Timeline";
-import { FloatingCode } from "../components/FloatingCode";
+import { FiArrowDown, FiArrowUpRight } from "react-icons/fi";
+import { Contours } from "../components/scenery/Contours";
+import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
 
 export const Route = createFileRoute("/about")({
     component: AboutPage,
 });
 
-// ─── Timeline config (6 scenes) ───
-const TIMELINE_ITEMS = [
-    { yearKey: "about.timeline_1_year", iconKey: "graduation", titleKey: "about.timeline_1_title", subtitleKey: "about.timeline_1_subtitle", contentKey: "about.timeline_1_content" },
-    { yearKey: "about.timeline_2_year", iconKey: "building", titleKey: "about.timeline_2_title", subtitleKey: "about.timeline_2_subtitle", contentKey: "about.timeline_2_content" },
-    { yearKey: "about.timeline_3_year", iconKey: "sparkles", titleKey: "about.timeline_3_title", subtitleKey: "about.timeline_3_subtitle", contentKey: "about.timeline_3_content" },
-    { yearKey: "about.timeline_4_year", iconKey: "monitor", titleKey: "about.timeline_4_title", subtitleKey: "about.timeline_4_subtitle", contentKey: "about.timeline_4_content" },
-    { yearKey: "about.timeline_5_year", iconKey: "gamepad", titleKey: "about.timeline_5_title", subtitleKey: "about.timeline_5_subtitle", contentKey: "about.timeline_5_content" },
-    { yearKey: "about.timeline_6_year", iconKey: "rocket", titleKey: "about.timeline_6_title", subtitleKey: "about.timeline_6_subtitle", contentKey: "about.timeline_6_content", linkKey: "about.timeline_6_link" },
-] as const;
+const MILESTONES = [1, 2, 3, 4, 5, 6] as const;
+const DARK_PHOTO_MASK =
+    "radial-gradient(ellipse 82% 78% at 50% 38%, black 55%, transparent 80%)";
 
-// ─── Grain Overlay ───
-function GrainOverlay() {
+function TimelineItem({ index }: { index: number }) {
+    const { t } = useTranslation();
+    const isLeft = index % 2 === 1;
+    const link = index === 6 ? t("about.timeline_6_link") : null;
+
     return (
-        <div
-            className="pointer-events-none fixed inset-0"
-            style={{
-                zIndex: 9999,
-                opacity: 0.035,
-                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-            }}
-        />
+        <div className="relative grid gap-6 py-10 md:grid-cols-2 md:gap-16 lg:py-16">
+            {/* node on the spine */}
+            <span className="absolute left-[7px] top-12 z-10 hidden h-3.5 w-3.5 rounded-full border-2 border-accent bg-paper md:left-1/2 md:block md:-translate-x-1/2" />
+
+            {/* oversized year, drifting on scroll */}
+            <ParallaxY
+                from={50}
+                to={-50}
+                className={`hidden items-start md:flex ${
+                    isLeft ? "justify-end md:order-2 md:pl-10" : "justify-start md:pr-10"
+                }`}
+            >
+                <span className="text-stroke select-none font-display text-7xl font-bold leading-none lg:text-8xl">
+                    {t(`about.timeline_${index}_year`)}
+                </span>
+            </ParallaxY>
+
+            <Reveal className={isLeft ? "md:order-1" : ""}>
+                <div className="rounded-2xl border border-line/70 bg-surface p-7 shadow-sm transition-colors hover:border-accent/50 sm:p-9">
+                    <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent md:hidden">
+                        {t(`about.timeline_${index}_year`)}
+                    </p>
+                    <h3 className="mt-2 font-display text-2xl font-bold text-ink md:mt-0">
+                        {t(`about.timeline_${index}_title`)}
+                    </h3>
+                    <p className="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-muted">
+                        {t(`about.timeline_${index}_subtitle`)}
+                    </p>
+                    <p className="mt-4 leading-relaxed text-ink-soft">
+                        {t(`about.timeline_${index}_content`)}
+                    </p>
+                    {link && (
+                        <a
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group mt-5 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-accent"
+                        >
+                            septimuslab.com
+                            <FiArrowUpRight className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                        </a>
+                    )}
+                </div>
+            </Reveal>
+        </div>
     );
 }
 
 function AboutPage() {
     const { t, i18n } = useTranslation();
-    const containerRef = useRef<HTMLDivElement>(null);
-    const heroRef = useRef<HTMLDivElement>(null);
-    const heroInView = useInView(heroRef, { once: false, amount: 0.3 });
+    const reduce = useReducedMotion();
+    const timelineRef = useRef<HTMLDivElement>(null);
 
+    // Spine grows and shrinks with scroll — fully bidirectional.
     const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start start", "end end"],
+        target: timelineRef,
+        offset: ["start 0.7", "end 0.6"],
     });
+    const spineScale = useSpring(scrollYProgress, { stiffness: 120, damping: 28 });
 
-    const heroOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
-    const heroScale = useTransform(scrollYProgress, [0, 0.15], [1, 0.95]);
-    const heroY = useTransform(scrollYProgress, [0, 0.15], [0, -60]);
-    const progressWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+    const heroRef = useRef<HTMLElement>(null);
+    const { scrollYProgress: heroProgress } = useScroll({
+        target: heroRef,
+        offset: ["start start", "end start"],
+    });
+    const heroY = useTransform(heroProgress, [0, 1], ["0%", "-30%"]);
+    const heroOpacity = useTransform(heroProgress, [0, 0.7], [1, 0]);
 
     return (
-        <div ref={containerRef} className="relative min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
-            <Helmet key={`${i18n.language}`} defer={false} prioritizeSeoTags>
+        <div>
+            <Helmet key={i18n.language} defer={false} prioritizeSeoTags>
                 <title>{t("seo.about_title")}</title>
                 <meta name="description" content={t("seo.about_description") ?? ""} />
             </Helmet>
 
-            <GrainOverlay />
-            <FloatingCode />
-
-            {/* Scroll Progress Bar */}
-            <motion.div
-                className="fixed top-0 left-0 h-[2px]"
-                style={{
-                    width: progressWidth,
-                    background: "linear-gradient(90deg, rgb(56,189,248) 0%, rgb(34,211,238) 50%, rgb(20,184,166) 100%)",
-                    zIndex: 100,
-                }}
-            />
-
-            {/* ═══════════ HERO ═══════════ */}
-            <motion.section
+            {/* Hero */}
+            <section
                 ref={heroRef}
-                style={{ opacity: heroOpacity, scale: heroScale, y: heroY }}
-                className="relative flex items-center justify-center pt-32 pb-24 md:pt-40 md:pb-32 px-6"
+                className="relative flex min-h-[88svh] items-center justify-center overflow-hidden"
             >
-                {/* Large background text */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-                    <motion.span
-                        initial={{ opacity: 0 }}
-                        animate={heroInView ? { opacity: 1 } : { opacity: 0 }}
-                        transition={{ duration: 2 }}
-                        className="text-[18vw] md:text-[14vw] font-black tracking-tight whitespace-nowrap text-slate-200/60 dark:text-slate-700/30"
-                        style={{ WebkitTextStroke: "1px rgba(148,163,184,0.06)" }}
-                    >
-                        {t("about.background_text")}
-                    </motion.span>
-                </div>
-
-                <div className="relative text-center max-w-3xl mx-auto">
-                    {/* Cinematic reveal line */}
-                    <motion.div
-                        initial={{ scaleX: 0 }}
-                        animate={heroInView ? { scaleX: 1 } : { scaleX: 0 }}
-                        transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                        className="w-24 h-[1px] mx-auto mb-8"
-                        style={{ background: "linear-gradient(90deg, transparent, rgba(56,189,248,0.6), transparent)" }}
-                    />
-
-                    {/* Label */}
-                    <motion.p
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
-                        className="font-mono text-[11px] tracking-[0.4em] uppercase mb-6 text-sky-600/60 dark:text-sky-400/60"
-                    >
-                        {t("about.hero_label")}
-                    </motion.p>
-
-                    {/* Main Title */}
-                    <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                        transition={{ duration: 0.8, delay: 0.5 }}
-                        className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6"
-                    >
-                        <span className="text-slate-800 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-br dark:from-slate-100 dark:via-slate-300 dark:to-slate-500">
-                            {t("about.hero_title_line1")}
-                        </span>
-                        <br />
-                        <span
-                            className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-400 to-teal-400 text-5xl md:text-7xl lg:text-8xl"
-                            style={{ fontFamily: "'Caveat', cursive" }}
-                        >
-                            {t("about.hero_title_line2")}
-                        </span>
-                    </motion.h1>
-
-                    {/* Subtitle */}
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                        transition={{ duration: 0.7, delay: 0.7 }}
-                        className="text-lg md:text-xl leading-relaxed max-w-xl mx-auto text-slate-500 dark:text-slate-400/60"
-                    >
-                        {t("about.hero_subtitle")}
-                    </motion.p>
-
-                    {/* Scroll indicator */}
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={heroInView ? { opacity: 1 } : { opacity: 0 }}
-                        transition={{ duration: 0.5, delay: 1.2 }}
-                        className="mt-16"
-                    >
-                        <motion.div
-                            animate={{ y: [0, 8, 0] }}
-                            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                            className="flex flex-col items-center gap-2"
-                        >
-                            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-slate-400/30">
-                                {t("about.scroll_hint")}
-                            </span>
-                            <div
-                                className="w-[1px] h-8"
-                                style={{ background: "linear-gradient(180deg, rgba(56,189,248,0.4) 0%, transparent 100%)" }}
-                            />
-                        </motion.div>
-                    </motion.div>
-                </div>
-            </motion.section>
-
-            {/* ═══════════ TIMELINE ═══════════ */}
-            <section className="relative px-6 md:px-12 pb-32 max-w-6xl mx-auto" style={{ zIndex: 10 }}>
-                {TIMELINE_ITEMS.map((item, index) => (
-                    <div key={index}>
-                        {index > 0 && <CinematicDivider />}
-                        <TimelineSection
-                            year={t(item.yearKey)}
-                            iconKey={item.iconKey}
-                            title={t(item.titleKey)}
-                            subtitle={t(item.subtitleKey)}
-                            content={t(item.contentKey)}
-                            index={index}
-                            total={TIMELINE_ITEMS.length}
-                            link={"linkKey" in item ? (t(item.linkKey as string) ?? undefined) : undefined}
-                        />
+                <Contours />
+                <motion.div
+                    style={reduce ? undefined : { y: heroY, opacity: heroOpacity }}
+                    className="relative z-10 mx-auto grid max-w-5xl items-center gap-12 px-5 pb-10 pt-28 sm:px-8 lg:grid-cols-[1fr_auto] lg:gap-20"
+                >
+                    <div className="text-center lg:text-left">
+                        <Reveal>
+                            <p className="font-mono text-xs uppercase tracking-[0.3em] text-accent sm:text-sm">
+                                {t("about.label")}
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.1}>
+                            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.02] tracking-tight text-ink sm:text-7xl">
+                                <span className="block">{t("about.title_line1")}</span>
+                                <span className="block text-accent">{t("about.title_line2")}</span>
+                            </h1>
+                        </Reveal>
+                        <Reveal delay={0.2}>
+                            <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-ink-soft lg:mx-0">
+                                {t("about.subtitle")}
+                            </p>
+                        </Reveal>
                     </div>
-                ))}
+
+                    <Reveal delay={0.25} className="justify-self-center lg:justify-self-end">
+                        <ParallaxY from={24} to={-24}>
+                            {/* Light mode: one transparent frame, with the photo anchored to its
+                                left and bottom edges. The source image keeps its natural alpha. */}
+                            <div className="relative w-56 overflow-hidden rounded-[1.75rem] border border-accent/55 sm:w-64 dark:hidden">
+                                <img
+                                    src="/ahmet-.webp"
+                                    alt="Ahmet Demiroğlu"
+                                    className="block w-full"
+                                />
+                            </div>
+
+                            {/* Dark mode intentionally keeps the original offset frames and fade. */}
+                            <div className="relative hidden w-56 sm:w-64 dark:block">
+                                <div
+                                    aria-hidden="true"
+                                    className="absolute inset-0 translate-x-4 translate-y-4 rounded-[1.75rem] border border-accent/55"
+                                />
+                                <div
+                                    aria-hidden="true"
+                                    className="absolute inset-0 -translate-x-2 -translate-y-2 rounded-[1.75rem] border border-line/50"
+                                />
+                                <img
+                                    src="/ahmet-.webp"
+                                    alt="Ahmet Demiroğlu"
+                                    className="relative block w-full"
+                                    style={{
+                                        WebkitMaskImage: DARK_PHOTO_MASK,
+                                        maskImage: DARK_PHOTO_MASK,
+                                    }}
+                                />
+                            </div>
+                        </ParallaxY>
+                    </Reveal>
+                </motion.div>
+
+                <div className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2">
+                    <div className="flex flex-col items-center gap-2 text-muted">
+                        <span className="font-mono text-[10px] uppercase tracking-[0.3em]">
+                            {t("common.scroll")}
+                        </span>
+                        <FiArrowDown className="animate-scroll-dot" />
+                    </div>
+                </div>
             </section>
 
-            {/* ═══════════ CLOSING QUOTE ═══════════ */}
-            <section className="relative py-24 px-6">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: false, amount: 0.5 }}
-                    transition={{ duration: 1.5 }}
-                    className="text-center max-w-2xl mx-auto"
-                >
-                    <div
-                        className="w-16 h-[1px] mx-auto mb-8"
-                        style={{
-                            background: "linear-gradient(90deg, transparent, rgba(34,211,238,0.4), transparent)"
-                        }}
+            {/* Timeline */}
+            <section className="relative overflow-hidden pb-24 sm:pb-32">
+                <GhostWord word={t("about.ghost")} className="top-0" from={-120} to={120} />
+
+                <div ref={timelineRef} className="relative mx-auto max-w-5xl px-5 sm:px-8">
+                    {/* spine */}
+                    <div className="absolute inset-y-0 left-[12px] w-px bg-line/80 md:left-1/2" />
+                    <motion.div
+                        style={{ scaleY: reduce ? 1 : spineScale }}
+                        className="absolute inset-y-0 left-[12px] w-px origin-top bg-accent md:left-1/2"
                     />
-                    <p className="text-2xl md:text-3xl font-light leading-relaxed italic text-slate-400 dark:text-slate-400/50">
-                        "{t("about.closing_quote")}"
-                    </p>
-                    <div
-                        className="w-16 h-[1px] mx-auto mt-8"
-                        style={{
-                            background: "linear-gradient(90deg, transparent, rgba(34,211,238,0.4), transparent)"
-                        }}
-                    />
-                </motion.div>
+
+                    <div className="relative pl-8 md:pl-0">
+                        {MILESTONES.map((index) => (
+                            <TimelineItem key={index} index={index} />
+                        ))}
+                    </div>
+                </div>
+
+                {/* Closing quote */}
+                <div className="mx-auto mt-24 max-w-4xl px-5 text-center sm:px-8">
+                    <Reveal>
+                        <span className="font-display text-7xl leading-none text-accent">“</span>
+                        <blockquote className="-mt-6 font-display text-3xl font-bold leading-snug tracking-tight text-ink sm:text-4xl">
+                            {t("about.closing_quote")}
+                        </blockquote>
+                        <p className="mt-6 font-mono text-xs uppercase tracking-[0.25em] text-muted">
+                            Ahmet Demiroğlu
+                        </p>
+                    </Reveal>
+                </div>
             </section>
         </div>
     );

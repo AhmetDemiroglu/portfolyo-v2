@@ -19,8 +19,16 @@ i18n
       loadPath: 'locales/{{lng}}/translation.json'
     },
     react: {
-      useSuspense: true, 
+      useSuspense: true,
     },
   });
+
+// Keep <html lang> in sync so CSS text-transform handles Turkish dotted/dotless i correctly.
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.lang = lng;
+});
+if (i18n.resolvedLanguage) {
+  document.documentElement.lang = i18n.resolvedLanguage;
+}
 
 export default i18n;

@@ -1,13 +1,12 @@
 {
     "seo": {
         "home_title": "Ahmet Demiroğlu | Desarrollador Full-Stack",
-        "home_description": "Desarrollador Full-Stack con sede en Izmir que crea experiencias web modernas centradas en el usuario. React, Vue.js, .NET Core y más.",
-        "about_title": "Sobre mí | Ahmet Demiroğlu",
-        "about_description": "Aprende más sobre mi trayectoria, mis objetivos y mi viaje en el mundo del desarrollo web.",
+        "home_description": "Del urbanismo al software: desarrollador full-stack que construye productos digitales como una ciudad. Web y móvil con React, Vue y .NET.",        "about_title": "Sobre mí | Ahmet Demiroğlu",
+        "about_description": "Mi historia de urbanista a desarrollador full-stack: mi trayectoria, mis objetivos y mi camino hacia el software.",
         "skills_title": "Mis Habilidades | Ahmet Demiroğlu",
-        "skills_description": "Explora mis habilidades en tecnologías front-end y back-end: React, Vue, C#, .NET, SQL y más.",
+        "skills_description": "Las tecnologías front-end y back-end que uso en producción: React, Vue, C#, .NET, SQL y más.",
         "projects_title": "Mis Proyectos | Ahmet Demiroğlu",
-        "projects_description": "Echa un vistazo a las aplicaciones web y proyectos que he desarrollado.",
+        "projects_description": "De la idea al lanzamiento: las aplicaciones web y móviles, productos y experimentos que he creado.",
         "contact_title": "Contacto | Ahmet Demiroğlu",
         "contact_description": "¿Tienes una idea para un proyecto o simplemente quieres saludar? Ponte en contacto conmigo.",
         "404_title": "Página no encontrada | Ahmet Demiroğlu",
@@ -20,65 +19,88 @@
         "projects": "Proyectos",
         "contact": "Contacto"
     },
+    "common": {
+        "scroll": "Desplaza",
+        "location": "Izmir, Turquía"
+    },
     "home": {
-        "greeting": "Ahmet Demiroğlu",
-        "description": "Combino código y diseño para crear experiencias web modernas que son tanto estéticas como funcionales.",
-        "button": "Ver mis proyectos",
-        "typing_sequences": [
-            "Desarrollador Full-Stack",
-            2000,
-            "Entusiasta de UI/UX",
-            2000,
-            "Soluciones Centradas en el Usuario",
-            2000
+        "kicker": "Hola, soy Ahmet Demiroğlu",
+        "line1": "Construyo productos digitales",
+        "line2a": "como se ",
+        "line2b": "construye una ciudad.",
+        "description": "Lo que se construye sin plan no se sostiene. Llevo la disciplina del urbanismo al software: cimientos sólidos, detalles cuidados y productos listos para crecer. Hoy tengo tres apps publicadas en las tiendas y mis sistemas empresariales funcionan cada día en producción.",
+        "cta_projects": "Ver mi trabajo",
+        "cta_contact": "Trabajemos juntos",
+        "career_label": "Mi historia",
+        "career_title": "Una mirada interdisciplinaria",
+        "career_ghost": "CARRERA",
+        "career_p1": "No llegué al software por el camino habitual. Me formé como urbanista y trabajé nueve años en la valoración inmobiliaria. Esos años sobre el terreno me enseñaron a leer datos, a valorar los detalles y a dividir un problema complejo en partes manejables.",
+        "career_p2": "Hoy llevo esa misma disciplina al código. Para mí, el buen software no es solo una herramienta que funciona: es un producto que cuida a sus usuarios, se mantiene limpio y sigue en pie años después. El cuidado por el detalle es la firma de todo lo que construyo.",
+        "stats": [
+            {
+                "value": "9+",
+                "label": "años de experiencia en campo y análisis"
+            },
+            {
+                "value": "2+",
+                "label": "años de desarrollo de software profesional"
+            },
+            {
+                "value": "10+",
+                "label": "proyectos hechos realidad"
+            },
+            {
+                "value": "3",
+                "label": "apps publicadas en las tiendas"
+            }
         ],
-        "career_section_background": "CARRERA",
-        "career_section_title": "Un Enfoque Interdisciplinario",
-        "career_section_p1": "Mi carrera se basa en una base de 9 años en Planificación Urbana y Valoración Inmobiliaria. Las habilidades que adquirí en pensamiento analítico, informes detallados e interpretación de datos durante este tiempo son las piedras angulares de mi enfoque actual en el desarrollo de software.",
-        "career_section_p2": "Al transformar mi pasión por la tecnología en una carrera profesional, traslado esta disciplina de mi pasado a mi código. Para mí, el desarrollo de software no se trata solo de crear herramientas funcionales; se trata de producir soluciones centradas en el usuario, limpias y sostenibles. Mi compromiso con el detalle es mi guía más fuerte en todo lo que construyo.",
-        "studio_section_title": "Estudio Independiente",
-        "studio_section_description": "Mi estudio de software independiente que desarrolla aplicaciones móviles impulsadas por IA.",
-        "studio_section_visit": "Visitar Estudio",
-        "studio_section_apps_label": "Apps Publicadas"
+        "studio_label": "Estudio independiente",
+        "studio_desc": "Mi estudio de software independiente donde creo aplicaciones móviles impulsadas por IA. De la idea a la tienda: diseño, desarrollo y publicación bajo un mismo techo.",
+        "studio_apps_label": "Apps en producción",
+        "studio_cta": "Visitar el estudio",
+        "featured_label": "Trabajo seleccionado",
+        "featured_title": "Proyectos destacados",
+        "featured_link": "Todos los proyectos",
+        "role": "Full-Stack Developer · Esmirna"
     },
     "about": {
-        "background_text": "SOBRE MÍ",
-        "title": "Mi Historia",
-        "hero_label": "Historia del Desarrollador",
-        "hero_title_line1": "Creando Experiencias",
-        "hero_title_line2": "Digitales",
-        "hero_subtitle": "Un viaje de software desde Esmirna al mundo. Cada línea de código cuenta una historia.",
-        "scroll_hint": "Desplazar",
+        "label": "Sobre mí",
+        "title_line1": "Una carrera,",
+        "title_line2": "tres disciplinas.",
+        "subtitle": "Un viaje desde el urbanismo a la valoración inmobiliaria, y de ahí al software. Detrás de cada línea de código hay una historia.",
+        "ghost": "VIAJE",
         "closing_quote": "El mejor código es el que cuenta una historia.",
         "timeline_1_year": "2013",
         "timeline_1_title": "Universidad de Gazi",
         "timeline_1_subtitle": "Planificación Urbana y Regional",
-        "timeline_1_content": "Me gradué de la Universidad de Gazi, Facultad de Arquitectura, Departamento de Planificación Urbana y Regional. Durante este período, construí una base sólida en atención al detalle y elaboración de informes mediante un trabajo intensivo en software de planificación, análisis y diseño.",
+        "timeline_1_content": "Me gradué en el Departamento de Planificación Urbana y Regional de la Facultad de Arquitectura de la Universidad de Gazi. Aquellos años de trabajo intensivo con software de planificación, análisis y diseño fueron donde aprendí por primera vez a cuidar los detalles y a informar con estructura.",
         "timeline_2_year": "2014–2023",
         "timeline_2_title": "Valoración Inmobiliaria",
         "timeline_2_subtitle": "9 años de experiencia en campo",
-        "timeline_2_content": "Trabajé durante nueve años como especialista de campo e inspección en el sector de valoración inmobiliaria. Avancé en mi carrera obteniendo la licencia de Tasador Certificado. La mentalidad analítica y las habilidades de resolución de problemas que adquirí en este período sentaron las bases de mi carrera en software.",
+        "timeline_2_content": "Durante nueve años trabajé como especialista de campo e inspección en el sector de la valoración inmobiliaria, avanzando en mi carrera al obtener la licencia de Tasador Certificado. La mentalidad analítica y el hábito de resolver problemas de aquella etapa están detrás de cada línea de código que escribo hoy.",
         "timeline_3_year": "2023",
         "timeline_3_title": "Neos Software Academy",
         "timeline_3_subtitle": "Formación Full-Stack",
-        "timeline_3_content": "Con la decisión de cambiar de carrera, completé la Formación de Especialización en Software en Neos Software Academy. Recibí formación intensiva en HTML, CSS, JavaScript, C#, Bootstrap, React.js y .NET. Durante el programa de prácticas de 7 semanas, desarrollé un sitio web de alquiler de coches desde cero, ganando experiencia tanto en front-end como en back-end.",
+        "timeline_3_content": "Tras decidir cambiar de carrera, completé la Formación de Especialización en Software en Neos Software Academy: formación intensiva en HTML, CSS, JavaScript, C#, Bootstrap, React.js y .NET. Durante las prácticas de 7 semanas desarrollé desde cero un sitio de alquiler de coches, ganando mi primera experiencia de producción tanto en front-end como en back-end.",
         "timeline_4_year": "2024",
         "timeline_4_title": "SedBim Bilişim",
-        "timeline_4_subtitle": "Full-Stack Developer",
-        "timeline_4_content": "Como Full-Stack Developer, desarrollo sistemas de flujo de trabajo empresarial de extremo a extremo para clientes de fabricación y comercio minorista: portales de comercio B2B con integración ERP (Netsis) que automatizan los flujos de pedidos, inventario y facturación; integraciones de pago y POS con automatización de cobros (POS virtual y APIs financieras de terceros); y módulos de CRM, logística/TMS y planificación de producción entregados desde el esquema de SQL Server hasta la API y la interfaz. En el front-end construyo interfaces basadas en componentes con Vue.js y React; en el back-end diseño servicios REST API resilientes con rate-limiting y retry/backoff para APIs externas de alto volumen.",
+        "timeline_4_subtitle": "Desarrollador Full-Stack",
+        "timeline_4_content": "Como desarrollador Full-Stack construyo sistemas de flujo de trabajo de extremo a extremo para clientes de fabricación y comercio: portales B2B con integración ERP (Netsis) que automatizan pedidos, inventario y facturación; integraciones de pago y POS con automatización de cobros; y módulos de CRM, logística/TMS y planificación de producción, desde el esquema de SQL Server hasta la API y la interfaz. En el front-end construyo interfaces basadas en componentes con Vue.js y React; en el back-end diseño servicios REST resilientes con rate-limiting y retry/backoff para APIs externas de alto volumen.",
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
-        "timeline_5_subtitle": "Plataforma Social de Jugadores",
-        "timeline_5_content": "Desarrollé y lancé GGHub - una plataforma social de gaming - como proyecto personal. Construida con Next.js y .NET Core, la plataforma ha alcanzado su versión V2 con soporte multilingüe, mensajería en tiempo real basada en SignalR y mejoras de rendimiento. El desarrollo de V3 está en marcha con integraciones OAuth y funciones de publicación de contenido por usuarios.",
+        "timeline_5_subtitle": "Plataforma Social de Gaming",
+        "timeline_5_content": "Desarrollé y lancé GGHub, una plataforma social de gaming, como proyecto personal. Construida sobre Next.js y .NET Core, la plataforma ha alcanzado su versión V2 con soporte multilingüe, mensajería en tiempo real basada en SignalR y mejoras notables de rendimiento. Ya trabajo en la V3, con integraciones OAuth y publicación de contenido por usuarios.",
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
-        "timeline_6_subtitle": "Aplicaciones Móviles con IA",
-        "timeline_6_content": "A través de mi estudio independiente de software móvil SeptimusLab, desarrollo y publico aplicaciones impulsadas por IA. Fintel para el seguimiento periódico de gastos y PureScan Cosmetics para el análisis de ingredientes cosméticos están en producción. PureScan Foods ya está publicada en Google Play y su versión iOS está actualmente en revisión por parte de Apple. Continúo expandiendo mi stack tecnológico con React Native.",
+        "timeline_6_subtitle": "Aplicaciones móviles con IA",
+        "timeline_6_content": "Bajo mi estudio independiente de software móvil SeptimusLab, desarrollo y publico aplicaciones impulsadas por IA. Fintel, para el seguimiento periódico de gastos, y PureScan Cosmetics, para el análisis de ingredientes cosméticos, ya están en producción. PureScan Foods se ha lanzado en Google Play y su versión iOS está en revisión por parte de Apple. Sigo ampliando mi stack con React Native.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
+        "label": "Competencias",
+        "ghost": "STACK",
         "main_title": "Mis Habilidades",
-        "subtitle": "Las tecnologías y herramientas fundamentales que he adquirido a lo largo de mi carrera y utilizado en mis proyectos.",
+        "subtitle": "Las tecnologías en las que confío al construir productos, y los hábitos que las hacen valiosas. Todas probadas en proyectos reales, en producción.",
         "skill_categories": [
             {
                 "category": "Habilidades Técnicas",
@@ -128,7 +150,7 @@
                             },
                             {
                                 "name": "Next.js",
-                                "description": "Aplicaciones de producción SSR/SSG (App Router, React 19) — base de GGHub."
+                                "description": "Aplicaciones de producción SSR/SSG (App Router, React 19); base de GGHub."
                             }
                         ]
                     },
@@ -221,7 +243,7 @@
                 }
             },
             {
-                "category": "Habilidades No Técnicas",
+                "category": "Más Allá del Código",
                 "skills": {
                     "real_estate_appraisal": {
                         "name": "Valoración Inmobiliaria",
@@ -248,12 +270,14 @@
         ]
     },
     "projects_page": {
+        "label": "Portafolio",
+        "ghost": "PROYECTOS",
         "main_title": "Mis Proyectos",
-        "subtitle": "Trabajos que he desarrollado a lo largo de mi trayectoria mostrando mis habilidades.",
+        "subtitle": "De la idea al lanzamiento: productos, experimentos y proyectos personales. Cada uno nació para resolver un problema real.",
         "featured_badge": "PROYECTO DESTACADO",
-        "view_live_button": "Ver en Vivo",
-        "view_github_button": "GitHub",
-        "view_github_button_long": "Ver en GitHub",
+        "view_live_button": "Ver en vivo",
+        "archive_label": "Archivo",
+        "archive_title": "Primeros pasos",
         "badges": {
             "live": "En Vivo",
             "beta": "Beta",
@@ -261,14 +285,12 @@
             "new": "Nuevo",
             "experimental": "Experimental"
         },
-        "show_more": "Ver Más",
-        "show_less": "Ver Menos",
-        "download_apk_button": "Descargar APK",
-        "view_google_play_button": "Descargar en Google Play",
+        "show_more": "Ver más",
+        "show_less": "Ver menos",
         "projects": {
             "rent_a_car": {
-                "title": "Plataforma Full-Stack de Rent A Car",
-                "description": "Una plataforma de alquiler de coches escalable construida sobre la moderna arquitectura .NET 8 y ASP.NET Core MVC. Cuenta con gestión de bases de datos relacionales a través de Entity Framework Core, Control de Acceso Basado en Roles (RBAC) mediante Identity y operaciones CRUD seguras. Desarrollado durante las prácticas en la Academia de Software Neos, siguiendo estrictamente los principios de código limpio.",
+                "title": "Plataforma Full-Stack Rent A Car",
+                "description": "Una plataforma escalable de alquiler de coches que construí sobre .NET 8 y ASP.NET Core MVC. Incluye gestión de bases de datos relacionales con Entity Framework Core, control de acceso basado en roles (RBAC) con Identity y operaciones CRUD seguras. Desarrollada durante mis prácticas en Neos Software Academy, con un compromiso estricto con los principios de código limpio.",
                 "tags": [
                     "ASP.NET Core MVC",
                     ".NET 8",
@@ -277,9 +299,18 @@
                     "SQL Server"
                 ]
             },
+            "butce_360": {
+                "title": "Presupuesto360° - Control de Gastos",
+                "description": "Mi primer prototipo para el seguimiento de ciclos de tarjetas de crédito y la gestión de gastos. Construido con Vue.js 3 y Firebase Realtime Database, sentó la base experimental de lo que más tarde se convertiría en Fintel.",
+                "tags": [
+                    "Vue.js",
+                    "Firebase",
+                    "JavaScript"
+                ]
+            },
             "purescan": {
-                "title": "PureScan - Analizador de Ingredientes Cosméticos",
-                "description": "Analizador de ingredientes de productos cosméticos impulsado por IA. Analiza ingredientes mediante OCR de cámara, escaneo de códigos de barras (OpenBeautyFacts DB) o entrada de texto manual. Ofrece evaluación de riesgos potenciada por Gemini 3.1 Flash-Lite, puntuación de compatibilidad según tipo de piel, resúmenes de audio TTS y un asistente de chat con IA. La función de Armario Virtual permite añadir contenidos analizados al inventario y verificar la compatibilidad entre productos usando tecnología de motor de conflictos. Soporta modelo freemium con suscripciones Pro mediante RevenueCat e integración AdMob (banner/recompensa). Convertido a aplicación Android usando Capacitor, disponible para descarga en Google Play Store.",
+                "title": "PureScan - Análisis de Ingredientes Cosméticos",
+                "description": "Un analizador de ingredientes cosméticos impulsado por IA. Lee los ingredientes mediante OCR de cámara, escaneo de códigos de barras (OpenBeautyFacts) o entrada manual; ofrece evaluación de riesgos con Gemini 3.1 Flash-Lite, puntuación de compatibilidad por tipo de piel, resúmenes de audio (TTS) y un asistente de chat con IA. El Armario Virtual añade los productos analizados a un inventario y comprueba la compatibilidad entre productos con un motor de conflictos. Modelo freemium con suscripciones Pro vía RevenueCat e integración de AdMob, compilado para Android con Capacitor y disponible en Google Play.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -289,18 +320,9 @@
                     "AdMob"
                 ]
             },
-            "butce_360": {
-                "title": "Presupuesto360° Seguimiento de Gastos",
-                "description": "Primer prototipo desarrollado para el seguimiento de ciclos de tarjetas de crédito y gestión de gastos. Creado con Vue.js 3.0 y Firebase Realtime Database, sirvió como base experimental para el proyecto Fintel (V2).",
-                "tags": [
-                    "Vue.js",
-                    "Firebase",
-                    "JavaScript"
-                ]
-            },
             "not_defteri": {
-                "title": "Aplicación de Cuaderno Interactivo",
-                "description": "Ofrece a los usuarios una experiencia de cuaderno dinámico. Desarrollado utilizando HTML, CSS y Vue.js 3.0.",
+                "title": "Cuaderno Interactivo",
+                "description": "Una aplicación pequeña pero encantadora que ofrece una experiencia de cuaderno dinámico. Construida con HTML, CSS y Vue.js 3.",
                 "tags": [
                     "Vue.js",
                     "JavaScript",
@@ -310,7 +332,7 @@
             },
             "fintel": {
                 "title": "Fintel - Asistente Financiero con IA",
-                "description": "Inicialmente prototipado con Gemini 3.0 usando un enfoque de 'Vibecoding', luego refinado profesionalmente hasta convertirse en un producto SaaS completo. Una herramienta financiera híbrida (LocalStorage + Firestore) con integración 'Nova AI' impulsada por la infraestructura Groq y el modelo Llama 3.3 70B, junto con tecnología GLM-OCR para el procesamiento de alta precisión de PDFs y recibos, ofreciendo análisis de gastos y estrategias de ahorro personalizadas. Convertido a aplicación Android usando Capacitor y disponible para descarga en Google Play Store.",
+                "description": "Un asistente financiero híbrido (LocalStorage + Firestore) que comenzó como un prototipo rápido con Gemini y creció hasta ser un producto SaaS de ingeniería profesional. Su 'Nova AI' (Llama 3.3 70B sobre infraestructura Groq) procesa PDFs y recibos con alta precisión gracias a GLM-OCR, ofreciendo análisis de gastos y estrategias de ahorro personalizadas. Portado a Android con Capacitor y disponible en Google Play.",
                 "tags": [
                     "React",
                     "TypeScript",
@@ -321,28 +343,52 @@
                 ]
             },
             "purescan_foods": {
-                "title": "PureScan Foods - Analizador de Ingredientes Alimentarios",
-                "description": "Analizador de etiquetas alimentarias multiplataforma desarrollado con React Native y Expo sobre infraestructura Firebase. Lee etiquetas de productos mediante escaneo de códigos de barras y OCR basado en cámara, aprovechando el modelo Gemini 3.1 Flash-Lite para detección de alérgenos, análisis de riesgo de aditivos y evaluación de compatibilidad dietética. El sistema de perfiles familiares calcula puntuaciones de compatibilidad de productos según las alergias y preferencias dietéticas de cada miembro. Incluye un diccionario de aditivos alimentarios basado en códigos E, asistente de chat Guru AI y soporte multilingüe. Todas las comunicaciones API se enrutan a través de Firebase Cloud Functions para proteger la privacidad del usuario. Disponible en Google Play, con la versión iOS actualmente en revisión por parte de Apple.",
-                "tags": ["React Native", "Expo", "Firebase", "Gemini AI", "OCR"]
+                "title": "PureScan Foods - Análisis de Ingredientes Alimentarios",
+                "description": "Un analizador multiplataforma de etiquetas alimentarias que construí con React Native y Expo sobre infraestructura Firebase. Lee etiquetas mediante escaneo de códigos de barras y OCR de cámara, usando Gemini 3.1 Flash-Lite para la detección de alérgenos, el análisis de riesgo de aditivos y la evaluación de compatibilidad dietética. Los perfiles familiares calculan una puntuación de compatibilidad para cada miembro según sus alergias y preferencias. Incluye un diccionario de aditivos por códigos E, el asistente de chat Guru AI y soporte multilingüe; todo el tráfico de API pasa por Firebase Cloud Functions para proteger la privacidad. Disponible en Google Play, con la versión iOS en revisión por Apple.",
+                "tags": [
+                    "React Native",
+                    "Expo",
+                    "Firebase",
+                    "Gemini AI",
+                    "OCR"
+                ]
             },
             "openworld": {
-                "title": "OpenWorld - Superagente IA Local",
-                "description": "Un superagente de IA local basado en Windows con seguridad de 4 capas. Ofrece más de 100 herramientas integradas para control de pantalla, gestión de archivos, OCR, investigación, gestión de código y más. Funciona con integración Ollama o LLM en la nube (Groq, Z.AI). Incluye control remoto a través de bot de Telegram, enrutamiento semántico de herramientas y un sistema de cuaderno. Actualmente en fase experimental, en desarrollo activo con trabajo en diversos modelos.",
-                "tags": ["Python", "FastAPI", "React", "ChromaDB", "Ollama", "Telegram Bot"]
+                "title": "OpenWorld - Superagente de IA Local",
+                "description": "Un superagente de IA local para Windows con seguridad de 4 capas. Ofrece más de 100 herramientas integradas para control de pantalla, gestión de archivos, OCR, investigación y gestión de código, y funciona con Ollama o LLMs en la nube (Groq, Z.AI). Incluye control remoto vía bot de Telegram, enrutamiento semántico de herramientas y un sistema de cuadernos. Un proyecto experimental en desarrollo activo.",
+                "tags": [
+                    "Python",
+                    "FastAPI",
+                    "React",
+                    "ChromaDB",
+                    "Ollama",
+                    "Telegram Bot"
+                ]
             },
             "multimind": {
-                "title": "MultiMind - Sistema Autónomo Multi-Agente",
-                "description": "Un sistema autónomo multi-agente que toma un prompt y planifica, programa, prueba y se autocorrige hasta entregar software funcional. Un orquestador central coordina cinco agentes especializados (ingeniero, ingeniero de respaldo, tester y un agente de visión que verifica visualmente la interfaz contra el prompt original), cada uno ejecutándose en sandboxes aislados, con un bucle de autorreparación que detecta fallos y los retroalimenta para una recuperación automática. Incluye informes de progreso en vivo por Telegram.",
-                "tags": ["Python", "Multi-LLM", "React", "Telegram"]
+                "title": "MultiMind - Sistema Autónomo Multiagente",
+                "description": "Un sistema autónomo multiagente que toma un único prompt y planifica, programa, prueba y se autocorrige hasta entregar software funcional. Un orquestador central coordina cinco agentes especializados (ingeniero, ingeniero de respaldo, tester y un agente de visión que verifica visualmente la interfaz contra el prompt original), cada uno en sandboxes aislados. Cuenta con un bucle de autorreparación que captura fallos y los retroalimenta para una recuperación automática, además de informes de progreso en vivo por Telegram.",
+                "tags": [
+                    "Python",
+                    "Multi-LLM",
+                    "React",
+                    "Telegram"
+                ]
             },
             "sip": {
                 "title": "SIP - Plataforma de Inteligencia de Ventas",
-                "description": "Un motor de analítica multi-tenant para cualquier operación de venta de campo (basada en vendedores/plasiyer): puntúa leads, descubre oportunidades de venta cruzada y predice la fuga de clientes (churn), con una interfaz de lenguaje natural que convierte preguntas de negocio en consultas SQL. Construido sobre .NET 8, React y Python/FastAPI usando CQRS, pipelines de trabajos en segundo plano y una estrategia híbrida de LLM local y en la nube. Actualmente en pruebas con un cliente empresarial real.",
-                "tags": [".NET 8", "React", "Python/FastAPI", "SQL Server", "LLM"]
+                "description": "Un motor de analítica multi-tenant para operaciones de venta en campo: puntúa leads, descubre oportunidades de venta cruzada y predice la fuga de clientes, con una interfaz de lenguaje natural que convierte preguntas de negocio en consultas SQL. Lo construí sobre .NET 8, React y Python/FastAPI con CQRS y pipelines de trabajos en segundo plano, con una estrategia híbrida de LLM local y en la nube. Actualmente en pruebas con un cliente empresarial real.",
+                "tags": [
+                    ".NET 8",
+                    "React",
+                    "Python/FastAPI",
+                    "SQL Server",
+                    "LLM"
+                ]
             },
             "gghub": {
-                "title": "GGHub - Plataforma Social para Gamers (Beta)",
-                "description": "Este proyecto Monorepo, que une .NET 8 y Next.js 15 bajo un marco de Clean Architecture, ha alcanzado su versión V2. La plataforma ofrece funciones completas como listados, búsqueda de juegos, reseñas detalladas, feed de inicio, gamificación (insignias/niveles), tablas de clasificación, panel de administración y algoritmos de perfil de usuario, además de soporte multilingüe (EN/TR), mensajería en tiempo real basada en SignalR y mejoras significativas de rendimiento. La hoja de ruta V3 incluye integraciones OAuth de Steam, Epic y Google, funciones de edición y publicación de contenido por usuarios (sujetas a aprobación del administrador, reflejadas en puntos e insignias).",
+                "title": "GGHub - Plataforma Social para Gamers",
+                "description": "Mi proyecto monorepo, que une .NET 8 y Next.js 15 bajo Clean Architecture, ha alcanzado su versión V2. Además de búsqueda de juegos, reseñas detalladas, feed de inicio, insignias y niveles, tablas de clasificación, panel de administración y algoritmos de perfil de usuario, ofrece soporte multilingüe (EN/TR), mensajería en tiempo real con SignalR y mejoras notables de rendimiento. La hoja de ruta V3 incluye integraciones OAuth de Steam, Epic y Google, además de la publicación de contenido de usuarios con aprobación de administradores.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
@@ -352,15 +398,16 @@
                     "i18n"
                 ]
             }
-        }
+        },
+        "app_store_review": "Versión iOS en revisión de Apple"
     },
     "contact_page": {
-        "main_title": "Ponte en Contacto",
-        "subtitle": "¿Tienes una idea para un proyecto o simplemente quieres saludar? Puedes contactarme a través de los siguientes canales.",
-        "direct_contact_title": "Contacto Directo",
+        "label": "Contacto",
+        "main_title": "Ponte en contacto",
+        "subtitle": "Una idea de proyecto, una colaboración o simplemente un hola. No dudes en escribirme.",
         "location_title": "Ubicación",
-        "location_popup": "Vivo en Izmir. <br /> ¡Estás invitado a tomar un café!",
-        "form_title": "O Rellena el Formulario",
+        "location_popup": "Vivo en Izmir. <br /> ¡Estás invitado a un café!",
+        "form_title": "Deja un mensaje",
         "form_placeholder_name": "Tu Nombre",
         "form_placeholder_email": "Tu Correo Electrónico",
         "form_placeholder_message": "Tu Mensaje...",
@@ -368,7 +415,7 @@
         "form_button_submitting": "Enviando...",
         "form_status_success": "¡Tu mensaje ha sido enviado con éxito!",
         "form_status_error": "Ocurrió un error: ",
-        "social_title": "Mis Cuentas de Redes Sociales",
+        "social_title": "Redes",
         "direct_links": {
             "email": {
                 "label": "Correo Electrónico"
@@ -392,9 +439,17 @@
             }
         }
     },
+    "footer": {
+        "cta_kicker": "Próximo proyecto",
+        "cta_title": "¿Tienes una idea en mente? Hagámosla realidad juntos.",
+        "cta_button": "Contactar",
+        "rights": "Todos los derechos reservados.",
+        "made_in": "Diseñado y desarrollado en Izmir.",
+        "cta_button_email": "Enviar un correo"
+    },
     "404_page": {
         "title": "Página no encontrada",
-        "subtitle": "La página que buscas ha sido eliminada o nunca existió.",
+        "subtitle": "La página que buscas se ha movido o nunca existió, como una parcela que falta en el plan urbanístico.",
         "home_link": "Volver a la página de inicio",
         "error_code": "Código de error: 404"
     }

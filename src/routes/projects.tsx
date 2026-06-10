@@ -1,14 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaAndroid, FaGooglePlay } from "react-icons/fa";
-import { BsPinAngleFill } from "react-icons/bs";
-import { projectsData, type ProjectBase } from "../data/projects";
-import { AnimatedGridBackground } from "../components/GridBackground";
-import { PhoneMockup, LaptopMockup } from "../components/DeviceMockups";
-import { useTranslation } from "react-i18next";
-import type { TFunction } from "i18next";
-import { Helmet } from "react-helmet-async";
+import { FaApple, FaGithub, FaGooglePlay } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
+import { projectsData, type ProjectBase } from "../data/projects";
+import { PhoneMockup, LaptopMockup } from "../components/DeviceMockups";
+import { SectionHeading } from "../components/SectionHeading";
+import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
 
 interface ProjectTranslation {
     title: string;
@@ -18,91 +17,129 @@ interface ProjectTranslation {
 
 type FullProject = ProjectBase & ProjectTranslation;
 
-const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } };
+const FEATURED_ID = "gghub";
+const MAIN_ORDER = ["purescan_foods", "purescan", "fintel", "openworld", "multimind", "sip"];
+const ARCHIVE_IDS = ["rent_a_car", "not_defteri", "butce_360"];
 
-const badgeConfig: Record<string, { bg: string; text: string; dot: string }> = {
-    live: { bg: "bg-emerald-100 dark:bg-emerald-900/50", text: "text-emerald-700 dark:text-emerald-300", dot: "bg-emerald-500" },
-    beta: { bg: "bg-amber-100 dark:bg-amber-900/50", text: "text-amber-700 dark:text-amber-300", dot: "bg-amber-500" },
-    apk: { bg: "bg-violet-100 dark:bg-violet-900/50", text: "text-violet-700 dark:text-violet-300", dot: "bg-violet-500" },
-    new: { bg: "bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/50 dark:to-pink-900/50", text: "text-purple-700 dark:text-purple-300", dot: "bg-purple-500" },
-    experimental: { bg: "bg-cyan-100 dark:bg-cyan-900/50", text: "text-cyan-700 dark:text-cyan-300", dot: "bg-cyan-500" },
+const badgeStyles: Record<string, string> = {
+    live: "border-emerald-500/40 text-emerald-600 dark:text-emerald-400",
+    beta: "border-amber-500/40 text-amber-600 dark:text-amber-400",
+    apk: "border-cyan-500/40 text-cyan-600 dark:text-cyan-400",
+    new: "border-accent/50 text-accent",
+    experimental: "border-violet-500/40 text-violet-600 dark:text-violet-400",
 };
-
-const itemVariants = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1 } };
 
 export const Route = createFileRoute("/projects")({
     component: ProjectsPage,
 });
 
-/* ─── Image area (sabit yükseklikte, mockup veya düz görsel) ─── */
-function ProjectImageArea({ project }: { project: FullProject }) {
-    if (project.mockupType === "phone") {
-        return (
-            <div className="relative h-[280px] sm:h-[300px] bg-gradient-to-br from-slate-200 via-slate-100 to-white dark:from-slate-800 dark:via-slate-800/90 dark:to-slate-900 rounded-t-xl overflow-hidden">
-                <PhoneMockup src={project.image} alt={project.title} accentColor={project.accentColor} />
-            </div>
-        );
-    }
-    if (project.mockupType === "laptop") {
-        return (
-            <div className="relative h-[280px] sm:h-[300px] flex items-center justify-center bg-gradient-to-br from-slate-200 via-slate-100 to-white dark:from-slate-800 dark:via-slate-800/90 dark:to-slate-900 rounded-t-xl overflow-hidden p-4 sm:p-6">
-                <LaptopMockup src={project.image} alt={project.title} accentColor={project.accentColor} />
-            </div>
-        );
-    }
+function Badges({ project }: { project: FullProject }) {
+    const { t } = useTranslation();
+    if (!project.badges?.length) return null;
+
     return (
-        <div className="relative h-[280px] sm:h-[300px] overflow-hidden rounded-t-xl">
-            <img
-                src={project.image}
-                alt={project.title}
-                loading="lazy"
-                className="w-full h-full object-cover"
-            />
+        <div className="flex flex-wrap gap-2">
+            {project.badges.map((badge) => (
+                <span
+                    key={badge}
+                    className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] ${badgeStyles[badge]}`}
+                >
+                    <span className="h-1.5 w-1.5 rounded-full bg-current" />
+                    {t(`projects_page.badges.${badge}`)}
+                </span>
+            ))}
         </div>
     );
 }
 
-/* ─── Badge bileşeni ─── */
-function BadgeList({ badges, t }: { badges?: string[]; t: TFunction }) {
-    if (!badges || badges.length === 0) return null;
+const linkBtn =
+    "inline-flex items-center gap-1.5 rounded-full border border-line px-4 py-2 font-mono text-[10px] tracking-[0.12em] text-ink transition-colors hover:border-accent hover:text-accent";
+
+function ProjectLinks({ project }: { project: FullProject }) {
+    const { t } = useTranslation();
+
     return (
-        <div className="flex flex-wrap gap-1.5 mt-1.5">
-            {badges.map((badge) => {
-                const config = badgeConfig[badge];
-                if (!config) return null;
-                return (
-                    <span
-                        key={badge}
-                        className={`${config.bg} ${config.text} text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded inline-flex items-center gap-1`}
-                    >
-                        <span className="relative flex h-2 w-2">
-                            <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${config.dot}`} />
-                            <span className={`relative inline-flex rounded-full h-2 w-2 ${config.dot}`} />
-                        </span>
-                        {t(`projects_page.badges.${badge}`)}
-                    </span>
-                );
-            })}
+        <div className="flex flex-wrap items-center gap-2">
+            {project.liveLink && (
+                <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 font-mono text-[10px] tracking-[0.12em] text-paper transition-colors hover:bg-accent hover:text-white"
+                >
+                    {t("projects_page.view_live_button")}
+                    <FiArrowUpRight className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </a>
+            )}
+            {project.googlePlayLink && (
+                <a
+                    href={project.googlePlayLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={linkBtn}
+                >
+                    <FaGooglePlay size={11} />
+                    Google Play
+                </a>
+            )}
+            {project.appStoreSoon && (
+                <span
+                    title={t("projects_page.app_store_review")}
+                    aria-disabled="true"
+                    className="inline-flex cursor-not-allowed items-center gap-1.5 rounded-full border border-line px-4 py-2 font-mono text-[10px] tracking-[0.12em] text-muted opacity-60"
+                >
+                    <FaApple size={12} />
+                    App Store
+                </span>
+            )}
+            {project.githubLink && (
+                <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={linkBtn}
+                >
+                    <FaGithub size={12} />
+                    GitHub
+                </a>
+            )}
         </div>
     );
 }
 
-/* ─── Açıklama: sabit yükseklik + devamını gör ─── */
-const DESC_CHAR_LIMIT = 150;
+function Tags({ tags }: { tags: string[] }) {
+    return (
+        <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+                <span
+                    key={tag}
+                    className="rounded-md bg-soft px-2.5 py-1 font-mono text-[11px] text-ink-soft"
+                >
+                    {tag}
+                </span>
+            ))}
+        </div>
+    );
+}
 
-function ExpandableDescription({ text, t }: { text: string; t: TFunction }) {
+function ExpandableText({ text }: { text: string }) {
+    const { t } = useTranslation();
     const [expanded, setExpanded] = useState(false);
-    const isLong = text && text.length > DESC_CHAR_LIMIT;
+    const isLong = text.length > 220;
 
     return (
-        <div className="mt-2">
-            <p className={`text-sm text-slate-600 dark:text-slate-400 leading-relaxed ${!expanded && isLong ? "line-clamp-3" : ""}`}>
+        <div>
+            <p
+                className={`text-sm leading-relaxed text-ink-soft ${
+                    !expanded && isLong ? "line-clamp-4" : ""
+                }`}
+            >
                 {text}
             </p>
             {isLong && (
                 <button
                     onClick={() => setExpanded((v) => !v)}
-                    className="mt-1 text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline"
+                    className="mt-2 font-mono text-[11px] uppercase tracking-[0.15em] text-accent hover:underline"
                 >
                     {expanded ? t("projects_page.show_less") : t("projects_page.show_more")}
                 </button>
@@ -111,205 +148,213 @@ function ExpandableDescription({ text, t }: { text: string; t: TFunction }) {
     );
 }
 
-/* ─── Buton grubu ─── */
-function ActionButtons({ project, t }: { project: FullProject; t: TFunction }) {
+function ImageArea({ project, tall = false }: { project: FullProject; tall?: boolean }) {
+    const height = tall ? "h-[340px] sm:h-[420px]" : "h-[280px]";
+
     return (
-        <div className="mt-auto pt-4 flex flex-wrap items-center gap-2">
-            {project.liveLink && (
-                <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-medium text-slate-800 bg-slate-200 rounded-md hover:bg-slate-300 dark:text-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600 transition"
-                >
-                    <FaExternalLinkAlt className="text-[10px] sm:text-xs" /> {t("projects_page.view_live_button")}
-                </a>
-            )}
-            {project.githubLink && (
-                <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-medium text-slate-300 bg-slate-700 rounded-md hover:bg-slate-600 transition"
-                >
-                    <FaGithub className="text-xs sm:text-sm" /> {t("projects_page.view_github_button")}
-                </a>
-            )}
-            {project.apkLink && (
-                <a
-                    href={project.apkLink}
-                    download
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-medium text-white bg-violet-600 rounded-md hover:bg-violet-700 transition"
-                >
-                    <FaAndroid className="text-xs sm:text-sm" /> {t("projects_page.download_apk_button")}
-                </a>
-            )}
-            {project.googlePlayLink && (
-                <a
-                    href={project.googlePlayLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700 transition"
-                >
-                    <FaGooglePlay className="text-xs sm:text-sm" /> {t("projects_page.view_google_play_button")}
-                </a>
+        <div className={`relative overflow-hidden bg-soft ${height}`}>
+            <div className="blueprint-grid absolute inset-0 opacity-60" />
+            {project.mockupType === "phone" ? (
+                <PhoneMockup src={`/${project.image}`} alt={project.title} accentColor={project.accentColor} />
+            ) : project.mockupType === "laptop" ? (
+                <div className="flex h-full items-center justify-center p-6">
+                    <ParallaxY from={14} to={-14} className="w-full">
+                        <LaptopMockup
+                            src={`/${project.image}`}
+                            alt={project.title}
+                            accentColor={project.accentColor}
+                        />
+                    </ParallaxY>
+                </div>
+            ) : (
+                <ParallaxY from={10} to={-10} className="h-full w-full">
+                    <img
+                        src={`/${project.image}`}
+                        alt={project.title}
+                        loading="lazy"
+                        className="h-full w-full object-cover"
+                    />
+                </ParallaxY>
             )}
         </div>
     );
 }
 
-/* ─── SAYFA ─── */
+function FeaturedProject({ project }: { project: FullProject }) {
+    const { t } = useTranslation();
+
+    return (
+        <Reveal>
+            <div className="overflow-hidden rounded-3xl border border-line/70 bg-surface shadow-sm">
+                <div className="grid lg:grid-cols-5">
+                    <div className="flex flex-col justify-center p-8 sm:p-12 lg:col-span-2">
+                        <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">
+                            {t("projects_page.featured_badge")}
+                        </p>
+                        <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                            {project.title}
+                        </h2>
+                        <div className="mt-4">
+                            <Badges project={project} />
+                        </div>
+                        <p className="mt-5 text-sm leading-relaxed text-ink/90 sm:text-base">
+                            {project.description}
+                        </p>
+                        <div className="mt-6">
+                            <Tags tags={project.tags} />
+                        </div>
+                        <div className="mt-8">
+                            <ProjectLinks project={project} />
+                        </div>
+                    </div>
+                    <div className="relative lg:col-span-3">
+                        <div className="relative flex h-full min-h-[300px] items-center justify-center overflow-hidden bg-soft p-8 sm:min-h-[420px]">
+                            <div className="blueprint-grid absolute inset-0 opacity-60" />
+                            <ParallaxY from={24} to={-24} className="w-full max-w-xl">
+                                <img
+                                    src={`/${project.image}`}
+                                    alt={project.title}
+                                    className="rounded-xl border border-line/70 shadow-2xl"
+                                />
+                            </ParallaxY>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Reveal>
+    );
+}
+
+function ProjectCard({ project, index }: { project: FullProject; index: number }) {
+    return (
+        <Reveal delay={Math.min((index % 2) * 0.1, 0.2)} className="h-full">
+            <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-line/70 bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-xl">
+                <ImageArea project={project} />
+                <div className="flex flex-grow flex-col gap-4 p-7">
+                    <div className="flex items-start justify-between gap-4">
+                        <h3 className="font-display text-xl font-bold text-ink">{project.title}</h3>
+                        <Badges project={project} />
+                    </div>
+                    <ExpandableText text={project.description} />
+                    <Tags tags={project.tags} />
+                    <div className="mt-auto pt-2">
+                        <ProjectLinks project={project} />
+                    </div>
+                </div>
+            </article>
+        </Reveal>
+    );
+}
+
+function ArchiveRow({ project }: { project: FullProject }) {
+    return (
+        <Reveal>
+            <div className="group flex flex-col gap-4 border-b border-line/70 py-7 sm:flex-row sm:items-center sm:justify-between">
+                <div className="max-w-xl">
+                    <h3 className="font-display text-lg font-bold text-ink transition-colors group-hover:text-accent">
+                        {project.title}
+                    </h3>
+                    <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted">
+                        {project.description}
+                    </p>
+                    <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.12em] text-muted">
+                        {project.tags.slice(0, 4).join(" · ")}
+                    </p>
+                </div>
+                <div className="flex shrink-0 items-center gap-3">
+                    {project.liveLink && (
+                        <a
+                            href={project.liveLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Live"
+                            className="rounded-full border border-line p-2.5 text-ink-soft transition-colors hover:border-accent hover:text-accent"
+                        >
+                            <FiArrowUpRight size={15} />
+                        </a>
+                    )}
+                    {project.githubLink && (
+                        <a
+                            href={project.githubLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="GitHub"
+                            className="rounded-full border border-line p-2.5 text-ink-soft transition-colors hover:border-accent hover:text-accent"
+                        >
+                            <FaGithub size={15} />
+                        </a>
+                    )}
+                </div>
+            </div>
+        </Reveal>
+    );
+}
+
 function ProjectsPage() {
     const { t, i18n } = useTranslation();
 
-    const translatedProjects = (t('projects_page.projects', { returnObjects: true, defaultValue: {} }) || {}) as Record<string, ProjectTranslation>;
-    const fullProjectsData: FullProject[] = projectsData.map((projectBase) => ({
-        ...projectBase,
-        ...(translatedProjects[projectBase.id] || {}),
-    }));
+    const withTranslation = (project: ProjectBase): FullProject => ({
+        ...project,
+        title: t(`projects_page.projects.${project.id}.title`),
+        description: t(`projects_page.projects.${project.id}.description`),
+        tags: t(`projects_page.projects.${project.id}.tags`, { returnObjects: true }) as string[],
+    });
 
-    const pinnedProject = fullProjectsData.find((p) => p.pinned);
-    const otherProjects = fullProjectsData.filter((p) => !p.pinned);
+    const featured = withTranslation(projectsData.find((p) => p.id === FEATURED_ID)!);
+    const mainProjects = MAIN_ORDER.map((id) => projectsData.find((p) => p.id === id)!)
+        .filter(Boolean)
+        .map(withTranslation);
+    const archive = ARCHIVE_IDS.map((id) => projectsData.find((p) => p.id === id)!).map(
+        withTranslation,
+    );
 
     return (
-        <div className="relative min-h-screen pt-16">
-            <Helmet key={`${i18n.language}`} defer={false} prioritizeSeoTags>
+        <div className="relative overflow-hidden">
+            <Helmet key={i18n.language} defer={false} prioritizeSeoTags>
                 <title>{t("seo.projects_title")}</title>
                 <meta name="description" content={t("seo.projects_description") ?? ""} />
             </Helmet>
-            <AnimatedGridBackground />
-            <div className="relative z-10 container mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16">
-                <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-                    <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">{t("projects_page.main_title")}</h1>
-                    <p className="mx-auto mt-3 sm:mt-4 max-w-2xl text-center text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400">{t("projects_page.subtitle")}</p>
-                </motion.div>
 
-                {pinnedProject && <PinnedProjectCard project={pinnedProject} t={t} />}
+            <GhostWord word={t("projects_page.ghost")} className="top-28" from={-100} to={140} />
 
-                <motion.div
-                    className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 md:gap-8"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
-                >
-                    {otherProjects.map((project) => (
-                        <ProjectCard key={project.id} project={project} t={t} />
-                    ))}
-                </motion.div>
-            </div>
-        </div>
-    );
-}
+            <div className="relative mx-auto max-w-6xl px-5 pb-28 pt-36 sm:px-8 sm:pt-44">
+                <SectionHeading
+                    label={t("projects_page.label")}
+                    title={t("projects_page.main_title")}
+                />
+                <Reveal delay={0.1}>
+                    <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
+                        {t("projects_page.subtitle")}
+                    </p>
+                </Reveal>
 
-/* ─── PROJE KARTI ─── */
-function ProjectCard({ project, t }: { project: FullProject; t: TFunction }) {
-    return (
-        <motion.div
-            className="flex flex-col rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 overflow-hidden transition-colors duration-300 hover:border-sky-500/50 hover:shadow-lg hover:shadow-sky-500/5"
-            variants={itemVariants}
-            whileHover={{ y: -4 }}
-            transition={{ type: "spring", stiffness: 200 }}
-        >
-            {/* Sabit yükseklikte görsel alanı */}
-            <ProjectImageArea project={project} />
+                <div className="mt-16">
+                    <FeaturedProject project={featured} />
+                </div>
 
-            {/* İçerik alanı */}
-            <div className="p-4 sm:p-5 flex flex-col flex-grow">
-                <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white leading-snug">{project.title}</h3>
-                <BadgeList badges={project.badges} t={t} />
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-1.5 mt-3">
-                    {(project.tags || []).map((tag) => (
-                        <span key={tag} className="bg-sky-100 text-sky-800 dark:bg-sky-900/50 dark:text-sky-300 text-[11px] font-semibold px-2 py-0.5 rounded-full">
-                            {tag}
-                        </span>
+                <div className="mt-8 grid gap-8 md:grid-cols-2">
+                    {mainProjects.map((project, i) => (
+                        <ProjectCard key={project.id} project={project} index={i} />
                     ))}
                 </div>
 
-                {/* Açıklama: sabit alan + devamını gör */}
-                <ExpandableDescription text={project.description} t={t} />
-
-                {/* Butonlar */}
-                <ActionButtons project={project} t={t} />
-            </div>
-        </motion.div>
-    );
-}
-
-/* ─── ÖNE ÇIKAN PROJE ─── */
-function PinnedProjectCard({ project, t }: { project: FullProject; t: TFunction }) {
-    const [expanded, setExpanded] = useState(false);
-    const isLong = project.description && project.description.length > 200;
-
-    return (
-        <motion.div
-            className="relative mt-10 sm:mt-16 rounded-xl bg-white/60 dark:bg-slate-800/60 border-2 border-sky-500 dark:border-sky-400 p-4 sm:p-6 md:p-8 shadow-2xl shadow-sky-500/10 backdrop-blur-sm"
-            whileHover={{ y: -4, borderColor: "#38bdf8" }}
-            transition={{ type: "spring", stiffness: 300 }}
-        >
-            <div className="absolute -top-3 -left-1 -rotate-90">
-                <BsPinAngleFill size={28} className="text-sky-500 dark:text-sky-300 drop-shadow-lg sm:text-[35px]" />
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-5 sm:gap-8 items-center">
-                {/* Görsel */}
-                <div className="w-full md:w-2/5">
-                    <img src={project.image} alt={project.title} loading="lazy" className="w-full rounded-lg object-cover shadow-lg" />
-                </div>
-
-                {/* İçerik */}
-                <div className="w-full md:w-3/5 flex flex-col">
-                    <span className="text-xs sm:text-sm font-bold text-sky-600 dark:text-sky-400">{t("projects_page.featured_badge")}</span>
-                    <div className="flex items-start gap-3 flex-wrap mt-1 sm:mt-2">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">{project.title}</h2>
-                        <BadgeList badges={project.badges} t={t} />
-                    </div>
-
-                    <div className="flex flex-wrap gap-1.5 my-3 sm:my-4">
-                        {(project.tags || []).map((tag) => (
-                            <span key={tag} className="bg-sky-100 text-sky-800 dark:bg-sky-900/50 dark:text-sky-300 text-[11px] sm:text-xs font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">
-                                {tag}
-                            </span>
+                <div className="mt-28">
+                    <Reveal>
+                        <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-accent">
+                            <span className="inline-block h-px w-8 bg-accent" />
+                            {t("projects_page.archive_label")}
+                        </p>
+                        <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                            {t("projects_page.archive_title")}
+                        </h2>
+                    </Reveal>
+                    <div className="mt-8 border-t border-line/70">
+                        {archive.map((project) => (
+                            <ArchiveRow key={project.id} project={project} />
                         ))}
                     </div>
-
-                    <p className={`text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed ${!expanded && isLong ? "line-clamp-4" : ""}`}>
-                        {project.description}
-                    </p>
-                    {isLong && (
-                        <button
-                            onClick={() => setExpanded((v) => !v)}
-                            className="mt-1 text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline self-start"
-                        >
-                            {expanded ? t("projects_page.show_less") : t("projects_page.show_more")}
-                        </button>
-                    )}
-
-                    <div className="mt-4 sm:mt-6 flex flex-wrap items-center gap-2 sm:gap-3">
-                        {project.liveLink && (
-                            <a
-                                href={project.liveLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1.5 px-3 sm:px-5 py-2 sm:py-3 text-xs sm:text-base font-medium text-slate-800 bg-slate-200 rounded-md hover:bg-slate-300 dark:text-white dark:bg-slate-700 dark:hover:bg-slate-600 transition"
-                            >
-                                <FaExternalLinkAlt /> {t("projects_page.view_live_button")}
-                            </a>
-                        )}
-                        {project.githubLink && (
-                            <a
-                                href={project.githubLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1.5 px-3 sm:px-5 py-2 sm:py-3 text-xs sm:text-base font-medium text-slate-300 bg-slate-700 rounded-md hover:bg-slate-600 transition"
-                            >
-                                <FaGithub /> {t("projects_page.view_github_button_long")}
-                            </a>
-                        )}
-                    </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }

@@ -1,13 +1,12 @@
 {
     "seo": {
-        "home_title": "Ahmet Demiroğlu | Full-Stack Web Developer",
-        "home_description": "Izmir-based Full-Stack Developer creating user-focused modern web experiences. React, Vue.js, .NET Core, and more.",
-        "about_title": "About Me | Ahmet Demiroğlu",
-        "about_description": "Learn more about my background, my goals, and my journey into the world of web development.",
+        "home_title": "Ahmet Demiroğlu | Full-Stack Developer",
+        "home_description": "From urban planning to software: a full-stack developer building digital products the way you'd build a city. Web & mobile with React, Vue and .NET.",        "about_title": "About Me | Ahmet Demiroğlu",
+        "about_description": "My story from urban planner to full-stack developer: my background, goals, and journey into software.",
         "skills_title": "My Skills | Ahmet Demiroğlu",
-        "skills_description": "Explore my skills in front-end and back-end technologies: React, Vue, C#, .NET, SQL, and more.",
+        "skills_description": "The front-end and back-end technologies I use in production: React, Vue, C#, .NET, SQL, and more.",
         "projects_title": "My Projects | Ahmet Demiroğlu",
-        "projects_description": "Take a look at the web applications and projects I have developed.",
+        "projects_description": "From idea to release: the web and mobile apps, products, and experiments I have built.",
         "contact_title": "Contact | Ahmet Demiroğlu",
         "contact_description": "Have a project idea or just want to say hello? Get in touch with me.",
         "404_title": "Page Not Found | Ahmet Demiroğlu",
@@ -20,65 +19,88 @@
         "projects": "Projects",
         "contact": "Contact"
     },
+    "common": {
+        "scroll": "Scroll",
+        "location": "Izmir, Türkiye"
+    },
     "home": {
-        "greeting": "Ahmet Demiroğlu",
-        "description": "I create modern web experiences that are both aesthetic and functional by combining code and design.",
-        "button": "Explore My Projects",
-        "typing_sequences": [
-            "Full-Stack Developer",
-            2000,
-            "UI/UX Enthusiast",
-            2000,
-            "User-Focused Solutions",
-            2000
+        "kicker": "Hi, I'm Ahmet Demiroğlu",
+        "line1": "I build digital products",
+        "line2a": "the way you'd ",
+        "line2b": "build a city.",
+        "description": "Unplanned structures don't last. I carry the discipline of urban planning into software: solid foundations, considered details, and products built to grow. Three of my apps are live on the stores today, and my enterprise systems run in production every day.",
+        "cta_projects": "Explore My Work",
+        "cta_contact": "Let's Work Together",
+        "career_label": "My Story",
+        "career_title": "An interdisciplinary mindset",
+        "career_ghost": "CAREER",
+        "career_p1": "I didn't take the usual route into software. I trained as an urban planner and spent nine years working in real-estate appraisal. Those years in the field taught me how to read data, why details matter, and how to break a complex problem into manageable pieces.",
+        "career_p2": "Today I bring that same discipline to code. To me, good software isn't just a tool that works; it's a product that cares about its users, stays clean, and still stands years later. The attention I give to detail is the signature of everything I build.",
+        "stats": [
+            {
+                "value": "9+",
+                "label": "years of field & analysis experience"
+            },
+            {
+                "value": "2+",
+                "label": "years of professional software development"
+            },
+            {
+                "value": "10+",
+                "label": "projects brought to life"
+            },
+            {
+                "value": "3",
+                "label": "mobile apps live on the stores"
+            }
         ],
-        "career_section_background": "CAREER",
-        "career_section_title": "An Interdisciplinary Approach",
-        "career_section_p1": "My career is built on a 9-year foundation in Urban Planning and Real Estate Appraisal. The skills I acquired in analytical thinking, detailed reporting, and data interpretation during this time are the cornerstones of my software development approach today.",
-        "career_section_p2": "As I transform my passion for technology into a professional career, I carry this discipline from my past into my code. For me, software development isn't just about creating functional tools; it's about producing user-centric, clean, and sustainable solutions. My commitment to detail is my strongest guide in everything I build.",
-        "studio_section_title": "Independent Studio",
-        "studio_section_description": "My independent software studio developing AI-powered mobile applications.",
-        "studio_section_visit": "Visit Studio",
-        "studio_section_apps_label": "Published Apps"
+        "studio_label": "Independent Studio",
+        "studio_desc": "My independent software studio building AI-powered mobile apps. From idea to store: design, development, and release under one roof.",
+        "studio_apps_label": "Apps in production",
+        "studio_cta": "Visit the Studio",
+        "featured_label": "Selected Work",
+        "featured_title": "Featured projects",
+        "featured_link": "All projects",
+        "role": "Full-Stack Developer · Izmir"
     },
     "about": {
-        "background_text": "ABOUT ME",
-        "title": "My Story",
-        "hero_label": "Developer Story",
-        "hero_title_line1": "Crafting Digital",
-        "hero_title_line2": "Experiences",
-        "hero_subtitle": "A software journey from Izmir to the world. Every line of code tells a story.",
-        "scroll_hint": "Scroll",
+        "label": "About Me",
+        "title_line1": "One career,",
+        "title_line2": "three disciplines.",
+        "subtitle": "A journey from urban planning to real-estate appraisal, and on to software. There's a story behind every line of code.",
+        "ghost": "JOURNEY",
         "closing_quote": "The best code is the one that tells a story.",
         "timeline_1_year": "2013",
         "timeline_1_title": "Gazi University",
         "timeline_1_subtitle": "City and Regional Planning",
-        "timeline_1_content": "I graduated from Gazi University, Faculty of Architecture, Department of City and Regional Planning. During this period, I built a strong foundation in attention to detail and reporting through intensive work on planning, analysis, and design software.",
+        "timeline_1_content": "I graduated from the Department of City and Regional Planning at Gazi University's Faculty of Architecture. Those years of intensive work with planning, analysis, and design software were where I first learned to care about detail and to report with structure.",
         "timeline_2_year": "2014–2023",
         "timeline_2_title": "Real Estate Appraisal",
         "timeline_2_subtitle": "9 years of field experience",
-        "timeline_2_content": "I worked for nine years as a field and inspection specialist in the real estate appraisal sector. I advanced my career by obtaining the Certified Appraiser license. The analytical mindset and problem-solving skills I gained during this period laid the foundation for my software career.",
+        "timeline_2_content": "For nine years I worked as a field and inspection specialist in the real estate appraisal sector, advancing my career by earning the Certified Appraiser license. The analytical mindset and problem-solving habits I built in that period sit underneath every line of code I write today.",
         "timeline_3_year": "2023",
         "timeline_3_title": "Neos Software Academy",
         "timeline_3_subtitle": "Full-Stack Training",
-        "timeline_3_content": "With the decision to change careers, I completed the Software Specialization Training at Neos Software Academy. I received intensive training in HTML, CSS, JavaScript, C#, Bootstrap, React.js, and .NET. During the 7-week internship program, I developed a car rental website from scratch, gaining both front-end and back-end experience.",
+        "timeline_3_content": "After deciding to change careers, I completed the Software Specialization Training at Neos Software Academy, an intensive program covering HTML, CSS, JavaScript, C#, Bootstrap, React.js, and .NET. During the 7-week internship I built a car rental website from scratch, gaining my first production experience on both the front-end and the back-end.",
         "timeline_4_year": "2024",
         "timeline_4_title": "SedBim Bilişim",
         "timeline_4_subtitle": "Full-Stack Developer",
-        "timeline_4_content": "As a Full-Stack Developer, I build end-to-end business workflow systems for manufacturing and retail clients: B2B commerce portals with ERP (Netsis) integration that automate order, inventory, and invoicing flows; payment and POS integrations with collection automation (virtual POS and third-party financial APIs); and CRM, logistics/TMS, and production-planning modules delivered from SQL Server schema to API to UI. On the front-end I build component-driven Vue.js and React interfaces; on the back-end I design resilient REST API services with rate-limiting and retry/backoff for high-volume external APIs.",
+        "timeline_4_content": "As a Full-Stack Developer I build end-to-end business workflow systems for manufacturing and retail clients: B2B commerce portals with ERP (Netsis) integration automating order, inventory, and invoicing flows; payment and POS integrations with collection automation; and CRM, logistics/TMS, and production-planning modules delivered from SQL Server schema to API to UI. On the front-end I build component-driven Vue.js and React interfaces; on the back-end I design resilient REST services with rate-limiting and retry/backoff for high-volume external APIs.",
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Gaming Social Platform",
-        "timeline_5_content": "I developed and launched GGHub - a gaming social platform - as a personal project. Built with Next.js and .NET Core, the platform has reached its V2 release featuring multilingual support, SignalR-based real-time messaging, and performance improvements. V3 development is underway with OAuth integrations and user content sharing features.",
+        "timeline_5_content": "I developed and launched GGHub, a gaming social platform, as a personal project. Built on Next.js and .NET Core, the platform has reached its V2 release with multilingual support, SignalR-based real-time messaging, and significant performance improvements. V3 work is underway with OAuth integrations and user content sharing features.",
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "AI-Powered Mobile Applications",
-        "timeline_6_content": "Through my independent mobile software studio SeptimusLab, I develop and publish AI-powered applications. Fintel for periodic expense tracking and PureScan Cosmetics for cosmetic ingredient analysis are live. PureScan Foods is now live on Google Play (Android), and its iOS version is currently under Apple review. I continue expanding my tech stack with React Native.",
+        "timeline_6_content": "Under my independent mobile software studio SeptimusLab, I develop and publish AI-powered applications. Fintel for periodic expense tracking and PureScan Cosmetics for cosmetic ingredient analysis are live. PureScan Foods has launched on Google Play, with its iOS version currently under Apple review. I keep expanding my stack with React Native.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
+        "label": "Capabilities",
+        "ghost": "STACK",
         "main_title": "My Skills",
-        "subtitle": "The core technologies and tools I've acquired throughout my career and used in my projects.",
+        "subtitle": "The technologies I rely on when building products, and the habits that make them matter. All of them battle-tested in real, production projects.",
         "skill_categories": [
             {
                 "category": "Technical Skills",
@@ -128,7 +150,7 @@
                             },
                             {
                                 "name": "Next.js",
-                                "description": "SSR/SSG production apps (App Router, React 19) — powering GGHub."
+                                "description": "SSR/SSG production apps (App Router, React 19); powering GGHub."
                             }
                         ]
                     },
@@ -221,7 +243,7 @@
                 }
             },
             {
-                "category": "Soft Skills",
+                "category": "Beyond Code",
                 "skills": {
                     "real_estate_appraisal": {
                         "name": "Real Estate Appraisal",
@@ -248,12 +270,14 @@
         ]
     },
     "projects_page": {
+        "label": "Portfolio",
+        "ghost": "WORK",
         "main_title": "My Projects",
-        "subtitle": "Works I have developed throughout my journey, showcasing my skills.",
+        "subtitle": "From idea to release: products, experiments, and personal projects. Each one was born to solve a real problem.",
         "featured_badge": "FEATURED PROJECT",
         "view_live_button": "View Live",
-        "view_github_button": "GitHub",
-        "view_github_button_long": "View on GitHub",
+        "archive_label": "Archive",
+        "archive_title": "Early steps",
         "badges": {
             "live": "Live",
             "beta": "Beta",
@@ -263,12 +287,10 @@
         },
         "show_more": "Show More",
         "show_less": "Show Less",
-        "download_apk_button": "Download APK",
-        "view_google_play_button": "Get it on Google Play",
         "projects": {
             "rent_a_car": {
                 "title": "Rent A Car Full-Stack Platform",
-                "description": "A scalable car rental platform built on modern .NET 8 and ASP.NET Core MVC architecture. Features relational database management via Entity Framework Core, Role-Based Access Control (RBAC) using Identity, and secure CRUD operations. Developed during the Neos Software Academy internship, strictly adhering to clean code principles.",
+                "description": "A scalable car rental platform I built on .NET 8 and ASP.NET Core MVC. It features relational database management via Entity Framework Core, role-based access control (RBAC) with Identity, and secure CRUD operations. Developed during my Neos Software Academy internship, with a strict commitment to clean code principles.",
                 "tags": [
                     "ASP.NET Core MVC",
                     ".NET 8",
@@ -277,9 +299,18 @@
                     "SQL Server"
                 ]
             },
+            "butce_360": {
+                "title": "Budget360° Expense Tracker",
+                "description": "My first prototype for credit card cycle tracking and expense management. Built with Vue.js 3 and Firebase Realtime Database, it laid the experimental groundwork for what later became Fintel.",
+                "tags": [
+                    "Vue.js",
+                    "Firebase",
+                    "JavaScript"
+                ]
+            },
             "purescan": {
-                "title": "PureScan - Cosmetic Analyzer",
-                "description": "AI-powered cosmetic product ingredient analyzer. Analyzes ingredients via camera OCR, barcode scanning (OpenBeautyFacts DB), or manual text input. Features risk assessment powered by Gemini 3.1 Flash-Lite, skin type compatibility scoring, TTS audio summaries, and an AI chat assistant. Virtual Cabinet feature allows adding analyzed items to inventory and checking cross-product compatibility using conflict engine technology. Supports a freemium model with RevenueCat-powered Pro subscriptions and AdMob integration (banner/reward). Converted to a native application using Capacitor, it is actively published on Google Play Store and available for download.",
+                "title": "PureScan - Cosmetic Ingredient Analyzer",
+                "description": "An AI-powered cosmetic ingredient analyzer. It reads ingredients via camera OCR, barcode scanning (OpenBeautyFacts), or manual input; offers Gemini 3.1 Flash-Lite powered risk assessment, skin-type compatibility scoring, TTS audio summaries, and an AI chat assistant. The Virtual Cabinet adds analyzed products to an inventory and checks cross-product compatibility through a conflict engine. Runs on a freemium model with RevenueCat Pro subscriptions and AdMob integration, compiled to Android with Capacitor, and live on Google Play.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -289,18 +320,9 @@
                     "AdMob"
                 ]
             },
-            "butce_360": {
-                "title": "Budget360° Expense Tracker",
-                "description": "First prototype developed for credit card cycle tracking and expense management. Built with Vue.js 3.0 and Firebase Realtime Database, it served as the experimental foundation for the Fintel project (V2).",
-                "tags": [
-                    "Vue.js",
-                    "Firebase",
-                    "JavaScript"
-                ]
-            },
             "not_defteri": {
                 "title": "Interactive Notebook App",
-                "description": "Offers users a dynamic notebook experience. Developed using HTML, CSS, and Vue.js 3.0.",
+                "description": "A small but delightful app offering a dynamic notebook experience. Built with HTML, CSS, and Vue.js 3.",
                 "tags": [
                     "Vue.js",
                     "JavaScript",
@@ -310,7 +332,7 @@
             },
             "fintel": {
                 "title": "Fintel - AI Financial Assistant",
-                "description": "Initially prototyped with Gemini 3.0 using a 'Vibecoding' approach, then professionally engineered and refined into a complete SaaS product. A hybrid financial tool (LocalStorage + Firestore) featuring 'Nova AI' integration powered by Groq infrastructure and Llama 3.3 70B model, combined with GLM-OCR technology for high-accuracy PDF and receipt processing, offering expense analysis and personalized savings strategies. Converted to an Android application using Capacitor, available for download on Google Play Store.",
+                "description": "A hybrid (LocalStorage + Firestore) financial assistant that started as a rapid Gemini prototype and grew into a professionally engineered SaaS product. Its 'Nova AI' (Llama 3.3 70B on Groq infrastructure) processes PDFs and receipts with high accuracy through GLM-OCR, delivering expense analysis and personalized savings strategies. Ported to Android with Capacitor and live on Google Play.",
                 "tags": [
                     "React",
                     "TypeScript",
@@ -322,27 +344,51 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Food Ingredient Analyzer",
-                "description": "Cross-platform food label analyzer built with React Native and Expo, running on Firebase infrastructure. Reads product labels through barcode scanning and camera-based OCR, leveraging the Gemini 3.1 Flash-Lite model for allergen detection, additive risk analysis, and dietary compatibility assessment. The family profiles system calculates product compatibility scores based on each member's allergies and dietary preferences. Features an E-code-based food additive dictionary, Guru AI chat assistant, and multi-language support. All API communications are routed through Firebase Cloud Functions to protect user privacy. Live on Google Play, with the iOS version currently under Apple review.",
-                "tags": ["React Native", "Expo", "Firebase", "Gemini AI", "OCR"]
+                "description": "A cross-platform food label analyzer I built with React Native and Expo on Firebase infrastructure. It reads labels via barcode scanning and camera OCR, using Gemini 3.1 Flash-Lite for allergen detection, additive risk analysis, and dietary compatibility assessment. Family profiles calculate a compatibility score for each member based on their allergies and preferences. Includes an E-code additive dictionary, the Guru AI chat assistant, and multi-language support; all API traffic is routed through Firebase Cloud Functions to protect user privacy. Live on Google Play, with the iOS version under Apple review.",
+                "tags": [
+                    "React Native",
+                    "Expo",
+                    "Firebase",
+                    "Gemini AI",
+                    "OCR"
+                ]
             },
             "openworld": {
                 "title": "OpenWorld - Local AI Super Agent",
-                "description": "A Windows-based local AI super agent with 4-layer security. Offers 100+ built-in tools for screen control, file management, OCR, research, code management, and more. Works with Ollama or cloud LLM integration (Groq, Z.AI). Includes remote control via Telegram bot, semantic tool routing, and a notebook system. Currently in experimental stage, under active development with work being done on various models.",
-                "tags": ["Python", "FastAPI", "React", "ChromaDB", "Ollama", "Telegram Bot"]
+                "description": "A Windows-based local AI super agent with 4-layer security. It offers 100+ built-in tools for screen control, file management, OCR, research, and code management, and runs with Ollama or cloud LLMs (Groq, Z.AI). Includes remote control via a Telegram bot, semantic tool routing, and a notebook system. An experimental project under active development.",
+                "tags": [
+                    "Python",
+                    "FastAPI",
+                    "React",
+                    "ChromaDB",
+                    "Ollama",
+                    "Telegram Bot"
+                ]
             },
             "multimind": {
                 "title": "MultiMind - Autonomous Multi-Agent System",
-                "description": "An autonomous multi-agent system that takes a prompt and plans, codes, tests, and self-corrects until it delivers working software. A central orchestrator coordinates five specialized agents (engineer, backup engineer, tester, and a vision agent that visually verifies the UI against the original prompt), each running in isolated sandboxes, with a self-healing loop that detects failures and feeds them back for automatic recovery. Includes live Telegram progress reporting.",
-                "tags": ["Python", "Multi-LLM", "React", "Telegram"]
+                "description": "An autonomous multi-agent system that takes a single prompt and plans, codes, tests, and self-corrects until it ships working software. A central orchestrator coordinates five specialized agents (engineer, backup engineer, tester, and a vision agent that visually verifies the UI against the original prompt), each running in isolated sandboxes. It has a self-healing loop that catches failures and feeds them back for automatic recovery, plus live Telegram progress reporting.",
+                "tags": [
+                    "Python",
+                    "Multi-LLM",
+                    "React",
+                    "Telegram"
+                ]
             },
             "sip": {
                 "title": "SIP - Sales Intelligence Platform",
-                "description": "A multi-tenant analytics engine for any field-sales (plasiyer-based) operation, scoring leads, surfacing cross-sell opportunities, and predicting customer churn, with a natural-language interface that turns business questions into SQL queries. Built on .NET 8, React, and Python/FastAPI using CQRS, background job pipelines, and a hybrid local and cloud LLM strategy. Currently in testing with a live enterprise client.",
-                "tags": [".NET 8", "React", "Python/FastAPI", "SQL Server", "LLM"]
+                "description": "A multi-tenant analytics engine for field-sales operations: it scores leads, surfaces cross-sell opportunities, and predicts customer churn, with a natural-language interface that turns business questions into SQL queries. I built it on .NET 8, React, and Python/FastAPI with CQRS and background job pipelines, running a hybrid local-plus-cloud LLM strategy. Currently in testing with a live enterprise client.",
+                "tags": [
+                    ".NET 8",
+                    "React",
+                    "Python/FastAPI",
+                    "SQL Server",
+                    "LLM"
+                ]
             },
             "gghub": {
-                "title": "GGHub - Gamer Social Platform (Beta)",
-                "description": "This Monorepo project, uniting .NET 8 and Next.js 15 within a Clean Architecture framework, has reached its V2 release. The platform delivers comprehensive features including listing, game search, detailed reviews, home feed, gamification (badges/levels), leaderboards, admin panel, and user profile algorithms, along with multilingual support (EN/TR), SignalR-based real-time messaging, and significant performance improvements. The V3 roadmap includes Steam, Epic, and Google OAuth integrations, user-driven content editing and sharing features (subject to admin approval, reflected in points and badges).",
+                "title": "GGHub - Gamer Social Platform",
+                "description": "My monorepo project uniting .NET 8 and Next.js 15 under Clean Architecture has reached its V2 release. Alongside game search, detailed reviews, a home feed, badges and levels, leaderboards, an admin panel, and user profile algorithms, it delivers multilingual support (EN/TR), SignalR-based real-time messaging, and significant performance improvements. The V3 roadmap includes Steam, Epic, and Google OAuth integrations plus admin-approved user content sharing.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
@@ -352,15 +398,16 @@
                     "i18n"
                 ]
             }
-        }
+        },
+        "app_store_review": "iOS version under Apple review"
     },
     "contact_page": {
-        "main_title": "Get In Touch",
-        "subtitle": "Have a project idea or just want to say hello? You can reach me through the channels below.",
-        "direct_contact_title": "Contact Me Directly",
+        "label": "Contact",
+        "main_title": "Get in touch",
+        "subtitle": "A project idea, a collaboration, or just a hello. Don't hesitate to reach out.",
         "location_title": "Location",
         "location_popup": "I live in Izmir. <br /> Let's grab a coffee!",
-        "form_title": "Or Fill Out The Form",
+        "form_title": "Leave a message",
         "form_placeholder_name": "Your Name",
         "form_placeholder_email": "Your Email Address",
         "form_placeholder_message": "Your Message...",
@@ -368,7 +415,7 @@
         "form_button_submitting": "Sending...",
         "form_status_success": "Your message has been sent successfully!",
         "form_status_error": "An error occurred: ",
-        "social_title": "My Social Media Accounts",
+        "social_title": "Social",
         "direct_links": {
             "email": {
                 "label": "Email"
@@ -392,9 +439,17 @@
             }
         }
     },
+    "footer": {
+        "cta_kicker": "Next project",
+        "cta_title": "Got an idea in mind? Let's build it together.",
+        "cta_button": "Get in Touch",
+        "rights": "All rights reserved.",
+        "made_in": "Designed & built in Izmir.",
+        "cta_button_email": "Send an Email"
+    },
     "404_page": {
         "title": "Page Not Found",
-        "subtitle": "The page you are looking for has either been removed or never existed.",
+        "subtitle": "The page you're looking for has moved or never existed, like a parcel missing from the zoning plan.",
         "home_link": "Return to Homepage",
         "error_code": "Error Code: 404"
     }
