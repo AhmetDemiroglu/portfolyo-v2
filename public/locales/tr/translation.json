@@ -93,7 +93,7 @@
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "Yapay Zekâ Destekli Mobil Uygulamalar",
-        "timeline_6_content": "Bağımsız mobil yazılım stüdyom SeptimusLab çatısı altında yapay zekâ destekli uygulamalar geliştirip yayınlıyorum. Dönemsel harcama takibi için Fintel ve kozmetik içerik analizi için PureScan Cosmetics yayında. PureScan Foods Google Play'de kullanıcılarla buluştu; iOS sürümü şu anda Apple incelemesinde. React Native ile teknoloji yığınımı genişletmeye devam ediyorum.",
+        "timeline_6_content": "Bağımsız mobil yazılım stüdyom SeptimusLab çatısı altında yapay zekâ destekli uygulamalar geliştirip yayınlıyorum. Dönemsel harcama takibi için Fintel ve kozmetik içerik analizi için PureScan Cosmetics yayında. PureScan Foods Google Play'de kullanıcılarla buluştu; iOS sürümü de App Store'da yayında. React Native ile teknoloji yığınımı genişletmeye devam ediyorum.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
@@ -344,7 +344,7 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Gıda İçerik Analizi",
-                "description": "React Native ve Expo ile geliştirdiğim, Firebase üzerinde çalışan cross-platform gıda etiketi analizörü. Barkod ve kamera (OCR) ile etiketleri okur; Gemini 3.1 Flash-Lite ile alerjen tespiti, katkı maddesi risk analizi ve diyet uyumluluğu değerlendirmesi yapar. Aile profilleri sayesinde her bireyin alerji ve tercihlerine göre ürün uygunluk skoru hesaplanır. E-kod sözlüğü, Guru AI sohbet asistanı ve çoklu dil desteği içerir; kullanıcı gizliliği için tüm API trafiği Firebase Cloud Functions üzerinden yönetilir. Google Play'de yayında, iOS sürümü Apple incelemesinde.",
+                "description": "React Native ve Expo ile geliştirdiğim, Firebase üzerinde çalışan cross-platform gıda etiketi analizörü. Barkod ve kamera (OCR) ile etiketleri okur; Gemini 3.1 Flash-Lite ile alerjen tespiti, katkı maddesi risk analizi ve diyet uyumluluğu değerlendirmesi yapar. Aile profilleri sayesinde her bireyin alerji ve tercihlerine göre ürün uygunluk skoru hesaplanır. E-kod sözlüğü, Guru AI sohbet asistanı ve çoklu dil desteği içerir; kullanıcı gizliliği için tüm API trafiği Firebase Cloud Functions üzerinden yönetilir. Google Play ve App Store'da yayında.",
                 "tags": [
                     "React Native",
                     "Expo",

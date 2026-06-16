@@ -5,6 +5,7 @@ export interface ProjectBase {
     githubLink: string | null;
     apkLink?: string | null;
     googlePlayLink?: string | null;
+    appStoreLink?: string | null;
     /* App Store sürümü henüz incelemede: buton görünür ama pasif kalır. */
     appStoreSoon?: boolean;
     badges?: ("live" | "beta" | "apk" | "new" | "experimental")[];
@@ -50,7 +51,7 @@ export const projectsData: ProjectBase[] = [
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/PureScanFoods",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.purescan.foods",
-        appStoreSoon: true,
+        appStoreLink: "https://apps.apple.com/app/id6778348937",
         badges: ["live"],
         pinned: false,
         mockupType: "phone",

@@ -93,7 +93,7 @@
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "KI-gestützte mobile Anwendungen",
-        "timeline_6_content": "Unter meinem unabhängigen Mobile-Studio SeptimusLab entwickle und veröffentliche ich KI-gestützte Apps. Fintel für die periodische Ausgabenverfolgung und PureScan Cosmetics für die Analyse kosmetischer Inhaltsstoffe sind live. PureScan Foods ist auf Google Play erschienen; die iOS-Version befindet sich derzeit in der Apple-Prüfung. Mit React Native erweitere ich meinen Stack kontinuierlich.",
+        "timeline_6_content": "Unter meinem unabhängigen Mobile-Studio SeptimusLab entwickle und veröffentliche ich KI-gestützte Apps. Fintel für die periodische Ausgabenverfolgung und PureScan Cosmetics für die Analyse kosmetischer Inhaltsstoffe sind live. PureScan Foods ist auf Google Play erschienen; die iOS-Version ist jetzt im App Store verfügbar. Mit React Native erweitere ich meinen Stack kontinuierlich.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
@@ -344,7 +344,7 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Lebensmittel-Analyse",
-                "description": "Ein plattformübergreifender Lebensmitteletikett-Analysator, den ich mit React Native und Expo auf Firebase-Infrastruktur entwickelt habe. Er liest Etiketten per Barcode-Scan und Kamera-OCR und nutzt Gemini 3.1 Flash-Lite für Allergenerkennung, Zusatzstoff-Risikoanalyse und Diätverträglichkeitsbewertung. Familienprofile berechnen für jedes Mitglied einen Verträglichkeitsscore auf Basis von Allergien und Vorlieben. Enthält ein E-Code-Zusatzstofflexikon, den Guru-AI-Chat-Assistenten und Mehrsprachigkeit; der gesamte API-Verkehr läuft zum Schutz der Privatsphäre über Firebase Cloud Functions. Live auf Google Play, die iOS-Version ist in der Apple-Prüfung.",
+                "description": "Ein plattformübergreifender Lebensmitteletikett-Analysator, den ich mit React Native und Expo auf Firebase-Infrastruktur entwickelt habe. Er liest Etiketten per Barcode-Scan und Kamera-OCR und nutzt Gemini 3.1 Flash-Lite für Allergenerkennung, Zusatzstoff-Risikoanalyse und Diätverträglichkeitsbewertung. Familienprofile berechnen für jedes Mitglied einen Verträglichkeitsscore auf Basis von Allergien und Vorlieben. Enthält ein E-Code-Zusatzstofflexikon, den Guru-AI-Chat-Assistenten und Mehrsprachigkeit; der gesamte API-Verkehr läuft zum Schutz der Privatsphäre über Firebase Cloud Functions. Live auf Google Play und im App Store.",
                 "tags": [
                     "React Native",
                     "Expo",

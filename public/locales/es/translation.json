@@ -93,7 +93,7 @@
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "Aplicaciones móviles con IA",
-        "timeline_6_content": "Bajo mi estudio independiente de software móvil SeptimusLab, desarrollo y publico aplicaciones impulsadas por IA. Fintel, para el seguimiento periódico de gastos, y PureScan Cosmetics, para el análisis de ingredientes cosméticos, ya están en producción. PureScan Foods se ha lanzado en Google Play y su versión iOS está en revisión por parte de Apple. Sigo ampliando mi stack con React Native.",
+        "timeline_6_content": "Bajo mi estudio independiente de software móvil SeptimusLab, desarrollo y publico aplicaciones impulsadas por IA. Fintel, para el seguimiento periódico de gastos, y PureScan Cosmetics, para el análisis de ingredientes cosméticos, ya están en producción. PureScan Foods se ha lanzado en Google Play y su versión iOS ya está disponible en la App Store. Sigo ampliando mi stack con React Native.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
@@ -344,7 +344,7 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Análisis de Ingredientes Alimentarios",
-                "description": "Un analizador multiplataforma de etiquetas alimentarias que construí con React Native y Expo sobre infraestructura Firebase. Lee etiquetas mediante escaneo de códigos de barras y OCR de cámara, usando Gemini 3.1 Flash-Lite para la detección de alérgenos, el análisis de riesgo de aditivos y la evaluación de compatibilidad dietética. Los perfiles familiares calculan una puntuación de compatibilidad para cada miembro según sus alergias y preferencias. Incluye un diccionario de aditivos por códigos E, el asistente de chat Guru AI y soporte multilingüe; todo el tráfico de API pasa por Firebase Cloud Functions para proteger la privacidad. Disponible en Google Play, con la versión iOS en revisión por Apple.",
+                "description": "Un analizador multiplataforma de etiquetas alimentarias que construí con React Native y Expo sobre infraestructura Firebase. Lee etiquetas mediante escaneo de códigos de barras y OCR de cámara, usando Gemini 3.1 Flash-Lite para la detección de alérgenos, el análisis de riesgo de aditivos y la evaluación de compatibilidad dietética. Los perfiles familiares calculan una puntuación de compatibilidad para cada miembro según sus alergias y preferencias. Incluye un diccionario de aditivos por códigos E, el asistente de chat Guru AI y soporte multilingüe; todo el tráfico de API pasa por Firebase Cloud Functions para proteger la privacidad. Disponible en Google Play y en la App Store.",
                 "tags": [
                     "React Native",
                     "Expo",

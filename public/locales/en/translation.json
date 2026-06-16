@@ -93,7 +93,7 @@
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "AI-Powered Mobile Applications",
-        "timeline_6_content": "Under my independent mobile software studio SeptimusLab, I develop and publish AI-powered applications. Fintel for periodic expense tracking and PureScan Cosmetics for cosmetic ingredient analysis are live. PureScan Foods has launched on Google Play, with its iOS version currently under Apple review. I keep expanding my stack with React Native.",
+        "timeline_6_content": "Under my independent mobile software studio SeptimusLab, I develop and publish AI-powered applications. Fintel for periodic expense tracking and PureScan Cosmetics for cosmetic ingredient analysis are live. PureScan Foods has launched on Google Play and its iOS version is now live on the App Store. I keep expanding my stack with React Native.",
         "timeline_6_link": "https://septimuslab.com"
     },
     "skills_page": {
@@ -344,7 +344,7 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Food Ingredient Analyzer",
-                "description": "A cross-platform food label analyzer I built with React Native and Expo on Firebase infrastructure. It reads labels via barcode scanning and camera OCR, using Gemini 3.1 Flash-Lite for allergen detection, additive risk analysis, and dietary compatibility assessment. Family profiles calculate a compatibility score for each member based on their allergies and preferences. Includes an E-code additive dictionary, the Guru AI chat assistant, and multi-language support; all API traffic is routed through Firebase Cloud Functions to protect user privacy. Live on Google Play, with the iOS version under Apple review.",
+                "description": "A cross-platform food label analyzer I built with React Native and Expo on Firebase infrastructure. It reads labels via barcode scanning and camera OCR, using Gemini 3.1 Flash-Lite for allergen detection, additive risk analysis, and dietary compatibility assessment. Family profiles calculate a compatibility score for each member based on their allergies and preferences. Includes an E-code additive dictionary, the Guru AI chat assistant, and multi-language support; all API traffic is routed through Firebase Cloud Functions to protect user privacy. Live on Google Play and the App Store.",
                 "tags": [
                     "React Native",
                     "Expo",

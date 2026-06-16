@@ -82,6 +82,17 @@ function ProjectLinks({ project }: { project: FullProject }) {
                     Google Play
                 </a>
             )}
+            {project.appStoreLink && (
+                <a
+                    href={project.appStoreLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={linkBtn}
+                >
+                    <FaApple size={12} />
+                    App Store
+                </a>
+            )}
             {project.appStoreSoon && (
                 <span
                     title={t("projects_page.app_store_review")}
