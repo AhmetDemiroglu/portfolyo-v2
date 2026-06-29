@@ -22,7 +22,7 @@ export const projectsData: ProjectBase[] = [
         image: "gghub-screen.jpg",
         liveLink: "https://gghub.social",
         githubLink: "https://github.com/AhmetDemiroglu/GGHub",
-        appStoreLink: "https://apps.apple.com/app/id6781281375",
+        appStoreLink: "https://apps.apple.com/us/app/gghub-games-community/id6781281375",
         googlePlaySoon: true,
         badges: ["live", "new"],
         pinned: true,
