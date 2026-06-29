@@ -78,7 +78,7 @@ interface DeviceDuoProps {
  */
 export function DeviceDuo({ laptopSrc, phoneSrc, alt, accentColor = "rgba(139,92,246,0.18)" }: DeviceDuoProps) {
     return (
-        <div className="relative mx-auto w-full max-w-[440px]" style={{ perspective: "1800px" }}>
+        <div className="relative mx-auto w-full max-w-[500px]" style={{ perspective: "1800px" }}>
             {/* Soft glow */}
             <div
                 className="pointer-events-none absolute left-1/2 top-1/2 h-60 w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-[40%] opacity-50 blur-3xl"

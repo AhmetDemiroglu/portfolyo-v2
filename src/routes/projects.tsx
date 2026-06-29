@@ -218,9 +218,9 @@ function FeaturedProject({ project }: { project: FullProject }) {
                         <div className="mt-4">
                             <Badges project={project} />
                         </div>
-                        <p className="mt-5 text-sm leading-relaxed text-ink/90 sm:text-base">
-                            {project.description}
-                        </p>
+                        <div className="mt-5">
+                            <ExpandableText text={project.description} />
+                        </div>
                         <div className="mt-6">
                             <Tags tags={project.tags} />
                         </div>
@@ -229,9 +229,9 @@ function FeaturedProject({ project }: { project: FullProject }) {
                         </div>
                     </div>
                     <div className="relative lg:col-span-3">
-                        <div className="relative flex h-full min-h-[300px] items-center justify-center overflow-hidden bg-soft p-8 sm:min-h-[440px]">
+                        <div className="relative flex h-full min-h-[280px] items-center justify-center overflow-hidden bg-soft p-6 sm:min-h-[360px]">
                             <div className="blueprint-grid absolute inset-0 opacity-60" />
-                            <ParallaxY from={24} to={-24} className="w-full max-w-xl">
+                            <ParallaxY from={20} to={-20} className="w-full max-w-2xl">
                                 {project.webImage ? (
                                     <DeviceDuo
                                         laptopSrc={`/${project.webImage}`}
