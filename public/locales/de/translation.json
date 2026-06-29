@@ -89,7 +89,7 @@
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Gaming-Sozialplattform",
-        "timeline_5_content": "Ich habe GGHub, eine Gaming-Sozialplattform, als persönliches Projekt entwickelt und veröffentlicht. Auf Next.js und .NET Core aufgebaut, hat die Plattform ihr V2-Release erreicht: mehrsprachige Unterstützung, SignalR-basierte Echtzeit-Kommunikation und deutliche Performance-Verbesserungen. An V3 mit OAuth-Integrationen und nutzergenerierten Inhalten arbeite ich bereits.",
+        "timeline_5_content": "Ich habe GGHub, eine Gaming-Sozialplattform, als persönliches Projekt entwickelt und veröffentlicht. Aufgebaut auf einer Next.js-Web-App und einem .NET-Core-Backend, hat sie ihr V3-Release erreicht: mehrsprachige Unterstützung, SignalR-basierte Echtzeit-Kommunikation und deutliche Performance-Verbesserungen. Ihre nativen Mobile-Apps sind jetzt live — iOS im App Store, die Android-Version folgt sehr bald im Google Play Store — und ich veröffentliche weiterhin mehrwertschaffende Verbesserungen.",
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "KI-gestützte mobile Anwendungen",
@@ -388,18 +388,20 @@
             },
             "gghub": {
                 "title": "GGHub - Gamer-Sozialplattform",
-                "description": "Mein Monorepo-Projekt, das .NET 8 und Next.js 15 unter Clean Architecture vereint, hat sein V2-Release erreicht. Neben Spielsuche, detaillierten Bewertungen, Home-Feed, Abzeichen und Leveln, Bestenlisten, Admin-Panel und Nutzerprofil-Algorithmen bietet es mehrsprachige Unterstützung (EN/TR), SignalR-basierte Echtzeit-Kommunikation und deutliche Performance-Verbesserungen. Die V3-Roadmap umfasst Steam-, Epic- und Google-OAuth-Integrationen sowie admin-geprüftes Teilen von Nutzerinhalten.",
+                "description": "Mein Monorepo-Projekt, das ein .NET-8-Backend und eine Next.js-15-Web-App unter Clean Architecture vereint, hat sein V3-Release erreicht — und ist nun auch mobil verfügbar. Neben Spiele-Entdeckung, detaillierten Bewertungen, Home-Feed, Abzeichen und Leveln, Bestenlisten, Admin-Panel und Profil-Algorithmen bietet es mehrsprachige Unterstützung (EN/TR), SignalR-basierte Echtzeit-Kommunikation und deutliche Performance-Verbesserungen. Die nativen iOS- und Android-Apps (React Native / Expo) bringen die Plattform aufs Smartphone, und die Entwicklung geht mit neuen, mehrwertschaffenden Funktionen weiter. Live im Web unter gghub.social und im App Store; die Android-Version kommt sehr bald in den Google Play Store.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
                     "Clean Architecture",
                     "SignalR",
                     "PostgreSQL",
+                    "React Native",
                     "i18n"
                 ]
             }
         },
-        "app_store_review": "iOS-Version in der Apple-Prüfung"
+        "app_store_review": "iOS-Version in der Apple-Prüfung",
+        "play_store_review": "Android-Version bald im Google Play Store"
     },
     "contact_page": {
         "label": "Kontakt",

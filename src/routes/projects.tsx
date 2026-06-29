@@ -103,6 +103,16 @@ function ProjectLinks({ project }: { project: FullProject }) {
                     App Store
                 </span>
             )}
+            {project.googlePlaySoon && (
+                <span
+                    title={t("projects_page.play_store_review")}
+                    aria-disabled="true"
+                    className="inline-flex cursor-not-allowed items-center gap-1.5 rounded-full border border-line px-4 py-2 font-mono text-[10px] tracking-[0.12em] text-muted opacity-60"
+                >
+                    <FaGooglePlay size={11} />
+                    Google Play
+                </span>
+            )}
             {project.githubLink && (
                 <a
                     href={project.githubLink}

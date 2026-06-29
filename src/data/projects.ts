@@ -8,6 +8,8 @@ export interface ProjectBase {
     appStoreLink?: string | null;
     /* App Store sürümü henüz incelemede: buton görünür ama pasif kalır. */
     appStoreSoon?: boolean;
+    /* Google Play sürümü henüz incelemede: buton görünür ama pasif kalır. */
+    googlePlaySoon?: boolean;
     badges?: ("live" | "beta" | "apk" | "new" | "experimental")[];
     pinned: boolean;
     mockupType?: "phone" | "laptop";
@@ -17,11 +19,15 @@ export interface ProjectBase {
 export const projectsData: ProjectBase[] = [
     {
         id: "gghub",
-        image: "gghub-placeholder.webp",
+        image: "gghub-screen.jpg",
         liveLink: "https://gghub.social",
         githubLink: "https://github.com/AhmetDemiroglu/GGHub",
-        badges: ["live", "beta"],
+        appStoreLink: "https://apps.apple.com/app/id6781281375",
+        googlePlaySoon: true,
+        badges: ["live", "new"],
         pinned: true,
+        mockupType: "phone",
+        accentColor: "rgba(139,92,246,0.2)",
     },
     {
         id: "fintel",
