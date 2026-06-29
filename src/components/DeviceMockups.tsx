@@ -63,3 +63,55 @@ export function LaptopMockup({ src, alt, accentColor = "rgba(226,84,14,0.14)" }:
         </div>
     );
 }
+
+interface DeviceDuoProps {
+    laptopSrc: string;
+    phoneSrc: string;
+    alt: string;
+    accentColor?: string;
+}
+
+/**
+ * A laptop + phone shown together in light 3D, gently turned toward each other:
+ * the web build on the laptop, the mobile build on the phone. Used for products
+ * that ship on both web and mobile (e.g. GGHub).
+ */
+export function DeviceDuo({ laptopSrc, phoneSrc, alt, accentColor = "rgba(139,92,246,0.18)" }: DeviceDuoProps) {
+    return (
+        <div className="relative mx-auto w-full max-w-[440px]" style={{ perspective: "1800px" }}>
+            {/* Soft glow */}
+            <div
+                className="pointer-events-none absolute left-1/2 top-1/2 h-60 w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-[40%] opacity-50 blur-3xl"
+                style={{ background: `radial-gradient(ellipse at center, ${accentColor}, transparent 70%)` }}
+            />
+
+            {/* Laptop (web build) — turned slightly toward the phone */}
+            <div className="relative" style={{ transform: "rotateY(-13deg) rotateX(6deg)" }}>
+                <div className="overflow-hidden rounded-t-xl border-[3px] border-b-0 border-ink/70 bg-zinc-900 shadow-2xl dark:border-line">
+                    <div className="flex items-center gap-1.5 border-b border-zinc-700 bg-zinc-800 px-3 py-2">
+                        <span className="h-2 w-2 rounded-full bg-red-500/70" />
+                        <span className="h-2 w-2 rounded-full bg-yellow-500/70" />
+                        <span className="h-2 w-2 rounded-full bg-green-500/70" />
+                        <div className="ml-2 h-4 flex-1 rounded-md bg-zinc-700/60" />
+                    </div>
+                    <div className="aspect-[16/10] w-full overflow-hidden bg-black">
+                        <img src={laptopSrc} alt={alt} loading="lazy" className="h-full w-full object-cover object-top" />
+                    </div>
+                </div>
+                <div className="mx-auto h-3 w-[110%] -translate-x-[4.5%] rounded-b-lg bg-ink/80 shadow-lg dark:bg-line" />
+            </div>
+
+            {/* Phone (mobile build) — overlaps front-right, turned toward the laptop */}
+            <div className="absolute -bottom-5 right-1 w-[28%] sm:right-2" style={{ transform: "rotateY(16deg)" }}>
+                <div className="overflow-hidden rounded-[1.5rem] border-[3px] border-ink/70 bg-black shadow-2xl dark:border-line">
+                    <div className="flex justify-center bg-black pb-1 pt-1.5">
+                        <div className="h-[4px] w-10 rounded-full bg-zinc-800" />
+                    </div>
+                    <div className="aspect-[9/19] w-full overflow-hidden bg-black">
+                        <img src={phoneSrc} alt={alt} loading="lazy" className="h-full w-full object-cover object-top" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}

@@ -1,6 +1,8 @@
 export interface ProjectBase {
     id: string;
     image: string;
+    /* Optional web/desktop screenshot — when set, the featured card shows a laptop+phone duo. */
+    webImage?: string;
     liveLink: string | null;
     githubLink: string | null;
     apkLink?: string | null;
@@ -20,6 +22,7 @@ export const projectsData: ProjectBase[] = [
     {
         id: "gghub",
         image: "gghub-screen.jpg",
+        webImage: "gghub-web.jpg",
         liveLink: "https://gghub.social",
         githubLink: "https://github.com/AhmetDemiroglu/GGHub",
         appStoreLink: "https://apps.apple.com/us/app/gghub-games-community/id6781281375",

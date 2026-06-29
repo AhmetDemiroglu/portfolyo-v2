@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { projectsData, type ProjectBase } from "../data/projects";
-import { PhoneMockup, LaptopMockup } from "../components/DeviceMockups";
+import { PhoneMockup, LaptopMockup, DeviceDuo } from "../components/DeviceMockups";
 import { SectionHeading } from "../components/SectionHeading";
 import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
 
@@ -229,14 +229,23 @@ function FeaturedProject({ project }: { project: FullProject }) {
                         </div>
                     </div>
                     <div className="relative lg:col-span-3">
-                        <div className="relative flex h-full min-h-[300px] items-center justify-center overflow-hidden bg-soft p-8 sm:min-h-[420px]">
+                        <div className="relative flex h-full min-h-[300px] items-center justify-center overflow-hidden bg-soft p-8 sm:min-h-[440px]">
                             <div className="blueprint-grid absolute inset-0 opacity-60" />
                             <ParallaxY from={24} to={-24} className="w-full max-w-xl">
-                                <img
-                                    src={`/${project.image}`}
-                                    alt={project.title}
-                                    className="rounded-xl border border-line/70 shadow-2xl"
-                                />
+                                {project.webImage ? (
+                                    <DeviceDuo
+                                        laptopSrc={`/${project.webImage}`}
+                                        phoneSrc={`/${project.image}`}
+                                        alt={project.title}
+                                        accentColor={project.accentColor}
+                                    />
+                                ) : (
+                                    <img
+                                        src={`/${project.image}`}
+                                        alt={project.title}
+                                        className="rounded-xl border border-line/70 shadow-2xl"
+                                    />
+                                )}
                             </ParallaxY>
                         </div>
                     </div>
