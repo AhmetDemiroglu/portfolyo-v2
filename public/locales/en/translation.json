@@ -89,7 +89,7 @@
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Gaming Social Platform",
-        "timeline_5_content": "I developed and launched GGHub, a gaming social platform, as a personal project. Built on a Next.js web app and a .NET Core backend, it has reached its V3 release with multilingual support, SignalR-based real-time messaging, and significant performance improvements. Its native mobile apps are now live: iOS on the App Store, with the Android version arriving very soon on Google Play. I keep shipping enhancements that add value to the platform.",
+        "timeline_5_content": "I developed and launched GGHub, a gaming social platform, as a personal project. Built on a Next.js web app and a .NET Core backend, it has reached its V3 release with multilingual support, SignalR-based real-time messaging, and significant performance improvements. Its native mobile apps are now live: iOS on the App Store, and Android on Google Play. I keep shipping enhancements that add value to the platform.",
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "AI-Powered Mobile Applications",
@@ -388,7 +388,7 @@
             },
             "gghub": {
                 "title": "GGHub - Gamer Social Platform",
-                "description": "My monorepo project uniting a .NET 8 backend and a Next.js 15 web app under Clean Architecture has reached its V3 release and is now also live on mobile. Alongside game discovery, detailed reviews, a home feed, badges and levels, leaderboards, an admin panel, and profile algorithms, it offers multilingual support (EN/TR), SignalR-based real-time messaging, and major performance gains. The native iOS and Android apps (React Native / Expo) extend the platform to phones, and development continues with new features that keep adding value. Live on the web at gghub.social and on the App Store; the Android version is coming very soon to Google Play.",
+                "description": "My monorepo project uniting a .NET 8 backend and a Next.js 15 web app under Clean Architecture has reached its V3 release and is now also live on mobile. Alongside game discovery, detailed reviews, a home feed, badges and levels, leaderboards, an admin panel, and profile algorithms, it offers multilingual support (EN/TR), SignalR-based real-time messaging, and major performance gains. The native iOS and Android apps (React Native / Expo) extend the platform to phones, and development continues with new features that keep adding value. Live on the web at gghub.social, the App Store, and Google Play.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
@@ -401,7 +401,7 @@
             }
         },
         "app_store_review": "iOS version under Apple review",
-        "play_store_review": "Android version coming soon to Google Play"
+        "play_store_review": "Now on Google Play"
     },
     "contact_page": {
         "label": "Contact",
