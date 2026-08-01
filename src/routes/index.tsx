@@ -11,6 +11,10 @@ import { SectionHeading } from "../components/SectionHeading";
 import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
 import { PhoneMockup, LaptopMockup } from "../components/DeviceMockups";
 import { projectsData } from "../data/projects";
+import septimusLogo from "../assets/septimuslab.webp";
+import gghubScreen from "../assets/gghub-screen.webp";
+import purescanScreen from "../assets/purescan-screen.webp";
+import purescanFoodsScreen from "../assets/purescan-foods-screen.webp";
 
 export const Route = createFileRoute("/")({
     component: HomePage,
@@ -185,8 +189,12 @@ function StudioSection() {
                             </p>
                             <h2 className="mt-5 flex items-center gap-4 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
                                 <img
-                                    src="/septimuslab.png"
+                                    src={septimusLogo}
                                     alt="SeptimusLab"
+                                    width={128}
+                                    height={128}
+                                    loading="lazy"
+                                    decoding="async"
                                     className="h-12 w-12 rounded-xl object-contain sm:h-14 sm:w-14"
                                 />
                                 SeptimusLab
@@ -212,25 +220,28 @@ function StudioSection() {
                             <div className="blueprint-grid absolute inset-0" />
                             <ParallaxY from={50} to={-30} className="absolute left-6 top-16 w-44">
                                 <img
-                                    src="/gghub-screen.jpg"
+                                    src={gghubScreen}
                                     alt="GGHub"
                                     loading="lazy"
+                                    decoding="async"
                                     className="rounded-2xl border-4 border-ink/70 shadow-2xl dark:border-line"
                                 />
                             </ParallaxY>
                             <ParallaxY from={-30} to={40} className="absolute left-52 top-6 w-44">
                                 <img
-                                    src="/purescan-screen.png"
+                                    src={purescanScreen}
                                     alt="PureScan"
                                     loading="lazy"
+                                    decoding="async"
                                     className="rounded-2xl border-4 border-ink/70 shadow-2xl dark:border-line"
                                 />
                             </ParallaxY>
                             <ParallaxY from={70} to={-50} className="absolute left-[24rem] top-24 w-44">
                                 <img
-                                    src="/purescan-foods-screen.png"
+                                    src={purescanFoodsScreen}
                                     alt="PureScan Foods"
                                     loading="lazy"
+                                    decoding="async"
                                     className="rounded-2xl border-4 border-ink/70 shadow-2xl dark:border-line"
                                 />
                             </ParallaxY>

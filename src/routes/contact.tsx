@@ -2,33 +2,17 @@ import { createFileRoute } from "@tanstack/react-router";
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { Suspense, lazy, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
-import iconUrl from "leaflet/dist/images/marker-icon.png";
-import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
-import shadowUrl from "leaflet/dist/images/marker-shadow.png";
 import { useTheme } from "../contexts/ThemeContext";
 import { Contours } from "../components/scenery/Contours";
 import { SectionHeading } from "../components/SectionHeading";
 import { Reveal } from "../components/motion/primitives";
 
-const DefaultIcon = L.icon({
-    iconUrl,
-    iconRetinaUrl,
-    shadowUrl,
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    tooltipAnchor: [16, -28],
-    shadowSize: [41, 41],
-});
-
-L.Marker.prototype.options.icon = DefaultIcon;
+/* Leaflet and EmailJS are both loaded on demand: neither is needed to paint
+   this page, and the route file itself is imported eagerly by the router. */
+const LocationMap = lazy(() => import("../components/LocationMap"));
 
 const directContactLinks = [
     {
@@ -63,10 +47,6 @@ function ContactPage() {
     const { t, i18n } = useTranslation();
     const { theme } = useTheme();
 
-    const lightMapUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-    const darkMapUrl = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
-    const mapUrl = theme === "light" ? lightMapUrl : darkMapUrl;
-
     const formRef = useRef<HTMLFormElement>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [formStatus, setFormStatus] = useState({ success: false, message: "" });
@@ -91,25 +71,28 @@ function ContactPage() {
 
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (!formRef.current) return;
+        const form = formRef.current;
+        if (!form) return;
         setIsSubmitting(true);
 
-        emailjs
-            .sendForm(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                formRef.current,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        import("@emailjs/browser")
+            .then(({ default: emailjs }) =>
+                emailjs.sendForm(
+                    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                    form,
+                    import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+                ),
             )
             .then(
                 () => {
                     setFormStatus({ success: true, message: t("contact_page.form_status_success") });
-                    formRef.current?.reset();
+                    form.reset();
                 },
                 (error) => {
                     setFormStatus({
                         success: false,
-                        message: t("contact_page.form_status_error") + error.text,
+                        message: t("contact_page.form_status_error") + (error?.text ?? ""),
                     });
                 },
             )
@@ -177,26 +160,12 @@ function ContactPage() {
                                     </span>
                                 </div>
                                 <div className="h-64">
-                                    <MapContainer
-                                        center={[38.4237, 27.1428]}
-                                        zoom={10}
-                                        scrollWheelZoom={false}
-                                        className="h-full w-full"
-                                    >
-                                        <TileLayer
-                                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                                            url={mapUrl}
+                                    <Suspense fallback={<div className="h-full w-full bg-soft" />}>
+                                        <LocationMap
+                                            theme={theme}
+                                            popupHtml={t("contact_page.location_popup")}
                                         />
-                                        <Marker position={[38.4237, 27.1428]}>
-                                            <Popup>
-                                                <span
-                                                    dangerouslySetInnerHTML={{
-                                                        __html: t("contact_page.location_popup"),
-                                                    }}
-                                                />
-                                            </Popup>
-                                        </Marker>
-                                    </MapContainer>
+                                    </Suspense>
                                 </div>
                             </div>
                         </Reveal>

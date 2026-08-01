@@ -171,17 +171,19 @@ function ExpandableText({ text }: { text: string }) {
 
 function ImageArea({ project, tall = false }: { project: FullProject; tall?: boolean }) {
     const height = tall ? "h-[340px] sm:h-[420px]" : "h-[280px]";
+    const image = project.image;
+    if (!image) return null;
 
     return (
         <div className={`relative overflow-hidden bg-soft ${height}`}>
             <div className="blueprint-grid absolute inset-0 opacity-60" />
             {project.mockupType === "phone" ? (
-                <PhoneMockup src={`/${project.image}`} alt={project.title} accentColor={project.accentColor} />
+                <PhoneMockup src={image} alt={project.title} accentColor={project.accentColor} />
             ) : project.mockupType === "laptop" ? (
                 <div className="flex h-full items-center justify-center p-6">
                     <ParallaxY from={14} to={-14} className="w-full">
                         <LaptopMockup
-                            src={`/${project.image}`}
+                            src={image}
                             alt={project.title}
                             accentColor={project.accentColor}
                         />
@@ -190,9 +192,10 @@ function ImageArea({ project, tall = false }: { project: FullProject; tall?: boo
             ) : (
                 <ParallaxY from={10} to={-10} className="h-full w-full">
                     <img
-                        src={`/${project.image}`}
+                        src={image}
                         alt={project.title}
                         loading="lazy"
+                        decoding="async"
                         className="h-full w-full object-cover"
                     />
                 </ParallaxY>
@@ -232,19 +235,22 @@ function FeaturedProject({ project }: { project: FullProject }) {
                         <div className="relative flex h-full min-h-[280px] items-center justify-center overflow-hidden bg-soft p-6 sm:min-h-[360px]">
                             <div className="blueprint-grid absolute inset-0 opacity-60" />
                             <ParallaxY from={20} to={-20} className="w-full max-w-2xl">
-                                {project.webImage ? (
+                                {project.webImage && project.image ? (
                                     <DeviceDuo
-                                        laptopSrc={`/${project.webImage}`}
-                                        phoneSrc={`/${project.image}`}
+                                        laptopSrc={project.webImage}
+                                        phoneSrc={project.image}
                                         alt={project.title}
                                         accentColor={project.accentColor}
                                     />
                                 ) : (
-                                    <img
-                                        src={`/${project.image}`}
-                                        alt={project.title}
-                                        className="rounded-xl border border-line/70 shadow-2xl"
-                                    />
+                                    project.image && (
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            decoding="async"
+                                            className="rounded-xl border border-line/70 shadow-2xl"
+                                        />
+                                    )
                                 )}
                             </ParallaxY>
                         </div>

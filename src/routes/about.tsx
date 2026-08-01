@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async";
 import { FiArrowDown, FiArrowUpRight } from "react-icons/fi";
 import { Contours } from "../components/scenery/Contours";
 import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
+import portrait from "../assets/ahmet.webp";
 
 export const Route = createFileRoute("/about")({
     component: AboutPage,
@@ -131,8 +132,12 @@ function AboutPage() {
                                 left and bottom edges. The source image keeps its natural alpha. */}
                             <div className="relative w-56 overflow-hidden rounded-[1.75rem] border border-accent/55 sm:w-64 dark:hidden">
                                 <img
-                                    src="/ahmet-.webp"
+                                    src={portrait}
                                     alt="Ahmet Demiroğlu"
+                                    width={560}
+                                    height={747}
+                                    fetchPriority="high"
+                                    decoding="async"
                                     className="block w-full"
                                 />
                             </div>
@@ -148,8 +153,12 @@ function AboutPage() {
                                     className="absolute inset-0 -translate-x-2 -translate-y-2 rounded-[1.75rem] border border-line/50"
                                 />
                                 <img
-                                    src="/ahmet-.webp"
+                                    src={portrait}
                                     alt="Ahmet Demiroğlu"
+                                    width={560}
+                                    height={747}
+                                    fetchPriority="high"
+                                    decoding="async"
                                     className="relative block w-full"
                                     style={{
                                         WebkitMaskImage: DARK_PHOTO_MASK,

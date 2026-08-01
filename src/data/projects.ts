@@ -1,6 +1,16 @@
+import fintelScreen from "../assets/fintel-screen.webp";
+import gghubScreen from "../assets/gghub-screen.webp";
+import gghubWeb from "../assets/gghub-web.webp";
+import multimind from "../assets/multimind.webp";
+import openworld from "../assets/openworld.webp";
+import purescanFoodsScreen from "../assets/purescan-foods-screen.webp";
+import purescanScreen from "../assets/purescan-screen.webp";
+import sip from "../assets/sip.webp";
+
 export interface ProjectBase {
     id: string;
-    image: string;
+    /* Resolved (hashed) asset URL. Archive-only entries render no image, so this is optional. */
+    image?: string;
     /* Optional web/desktop screenshot — when set, the featured card shows a laptop+phone duo. */
     webImage?: string;
     liveLink: string | null;
@@ -21,8 +31,8 @@ export interface ProjectBase {
 export const projectsData: ProjectBase[] = [
     {
         id: "gghub",
-        image: "gghub-screen.jpg",
-        webImage: "gghub-web.jpg",
+        image: gghubScreen,
+        webImage: gghubWeb,
         liveLink: "https://gghub.social",
         githubLink: "https://github.com/AhmetDemiroglu/GGHub",
         appStoreLink: "https://apps.apple.com/us/app/gghub-games-community/id6781281375",
@@ -34,7 +44,7 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "fintel",
-        image: "fintel-screen.png",
+        image: fintelScreen,
         liveLink: "https://expense-tracker-v2-f5a0b.web.app/",
         githubLink: "https://github.com/AhmetDemiroglu/expense-tracker-v2",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.fintel.app",
@@ -45,7 +55,7 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "purescan",
-        image: "purescan-screen.png",
+        image: purescanScreen,
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/PureScan",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.septimuslab.purescan",
@@ -56,7 +66,7 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "purescan_foods",
-        image: "purescan-foods-screen.png",
+        image: purescanFoodsScreen,
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/PureScanFoods",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.purescan.foods",
@@ -68,7 +78,7 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "openworld",
-        image: "openworld.png",
+        image: openworld,
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/OpenWorld",
         badges: ["experimental"],
@@ -78,7 +88,7 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "multimind",
-        image: "multimind.png",
+        image: multimind,
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/MultiMind",
         badges: ["experimental"],
@@ -88,7 +98,7 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "sip",
-        image: "sip.png",
+        image: sip,
         liveLink: null,
         githubLink: null,
         badges: ["beta"],
@@ -98,14 +108,12 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "rent_a_car",
-        image: "Rent A Car Svg.svg",
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/rota-rent-a-car",
         pinned: false,
     },
     {
         id: "not_defteri",
-        image: "Not Defteri svg.svg",
         liveLink: "https://interactive-notebook-4b92a.web.app/folder/-OHERE6EyPnNkjYdwwwk",
         githubLink: "https://github.com/AhmetDemiroglu/interactive-notebook",
         badges: ["live"],
@@ -113,7 +121,6 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "butce_360",
-        image: "butce360 svg.svg",
         liveLink: "https://expense-tracker-1dc73.firebaseapp.com/",
         githubLink: "https://github.com/AhmetDemiroglu/expense-tracker",
         badges: ["live"],

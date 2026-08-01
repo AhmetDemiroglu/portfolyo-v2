@@ -47,37 +47,77 @@
             content="Ahmet Demiroğlu, Full-Stack Developer portfolyo paylaşım görseli"
         />
 
-        <link rel="icon" type="image/png" href="/icon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        <!-- The app renders client-side, so no text exists until the bundle runs and
+             the browser would otherwise only discover these once React paints. -->
         <link
-            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-            rel="stylesheet"
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            crossorigin
+            href="/fonts/space-grotesk-700-latin.woff2"
         />
-        <script type="text/javascript">
-            (function (c, l, a, r, i, t, y) {
-                c[a] =
-                    c[a] ||
-                    function () {
-                        (c[a].q = c[a].q || []).push(arguments);
-                    };
-                t = l.createElement(r);
-                t.async = 1;
-                t.src = "https://www.clarity.ms/tag/" + i;
-                y = l.getElementsByTagName(r)[0];
-                y.parentNode.insertBefore(t, y);
-            })(window, document, "clarity", "script", "u10ieihl2z");
-        </script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFJXL2E2NV"></script>
+        <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            crossorigin
+            href="/fonts/space-grotesk-700-latin-ext.woff2"
+        />
+        <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            crossorigin
+            href="/fonts/inter-400-latin.woff2"
+        />
+
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
+            /* The queueing stubs stay synchronous so nothing the app reports before
+               the vendors arrive is lost. Only the two remote scripts are held back
+               until the page has settled: previously they executed during load and
+               were a large share of the measured blocking time. */
+            (function () {
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () {
+                    window.dataLayer.push(arguments);
+                };
+                window.gtag("js", new Date());
+                window.gtag("config", "G-MFJXL2E2NV", { send_page_view: false });
 
-            gtag("js", new Date());
+                window.clarity =
+                    window.clarity ||
+                    function () {
+                        (window.clarity.q = window.clarity.q || []).push(arguments);
+                    };
 
-            gtag("config", "G-MFJXL2E2NV", { send_page_view: false });
+                var loaded = false;
+                function loadVendors() {
+                    if (loaded) return;
+                    loaded = true;
+                    ["https://www.googletagmanager.com/gtag/js?id=G-MFJXL2E2NV",
+                     "https://www.clarity.ms/tag/u10ieihl2z"].forEach(function (src) {
+                        var s = document.createElement("script");
+                        s.async = true;
+                        s.src = src;
+                        document.head.appendChild(s);
+                    });
+                }
+
+                function schedule() {
+                    if ("requestIdleCallback" in window) {
+                        requestIdleCallback(loadVendors, { timeout: 4000 });
+                    } else {
+                        setTimeout(loadVendors, 2000);
+                    }
+                }
+
+                if (document.readyState === "complete") schedule();
+                else window.addEventListener("load", schedule, { once: true });
+            })();
         </script>
     </head>
     <body>

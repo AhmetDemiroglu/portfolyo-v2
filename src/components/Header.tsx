@@ -44,7 +44,7 @@ export function Header() {
                 }`}
             >
                 <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-                    <Link to="/" preload="intent" aria-label="Ana sayfa">
+                    <Link to="/" preload="intent">
                         <Logo />
                     </Link>
 
