@@ -287,14 +287,14 @@ function FeaturedSection() {
                                 <div className="relative h-60 shrink-0 overflow-hidden bg-soft">
                                     {project.mockupType === "phone" ? (
                                         <PhoneMockup
-                                            src={`/${project.image}`}
+                                            src={project.image!}
                                             alt={t(`projects_page.projects.${project.id}.title`)}
                                             accentColor={project.accentColor}
                                         />
                                     ) : (
                                         <div className="flex h-full items-center justify-center p-6">
                                             <LaptopMockup
-                                                src={`/${project.image}`}
+                                                src={project.image!}
                                                 alt={t(`projects_page.projects.${project.id}.title`)}
                                                 accentColor={project.accentColor}
                                             />

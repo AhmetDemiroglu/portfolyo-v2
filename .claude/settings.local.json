@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(head -5 \"/Users/ahmetdemiroglu/Documents/SaaS/Portfolyo \\(New\\)/src/routes/about.tsx\" \"/Users/ahmetdemiroglu/Documents/SaaS/Portfolyo \\(New\\)/src/routes/skills.tsx\" \"/Users/ahmetdemiroglu/Documents/SaaS/Portfolyo \\(New\\)/src/routes/projects.tsx\" \"/Users/ahmetdemiroglu/Documents/SaaS/Portfolyo \\(New\\)/src/routes/\\\\$.tsx\")"
+    ]
+  }
+}
