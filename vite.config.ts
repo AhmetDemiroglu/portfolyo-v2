@@ -32,7 +32,7 @@ export default defineConfig({
           react: ['react', 'react-dom', 'react-dom/client', 'react/jsx-runtime'],
           router: ['@tanstack/react-router'],
           motion: ['framer-motion'],
-          i18n: ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
+          i18n: ['i18next', 'react-i18next'],
         },
       },
     },

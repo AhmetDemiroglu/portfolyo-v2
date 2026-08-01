@@ -1,6 +1,6 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, type CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { FiArrowDown, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
@@ -35,6 +35,15 @@ const RIBBON = [
 
 const FEATURED_IDS = ["gghub", "purescan_foods", "purescan"] as const;
 
+/* Drives the .hero-in keyframes. Kept as inline custom properties so each line
+   of the hero can stagger without a class per delay. */
+const heroIn = (y: number, delay: number, duration = 0.8) =>
+    ({
+        "--hero-y": `${y}px`,
+        "--hero-delay": `${delay}s`,
+        "--hero-dur": `${duration}s`,
+    }) as CSSProperties;
+
 function Hero() {
     const { t } = useTranslation();
     const heroRef = useRef<HTMLElement>(null);
@@ -57,51 +66,35 @@ function Hero() {
                 style={reduce ? undefined : { y: contentY, opacity: contentOpacity }}
                 className="relative z-10 mx-auto -mt-16 max-w-4xl px-5 text-center sm:px-8"
             >
-                <motion.div
-                    initial={reduce ? false : { opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                    className="flex min-h-[3.75rem] items-end justify-center"
+                <div
+                    style={heroIn(20, 0, 0.7)}
+                    className="hero-in flex min-h-[3.75rem] items-end justify-center"
                 >
                     <p className="font-mono text-sm uppercase tracking-[0.3em] text-accent sm:text-base">
                         {t("home.kicker")}
                     </p>
-                </motion.div>
+                </div>
 
                 <h1 className="mt-5 font-display text-[2.6rem] font-bold leading-[1.04] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-                    <motion.span
-                        className="block"
-                        initial={reduce ? false : { opacity: 0, y: 34 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-                    >
+                    <span className="hero-in block" style={heroIn(34, 0.16)}>
                         {t("home.line1")}
-                    </motion.span>
-                    <motion.span
-                        className="block"
-                        initial={reduce ? false : { opacity: 0, y: 34 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
-                    >
+                    </span>
+                    <span className="hero-in block" style={heroIn(34, 0.28)}>
                         {t("home.line2a")}
                         <span className="text-accent">{t("home.line2b")}</span>
-                    </motion.span>
+                    </span>
                 </h1>
 
-                <motion.p
-                    initial={reduce ? false : { opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                    className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg"
+                <p
+                    style={heroIn(24, 0.4)}
+                    className="hero-in mx-auto mt-7 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg"
                 >
                     {t("home.description")}
-                </motion.p>
+                </p>
 
-                <motion.div
-                    initial={reduce ? false : { opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                    className="mt-10 flex flex-wrap items-center justify-center gap-4"
+                <div
+                    style={heroIn(24, 0.5)}
+                    className="hero-in mt-10 flex flex-wrap items-center justify-center gap-4"
                 >
                     <Link
                         to="/projects"
@@ -116,7 +109,7 @@ function Hero() {
                     >
                         {t("home.cta_contact")}
                     </Link>
-                </motion.div>
+                </div>
             </motion.div>
 
             <div className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2">

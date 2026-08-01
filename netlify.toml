@@ -21,6 +21,32 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
+# Each route is prerendered to its own HTML during the build, so serve that
+# instead of falling through to the SPA shell. Listed explicitly rather than
+# relying on static-file precedence, so a route can never silently degrade to
+# the client-rendered shell.
+[[redirects]]
+  from = "/about"
+  to = "/about/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/skills"
+  to = "/skills/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/projects"
+  to = "/projects/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact/index.html"
+  status = 200
+
+# Anything else (deep links, 404s) still boots the app, which renders its own
+# not-found route.
 [[redirects]]
   from = "/*"
   to = "/index.html"

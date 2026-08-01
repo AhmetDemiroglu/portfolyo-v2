@@ -47,6 +47,32 @@
             content="Ahmet Demiroğlu, Full-Stack Developer portfolyo paylaşım görseli"
         />
 
+        <script>
+            /* Runs before first paint so the very first frame is already in the
+               right theme and language. Without it, dark-mode visitors saw a
+               light flash while React booted and applied the class. Must stay in
+               sync with the default in ThemeContext. */
+            (function () {
+                var el = document.documentElement;
+                try {
+                    var saved = localStorage.getItem("theme");
+                    el.classList.add(saved === "light" ? "light" : "dark");
+                } catch (e) {
+                    el.classList.add("dark");
+                }
+                try {
+                    var cookie = document.cookie.match(/(?:^|;\s*)i18next=([^;]*)/);
+                    var lng =
+                        (cookie && decodeURIComponent(cookie[1])) ||
+                        localStorage.getItem("i18nextLng") ||
+                        navigator.language ||
+                        "tr";
+                    lng = lng.split("-")[0];
+                    el.lang = ["tr", "en", "de", "es"].indexOf(lng) === -1 ? "tr" : lng;
+                } catch (e) {}
+            })();
+        </script>
+
         <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

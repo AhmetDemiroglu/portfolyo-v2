@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
-import { Suspense, lazy, useRef, useState } from "react";
+import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useTheme } from "../contexts/ThemeContext";
@@ -50,6 +50,12 @@ function ContactPage() {
     const formRef = useRef<HTMLFormElement>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [formStatus, setFormStatus] = useState({ success: false, message: "" });
+
+    /* The map is mounted only after hydration. Rendering a lazy component during
+       the prerender would leave a Suspense boundary the static render cannot
+       finish, which React reports as an error on every visit to this page. */
+    const [mapReady, setMapReady] = useState(false);
+    useEffect(() => setMapReady(true), []);
 
     const translatedDirectLinks = t("contact_page.direct_links", { returnObjects: true }) as Record<
         string,
@@ -160,12 +166,16 @@ function ContactPage() {
                                     </span>
                                 </div>
                                 <div className="h-64">
-                                    <Suspense fallback={<div className="h-full w-full bg-soft" />}>
-                                        <LocationMap
-                                            theme={theme}
-                                            popupHtml={t("contact_page.location_popup")}
-                                        />
-                                    </Suspense>
+                                    {mapReady ? (
+                                        <Suspense fallback={<div className="h-full w-full bg-soft" />}>
+                                            <LocationMap
+                                                theme={theme}
+                                                popupHtml={t("contact_page.location_popup")}
+                                            />
+                                        </Suspense>
+                                    ) : (
+                                        <div className="h-full w-full bg-soft" />
+                                    )}
                                 </div>
                             </div>
                         </Reveal>
