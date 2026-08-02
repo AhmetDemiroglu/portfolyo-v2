@@ -10,9 +10,17 @@ import { ThemeSwitcher } from "./ThemeSwitcher";
 const navHrefs = ["/", "/about", "/skills", "/projects", "/contact"] as const;
 const navKeys = ["home", "about", "skills", "projects", "contact"] as const;
 
+/* "/about/" and "/about" have to be treated as the same page. A host that adds a
+   trailing slash would otherwise make the active item render differently on the
+   client than in the prerendered HTML, which breaks hydration. */
+const normalizePath = (path: string) =>
+    path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+
 export function Header() {
     const { t } = useTranslation();
-    const pathname = useRouterState({ select: (state) => state.location.pathname });
+    const pathname = useRouterState({
+        select: (state) => normalizePath(state.location.pathname),
+    });
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 

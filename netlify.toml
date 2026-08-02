@@ -2,6 +2,12 @@
   command = "npm run build"
   publish = "dist"
 
+# Without this Netlify answers /about with a 301 to /about/. That costs an extra
+# round trip, and it also means the page hydrates at a different pathname than
+# the one it was prerendered at, which breaks hydration.
+[build.processing.html]
+  pretty_urls = false
+
 # Vite fingerprints everything under /assets, so it can be cached forever.
 [[headers]]
   for = "/assets/*"
