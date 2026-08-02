@@ -58,7 +58,6 @@ function detect(): string {
   return isSupported(fromNavigator) ? fromNavigator : 'tr';
 }
 
-/** What this visitor should end up seeing. Applied after hydration, not before. */
 export const preferredLanguage = detect();
 
 i18n
@@ -69,15 +68,14 @@ i18n
     // tr comes bundled; everything else still goes through the backend above.
     partialBundledLanguages: true,
     supportedLngs: [...SUPPORTED_LANGUAGES],
-    // Always boot in the language the HTML was prerendered in. Starting in the
-    // visitor's own language instead would mean React hydrating English markup
-    // onto a Turkish document, which fails and makes it throw the prerendered
-    // DOM away - exactly the paint we are trying to keep.
-    lng: 'tr',
+    lng: preferredLanguage,
     fallbackLng: 'tr',
     debug: import.meta.env.MODE === 'development',
     react: {
-      useSuspense: false,
+      // Turkish is bundled, so this never suspends for the common case. For the
+      // other three it waits on one small same-origin chunk, which is cheaper
+      // than showing Turkish first and swapping it out.
+      useSuspense: true,
     },
   });
 

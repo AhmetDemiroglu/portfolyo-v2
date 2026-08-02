@@ -23,5 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-# build-time only prerender helper bundle
-.prerender/
