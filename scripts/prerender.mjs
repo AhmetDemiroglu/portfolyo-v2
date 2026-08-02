@@ -73,11 +73,23 @@ function dropDanglingRefs(html) {
     });
 }
 
+/** Route paths must always resolve to a file, because netlify.toml rewrites
+ *  point straight at them. Falling back to the untouched shell means that route
+ *  is merely client-rendered, which is what the site did before; a missing file
+ *  would be a 404. */
+function writeHtml(route, html) {
+    const outDir = route === '/' ? DIST : path.join(DIST, route);
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'index.html'), html);
+    return path.relative(DIST, path.join(outDir, 'index.html'));
+}
+
 let puppeteer;
 try {
     puppeteer = (await import('puppeteer')).default;
 } catch {
     console.warn('[prerender] puppeteer unavailable, shipping the SPA shell as-is.');
+    for (const route of ROUTES) writeHtml(route, TEMPLATE);
     process.exit(0);
 }
 
@@ -88,6 +100,9 @@ try {
     browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-dev-shm-usage'] });
 
     for (const route of ROUTES) {
+      let done = false;
+      for (let attempt = 1; attempt <= 2 && !done; attempt++) {
+       try {
         const page = await browser.newPage();
         await page.setViewport({ width: 1280, height: 900 });
 
@@ -115,7 +130,9 @@ try {
         await page.addScriptTag({ url: `${HELPER_PREFIX}entry.js`, type: 'module' });
         await page.waitForFunction(() => typeof window.__prerenderHTML === 'function', { timeout: 30000 });
 
-        const html = await page.evaluate(async () => {
+        // Mutate in place and read the document back with page.content(): the
+        // whole HTML is too large to hand back through evaluate() reliably.
+        await page.evaluate(async () => {
             const body = await window.__prerenderHTML();
             // The theme class is per visitor, decided by the inline head script,
             // so it must not be baked into the output.
@@ -124,23 +141,45 @@ try {
             // deployed page asking for it would get the SPA fallback HTML back
             // and log a MIME type error.
             document.querySelectorAll('script[src^="/__prerender/"]').forEach((s) => s.remove());
-            document.getElementById('root').innerHTML = body;
-            return '<!doctype html>\n' + document.documentElement.outerHTML;
+
+            const root = document.getElementById('root');
+            root.innerHTML = body;
+
+            /* React hoists resources it wants preloaded (<link rel="preload">
+               for a fetchPriority image, stylesheets, ...) to the front of the
+               static render. On the client those same resources are put in
+               <head>, so leaving them inside #root makes hydration disagree on
+               the very first node. Move them where React expects to find them. */
+            for (const node of [...root.children]) {
+                if (['LINK', 'META', 'TITLE', 'STYLE'].includes(node.tagName)) {
+                    document.head.appendChild(node);
+                }
+            }
+
         });
 
-        const cleaned = dropDanglingRefs(html);
-
-        const outDir = route === '/' ? DIST : path.join(DIST, route);
-        fs.mkdirSync(outDir, { recursive: true });
-        fs.writeFileSync(path.join(outDir, 'index.html'), cleaned);
-
+        const cleaned = dropDanglingRefs(await page.content());
+        const written = writeHtml(route, cleaned);
         const kb = (Buffer.byteLength(cleaned) / 1024).toFixed(1);
-        console.log(`[prerender] ${route.padEnd(10)} -> ${path.relative(DIST, path.join(outDir, 'index.html'))} (${kb} kB)`);
+        console.log(`[prerender] ${route.padEnd(10)} -> ${written} (${kb} kB)`);
 
         await page.close();
+        done = true;
+       } catch (error) {
+        console.warn(`[prerender] ${route} attempt ${attempt} failed: ${error.message}`);
+       }
+      }
+      if (!done) {
+        writeHtml(route, TEMPLATE);
+        console.warn(`[prerender] ${route} falls back to the client-rendered shell`);
+      }
     }
 } catch (error) {
-    console.warn(`[prerender] skipped: ${error.message}`);
+    console.warn(`[prerender] aborted: ${error.message}`);
+    for (const route of ROUTES) {
+        const file = route === '/' ? path.join(DIST, 'index.html') : path.join(DIST, route, 'index.html');
+        if (!fs.existsSync(file)) writeHtml(route, TEMPLATE);
+    }
 } finally {
     await browser?.close();
     server.close();
