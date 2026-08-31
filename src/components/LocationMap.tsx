@@ -23,8 +23,22 @@ const DefaultIcon = L.icon({
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
+/* CARTO started watermarking raster tiles that arrive without a key. The key is
+   public by design (it ships in the bundle, has no domain lock) and a missing or
+   wrong one degrades to the watermark rather than breaking the map, so there is
+   no fallback path to maintain here. Set VITE_CARTO_KEY in Netlify as well as
+   .env.local, otherwise the production build renders the watermarked tiles. */
+const CARTO_KEY = import.meta.env.VITE_CARTO_KEY ?? "";
+
 const LIGHT_TILES = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-const DARK_TILES = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
+const DARK_TILES = `https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=${CARTO_KEY}`;
+
+/* CARTO's terms require its attribution to stay visible wherever its tiles are
+   drawn, so the credit follows the theme the same way the tiles do. */
+const LIGHT_ATTRIBUTION =
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+const DARK_ATTRIBUTION =
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>';
 
 export default function LocationMap({
     theme,
@@ -41,7 +55,7 @@ export default function LocationMap({
             className="h-full w-full"
         >
             <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                attribution={theme === "light" ? LIGHT_ATTRIBUTION : DARK_ATTRIBUTION}
                 url={theme === "light" ? LIGHT_TILES : DARK_TILES}
             />
             <Marker position={[38.4237, 27.1428]}>
