@@ -89,12 +89,16 @@
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Gaming-Sozialplattform",
-        "timeline_5_content": "Ich habe GGHub, eine Gaming-Sozialplattform, als persönliches Projekt entwickelt und veröffentlicht. Aufgebaut auf einer Next.js-Web-App und einem .NET-Core-Backend, hat sie ihr V3-Release erreicht: mehrsprachige Unterstützung, SignalR-basierte Echtzeit-Kommunikation und deutliche Performance-Verbesserungen. Ihre nativen Mobile-Apps sind jetzt live: iOS im App Store und Android im Google Play Store. Ich veröffentliche weiterhin mehrwertschaffende Verbesserungen.",
+        "timeline_5_content": "Ich habe GGHub, eine Gaming-Sozialplattform, als persönliches Projekt entwickelt und veröffentlicht. Aufgebaut auf einer Next.js-Web-App und einem .NET-Core-Backend, hat sie ihr V3-Release erreicht: mehrsprachige Unterstützung, SignalR-basierte Echtzeit-Kommunikation und deutliche Performance-Verbesserungen. Ihre nativen Mobile-Apps sind im App Store und im Google Play Store live. Der jüngste große Schritt sind die KI-Bots, die auf der Plattform leben: Jeder hat seinen eigenen Charakter und Spielegeschmack, schreibt Bewertungen, postet, beantwortet Nachrichten und diskutiert mit den anderen. Die gesamte Agenten-Infrastruktur habe ich selbst gebaut, vom Planer und der Aufgaben-Queue bis zum Modell-Gateway und zur Einwilligungsschicht.",
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "KI-gestützte mobile Anwendungen",
         "timeline_6_content": "Unter meinem unabhängigen Mobile-Studio SeptimusLab entwickle und veröffentliche ich KI-gestützte Apps. Fintel für die periodische Ausgabenverfolgung und PureScan Cosmetics für die Analyse kosmetischer Inhaltsstoffe sind live. PureScan Foods ist auf Google Play erschienen; die iOS-Version ist jetzt im App Store verfügbar. Mit React Native erweitere ich meinen Stack kontinuierlich.",
-        "timeline_6_link": "https://septimuslab.com"
+        "timeline_6_link": "https://septimuslab.com",
+        "timeline_7_year": "2026",
+        "timeline_7_title": "Technische Universität des Nahen Ostens",
+        "timeline_7_subtitle": "Masterstudium · KI und Planung",
+        "timeline_7_content": "Ich bin an die Technische Universität des Nahen Ostens (ODTÜ) zurückgekehrt, um mein Masterstudium dort fortzusetzen, wo ich es unterbrochen hatte: in der Phase der Abschlussarbeit. Es ist Zeit, die unvollendete Geschichte zu Ende zu bringen. Meine Masterarbeit widmet sich künstlicher Intelligenz und Planung, die Literaturrecherche läuft bereits. 2026-2027 verbinde ich die Planung, die ich im Bachelor studiert habe, mit der Software und KI, an denen ich beruflich arbeite, und bringe mich in diesem Feld auf die nächste Stufe. Parallel geht die Entwicklung weiter: Ich baue weiterhin Workflow-Anwendungen für Unternehmen, von Rechnungsfreigabe und B2B-Handelsportalen bis zu HR-Modulen und ERP-integrierten Systemen."
     },
     "skills_page": {
         "label": "Kompetenzen",
@@ -388,11 +392,13 @@
             },
             "gghub": {
                 "title": "GGHub - Gamer-Sozialplattform",
-                "description": "Mein Monorepo-Projekt, das ein .NET-8-Backend und eine Next.js-15-Web-App unter Clean Architecture vereint, hat sein V3-Release erreicht und ist nun auch mobil verfügbar. Neben Spiele-Entdeckung, detaillierten Bewertungen, Home-Feed, Abzeichen und Leveln, Bestenlisten, Admin-Panel und Profil-Algorithmen bietet es mehrsprachige Unterstützung (EN/TR), SignalR-basierte Echtzeit-Kommunikation und deutliche Performance-Verbesserungen. Die nativen iOS- und Android-Apps (React Native / Expo) bringen die Plattform aufs Smartphone, und die Entwicklung geht mit neuen, mehrwertschaffenden Funktionen weiter. Live im Web unter gghub.social, im App Store und im Google Play Store.",
+                "description": "Eine Gaming-Sozialplattform, live im Web und mobil, die ein .NET-8-Backend und eine Next.js-15-Web-App unter Clean Architecture vereint. Auf ihr leben KI-Bots mit eigenem Charakter, Spielegeschmack und eigener Sprache: Sie schreiben Bewertungen, posten, kommentieren Listen, beantworten Nachrichten in Echtzeit, diskutieren miteinander und starten Umfragen. Dahinter steht eine von Grund auf selbst gebaute Agenten-Engine: ein Planer, der das Tageskontingent jedes Bots über den Tag verteilt, eine Aufgaben-Queue, ein LLM-Gateway, das vom kostenlosen Gemma auf ein budgetgedeckeltes Gemini Flash-Lite ausweicht, und eine Einwilligungsschicht, die ohne ausdrückliche Zustimmung keine Nutzerdaten an das Modell sendet. Bot-Wertungen fließen weder in Durchschnitte noch in Bestenlisten ein. Außerdem bietet die Plattform Spiele-Entdeckung, detaillierte Bewertungen, Home-Feed, Abzeichen und Level, Admin-Panel, mehrsprachige Unterstützung (EN/TR) und SignalR-basierte Echtzeit-Kommunikation. Mit nativen iOS- und Android-Apps (React Native / Expo) live unter gghub.social, im App Store und im Google Play Store.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
                     "Clean Architecture",
+                    "AI Agents",
+                    "Gemma / Gemini",
                     "SignalR",
                     "PostgreSQL",
                     "React Native",

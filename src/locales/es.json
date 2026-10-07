@@ -89,12 +89,16 @@
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Plataforma Social de Gaming",
-        "timeline_5_content": "Desarrollé y lancé GGHub, una plataforma social de gaming, como proyecto personal. Construida sobre una app web Next.js y un backend .NET Core, ha alcanzado su versión V3 con soporte multilingüe, mensajería en tiempo real basada en SignalR y mejoras notables de rendimiento. Sus apps móviles nativas ya están disponibles: iOS en la App Store y Android en Google Play. Sigo lanzando mejoras que aportan valor a la plataforma.",
+        "timeline_5_content": "Desarrollé y lancé GGHub, una plataforma social de gaming, como proyecto personal. Construida sobre una app web Next.js y un backend .NET Core, ha alcanzado su versión V3 con soporte multilingüe, mensajería en tiempo real basada en SignalR y mejoras notables de rendimiento. Sus apps móviles nativas están disponibles en la App Store y en Google Play. El último gran paso son los bots de IA que viven dentro de la plataforma: cada uno con su propio carácter y gusto por los juegos, escriben reseñas, publican, responden mensajes y discuten entre ellos. Construí yo mismo toda la infraestructura de agentes, desde el planificador y la cola de tareas hasta la pasarela de modelos y la capa de consentimiento explícito.",
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "Aplicaciones móviles con IA",
         "timeline_6_content": "Bajo mi estudio independiente de software móvil SeptimusLab, desarrollo y publico aplicaciones impulsadas por IA. Fintel, para el seguimiento periódico de gastos, y PureScan Cosmetics, para el análisis de ingredientes cosméticos, ya están en producción. PureScan Foods se ha lanzado en Google Play y su versión iOS ya está disponible en la App Store. Sigo ampliando mi stack con React Native.",
-        "timeline_6_link": "https://septimuslab.com"
+        "timeline_6_link": "https://septimuslab.com",
+        "timeline_7_year": "2026",
+        "timeline_7_title": "Universidad Técnica de Oriente Medio",
+        "timeline_7_subtitle": "Máster · IA y Planificación",
+        "timeline_7_content": "Volví a la Universidad Técnica de Oriente Medio (ODTÜ) para retomar mi máster justo donde lo dejé: en la fase de tesis. Es hora de terminar la historia que quedó a medias. Mi tesis tratará sobre inteligencia artificial y planificación, y la revisión bibliográfica ya está en marcha. Dedicaré 2026-2027 a unir la planificación que estudié en la carrera con el software y la IA en los que trabajo profesionalmente, y a llevarme al siguiente nivel en este campo. Mientras tanto sigo construyendo: continúo desarrollando aplicaciones de flujo de trabajo para empresas, desde aprobación de facturas y portales de comercio B2B hasta módulos de RR. HH. y sistemas integrados con ERP."
     },
     "skills_page": {
         "label": "Competencias",
@@ -388,11 +392,13 @@
             },
             "gghub": {
                 "title": "GGHub - Plataforma Social para Gamers",
-                "description": "Mi proyecto monorepo, que une un backend .NET 8 y una app web Next.js 15 bajo Clean Architecture, ha alcanzado su versión V3 y ahora también está disponible en móvil. Además de descubrimiento de juegos, reseñas detalladas, feed de inicio, insignias y niveles, tablas de clasificación, panel de administración y algoritmos de perfil, ofrece soporte multilingüe (EN/TR), mensajería en tiempo real con SignalR y mejoras notables de rendimiento. Las apps nativas de iOS y Android (React Native / Expo) llevan la plataforma a los teléfonos, y el desarrollo continúa con nuevas funciones que siguen aportando valor. Disponible en la web en gghub.social, en la App Store y en Google Play.",
+                "description": "Una plataforma social para gamers, disponible en web y móvil, que une un backend .NET 8 y una app web Next.js 15 bajo Clean Architecture. Dentro de ella viven bots de IA con su propio carácter, gusto por los juegos e idioma: escriben reseñas, publican, comentan listas, responden mensajes en tiempo real, debaten entre ellos y lanzan encuestas. Detrás hay un motor de agentes que construí desde cero: un planificador que reparte la cuota diaria de cada bot a lo largo del día, una cola de tareas, una pasarela LLM que pasa del Gemma gratuito a un Gemini Flash-Lite con tope de presupuesto y una capa de consentimiento que no envía datos de un usuario al modelo sin su aceptación explícita. Las puntuaciones de los bots no entran en las medias ni en las clasificaciones. La plataforma ofrece además descubrimiento de juegos, reseñas detalladas, feed de inicio, insignias y niveles, panel de administración, soporte multilingüe (EN/TR) y mensajería en tiempo real con SignalR. Disponible en gghub.social, la App Store y Google Play con apps nativas de iOS y Android (React Native / Expo).",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
                     "Clean Architecture",
+                    "AI Agents",
+                    "Gemma / Gemini",
                     "SignalR",
                     "PostgreSQL",
                     "React Native",

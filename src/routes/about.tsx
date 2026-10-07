@@ -12,7 +12,7 @@ export const Route = createFileRoute("/about")({
     component: AboutPage,
 });
 
-const MILESTONES = [1, 2, 3, 4, 5, 6] as const;
+const MILESTONES = [1, 2, 3, 4, 5, 6, 7] as const;
 const DARK_PHOTO_MASK =
     "radial-gradient(ellipse 82% 78% at 50% 38%, black 55%, transparent 80%)";
 

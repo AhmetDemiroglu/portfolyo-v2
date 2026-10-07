@@ -89,12 +89,16 @@
         "timeline_5_year": "2025",
         "timeline_5_title": "GGHub",
         "timeline_5_subtitle": "Oyuncu Sosyal Platformu",
-        "timeline_5_content": "Oyunculara özel sosyal platformum GGHub'ı geliştirip yayına aldım. Next.js web uygulaması ve .NET Core backend altyapısıyla V3 sürümüne ulaşan platform; çoklu dil desteği, SignalR tabanlı gerçek zamanlı mesajlaşma ve ciddi performans iyileştirmeleri sunuyor. Native mobil uygulamaları artık yayında: iOS App Store'da, Android sürümü de Google Play'de yayında. Platforma değer katan geliştirmeleri eklemeye devam ediyorum.",
+        "timeline_5_content": "Oyunculara özel sosyal platformum GGHub'ı geliştirip yayına aldım. Next.js web uygulaması ve .NET Core backend altyapısıyla V3 sürümüne ulaşan platform; çoklu dil desteği, SignalR tabanlı gerçek zamanlı mesajlaşma ve ciddi performans iyileştirmeleri sunuyor. Native mobil uygulamaları App Store ve Google Play'de yayında. Son büyük adım, platformun içinde yaşayan yapay zekâ botları oldu: her biri kendi karakteri ve oyun zevkiyle inceleme yazıyor, gönderi paylaşıyor, mesajlara cevap veriyor ve birbirleriyle tartışıyor. Planlayıcıdan görev kuyruğuna, model geçidinden açık rıza katmanına kadar tüm ajan altyapısını kendim kurdum.",
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "Yapay Zekâ Destekli Mobil Uygulamalar",
         "timeline_6_content": "Bağımsız mobil yazılım stüdyom SeptimusLab çatısı altında yapay zekâ destekli uygulamalar geliştirip yayınlıyorum. Dönemsel harcama takibi için Fintel ve kozmetik içerik analizi için PureScan Cosmetics yayında. PureScan Foods Google Play'de kullanıcılarla buluştu; iOS sürümü de App Store'da yayında. React Native ile teknoloji yığınımı genişletmeye devam ediyorum.",
-        "timeline_6_link": "https://septimuslab.com"
+        "timeline_6_link": "https://septimuslab.com",
+        "timeline_7_year": "2026",
+        "timeline_7_title": "Orta Doğu Teknik Üniversitesi",
+        "timeline_7_subtitle": "Yüksek Lisans · Yapay Zekâ ve Planlama",
+        "timeline_7_content": "Orta Doğu Teknik Üniversitesi'nde tez aşamasında ara verdiğim yüksek lisansa, kaldığım yerden devam etmek üzere döndüm. Yarım kalan hikâyeyi tamamlama zamanı: tezimi yapay zekâ ve planlama üzerine yazacağım, literatür araştırmaları başladı. 2026-2027 dönemini, lisans eğitimini aldığım planlama ile profesyonel olarak çalıştığım yazılım ve yapay zekâyı aynı çalışmada buluşturarak ve bu alanda kendimi bir sonraki seviyeye taşıyarak geçireceğim. Üretim de sürüyor: fatura onay süreçleri, B2B ticaret portalları, insan kaynakları modülleri ve ERP entegrasyonlu kurumsal iş akışı uygulamaları geliştirmeye devam ediyorum."
     },
     "skills_page": {
         "label": "Yetkinlikler",
@@ -388,11 +392,13 @@
             },
             "gghub": {
                 "title": "GGHub - Oyuncu Sosyal Platformu",
-                "description": ".NET 8 backend ile Next.js 15 web uygulamasını Clean Architecture çatısı altında birleştiren monorepo projem V3 sürümüne ulaştı ve artık mobilde de yayında. Oyun keşfi, detaylı incelemeler, ana sayfa akışı, rozet/seviye sistemi, liderlik tabloları, admin paneli ve profil algoritmalarının yanında; çoklu dil desteği (EN/TR), SignalR tabanlı gerçek zamanlı mesajlaşma ve ciddi performans iyileştirmeleri sunuyor. Native iOS ve Android uygulamaları (React Native / Expo) platformu telefonlara taşıyor; değer katan yeni özelliklerle geliştirme sürüyor. Web'de gghub.social, App Store ve Google Play'de yayında.",
+                "description": ".NET 8 backend ile Next.js 15 web uygulamasını Clean Architecture çatısı altında birleştiren, web ve mobilde yayında olan oyuncu sosyal platformum. İçinde kendi karakteri, oyun zevki ve dili olan yapay zekâ botları yaşıyor: inceleme yazıyor, gönderi paylaşıyor, listelere yorum yapıyor, mesajlara gerçek zamanlı cevap veriyor, kendi aralarında tartışıp anket açıyorlar. Arkasında sıfırdan kurduğum bir ajan motoru var: günlük kotayı saatlere yayan planlayıcı, görev kuyruğu, ücretsiz Gemma'dan bütçe tavanlı Gemini Flash-Lite'a düşen LLM geçidi ve açık rıza vermeyen kullanıcının verisini modele göndermeyen izin katmanı. Bot puanları ortalamalara ve liderlik tablolarına girmiyor. Platform ayrıca oyun keşfi, detaylı incelemeler, ana sayfa akışı, rozet/seviye sistemi, admin paneli, çoklu dil desteği (EN/TR) ve SignalR tabanlı gerçek zamanlı mesajlaşma sunuyor. Native iOS ve Android uygulamalarıyla (React Native / Expo) gghub.social, App Store ve Google Play'de yayında.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
                     "Clean Architecture",
+                    "AI Agents",
+                    "Gemma / Gemini",
                     "SignalR",
                     "PostgreSQL",
                     "React Native",
