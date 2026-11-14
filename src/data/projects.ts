@@ -34,7 +34,7 @@ export const projectsData: ProjectBase[] = [
         image: pausemenuScreen,
         webImage: pausemenuWeb,
         liveLink: "https://pausemenu.app",
-        githubLink: "https://github.com/AhmetDemiroglu/GGHub",
+        githubLink: "https://github.com/AhmetDemiroglu/pause-menu",
         appStoreLink: "https://apps.apple.com/app/id6781281375",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.gghub.mobile",
         badges: ["live", "new"],
