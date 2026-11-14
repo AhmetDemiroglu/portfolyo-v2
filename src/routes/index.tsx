@@ -11,7 +11,8 @@ import { SectionHeading } from "../components/SectionHeading";
 import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
 import { PhoneMockup, LaptopMockup } from "../components/DeviceMockups";
 import { projectsData } from "../data/projects";
-import septimusLogo from "../assets/septimuslab.webp";
+import septimusLockupLight from "../assets/brand/septimuslab-lockup-yatay-acik-zemin.svg";
+import septimusLockupDark from "../assets/brand/septimuslab-lockup-yatay-koyu-zemin.svg";
 import pausemenuScreen from "../assets/pausemenu-screen.webp";
 import purescanScreen from "../assets/purescan-screen.webp";
 import purescanFoodsScreen from "../assets/purescan-foods-screen.webp";
@@ -180,17 +181,26 @@ function StudioSection() {
                                 <span className="inline-block h-px w-8 bg-accent" />
                                 {t("home.studio_label")}
                             </p>
-                            <h2 className="mt-5 flex items-center gap-4 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+                            <h2 className="mt-5">
+                                <span className="sr-only">SeptimusLab</span>
                                 <img
-                                    src={septimusLogo}
-                                    alt="SeptimusLab"
-                                    width={128}
-                                    height={128}
+                                    src={septimusLockupLight}
+                                    alt=""
+                                    width={329}
+                                    height={48}
                                     loading="lazy"
                                     decoding="async"
-                                    className="h-12 w-12 rounded-xl object-contain sm:h-14 sm:w-14"
+                                    className="h-11 w-auto sm:h-12 dark:hidden"
                                 />
-                                SeptimusLab
+                                <img
+                                    src={septimusLockupDark}
+                                    alt=""
+                                    width={329}
+                                    height={48}
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="hidden h-11 w-auto sm:h-12 dark:block"
+                                />
                             </h2>
                             <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft sm:text-lg">
                                 {t("home.studio_desc")}
