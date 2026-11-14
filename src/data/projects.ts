@@ -1,6 +1,6 @@
 import fintelScreen from "../assets/fintel-screen.webp";
-import gghubScreen from "../assets/gghub-screen.webp";
-import gghubWeb from "../assets/gghub-web.webp";
+import pausemenuScreen from "../assets/pausemenu-screen.webp";
+import pausemenuWeb from "../assets/pausemenu-web.webp";
 import multimind from "../assets/multimind.webp";
 import openworld from "../assets/openworld.webp";
 import purescanFoodsScreen from "../assets/purescan-foods-screen.webp";
@@ -30,12 +30,12 @@ export interface ProjectBase {
 
 export const projectsData: ProjectBase[] = [
     {
-        id: "gghub",
-        image: gghubScreen,
-        webImage: gghubWeb,
-        liveLink: "https://gghub.social",
+        id: "pausemenu",
+        image: pausemenuScreen,
+        webImage: pausemenuWeb,
+        liveLink: "https://pausemenu.app",
         githubLink: "https://github.com/AhmetDemiroglu/GGHub",
-        appStoreLink: "https://apps.apple.com/us/app/gghub-games-community/id6781281375",
+        appStoreLink: "https://apps.apple.com/app/id6781281375",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.gghub.mobile",
         badges: ["live", "new"],
         pinned: true,

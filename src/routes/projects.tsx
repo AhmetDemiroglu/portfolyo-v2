@@ -17,7 +17,7 @@ interface ProjectTranslation {
 
 type FullProject = ProjectBase & ProjectTranslation;
 
-const FEATURED_ID = "gghub";
+const FEATURED_ID = "pausemenu";
 const MAIN_ORDER = ["purescan_foods", "purescan", "fintel", "openworld", "multimind", "sip"];
 const ARCHIVE_IDS = ["rent_a_car", "not_defteri", "butce_360"];
 

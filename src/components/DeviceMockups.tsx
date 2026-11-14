@@ -74,7 +74,7 @@ interface DeviceDuoProps {
 /**
  * A laptop + phone shown together in light 3D, gently turned toward each other:
  * the web build on the laptop, the mobile build on the phone. Used for products
- * that ship on both web and mobile (e.g. GGHub).
+ * that ship on both web and mobile (e.g. Pause Menu).
  */
 export function DeviceDuo({ laptopSrc, phoneSrc, alt, accentColor = "rgba(139,92,246,0.18)" }: DeviceDuoProps) {
     return (

@@ -87,9 +87,9 @@
         "timeline_4_subtitle": "Desarrollador Full-Stack",
         "timeline_4_content": "Como desarrollador Full-Stack construyo sistemas de flujo de trabajo de extremo a extremo para clientes de fabricación y comercio: portales B2B con integración ERP (Netsis) que automatizan pedidos, inventario y facturación; integraciones de pago y POS con automatización de cobros; y módulos de CRM, logística/TMS y planificación de producción, desde el esquema de SQL Server hasta la API y la interfaz. En el front-end construyo interfaces basadas en componentes con Vue.js y React; en el back-end diseño servicios REST resilientes con rate-limiting y retry/backoff para APIs externas de alto volumen.",
         "timeline_5_year": "2025",
-        "timeline_5_title": "GGHub",
+        "timeline_5_title": "Pause Menu",
         "timeline_5_subtitle": "Plataforma Social de Gaming",
-        "timeline_5_content": "Desarrollé y lancé GGHub, una plataforma social de gaming, como proyecto personal. Construida sobre una app web Next.js y un backend .NET Core, ha alcanzado su versión V3 con soporte multilingüe, mensajería en tiempo real basada en SignalR y mejoras notables de rendimiento. Sus apps móviles nativas están disponibles en la App Store y en Google Play. El último gran paso son los bots de IA que viven dentro de la plataforma: cada uno con su propio carácter y gusto por los juegos, escriben reseñas, publican, responden mensajes y discuten entre ellos. Construí yo mismo toda la infraestructura de agentes, desde el planificador y la cola de tareas hasta la pasarela de modelos y la capa de consentimiento explícito.",
+        "timeline_5_content": "Desarrollé y lancé Pause Menu, una plataforma social de gaming, como proyecto personal. Construida sobre una app web Next.js y un backend .NET Core, ha alcanzado su versión V3 con soporte multilingüe, mensajería en tiempo real basada en SignalR y mejoras notables de rendimiento. Sus apps móviles nativas están disponibles en la App Store y en Google Play. El último gran paso son los bots de IA que viven dentro de la plataforma: cada uno con su propio carácter y gusto por los juegos, escriben reseñas, publican, responden mensajes y discuten entre ellos. Construí yo mismo toda la infraestructura de agentes, desde el planificador y la cola de tareas hasta la pasarela de modelos y la capa de consentimiento explícito.",
         "timeline_6_year": "2025",
         "timeline_6_title": "SeptimusLab",
         "timeline_6_subtitle": "Aplicaciones móviles con IA",
@@ -154,7 +154,7 @@
                             },
                             {
                                 "name": "Next.js",
-                                "description": "Aplicaciones de producción SSR/SSG (App Router, React 19); base de GGHub."
+                                "description": "Aplicaciones de producción SSR/SSG (App Router, React 19); base de Pause Menu."
                             }
                         ]
                     },
@@ -183,7 +183,7 @@
                             },
                             {
                                 "name": "PostgreSQL",
-                                "description": "Diseño de esquemas relacionales y consultas; base de datos de producción de GGHub."
+                                "description": "Diseño de esquemas relacionales y consultas; base de datos de producción de Pause Menu."
                             },
                             {
                                 "name": "Python",
@@ -390,9 +390,9 @@
                     "LLM"
                 ]
             },
-            "gghub": {
-                "title": "GGHub - Plataforma Social para Gamers",
-                "description": "Una plataforma social para gamers, disponible en web y móvil, que une un backend .NET 8 y una app web Next.js 15 bajo Clean Architecture. Dentro de ella viven bots de IA con su propio carácter, gusto por los juegos e idioma: escriben reseñas, publican, comentan listas, responden mensajes en tiempo real, debaten entre ellos y lanzan encuestas. Detrás hay un motor de agentes que construí desde cero: un planificador que reparte la cuota diaria de cada bot a lo largo del día, una cola de tareas, una pasarela LLM que pasa del Gemma gratuito a un Gemini Flash-Lite con tope de presupuesto y una capa de consentimiento que no envía datos de un usuario al modelo sin su aceptación explícita. Las puntuaciones de los bots no entran en las medias ni en las clasificaciones. La plataforma ofrece además descubrimiento de juegos, reseñas detalladas, feed de inicio, insignias y niveles, panel de administración, soporte multilingüe (EN/TR) y mensajería en tiempo real con SignalR. Disponible en gghub.social, la App Store y Google Play con apps nativas de iOS y Android (React Native / Expo).",
+            "pausemenu": {
+                "title": "Pause Menu - Plataforma Social para Gamers",
+                "description": "Una plataforma social para gamers, disponible en web y móvil, que une un backend .NET 8 y una app web Next.js 15 bajo Clean Architecture. Dentro de ella viven bots de IA con su propio carácter, gusto por los juegos e idioma: escriben reseñas, publican, comentan listas, responden mensajes en tiempo real, debaten entre ellos y lanzan encuestas. Detrás hay un motor de agentes que construí desde cero: un planificador que reparte la cuota diaria de cada bot a lo largo del día, una cola de tareas, una pasarela LLM que pasa del Gemma gratuito a un Gemini Flash-Lite con tope de presupuesto y una capa de consentimiento que no envía datos de un usuario al modelo sin su aceptación explícita. Las puntuaciones de los bots no entran en las medias ni en las clasificaciones. La plataforma ofrece además descubrimiento de juegos, reseñas detalladas, feed de inicio, insignias y niveles, panel de administración, soporte multilingüe (EN/TR) y mensajería en tiempo real con SignalR. Disponible en pausemenu.app, la App Store y Google Play con apps nativas de iOS y Android (React Native / Expo).",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",

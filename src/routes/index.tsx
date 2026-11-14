@@ -12,7 +12,7 @@ import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
 import { PhoneMockup, LaptopMockup } from "../components/DeviceMockups";
 import { projectsData } from "../data/projects";
 import septimusLogo from "../assets/septimuslab.webp";
-import gghubScreen from "../assets/gghub-screen.webp";
+import pausemenuScreen from "../assets/pausemenu-screen.webp";
 import purescanScreen from "../assets/purescan-screen.webp";
 import purescanFoodsScreen from "../assets/purescan-foods-screen.webp";
 
@@ -33,7 +33,7 @@ const RIBBON = [
     "UI / UX",
 ];
 
-const FEATURED_IDS = ["gghub", "purescan_foods", "purescan"] as const;
+const FEATURED_IDS = ["pausemenu", "purescan_foods", "purescan"] as const;
 
 /* Drives the .hero-in keyframes. Kept as inline custom properties so each line
    of the hero can stagger without a class per delay. */
@@ -196,7 +196,7 @@ function StudioSection() {
                                 {t("home.studio_desc")}
                             </p>
                             <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
-                                {t("home.studio_apps_label")}: GGHub · Fintel · PureScan Foods · PureScan Cosmetics
+                                {t("home.studio_apps_label")}: Pause Menu · Fintel · PureScan Foods · PureScan Cosmetics
                             </p>
                             <a
                                 href="https://septimuslab.com"
@@ -213,8 +213,8 @@ function StudioSection() {
                             <div className="blueprint-grid absolute inset-0" />
                             <ParallaxY from={50} to={-30} className="absolute left-6 top-16 w-44">
                                 <img
-                                    src={gghubScreen}
-                                    alt="GGHub"
+                                    src={pausemenuScreen}
+                                    alt="Pause Menu"
                                     loading="lazy"
                                     decoding="async"
                                     className="rounded-2xl border-4 border-ink/70 shadow-2xl dark:border-line"
