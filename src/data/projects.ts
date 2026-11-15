@@ -45,7 +45,7 @@ export const projectsData: ProjectBase[] = [
     {
         id: "fintel",
         image: fintelScreen,
-        liveLink: "https://expense-tracker-v2-f5a0b.web.app/",
+        liveLink: "https://app.fintel.septimuslab.com/",
         githubLink: "https://github.com/AhmetDemiroglu/expense-tracker-v2",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.fintel.app",
         appStoreSoon: true,
