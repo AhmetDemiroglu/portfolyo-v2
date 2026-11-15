@@ -6,7 +6,7 @@
         "skills_title": "My Skills | Ahmet Demiroğlu",
         "skills_description": "The front-end and back-end technologies I use in production: React, Vue, C#, .NET, SQL, and more.",
         "projects_title": "My Projects | Ahmet Demiroğlu",
-        "projects_description": "From idea to release: the web and mobile apps, products, and experiments I have built.",
+        "projects_description": "From idea to release: web and mobile apps, products, and experimental projects.",
         "contact_title": "Contact | Ahmet Demiroğlu",
         "contact_description": "Have a project idea or just want to say hello? Get in touch with me.",
         "404_title": "Page Not Found | Ahmet Demiroğlu",
@@ -55,7 +55,7 @@
             }
         ],
         "studio_label": "Independent Studio",
-        "studio_desc": "My independent software studio building AI-powered mobile apps. From idea to store: design, development, and release under one roof.",
+        "studio_desc": "An independent software studio building AI-powered mobile apps. From idea to store: design, development, and release under one roof.",
         "studio_apps_label": "Apps in production",
         "studio_cta": "Visit the Studio",
         "featured_label": "Selected Work",
@@ -294,7 +294,7 @@
         "projects": {
             "rent_a_car": {
                 "title": "Rent A Car Full-Stack Platform",
-                "description": "A scalable car rental platform I built on .NET 8 and ASP.NET Core MVC. It features relational database management via Entity Framework Core, role-based access control (RBAC) with Identity, and secure CRUD operations. Developed during my Neos Software Academy internship, with a strict commitment to clean code principles.",
+                "description": "An end-to-end car rental platform with role-based access control. Developed during the Neos Software Academy internship, following clean code principles.",
                 "tags": [
                     "ASP.NET Core MVC",
                     ".NET 8",
@@ -305,7 +305,7 @@
             },
             "butce_360": {
                 "title": "Budget360° Expense Tracker",
-                "description": "My first prototype for credit card cycle tracking and expense management. Built with Vue.js 3 and Firebase Realtime Database, it laid the experimental groundwork for what later became Fintel.",
+                "description": "The first prototype for tracking credit card cycles and expenses. Where the idea that became Fintel started.",
                 "tags": [
                     "Vue.js",
                     "Firebase",
@@ -314,7 +314,7 @@
             },
             "purescan": {
                 "title": "PureScan - Cosmetic Ingredient Analyzer",
-                "description": "An AI-powered cosmetic ingredient analyzer. It reads ingredients via camera OCR, barcode scanning (OpenBeautyFacts), or manual input. OCR and ingredient analysis run on Gemini 3.5 Flash-Lite, with Gemini 3.8 Flash stepping in when a read is weak. It offers skin-type compatibility scoring, audio summaries through Gemini 3.8 Flash-Lite TTS, and an AI chat assistant. The Cabinet adds analyzed products to an inventory and checks cross-product compatibility through a conflict engine. Runs on a freemium model with RevenueCat Pro subscriptions and AdMob integration, built with Capacitor for Android and iOS, and live on Google Play.",
+                "description": "Reads a cosmetic product's ingredients from the camera or a barcode and scores them for a given skin type. The Cabinet feature checks the products you own against each other. Includes a spoken summary and a chat assistant. Live on Google Play.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -326,7 +326,7 @@
             },
             "not_defteri": {
                 "title": "Interactive Notebook App",
-                "description": "A small but delightful app offering a dynamic notebook experience. Built with HTML, CSS, and Vue.js 3.",
+                "description": "A small app offering a dynamic notebook experience.",
                 "tags": [
                     "Vue.js",
                     "JavaScript",
@@ -336,7 +336,7 @@
             },
             "fintel": {
                 "title": "Fintel - Family Budget",
-                "description": "A family budget app that brings pay periods, daily limits, installments and receipt scanning into one flow. I rewrote the first version from scratch: Capacitor 8 and React 19 for Android and iOS, user data on Firebase, receipt scanning and the 'Nova' assistant powered by Gemini on the server. AI keys live on the server, not in the app. Live on Google Play for Android, with the iOS version in preparation.",
+                "description": "A family budget app that brings pay periods, daily limits, installments and receipt scanning into one flow. Typing \"groceries 640\" or snapping a receipt is enough to log an expense. The 'Nova' assistant interprets the period, while the numbers come from a tested calculation core that gives the same result on every screen. Live on Google Play, iOS version in preparation.",
                 "tags": [
                     "React",
                     "TypeScript",
@@ -347,7 +347,7 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Food Ingredient Analyzer",
-                "description": "A cross-platform food label analyzer I built with React Native and Expo on Firebase infrastructure. It reads labels via barcode scanning (OpenFoodFacts) and camera; photo reading runs on Gemini 3.8 Flash, while allergen detection and additive risk analysis run on Gemini 3.5 Flash-Lite in two steps. The safety score is not left to the AI: it is computed deterministically from the NOVA group and additive risk, so the same product gets the same score every scan. Family profiles assess suitability for each member based on their allergies and preferences. Includes an E-code additive dictionary, the Guru AI chat assistant, a highlighted usage tour, and TR/EN/ES language support; all API traffic goes through a Firebase Cloud Functions proxy that requires authentication. Live on Google Play and the App Store.",
+                "description": "Reads a food label from a barcode or a photo and shows allergen and additive risk. The safety score is not left to the AI: the same product gets the same score on every scan. Family profiles rate each product against every member's allergies. Live on Google Play and the App Store.",
                 "tags": [
                     "React Native",
                     "Expo",
@@ -358,7 +358,7 @@
             },
             "openworld": {
                 "title": "OpenWorld - Local AI Super Agent",
-                "description": "A Windows-based local AI super agent with 4-layer security. It offers 100+ built-in tools for screen control, file management, OCR, research, and code management, and runs with Ollama or cloud LLMs (Groq, Z.AI). Includes remote control via a Telegram bot, semantic tool routing, and a notebook system. An experimental project under active development.",
+                "description": "A local AI agent for Windows: more than 100 tools for screen control, file management, research and coding. Includes four layers of security and remote control over Telegram. Experimental and in active development.",
                 "tags": [
                     "Python",
                     "FastAPI",
@@ -370,7 +370,7 @@
             },
             "multimind": {
                 "title": "MultiMind - Autonomous Multi-Agent System",
-                "description": "An autonomous multi-agent system that takes a single prompt and plans, codes, tests, and self-corrects until it ships working software. A central orchestrator coordinates five specialized agents (engineer, backup engineer, tester, and a vision agent that visually verifies the UI against the original prompt), each running in isolated sandboxes. It has a self-healing loop that catches failures and feeds them back for automatic recovery, plus live Telegram progress reporting.",
+                "description": "From a single prompt to working software: a multi-agent system that plans, codes, tests and fixes its own mistakes. Five specialized agents work in isolated environments, and one of them verifies the interface visually. Progress is reported live on Telegram.",
                 "tags": [
                     "Python",
                     "Multi-LLM",
@@ -380,7 +380,7 @@
             },
             "sip": {
                 "title": "SIP - Sales Intelligence Platform",
-                "description": "A multi-tenant analytics engine for field-sales operations: it scores leads, surfaces cross-sell opportunities, and predicts customer churn, with a natural-language interface that turns business questions into SQL queries. I built it on .NET 8, React, and Python/FastAPI with CQRS and background job pipelines, running a hybrid local-plus-cloud LLM strategy. Currently in testing with a live enterprise client.",
+                "description": "An analytics engine for field-sales teams: it scores leads, finds cross-sell opportunities and predicts customer churn. Business questions are asked in plain language and the system turns them into SQL. In testing with a real enterprise client.",
                 "tags": [
                     ".NET 8",
                     "React",
@@ -391,7 +391,7 @@
             },
             "pausemenu": {
                 "title": "Pause Menu - Gamer Social Platform",
-                "description": "A gaming social platform, live on web and mobile, that unites a .NET 8 backend and a Next.js 15 web app under Clean Architecture. AI bots live inside it, each with its own personality, taste in games, and language: they write reviews, post, comment on lists, answer messages in real time, debate each other, and run polls. Behind them is an agent engine I built from scratch: a planner that spreads each bot's daily quota across the day, a task queue, an LLM gateway that falls back from free Gemma to a budget-capped Gemini Flash-Lite, and a consent layer that never sends a user's data to the model without explicit opt-in. Bot scores stay out of rating averages and leaderboards. The platform also offers game discovery, detailed reviews, a home feed, badges and levels, an admin panel, multilingual support (EN/TR), and SignalR-based real-time messaging. Live at pausemenu.app, on the App Store, and on Google Play with native iOS and Android apps (React Native / Expo).",
+                "description": "A social platform for gamers: game discovery, reviews, lists and real-time messaging. AI bots with their own character and taste in games live inside it: they write reviews, share posts, reply to messages and debate each other. Data from users who have not given explicit consent never reaches the model, and bot scores stay out of the rankings. Live on the web, the App Store and Google Play.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
@@ -405,7 +405,8 @@
                 ]
             }
         },
-        "app_store_review": "iOS version under Apple review",
+        "app_store_review": "Coming soon to the App Store",
+        "soon": "soon",
         "play_store_review": "Now on Google Play"
     },
     "contact_page": {

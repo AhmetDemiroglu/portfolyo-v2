@@ -100,7 +100,7 @@ function ProjectLinks({ project }: { project: FullProject }) {
                     className="inline-flex cursor-not-allowed items-center gap-1.5 rounded-full border border-line px-4 py-2 font-mono text-[10px] tracking-[0.12em] text-muted opacity-60"
                 >
                     <FaApple size={12} />
-                    App Store
+                    App Store · {t("projects_page.soon")}
                 </span>
             )}
             {project.googlePlaySoon && (

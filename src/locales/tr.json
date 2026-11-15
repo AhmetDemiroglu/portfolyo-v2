@@ -6,7 +6,7 @@
         "skills_title": "Yeteneklerim | Ahmet Demiroğlu",
         "skills_description": "Üretimde kullandığım front-end ve back-end teknolojileri: React, Vue, C#, .NET, SQL ve daha fazlası.",
         "projects_title": "Projelerim | Ahmet Demiroğlu",
-        "projects_description": "Fikirden yayına: geliştirdiğim web ve mobil uygulamalar, ürünler ve deneysel projeler.",
+        "projects_description": "Fikirden yayına: web ve mobil uygulamalar, ürünler ve deneysel projeler.",
         "contact_title": "İletişim | Ahmet Demiroğlu",
         "contact_description": "Bir proje fikriniz mi var, yoksa sadece merhaba mı demek istiyorsunuz? Benimle iletişime geçin.",
         "404_title": "Sayfa Bulunamadı | Ahmet Demiroğlu",
@@ -55,7 +55,7 @@
             }
         ],
         "studio_label": "Bağımsız Stüdyo",
-        "studio_desc": "Yapay zekâ destekli mobil uygulamalar geliştirdiğim bağımsız yazılım stüdyom. Fikirden tasarıma, geliştirmeden markete: tüm süreç tek çatı altında.",
+        "studio_desc": "Yapay zekâ destekli mobil uygulamalar geliştiren bağımsız yazılım stüdyosu. Fikirden tasarıma, geliştirmeden markete: tüm süreç tek çatı altında.",
         "studio_apps_label": "Yayındaki uygulamalar",
         "studio_cta": "Stüdyoyu Ziyaret Et",
         "featured_label": "Seçilmiş İşler",
@@ -277,7 +277,7 @@
         "label": "Portfolyo",
         "ghost": "PROJELER",
         "main_title": "Projelerim",
-        "subtitle": "Fikirden yayına: geliştirdiğim ürünler, denemeler ve kişisel projeler. Her biri gerçek bir problemi çözmek için doğdu.",
+        "subtitle": "Fikirden yayına: ürünler, denemeler ve kişisel projeler. Her biri gerçek bir problemi çözmek için doğdu.",
         "featured_badge": "ÖNE ÇIKAN PROJE",
         "view_live_button": "Canlı İncele",
         "archive_label": "Arşiv",
@@ -294,7 +294,7 @@
         "projects": {
             "rent_a_car": {
                 "title": "Rent A Car Full-Stack Platform",
-                "description": ".NET 8 ve ASP.NET Core MVC üzerine kurduğum ölçeklenebilir bir araç kiralama platformu. Entity Framework Core ile ilişkisel veritabanı yönetimi, Identity ile rol tabanlı erişim kontrolü (RBAC) ve güvenli CRUD operasyonları içeriyor. Neos Yazılım Akademi stajında, temiz kod prensiplerine bağlı kalarak geliştirdim.",
+                "description": "Rol tabanlı yetkilendirmeli, uçtan uca araç kiralama platformu. Neos Yazılım Akademi stajında temiz kod prensipleriyle geliştirildi.",
                 "tags": [
                     "ASP.NET Core MVC",
                     ".NET 8",
@@ -305,7 +305,7 @@
             },
             "butce_360": {
                 "title": "Bütçe360° Harcama Takibi",
-                "description": "Kredi kartı dönem takibi ve harcama yönetimi için geliştirdiğim ilk prototip. Vue.js 3 ve Firebase Realtime Database ile kurdum; sonradan Fintel'e dönüşecek fikrin deneysel temelini burada attım.",
+                "description": "Kredi kartı dönemini ve harcamaları izleyen ilk prototip. Fintel'e dönüşen fikrin başladığı yer.",
                 "tags": [
                     "Vue.js",
                     "Firebase",
@@ -314,7 +314,7 @@
             },
             "purescan": {
                 "title": "PureScan - Kozmetik İçerik Analizi",
-                "description": "Yapay zekâ destekli kozmetik içerik analizörü. İçerikleri kamera (OCR), barkod (OpenBeautyFacts) veya elle giriş yoluyla okur. OCR ve içerik analizi Gemini 3.5 Flash-Lite ile yapılır; zayıf okumada Gemini 3.8 Flash devreye girer. Cilt tipine göre uyumluluk skoru, Gemini 3.8 Flash-Lite TTS ile sesli özet ve yapay zekâ sohbet asistanı sunar. Kabin özelliğiyle analiz edilen ürünler envantere eklenir ve conflict engine ile ürünler arası uyumluluk kontrol edilir. RevenueCat ile Pro abonelik ve AdMob entegrasyonu içeren freemium modeliyle, Capacitor üzerinden Android ve iOS için derlenir; Google Play'de yayında.",
+                "description": "Kozmetik ürünün içeriğini kameradan ya da barkoddan okur, cilt tipine göre uyumluluk skoru verir. Kabin özelliği eldeki ürünlerin birbiriyle uyumunu denetler. Sesli özet ve sohbet asistanı içerir. Google Play'de yayında.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -326,7 +326,7 @@
             },
             "not_defteri": {
                 "title": "İnteraktif Not Defteri",
-                "description": "Kullanıcılara dinamik bir not defteri deneyimi sunan küçük ama keyifli bir uygulama. HTML, CSS ve Vue.js 3 ile geliştirdim.",
+                "description": "Dinamik bir not defteri deneyimi sunan küçük uygulama.",
                 "tags": [
                     "Vue.js",
                     "JavaScript",
@@ -336,7 +336,7 @@
             },
             "fintel": {
                 "title": "Fintel - Aile Bütçesi",
-                "description": "Maaş dönemi, günlük limit, taksit ve fiş okumayı tek akışta toplayan aile bütçesi uygulaması. İlk sürümü baştan yazdım: Capacitor 8 ve React 19 ile Android ve iOS, Firebase üzerinde kullanıcı verisi, sunucuda Gemini ile fiş okuma ve 'Nova' asistanı. Yapay zeka anahtarları uygulamada değil sunucuda durur. Android'de Google Play'de yayında, iOS sürümü hazırlanıyor.",
+                "description": "Maaş dönemi, günlük limit, taksit ve fiş okumayı tek akışta toplayan aile bütçesi uygulaması. Kayıt için \"market 640\" yazmak ya da fişin fotoğrafını çekmek yeter. 'Nova' asistanı dönemi yorumlar, sayıları ise her ekranda aynı sonucu veren testli bir hesap çekirdeği üretir. Google Play'de yayında, iOS sürümü hazırlanıyor.",
                 "tags": [
                     "React",
                     "TypeScript",
@@ -347,7 +347,7 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Gıda İçerik Analizi",
-                "description": "React Native ve Expo ile geliştirdiğim, Firebase üzerinde çalışan cross-platform gıda etiketi analizörü. Barkod (OpenFoodFacts) ve kamera ile etiketleri okur; fotoğraftan içerik okuma Gemini 3.8 Flash, alerjen tespiti ve katkı maddesi risk analizi Gemini 3.5 Flash-Lite ile iki adımda yapılır. Güvenlik skoru yapay zekâya bırakılmaz: NOVA grubu ve katkı maddesi riskinden deterministik hesaplanır, aynı ürün her taramada aynı skoru alır. Aile profilleri sayesinde her bireyin alerji ve tercihlerine göre uygunluk değerlendirilir. E-kod sözlüğü, Guru AI sohbet asistanı, vurgulamalı kullanım turu ve TR/EN/ES dil desteği içerir; tüm API trafiği, kimlik doğrulaması isteyen bir Firebase Cloud Functions vekilinden geçer. Google Play ve App Store'da yayında.",
+                "description": "Gıda etiketini barkoddan ya da fotoğraftan okur, alerjen ve katkı maddesi riskini gösterir. Güvenlik skoru yapay zekâya bırakılmaz: aynı ürün her taramada aynı skoru alır. Aile profilleriyle her bireyin alerjisine göre uygunluk değerlendirilir. Google Play ve App Store'da yayında.",
                 "tags": [
                     "React Native",
                     "Expo",
@@ -358,7 +358,7 @@
             },
             "openworld": {
                 "title": "OpenWorld - Lokal AI Süper Ajan",
-                "description": "Windows üzerinde çalışan, 4 katmanlı güvenliğe sahip lokal bir yapay zekâ süper ajanı. Ekran kontrolü, dosya yönetimi, OCR, araştırma ve kod yönetimi için 100'den fazla yerleşik araç sunar; Ollama veya bulut LLM'lerle (Groq, Z.AI) çalışır. Telegram bot üzerinden uzaktan kontrol, semantik araç yönlendirme ve notebook sistemi içerir. Aktif geliştirme sürecinde, deneysel bir proje.",
+                "description": "Windows'ta çalışan lokal yapay zekâ ajanı: ekran kontrolü, dosya yönetimi, araştırma ve kod işleri için 100'den fazla araç. Dört katmanlı güvenlik ve Telegram üzerinden uzaktan kontrol içerir. Deneysel, aktif geliştiriliyor.",
                 "tags": [
                     "Python",
                     "FastAPI",
@@ -370,7 +370,7 @@
             },
             "multimind": {
                 "title": "MultiMind - Otonom Çoklu-Ajan Sistemi",
-                "description": "Tek bir prompt alıp çalışan yazılım teslim edene kadar planlayan, kodlayan, test eden ve kendini düzelten otonom bir çoklu-ajan sistemi. Merkezi orkestratör; her biri izole sandbox'larda çalışan beş özelleşmiş ajanı (mühendis, yedek mühendis, test uzmanı ve arayüzü orijinal prompt'a göre görsel olarak doğrulayan bir vision ajanı) koordine eder. Hataları yakalayıp otomatik kurtarma için geri besleyen kendini onaran bir döngüye ve canlı Telegram raporlamasına sahip.",
+                "description": "Tek bir prompt'tan çalışan yazılıma: planlayan, kodlayan, test eden ve kendi hatasını düzelten çoklu-ajan sistemi. Beş özelleşmiş ajan izole ortamlarda çalışır, biri arayüzü görsel olarak doğrular. İlerleme Telegram'dan canlı izlenir.",
                 "tags": [
                     "Python",
                     "Multi-LLM",
@@ -380,7 +380,7 @@
             },
             "sip": {
                 "title": "SIP - Satış Zekâsı Platformu",
-                "description": "Saha satış (plasiyer) operasyonları için çok kiracılı (multi-tenant) bir analitik motoru: müşteri adaylarını skorlar, çapraz satış fırsatlarını ortaya çıkarır ve müşteri kaybını (churn) öngörür. İş sorularını SQL sorgularına çeviren doğal dil arayüzü içerir. .NET 8, React ve Python/FastAPI üzerine CQRS ve arka plan iş hatlarıyla kurdum; hibrit lokal+bulut LLM stratejisiyle çalışıyor. Şu anda gerçek bir kurumsal müşteriyle test aşamasında.",
+                "description": "Saha satış ekipleri için analitik motoru: müşteri adaylarını skorlar, çapraz satış fırsatlarını bulur, müşteri kaybını öngörür. İş soruları doğal dille sorulur, sistem SQL'e çevirir. Gerçek bir kurumsal müşteriyle test aşamasında.",
                 "tags": [
                     ".NET 8",
                     "React",
@@ -391,7 +391,7 @@
             },
             "pausemenu": {
                 "title": "Pause Menu - Oyuncu Sosyal Platformu",
-                "description": ".NET 8 backend ile Next.js 15 web uygulamasını Clean Architecture çatısı altında birleştiren, web ve mobilde yayında olan oyuncu sosyal platformum. İçinde kendi karakteri, oyun zevki ve dili olan yapay zekâ botları yaşıyor: inceleme yazıyor, gönderi paylaşıyor, listelere yorum yapıyor, mesajlara gerçek zamanlı cevap veriyor, kendi aralarında tartışıp anket açıyorlar. Arkasında sıfırdan kurduğum bir ajan motoru var: günlük kotayı saatlere yayan planlayıcı, görev kuyruğu, ücretsiz Gemma'dan bütçe tavanlı Gemini Flash-Lite'a düşen LLM geçidi ve açık rıza vermeyen kullanıcının verisini modele göndermeyen izin katmanı. Bot puanları ortalamalara ve liderlik tablolarına girmiyor. Platform ayrıca oyun keşfi, detaylı incelemeler, ana sayfa akışı, rozet/seviye sistemi, admin paneli, çoklu dil desteği (EN/TR) ve SignalR tabanlı gerçek zamanlı mesajlaşma sunuyor. Native iOS ve Android uygulamalarıyla (React Native / Expo) pausemenu.app, App Store ve Google Play'de yayında.",
+                "description": "Oyuncular için sosyal platform: oyun keşfi, incelemeler, listeler ve gerçek zamanlı mesajlaşma. İçinde kendi karakteri ve oyun zevki olan yapay zekâ botları yaşar: inceleme yazar, gönderi paylaşır, mesajlara cevap verir, kendi aralarında tartışır. Açık rıza vermeyen kullanıcının verisi modele gitmez, bot puanları sıralamalara girmez. Web, App Store ve Google Play'de yayında.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
@@ -405,7 +405,8 @@
                 ]
             }
         },
-        "app_store_review": "iOS sürümü Apple incelemesinde",
+        "app_store_review": "App Store'da yakında",
+        "soon": "yakında",
         "play_store_review": "Google Play'de yayında"
     },
     "contact_page": {

@@ -6,7 +6,7 @@
         "skills_title": "Meine Fähigkeiten | Ahmet Demiroğlu",
         "skills_description": "Die Front-End- und Back-End-Technologien, die ich in Produktion einsetze: React, Vue, C#, .NET, SQL und mehr.",
         "projects_title": "Meine Projekte | Ahmet Demiroğlu",
-        "projects_description": "Von der Idee bis zum Release: die Web- und Mobile-Apps, Produkte und Experimente, die ich entwickelt habe.",
+        "projects_description": "Von der Idee bis zum Release: Web- und Mobile-Apps, Produkte und experimentelle Projekte.",
         "contact_title": "Kontakt | Ahmet Demiroğlu",
         "contact_description": "Haben Sie eine Projektidee oder möchten Sie einfach Hallo sagen? Nehmen Sie Kontakt mit mir auf.",
         "404_title": "Seite nicht gefunden | Ahmet Demiroğlu",
@@ -55,7 +55,7 @@
             }
         ],
         "studio_label": "Unabhängiges Studio",
-        "studio_desc": "Mein unabhängiges Software-Studio für KI-gestützte mobile Apps. Von der Idee bis zum Store: Design, Entwicklung und Release unter einem Dach.",
+        "studio_desc": "Ein unabhängiges Software-Studio für KI-gestützte mobile Apps. Von der Idee bis zum Store: Design, Entwicklung und Release unter einem Dach.",
         "studio_apps_label": "Apps in Produktion",
         "studio_cta": "Studio besuchen",
         "featured_label": "Ausgewählte Arbeiten",
@@ -294,7 +294,7 @@
         "projects": {
             "rent_a_car": {
                 "title": "Rent A Car Full-Stack-Plattform",
-                "description": "Eine skalierbare Autovermietungsplattform, die ich auf .NET 8 und ASP.NET Core MVC aufgebaut habe. Sie bietet relationales Datenbankmanagement über Entity Framework Core, rollenbasierte Zugriffskontrolle (RBAC) mit Identity und sichere CRUD-Operationen. Entwickelt während meines Praktikums an der Neos Software Academy, mit konsequenter Einhaltung von Clean-Code-Prinzipien.",
+                "description": "Eine durchgängige Autovermietungsplattform mit rollenbasierter Zugriffskontrolle. Entwickelt im Praktikum bei der Neos Software Academy, nach Clean-Code-Prinzipien.",
                 "tags": [
                     "ASP.NET Core MVC",
                     ".NET 8",
@@ -305,7 +305,7 @@
             },
             "butce_360": {
                 "title": "Budget360° Ausgaben-Tracker",
-                "description": "Mein erster Prototyp für Kreditkarten-Zyklus-Tracking und Ausgabenmanagement. Mit Vue.js 3 und Firebase Realtime Database gebaut, legte er das experimentelle Fundament für das, was später Fintel wurde.",
+                "description": "Der erste Prototyp zum Verfolgen von Kreditkartenzyklen und Ausgaben. Hier begann die Idee, aus der Fintel wurde.",
                 "tags": [
                     "Vue.js",
                     "Firebase",
@@ -314,7 +314,7 @@
             },
             "purescan": {
                 "title": "PureScan - Kosmetik-Inhaltsstoff-Analyse",
-                "description": "Ein KI-gestützter Analysator für kosmetische Inhaltsstoffe. Er liest Inhaltsstoffe per Kamera-OCR, Barcode-Scan (OpenBeautyFacts) oder manueller Eingabe. OCR und Inhaltsstoffanalyse laufen mit Gemini 3.5 Flash-Lite, bei schwachen Ergebnissen springt Gemini 3.8 Flash ein. Er bietet Hauttyp-Kompatibilitätsscores, Audio-Zusammenfassungen über Gemini 3.8 Flash-Lite TTS und einen KI-Chat-Assistenten. Der Schrank (Cabinet) nimmt analysierte Produkte ins Inventar auf und prüft die Verträglichkeit zwischen Produkten über eine Conflict-Engine. Freemium-Modell mit RevenueCat-Pro-Abos und AdMob-Integration, mit Capacitor für Android und iOS gebaut und live auf Google Play.",
+                "description": "Liest die Inhaltsstoffe eines Kosmetikprodukts per Kamera oder Barcode und bewertet sie nach Hauttyp. Die Kabinett-Funktion prüft die vorhandenen Produkte gegeneinander. Mit gesprochener Zusammenfassung und Chat-Assistent. Bei Google Play verfügbar.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -326,7 +326,7 @@
             },
             "not_defteri": {
                 "title": "Interaktive Notizbuch-App",
-                "description": "Eine kleine, aber feine App mit einem dynamischen Notizbuch-Erlebnis. Gebaut mit HTML, CSS und Vue.js 3.",
+                "description": "Eine kleine App mit einem dynamischen Notizbuch-Erlebnis.",
                 "tags": [
                     "Vue.js",
                     "JavaScript",
@@ -336,7 +336,7 @@
             },
             "fintel": {
                 "title": "Fintel - Familienbudget",
-                "description": "Eine Familienbudget-App, die Gehaltszeiträume, Tageslimit, Ratenzahlungen und Belegerfassung in einem Ablauf vereint. Ich habe die erste Version komplett neu geschrieben: Capacitor 8 und React 19 für Android und iOS, Nutzerdaten in Firebase, Belegerkennung und der Assistent 'Nova' über Gemini auf dem Server. KI-Schlüssel liegen auf dem Server, nicht in der App. Auf Google Play für Android verfügbar, die iOS-Version ist in Vorbereitung.",
+                "description": "Eine Familienbudget-App, die Gehaltszeiträume, Tageslimit, Ratenzahlungen und Belegerfassung in einem Ablauf vereint. Für einen Eintrag genügt es, \"Einkauf 640\" zu tippen oder den Beleg zu fotografieren. Der Assistent 'Nova' deutet den Zeitraum, die Zahlen liefert ein getesteter Rechenkern, der auf jedem Bildschirm dasselbe Ergebnis zeigt. Bei Google Play verfügbar, die iOS-Version ist in Vorbereitung.",
                 "tags": [
                     "React",
                     "TypeScript",
@@ -347,7 +347,7 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Lebensmittel-Analyse",
-                "description": "Ein plattformübergreifender Lebensmitteletikett-Analysator, den ich mit React Native und Expo auf Firebase-Infrastruktur entwickelt habe. Er liest Etiketten per Barcode-Scan (OpenFoodFacts) und Kamera; das Lesen des Fotos übernimmt Gemini 3.8 Flash, Allergenerkennung und Zusatzstoff-Risikoanalyse übernimmt Gemini 3.5 Flash-Lite, in zwei Schritten. Der Sicherheitsscore wird nicht der KI überlassen: Er wird deterministisch aus NOVA-Gruppe und Zusatzstoffrisiko berechnet, sodass dasselbe Produkt bei jedem Scan denselben Score erhält. Familienprofile bewerten die Eignung für jedes Mitglied anhand von Allergien und Vorlieben. Enthält ein E-Code-Zusatzstofflexikon, den Guru-AI-Chat-Assistenten, eine hervorgehobene Nutzungstour und Unterstützung für TR/EN/ES; der gesamte API-Verkehr läuft über einen Firebase-Cloud-Functions-Proxy, der Authentifizierung verlangt. Live auf Google Play und im App Store.",
+                "description": "Liest ein Lebensmitteletikett per Barcode oder Foto und zeigt das Risiko von Allergenen und Zusatzstoffen. Der Sicherheits-Score wird nicht der KI überlassen: Dasselbe Produkt erhält bei jedem Scan denselben Score. Familienprofile bewerten jedes Produkt nach den Allergien jedes Mitglieds. Bei Google Play und im App Store verfügbar.",
                 "tags": [
                     "React Native",
                     "Expo",
@@ -358,7 +358,7 @@
             },
             "openworld": {
                 "title": "OpenWorld - Lokaler KI-Superagent",
-                "description": "Ein Windows-basierter lokaler KI-Superagent mit 4-Schichten-Sicherheit. Er bietet über 100 integrierte Werkzeuge für Bildschirmsteuerung, Dateiverwaltung, OCR, Recherche und Codeverwaltung und läuft mit Ollama oder Cloud-LLMs (Groq, Z.AI). Enthält Fernsteuerung per Telegram-Bot, semantisches Tool-Routing und ein Notebook-System. Ein experimentelles Projekt in aktiver Entwicklung.",
+                "description": "Ein lokaler KI-Agent für Windows: über 100 Werkzeuge für Bildschirmsteuerung, Dateiverwaltung, Recherche und Code. Mit vier Sicherheitsebenen und Fernsteuerung über Telegram. Experimentell und in aktiver Entwicklung.",
                 "tags": [
                     "Python",
                     "FastAPI",
@@ -370,7 +370,7 @@
             },
             "multimind": {
                 "title": "MultiMind - Autonomes Multi-Agenten-System",
-                "description": "Ein autonomes Multi-Agenten-System, das einen einzigen Prompt entgegennimmt und plant, programmiert, testet und sich selbst korrigiert, bis es funktionierende Software liefert. Ein zentraler Orchestrator koordiniert fünf spezialisierte Agenten (Engineer, Backup-Engineer, Tester und einen Vision-Agenten, der die UI visuell gegen den ursprünglichen Prompt verifiziert), jeweils in isolierten Sandboxes. Eine selbstheilende Schleife fängt Fehler ab und führt sie zur automatischen Wiederherstellung zurück; dazu kommt Live-Fortschrittsberichterstattung über Telegram.",
+                "description": "Von einem einzigen Prompt zu lauffähiger Software: ein Multi-Agenten-System, das plant, programmiert, testet und eigene Fehler behebt. Fünf spezialisierte Agenten arbeiten in isolierten Umgebungen, einer prüft die Oberfläche visuell. Der Fortschritt wird live über Telegram gemeldet.",
                 "tags": [
                     "Python",
                     "Multi-LLM",
@@ -380,7 +380,7 @@
             },
             "sip": {
                 "title": "SIP - Sales-Intelligence-Plattform",
-                "description": "Eine mandantenfähige Analyse-Engine für Außendienstvertrieb: Sie bewertet Leads, deckt Cross-Selling-Chancen auf und prognostiziert Kundenabwanderung, mit einer natürlichsprachlichen Schnittstelle, die Geschäftsfragen in SQL-Abfragen übersetzt. Aufgebaut auf .NET 8, React und Python/FastAPI mit CQRS und Hintergrund-Job-Pipelines, betrieben mit einer hybriden Lokal-plus-Cloud-LLM-Strategie. Derzeit im Test mit einem realen Unternehmenskunden.",
+                "description": "Eine Analyse-Engine für Außendienstteams: Sie bewertet Leads, findet Cross-Selling-Chancen und prognostiziert Kundenabwanderung. Geschäftsfragen werden in natürlicher Sprache gestellt, das System übersetzt sie in SQL. Im Test mit einem echten Unternehmenskunden.",
                 "tags": [
                     ".NET 8",
                     "React",
@@ -391,7 +391,7 @@
             },
             "pausemenu": {
                 "title": "Pause Menu - Gamer-Sozialplattform",
-                "description": "Eine Gaming-Sozialplattform, live im Web und mobil, die ein .NET-8-Backend und eine Next.js-15-Web-App unter Clean Architecture vereint. Auf ihr leben KI-Bots mit eigenem Charakter, Spielegeschmack und eigener Sprache: Sie schreiben Bewertungen, posten, kommentieren Listen, beantworten Nachrichten in Echtzeit, diskutieren miteinander und starten Umfragen. Dahinter steht eine von Grund auf selbst gebaute Agenten-Engine: ein Planer, der das Tageskontingent jedes Bots über den Tag verteilt, eine Aufgaben-Queue, ein LLM-Gateway, das vom kostenlosen Gemma auf ein budgetgedeckeltes Gemini Flash-Lite ausweicht, und eine Einwilligungsschicht, die ohne ausdrückliche Zustimmung keine Nutzerdaten an das Modell sendet. Bot-Wertungen fließen weder in Durchschnitte noch in Bestenlisten ein. Außerdem bietet die Plattform Spiele-Entdeckung, detaillierte Bewertungen, Home-Feed, Abzeichen und Level, Admin-Panel, mehrsprachige Unterstützung (EN/TR) und SignalR-basierte Echtzeit-Kommunikation. Mit nativen iOS- und Android-Apps (React Native / Expo) live unter pausemenu.app, im App Store und im Google Play Store.",
+                "description": "Eine soziale Plattform für Gamer: Spiele entdecken, Reviews, Listen und Echtzeit-Messaging. Darin leben KI-Bots mit eigenem Charakter und Spielegeschmack: Sie schreiben Reviews, teilen Beiträge, antworten auf Nachrichten und diskutieren untereinander. Daten von Nutzern ohne ausdrückliche Einwilligung erreichen das Modell nie, Bot-Bewertungen fließen nicht in die Ranglisten ein. Verfügbar im Web, im App Store und bei Google Play.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
@@ -405,7 +405,8 @@
                 ]
             }
         },
-        "app_store_review": "iOS-Version in der Apple-Prüfung",
+        "app_store_review": "Bald im App Store",
+        "soon": "bald",
         "play_store_review": "Jetzt im Google Play Store"
     },
     "contact_page": {

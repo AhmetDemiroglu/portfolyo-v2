@@ -6,7 +6,7 @@
         "skills_title": "Mis Habilidades | Ahmet Demiroğlu",
         "skills_description": "Las tecnologías front-end y back-end que uso en producción: React, Vue, C#, .NET, SQL y más.",
         "projects_title": "Mis Proyectos | Ahmet Demiroğlu",
-        "projects_description": "De la idea al lanzamiento: las aplicaciones web y móviles, productos y experimentos que he creado.",
+        "projects_description": "De la idea al lanzamiento: aplicaciones web y móviles, productos y proyectos experimentales.",
         "contact_title": "Contacto | Ahmet Demiroğlu",
         "contact_description": "¿Tienes una idea para un proyecto o simplemente quieres saludar? Ponte en contacto conmigo.",
         "404_title": "Página no encontrada | Ahmet Demiroğlu",
@@ -55,7 +55,7 @@
             }
         ],
         "studio_label": "Estudio independiente",
-        "studio_desc": "Mi estudio de software independiente donde creo aplicaciones móviles impulsadas por IA. De la idea a la tienda: diseño, desarrollo y publicación bajo un mismo techo.",
+        "studio_desc": "Un estudio de software independiente que crea aplicaciones móviles impulsadas por IA. De la idea a la tienda: diseño, desarrollo y publicación bajo un mismo techo.",
         "studio_apps_label": "Apps en producción",
         "studio_cta": "Visitar el estudio",
         "featured_label": "Trabajo seleccionado",
@@ -294,7 +294,7 @@
         "projects": {
             "rent_a_car": {
                 "title": "Plataforma Full-Stack Rent A Car",
-                "description": "Una plataforma escalable de alquiler de coches que construí sobre .NET 8 y ASP.NET Core MVC. Incluye gestión de bases de datos relacionales con Entity Framework Core, control de acceso basado en roles (RBAC) con Identity y operaciones CRUD seguras. Desarrollada durante mis prácticas en Neos Software Academy, con un compromiso estricto con los principios de código limpio.",
+                "description": "Una plataforma integral de alquiler de coches con control de acceso basado en roles. Desarrollada durante las prácticas en Neos Software Academy, siguiendo principios de código limpio.",
                 "tags": [
                     "ASP.NET Core MVC",
                     ".NET 8",
@@ -305,7 +305,7 @@
             },
             "butce_360": {
                 "title": "Presupuesto360° - Control de Gastos",
-                "description": "Mi primer prototipo para el seguimiento de ciclos de tarjetas de crédito y la gestión de gastos. Construido con Vue.js 3 y Firebase Realtime Database, sentó la base experimental de lo que más tarde se convertiría en Fintel.",
+                "description": "El primer prototipo para seguir los ciclos de la tarjeta de crédito y los gastos. Donde empezó la idea que se convirtió en Fintel.",
                 "tags": [
                     "Vue.js",
                     "Firebase",
@@ -314,7 +314,7 @@
             },
             "purescan": {
                 "title": "PureScan - Análisis de Ingredientes Cosméticos",
-                "description": "Un analizador de ingredientes cosméticos impulsado por IA. Lee los ingredientes mediante OCR de cámara, escaneo de códigos de barras (OpenBeautyFacts) o entrada manual. El OCR y el análisis de ingredientes usan Gemini 3.5 Flash-Lite, con Gemini 3.8 Flash como refuerzo cuando la lectura es débil. Ofrece puntuación de compatibilidad por tipo de piel, resúmenes de audio con Gemini 3.8 Flash-Lite TTS y un asistente de chat con IA. El Armario (Cabinet) añade los productos analizados a un inventario y comprueba la compatibilidad entre productos con un motor de conflictos. Modelo freemium con suscripciones Pro vía RevenueCat e integración de AdMob, compilado con Capacitor para Android e iOS y disponible en Google Play.",
+                "description": "Lee los ingredientes de un producto cosmético con la cámara o el código de barras y los puntúa según el tipo de piel. La función Gabinete comprueba la compatibilidad entre los productos que ya tienes. Incluye un resumen hablado y un asistente de chat. Disponible en Google Play.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -326,7 +326,7 @@
             },
             "not_defteri": {
                 "title": "Cuaderno Interactivo",
-                "description": "Una aplicación pequeña pero encantadora que ofrece una experiencia de cuaderno dinámico. Construida con HTML, CSS y Vue.js 3.",
+                "description": "Una aplicación pequeña que ofrece una experiencia de cuaderno dinámico.",
                 "tags": [
                     "Vue.js",
                     "JavaScript",
@@ -336,7 +336,7 @@
             },
             "fintel": {
                 "title": "Fintel - Presupuesto Familiar",
-                "description": "Una app de presupuesto familiar que reúne periodos de pago, límite diario, cuotas y lectura de recibos en un solo flujo. Reescribí la primera versión desde cero: Capacitor 8 y React 19 para Android e iOS, datos de usuario en Firebase, lectura de recibos y el asistente 'Nova' con Gemini en el servidor. Las claves de IA están en el servidor, no en la app. Disponible en Google Play para Android; la versión de iOS está en preparación.",
+                "description": "Una app de presupuesto familiar que reúne periodos de pago, límite diario, cuotas y lectura de recibos en un solo flujo. Para registrar un gasto basta con escribir \"mercado 640\" o fotografiar el recibo. El asistente 'Nova' interpreta el periodo, y las cifras salen de un núcleo de cálculo con pruebas que da el mismo resultado en todas las pantallas. Disponible en Google Play, versión de iOS en preparación.",
                 "tags": [
                     "React",
                     "TypeScript",
@@ -347,7 +347,7 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Análisis de Ingredientes Alimentarios",
-                "description": "Un analizador multiplataforma de etiquetas alimentarias que construí con React Native y Expo sobre infraestructura Firebase. Lee etiquetas mediante escaneo de códigos de barras (OpenFoodFacts) y cámara; la lectura de la foto usa Gemini 3.8 Flash, y la detección de alérgenos y el análisis de riesgo de aditivos usan Gemini 3.5 Flash-Lite, en dos pasos. La puntuación de seguridad no se deja a la IA: se calcula de forma determinista a partir del grupo NOVA y del riesgo de los aditivos, así que el mismo producto obtiene la misma puntuación en cada escaneo. Los perfiles familiares evalúan la idoneidad según las alergias y preferencias de cada miembro. Incluye un diccionario de aditivos por códigos E, el asistente de chat Guru AI, un recorrido guiado de uso y soporte para TR/EN/ES; todo el tráfico de API pasa por un proxy de Firebase Cloud Functions que exige autenticación. Disponible en Google Play y en la App Store.",
+                "description": "Lee la etiqueta de un alimento con el código de barras o una foto y muestra el riesgo de alérgenos y aditivos. La puntuación de seguridad no se deja a la IA: el mismo producto obtiene la misma puntuación en cada escaneo. Los perfiles familiares valoran cada producto según las alergias de cada miembro. Disponible en Google Play y App Store.",
                 "tags": [
                     "React Native",
                     "Expo",
@@ -358,7 +358,7 @@
             },
             "openworld": {
                 "title": "OpenWorld - Superagente de IA Local",
-                "description": "Un superagente de IA local para Windows con seguridad de 4 capas. Ofrece más de 100 herramientas integradas para control de pantalla, gestión de archivos, OCR, investigación y gestión de código, y funciona con Ollama o LLMs en la nube (Groq, Z.AI). Incluye control remoto vía bot de Telegram, enrutamiento semántico de herramientas y un sistema de cuadernos. Un proyecto experimental en desarrollo activo.",
+                "description": "Un agente de IA local para Windows: más de 100 herramientas para control de pantalla, gestión de archivos, investigación y código. Incluye cuatro capas de seguridad y control remoto por Telegram. Experimental y en desarrollo activo.",
                 "tags": [
                     "Python",
                     "FastAPI",
@@ -370,7 +370,7 @@
             },
             "multimind": {
                 "title": "MultiMind - Sistema Autónomo Multiagente",
-                "description": "Un sistema autónomo multiagente que toma un único prompt y planifica, programa, prueba y se autocorrige hasta entregar software funcional. Un orquestador central coordina cinco agentes especializados (ingeniero, ingeniero de respaldo, tester y un agente de visión que verifica visualmente la interfaz contra el prompt original), cada uno en sandboxes aislados. Cuenta con un bucle de autorreparación que captura fallos y los retroalimenta para una recuperación automática, además de informes de progreso en vivo por Telegram.",
+                "description": "De un solo prompt a software que funciona: un sistema multiagente que planifica, programa, prueba y corrige sus propios errores. Cinco agentes especializados trabajan en entornos aislados y uno de ellos verifica la interfaz visualmente. El progreso se sigue en directo por Telegram.",
                 "tags": [
                     "Python",
                     "Multi-LLM",
@@ -380,7 +380,7 @@
             },
             "sip": {
                 "title": "SIP - Plataforma de Inteligencia de Ventas",
-                "description": "Un motor de analítica multi-tenant para operaciones de venta en campo: puntúa leads, descubre oportunidades de venta cruzada y predice la fuga de clientes, con una interfaz de lenguaje natural que convierte preguntas de negocio en consultas SQL. Lo construí sobre .NET 8, React y Python/FastAPI con CQRS y pipelines de trabajos en segundo plano, con una estrategia híbrida de LLM local y en la nube. Actualmente en pruebas con un cliente empresarial real.",
+                "description": "Un motor de analítica para equipos de venta en campo: puntúa leads, encuentra oportunidades de venta cruzada y predice la fuga de clientes. Las preguntas de negocio se hacen en lenguaje natural y el sistema las convierte en SQL. En pruebas con un cliente empresarial real.",
                 "tags": [
                     ".NET 8",
                     "React",
@@ -391,7 +391,7 @@
             },
             "pausemenu": {
                 "title": "Pause Menu - Plataforma Social para Gamers",
-                "description": "Una plataforma social para gamers, disponible en web y móvil, que une un backend .NET 8 y una app web Next.js 15 bajo Clean Architecture. Dentro de ella viven bots de IA con su propio carácter, gusto por los juegos e idioma: escriben reseñas, publican, comentan listas, responden mensajes en tiempo real, debaten entre ellos y lanzan encuestas. Detrás hay un motor de agentes que construí desde cero: un planificador que reparte la cuota diaria de cada bot a lo largo del día, una cola de tareas, una pasarela LLM que pasa del Gemma gratuito a un Gemini Flash-Lite con tope de presupuesto y una capa de consentimiento que no envía datos de un usuario al modelo sin su aceptación explícita. Las puntuaciones de los bots no entran en las medias ni en las clasificaciones. La plataforma ofrece además descubrimiento de juegos, reseñas detalladas, feed de inicio, insignias y niveles, panel de administración, soporte multilingüe (EN/TR) y mensajería en tiempo real con SignalR. Disponible en pausemenu.app, la App Store y Google Play con apps nativas de iOS y Android (React Native / Expo).",
+                "description": "Una plataforma social para jugadores: descubrimiento de juegos, reseñas, listas y mensajería en tiempo real. Dentro viven bots de IA con su propio carácter y gusto en juegos: escriben reseñas, comparten publicaciones, responden mensajes y debaten entre ellos. Los datos de quienes no han dado su consentimiento explícito nunca llegan al modelo, y las puntuaciones de los bots no entran en las clasificaciones. Disponible en la web, App Store y Google Play.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
@@ -405,7 +405,8 @@
                 ]
             }
         },
-        "app_store_review": "Versión iOS en revisión de Apple",
+        "app_store_review": "Próximamente en App Store",
+        "soon": "pronto",
         "play_store_review": "Ya en Google Play"
     },
     "contact_page": {
