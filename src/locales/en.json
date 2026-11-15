@@ -314,7 +314,7 @@
             },
             "purescan": {
                 "title": "PureScan - Cosmetic Ingredient Analyzer",
-                "description": "An AI-powered cosmetic ingredient analyzer. It reads ingredients via camera OCR, barcode scanning (OpenBeautyFacts), or manual input; offers Gemini 3.1 Flash-Lite powered risk assessment, skin-type compatibility scoring, TTS audio summaries, and an AI chat assistant. The Virtual Cabinet adds analyzed products to an inventory and checks cross-product compatibility through a conflict engine. Runs on a freemium model with RevenueCat Pro subscriptions and AdMob integration, compiled to Android with Capacitor, and live on Google Play.",
+                "description": "An AI-powered cosmetic ingredient analyzer. It reads ingredients via camera OCR, barcode scanning (OpenBeautyFacts), or manual input. OCR and ingredient analysis run on Gemini 3.5 Flash-Lite, with Gemini 3.8 Flash stepping in when a read is weak. It offers skin-type compatibility scoring, audio summaries through Gemini 3.8 Flash-Lite TTS, and an AI chat assistant. The Cabinet adds analyzed products to an inventory and checks cross-product compatibility through a conflict engine. Runs on a freemium model with RevenueCat Pro subscriptions and AdMob integration, built with Capacitor for Android and iOS, and live on Google Play.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -348,7 +348,7 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Food Ingredient Analyzer",
-                "description": "A cross-platform food label analyzer I built with React Native and Expo on Firebase infrastructure. It reads labels via barcode scanning and camera OCR, using Gemini 3.1 Flash-Lite for allergen detection, additive risk analysis, and dietary compatibility assessment. Family profiles calculate a compatibility score for each member based on their allergies and preferences. Includes an E-code additive dictionary, the Guru AI chat assistant, and multi-language support; all API traffic is routed through Firebase Cloud Functions to protect user privacy. Live on Google Play and the App Store.",
+                "description": "A cross-platform food label analyzer I built with React Native and Expo on Firebase infrastructure. It reads labels via barcode scanning (OpenFoodFacts) and camera; photo reading runs on Gemini 3.8 Flash, while allergen detection and additive risk analysis run on Gemini 3.5 Flash-Lite in two steps. The safety score is not left to the AI: it is computed deterministically from the NOVA group and additive risk, so the same product gets the same score every scan. Family profiles assess suitability for each member based on their allergies and preferences. Includes an E-code additive dictionary, the Guru AI chat assistant, a highlighted usage tour, and TR/EN/ES language support; all API traffic goes through a Firebase Cloud Functions proxy that requires authentication. Live on Google Play and the App Store.",
                 "tags": [
                     "React Native",
                     "Expo",

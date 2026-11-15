@@ -314,7 +314,7 @@
             },
             "purescan": {
                 "title": "PureScan - Kozmetik İçerik Analizi",
-                "description": "Yapay zekâ destekli kozmetik içerik analizörü. İçerikleri kamera (OCR), barkod (OpenBeautyFacts) veya elle giriş yoluyla okur; Gemini 3.1 Flash-Lite destekli risk değerlendirmesi, cilt tipine göre uyumluluk skoru, sesli özet (TTS) ve yapay zekâ sohbet asistanı sunar. Sanal Dolap özelliğiyle analiz edilen ürünler envantere eklenir ve conflict engine ile ürünler arası uyumluluk kontrol edilir. RevenueCat ile Pro abonelik ve AdMob entegrasyonu içeren freemium modeliyle, Capacitor üzerinden Android'e derlenmiş hâlde Google Play'de yayında.",
+                "description": "Yapay zekâ destekli kozmetik içerik analizörü. İçerikleri kamera (OCR), barkod (OpenBeautyFacts) veya elle giriş yoluyla okur. OCR ve içerik analizi Gemini 3.5 Flash-Lite ile yapılır; zayıf okumada Gemini 3.8 Flash devreye girer. Cilt tipine göre uyumluluk skoru, Gemini 3.8 Flash-Lite TTS ile sesli özet ve yapay zekâ sohbet asistanı sunar. Kabin özelliğiyle analiz edilen ürünler envantere eklenir ve conflict engine ile ürünler arası uyumluluk kontrol edilir. RevenueCat ile Pro abonelik ve AdMob entegrasyonu içeren freemium modeliyle, Capacitor üzerinden Android ve iOS için derlenir; Google Play'de yayında.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -348,7 +348,7 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Gıda İçerik Analizi",
-                "description": "React Native ve Expo ile geliştirdiğim, Firebase üzerinde çalışan cross-platform gıda etiketi analizörü. Barkod ve kamera (OCR) ile etiketleri okur; Gemini 3.1 Flash-Lite ile alerjen tespiti, katkı maddesi risk analizi ve diyet uyumluluğu değerlendirmesi yapar. Aile profilleri sayesinde her bireyin alerji ve tercihlerine göre ürün uygunluk skoru hesaplanır. E-kod sözlüğü, Guru AI sohbet asistanı ve çoklu dil desteği içerir; kullanıcı gizliliği için tüm API trafiği Firebase Cloud Functions üzerinden yönetilir. Google Play ve App Store'da yayında.",
+                "description": "React Native ve Expo ile geliştirdiğim, Firebase üzerinde çalışan cross-platform gıda etiketi analizörü. Barkod (OpenFoodFacts) ve kamera ile etiketleri okur; fotoğraftan içerik okuma Gemini 3.8 Flash, alerjen tespiti ve katkı maddesi risk analizi Gemini 3.5 Flash-Lite ile iki adımda yapılır. Güvenlik skoru yapay zekâya bırakılmaz: NOVA grubu ve katkı maddesi riskinden deterministik hesaplanır, aynı ürün her taramada aynı skoru alır. Aile profilleri sayesinde her bireyin alerji ve tercihlerine göre uygunluk değerlendirilir. E-kod sözlüğü, Guru AI sohbet asistanı, vurgulamalı kullanım turu ve TR/EN/ES dil desteği içerir; tüm API trafiği, kimlik doğrulaması isteyen bir Firebase Cloud Functions vekilinden geçer. Google Play ve App Store'da yayında.",
                 "tags": [
                     "React Native",
                     "Expo",

@@ -314,7 +314,7 @@
             },
             "purescan": {
                 "title": "PureScan - Kosmetik-Inhaltsstoff-Analyse",
-                "description": "Ein KI-gestützter Analysator für kosmetische Inhaltsstoffe. Er liest Inhaltsstoffe per Kamera-OCR, Barcode-Scan (OpenBeautyFacts) oder manueller Eingabe; bietet Gemini 3.1 Flash-Lite-gestützte Risikobewertung, Hauttyp-Kompatibilitätsscores, TTS-Audio-Zusammenfassungen und einen KI-Chat-Assistenten. Der virtuelle Schrank nimmt analysierte Produkte ins Inventar auf und prüft die Verträglichkeit zwischen Produkten über eine Conflict-Engine. Freemium-Modell mit RevenueCat-Pro-Abos und AdMob-Integration, mit Capacitor für Android kompiliert und live auf Google Play.",
+                "description": "Ein KI-gestützter Analysator für kosmetische Inhaltsstoffe. Er liest Inhaltsstoffe per Kamera-OCR, Barcode-Scan (OpenBeautyFacts) oder manueller Eingabe. OCR und Inhaltsstoffanalyse laufen mit Gemini 3.5 Flash-Lite, bei schwachen Ergebnissen springt Gemini 3.8 Flash ein. Er bietet Hauttyp-Kompatibilitätsscores, Audio-Zusammenfassungen über Gemini 3.8 Flash-Lite TTS und einen KI-Chat-Assistenten. Der Schrank (Cabinet) nimmt analysierte Produkte ins Inventar auf und prüft die Verträglichkeit zwischen Produkten über eine Conflict-Engine. Freemium-Modell mit RevenueCat-Pro-Abos und AdMob-Integration, mit Capacitor für Android und iOS gebaut und live auf Google Play.",
                 "tags": [
                     "React",
                     "Capacitor",
@@ -348,7 +348,7 @@
             },
             "purescan_foods": {
                 "title": "PureScan Foods - Lebensmittel-Analyse",
-                "description": "Ein plattformübergreifender Lebensmitteletikett-Analysator, den ich mit React Native und Expo auf Firebase-Infrastruktur entwickelt habe. Er liest Etiketten per Barcode-Scan und Kamera-OCR und nutzt Gemini 3.1 Flash-Lite für Allergenerkennung, Zusatzstoff-Risikoanalyse und Diätverträglichkeitsbewertung. Familienprofile berechnen für jedes Mitglied einen Verträglichkeitsscore auf Basis von Allergien und Vorlieben. Enthält ein E-Code-Zusatzstofflexikon, den Guru-AI-Chat-Assistenten und Mehrsprachigkeit; der gesamte API-Verkehr läuft zum Schutz der Privatsphäre über Firebase Cloud Functions. Live auf Google Play und im App Store.",
+                "description": "Ein plattformübergreifender Lebensmitteletikett-Analysator, den ich mit React Native und Expo auf Firebase-Infrastruktur entwickelt habe. Er liest Etiketten per Barcode-Scan (OpenFoodFacts) und Kamera; das Lesen des Fotos übernimmt Gemini 3.8 Flash, Allergenerkennung und Zusatzstoff-Risikoanalyse übernimmt Gemini 3.5 Flash-Lite, in zwei Schritten. Der Sicherheitsscore wird nicht der KI überlassen: Er wird deterministisch aus NOVA-Gruppe und Zusatzstoffrisiko berechnet, sodass dasselbe Produkt bei jedem Scan denselben Score erhält. Familienprofile bewerten die Eignung für jedes Mitglied anhand von Allergien und Vorlieben. Enthält ein E-Code-Zusatzstofflexikon, den Guru-AI-Chat-Assistenten, eine hervorgehobene Nutzungstour und Unterstützung für TR/EN/ES; der gesamte API-Verkehr läuft über einen Firebase-Cloud-Functions-Proxy, der Authentifizierung verlangt. Live auf Google Play und im App Store.",
                 "tags": [
                     "React Native",
                     "Expo",
