@@ -335,15 +335,14 @@
                 ]
             },
             "fintel": {
-                "title": "Fintel - AI Finans Asistanı",
-                "description": "Gemini ile hızlıca prototiplenen, ardından kapsamlı mimari geliştirmelerle profesyonel bir SaaS ürününe dönüştürdüğüm hibrit (LocalStorage + Firestore) finans asistanı. Groq altyapısında Llama 3.3 70B ile çalışan 'Nova AI', GLM-OCR desteğiyle PDF ve fişleri yüksek doğrulukla işler; harcama analizi ve kişiselleştirilmiş tasarruf önerileri sunar. Capacitor ile Android'e taşıdım; Google Play'de yayında.",
+                "title": "Fintel - Aile Bütçesi",
+                "description": "Maaş dönemi, günlük limit, taksit ve fiş okumayı tek akışta toplayan aile bütçesi uygulaması. İlk sürümü baştan yazdım: Capacitor 8 ve React 19 ile Android ve iOS, Firebase üzerinde kullanıcı verisi, sunucuda Gemini ile fiş okuma ve 'Nova' asistanı. Yapay zeka anahtarları uygulamada değil sunucuda durur. Android'de Google Play'de yayında, iOS sürümü hazırlanıyor.",
                 "tags": [
                     "React",
                     "TypeScript",
-                    "Llama 3.3 70B",
-                    "GLM-OCR",
+                    "Capacitor",
                     "Firebase",
-                    "Capacitor"
+                    "Gemini"
                 ]
             },
             "purescan_foods": {

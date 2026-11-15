@@ -335,15 +335,14 @@
                 ]
             },
             "fintel": {
-                "title": "Fintel - KI-Finanzassistent",
-                "description": "Ein hybrider (LocalStorage + Firestore) Finanzassistent, der als schneller Gemini-Prototyp begann und zu einem professionell entwickelten SaaS-Produkt heranwuchs. Seine 'Nova AI' (Llama 3.3 70B auf Groq-Infrastruktur) verarbeitet PDFs und Belege mit GLM-OCR hochpräzise und liefert Ausgabenanalysen sowie personalisierte Sparstrategien. Mit Capacitor auf Android portiert und live auf Google Play.",
+                "title": "Fintel - Familienbudget",
+                "description": "Eine Familienbudget-App, die Gehaltszeiträume, Tageslimit, Ratenzahlungen und Belegerfassung in einem Ablauf vereint. Ich habe die erste Version komplett neu geschrieben: Capacitor 8 und React 19 für Android und iOS, Nutzerdaten in Firebase, Belegerkennung und der Assistent 'Nova' über Gemini auf dem Server. KI-Schlüssel liegen auf dem Server, nicht in der App. Auf Google Play für Android verfügbar, die iOS-Version ist in Vorbereitung.",
                 "tags": [
                     "React",
                     "TypeScript",
-                    "Llama 3.3 70B",
-                    "GLM-OCR",
+                    "Capacitor",
                     "Firebase",
-                    "Capacitor"
+                    "Gemini"
                 ]
             },
             "purescan_foods": {

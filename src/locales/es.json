@@ -335,15 +335,14 @@
                 ]
             },
             "fintel": {
-                "title": "Fintel - Asistente Financiero con IA",
-                "description": "Un asistente financiero híbrido (LocalStorage + Firestore) que comenzó como un prototipo rápido con Gemini y creció hasta ser un producto SaaS de ingeniería profesional. Su 'Nova AI' (Llama 3.3 70B sobre infraestructura Groq) procesa PDFs y recibos con alta precisión gracias a GLM-OCR, ofreciendo análisis de gastos y estrategias de ahorro personalizadas. Portado a Android con Capacitor y disponible en Google Play.",
+                "title": "Fintel - Presupuesto Familiar",
+                "description": "Una app de presupuesto familiar que reúne periodos de pago, límite diario, cuotas y lectura de recibos en un solo flujo. Reescribí la primera versión desde cero: Capacitor 8 y React 19 para Android e iOS, datos de usuario en Firebase, lectura de recibos y el asistente 'Nova' con Gemini en el servidor. Las claves de IA están en el servidor, no en la app. Disponible en Google Play para Android; la versión de iOS está en preparación.",
                 "tags": [
                     "React",
                     "TypeScript",
-                    "Llama 3.3 70B",
-                    "GLM-OCR",
+                    "Capacitor",
                     "Firebase",
-                    "Capacitor"
+                    "Gemini"
                 ]
             },
             "purescan_foods": {
