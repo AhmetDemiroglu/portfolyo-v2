@@ -193,8 +193,9 @@ function Moon({ body }: { body: Body }) {
    Keys: [home .. sets], [rises .. peak .. sets], [returns .. home]. */
 function useBodies(progress: MotionValue<number>, dark: boolean) {
     // The body that is home at scroll 0 (moon in dark theme, sun in light).
-    const homeX = useTransform(progress, [0, 0.25, 0.42, 0.7, 0.92, 1], ["0%", "0%", "8%", "30%", "0%", "0%"]);
-    const homeY = useTransform(progress, [0, 0.25, 0.42, 0.7, 0.92, 1], ["0%", "0%", "45%", "60%", "0%", "0%"]);
+    /* It starts sinking with the first scroll so the sky answers immediately. */
+    const homeX = useTransform(progress, [0, 0.42, 0.7, 0.92, 1], ["0%", "8%", "30%", "0%", "0%"]);
+    const homeY = useTransform(progress, [0, 0.25, 0.42, 0.7, 0.92, 1], ["0%", "18%", "45%", "60%", "0%", "0%"]);
     const homeOpacity = useTransform(progress, [0, 0.25, 0.4, 0.7, 0.86, 1], [1, 1, 0, 0, 1, 1]);
     const homeScale = useTransform(progress, [0, 0.9, 1], [1, 1, 0.9]);
     // The visiting body: rises from the left, peaks at 0.53, sets on the right.
@@ -248,9 +249,9 @@ export function CityScene({
     const exitFar = useTransform(exit, [0, 1], ["0%", "13%"]);
     const exitMid = useTransform(exit, [0, 1], ["0%", "24%"]);
     const exitNear = useTransform(exit, [0, 1], ["0%", "38%"]);
-    const scaleFar = useTransform(progress, [0.35, 1], [1, cam.far]);
-    const scaleMid = useTransform(progress, [0.35, 1], [1, cam.mid]);
-    const scaleNear = useTransform(progress, [0.35, 1], [1, cam.near]);
+    const scaleFar = useTransform(progress, [0.02, 1], [1, cam.far]);
+    const scaleMid = useTransform(progress, [0.02, 1], [1, cam.mid]);
+    const scaleNear = useTransform(progress, [0.02, 1], [1, cam.near]);
 
     const layer = "absolute inset-x-0 bottom-0 origin-bottom will-change-transform";
 
@@ -301,8 +302,8 @@ export function CityScene({
             {/* ground fade into the page: day and night versions cross-fade.
                 Both fade to transparent, so each gets its own opacity; a
                 permanent day layer would bleed a grey band through the night one. */}
-            <motion.div style={{ opacity: dayOpacity }} className="city-ground-day absolute inset-x-0 bottom-0 h-24" />
-            <motion.div style={{ opacity: nightOpacity }} className="city-ground-night absolute inset-x-0 bottom-0 h-24" />
+            <motion.div style={{ opacity: dayOpacity }} className="city-ground-day absolute inset-x-0 bottom-0 h-12" />
+            <motion.div style={{ opacity: nightOpacity }} className="city-ground-night absolute inset-x-0 bottom-0 h-12" />
         </div>
     );
 }

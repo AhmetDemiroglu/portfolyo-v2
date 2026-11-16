@@ -542,3 +542,15 @@ Bulgular:
 | Şehir alt üçte birde | `md` altında SVG yükseklikleri ×1,4: uzak 300 → 420, orta 360 → 500, yakın 220 → 310 px | p = 1'de şehir ekranın alt ~%45'i. Masaüstü değişmedi (480 / 600 / 380) |
 
 Bilinen yan etki: mobilde scroll 0'da silüet daha yüksek, ikinci CTA artık silüetin önünde duruyor (z-10, okunuyor). Kabul 1 masaüstü için geçerli kalır; mobil scroll 0 bilerek değişti. Görüntüler `docs/motion-ref/mobile390-fix-*`.
+
+## 15. Canlı sonrası düzeltmeler (Ahmet, 2026-11-16)
+
+| Geri bildirim | Neden | Düzeltme |
+|---|---|---|
+| Açık temada alt kısım parlıyor, KAYDIR okunmuyor | Zemin solması 96 px ve tam kağıt rengine gidiyordu, ipucu bu bandın içindeydi | Solma 48 px ve en fazla %22 kağıt (parlama bandı kalktı). İpucu çerçevesiz: açık renk, kalın, 11 px; yakın silüetin üstünde durur (hap denemesi Ahmet tarafından reddedildi) |
+| İlk 2-3 scroll tepkisiz | Kuyruk 0,15'te, kamera 0,35'te, ay 0,25'te başlıyordu; ilk ~220 px yalnız ipucu sönüyordu | Kuyruk başlangıcı 0,06 (ilk çizgi p 0,01), uzak kat 0,01, kamera 0,02, ay ilk scroll'la batmaya başlar, metin 0,02'de kaymaya başlar. Son bina bitişi 0,69 → 0,60. Scroll 0 değişmedi |
+| Featured: başlığa tıklayınca projeler sayfası açılıyor | Başlıklar `Link` idi | Başlıklar düğme: o projenin adımının ortasına yumuşak kaydırır (kitap ayracı). "Tüm projeler" bağlantısı kaldı |
+| Tek telefon sıkıcı | | Proje başına 3 telefonlu yelpaze: ortada mevcut ekran, arkada iki mağaza ekranı (`gallery`). Kaynak `SaaS/MARKETING/*` ham ekranları, 400 px webp, 6 dosya toplam ~147 KB, lazy |
+| Hızlı scroll'da telefonlar titriyor | Adım içi drift her adım sınırında 24 px sıçrıyordu; `AnimatePresence mode="wait"` atlanan adımların çıkışlarını sıraya diziyordu | Drift kaldırıldı. Üç yelpaze hep mount, CSS transition ile çapraz geçiş (0,5 sn); hızlı geçişte yalnız hedef değişir. Adım ham scroll'dan okunur (spring gecikmesi yok). 12 hızlı ileri-geri sıçramadan sonra tek yelpaze görünür kaldı |
+
+Adım uzunluğu 60vh olarak kaldı (ayar: `FeaturedPinned.tsx` `h-[280vh]`).

@@ -226,7 +226,7 @@ body::after {
 }
 
 .city-ground-day {
-    background: linear-gradient(to top, rgb(var(--sky-day-paper)), transparent);
+    background: linear-gradient(to top, rgb(var(--sky-day-paper) / 0.22), transparent);
 }
 
 .city-ground-night {

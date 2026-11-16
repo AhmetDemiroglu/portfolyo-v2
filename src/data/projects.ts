@@ -1,6 +1,12 @@
 import fintelScreen from "../assets/fintel-screen.webp";
 import pausemenuScreen from "../assets/pausemenu-screen.webp";
 import pausemenuWeb from "../assets/pausemenu-web.webp";
+import pausemenuLists from "../assets/pausemenu-lists.webp";
+import pausemenuDetail from "../assets/pausemenu-detail.webp";
+import purescanResult from "../assets/purescan-result.webp";
+import purescanIngredients from "../assets/purescan-ingredients.webp";
+import purescanFoodsAnalysis from "../assets/purescan-foods-analysis.webp";
+import purescanFoodsLibrary from "../assets/purescan-foods-library.webp";
 import multimind from "../assets/multimind.webp";
 import openworld from "../assets/openworld.webp";
 import purescanFoodsScreen from "../assets/purescan-foods-screen.webp";
@@ -13,6 +19,8 @@ export interface ProjectBase {
     image?: string;
     /* Optional web/desktop screenshot — when set, the featured card shows a laptop+phone duo. */
     webImage?: string;
+    /* Two extra phone screens shown behind the main one on the home page stage. */
+    gallery?: [string, string];
     liveLink: string | null;
     githubLink: string | null;
     apkLink?: string | null;
@@ -33,6 +41,7 @@ export const projectsData: ProjectBase[] = [
         id: "pausemenu",
         image: pausemenuScreen,
         webImage: pausemenuWeb,
+        gallery: [pausemenuLists, pausemenuDetail],
         liveLink: "https://pausemenu.app",
         githubLink: "https://github.com/AhmetDemiroglu/pause-menu",
         appStoreLink: "https://apps.apple.com/app/id6781281375",
@@ -57,6 +66,7 @@ export const projectsData: ProjectBase[] = [
     {
         id: "purescan",
         image: purescanScreen,
+        gallery: [purescanIngredients, purescanResult],
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/PureScan",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.septimuslab.purescan",
@@ -69,6 +79,7 @@ export const projectsData: ProjectBase[] = [
     {
         id: "purescan_foods",
         image: purescanFoodsScreen,
+        gallery: [purescanFoodsLibrary, purescanFoodsAnalysis],
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/PureScanFoods",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.purescan.foods",

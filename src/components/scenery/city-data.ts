@@ -13,7 +13,10 @@
 export const RISE = 0.045; // rise duration, both layers
 export const LINE_LEAD = 0.05; // the outline starts drawing this long before the slot
 export const LINE_DUR = 0.04;
-export const QUEUE_START = 0.15;
+/* Lines start LINE_LEAD before the slot, so 0.06 puts the first stroke at
+   p = 0.01: the scene answers the very first wheel notch while scroll 0
+   itself stays untouched. */
+export const QUEUE_START = 0.06;
 
 export interface LitGroup {
     d: string;
@@ -265,8 +268,8 @@ export const FAR = {
     width: 1440,
     height: 560,
     extra: 42,
-    start: 0.15,
-    dur: 0.2,
+    start: 0.01,
+    dur: 0.22,
     d: "M0 560 L0 428 L48 428 L48 390 L96 390 L96 416 L150 416 L150 370 L208 370 L208 408 L262 408 L262 386 L320 386 L320 426 L378 426 L378 358 L430 358 L430 402 L494 402 L494 380 L552 380 L552 422 L614 422 L614 346 L640 346 L640 334 L652 334 L652 346 L678 346 L678 406 L742 406 L742 378 L806 378 L806 416 L868 416 L868 362 L926 362 L926 398 L992 398 L992 380 L1052 380 L1052 424 L1116 424 L1116 350 L1174 350 L1174 396 L1238 396 L1238 372 L1300 372 L1300 414 L1364 414 L1364 388 L1404 388 L1404 426 L1440 426 L1440 560 Z",
 };
 

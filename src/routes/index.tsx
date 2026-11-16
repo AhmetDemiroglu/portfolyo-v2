@@ -56,10 +56,10 @@ function Hero() {
 
     /* Pin timeline, docs/MOTION_SPEC.md 4.1. Everything derives from the one
        spring-smoothed progress so the layers never drift apart. */
-    const hintOpacity = useTransform(progress, [0, 0.08], [1, 0]);
-    const contentY = useTransform(progress, [0.08, 0.32], ["0%", "-30%"]);
-    const contentOpacity = useTransform(progress, [0.08, 0.32], [1, 0]);
-    const contentVisibility = useTransform(progress, (v) => (v > 0.32 ? "hidden" : "visible"));
+    const hintOpacity = useTransform(progress, [0, 0.04], [1, 0]);
+    const contentY = useTransform(progress, [0.02, 0.3], ["0%", "-30%"]);
+    const contentOpacity = useTransform(progress, [0.06, 0.3], [1, 0]);
+    const contentVisibility = useTransform(progress, (v) => (v > 0.3 ? "hidden" : "visible"));
     const captionY = useTransform(progress, [0.88, 1], [16, 0]);
     const captionOpacity = useTransform(progress, [0.88, 1], [0, 1]);
 
@@ -127,10 +127,11 @@ function Hero() {
 
                 <motion.div
                     style={reduce ? undefined : { opacity: hintOpacity }}
-                    className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2"
+                    className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2"
                 >
-                    <div className="flex flex-col items-center gap-2 text-muted">
-                        <span className="font-mono text-[10px] uppercase tracking-[0.3em]">
+                    {/* sits on the near skyline, which is dark in both themes: light text, no frame */}
+                    <div className="flex flex-col items-center gap-1.5 text-[rgb(var(--sky-day-paper))]">
+                        <span className="font-mono text-[11px] font-bold uppercase tracking-[0.32em]">
                             {t("common.scroll")}
                         </span>
                         <FiArrowDown className="animate-scroll-dot" />
