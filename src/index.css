@@ -179,6 +179,145 @@ body::after {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
 }
 
+/* ─── City build (hero) ──────────────────────────────────────────────────────
+   The stage root carries --p (0..1, pinned hero progress) and --day (0 night,
+   1 day). Each building <g> carries --s (slot start) and --dy (rise, px; 1px =
+   1 viewBox unit inside the SVG). Outlines and lit groups carry their own --s;
+   lit groups also --thr. Everything below is pure CSS off those values.
+   docs/MOTION_SPEC.md 12. */
+
+/* Sky token sets, theme-independent: both are needed at once for the day
+   cycle. Values are the dark / light --c-sky-* and paper tokens. */
+:root {
+    --sky-night-top: 16 22 35;
+    --sky-night-far: 36 46 66;
+    --sky-night-mid: 25 33 49;
+    --sky-night-near: 13 17 26;
+    --sky-night-paper: 10 13 19;
+    --sky-night-ink: 236 238 243;
+    --sky-day-top: 224 231 240;
+    --sky-day-far: 196 204 218;
+    --sky-day-mid: 138 150 171;
+    --sky-day-near: 76 86 105;
+    --sky-day-paper: 245 243 238;
+    --sky-day-surface: 252 251 248;
+    --city-rise: 0.045;
+    --city-line-lead: 0.05;
+    --city-line-dur: 0.04;
+}
+
+.city-stage {
+    --p: 0;
+    --day: 0;
+    --lit-day-off: 0;
+    contain: paint;
+}
+
+.dark .city-stage {
+    --lit-day-off: 1;
+}
+
+.city-sky-day {
+    background: linear-gradient(to bottom, rgb(var(--sky-day-top)), rgb(var(--sky-day-paper)) 50%, rgb(var(--sky-day-paper)));
+}
+
+.city-sky-night {
+    background: linear-gradient(to bottom, rgb(var(--sky-night-top)), rgb(var(--sky-night-paper)) 50%, rgb(var(--sky-night-paper)));
+}
+
+.city-ground-day {
+    background: linear-gradient(to top, rgb(var(--sky-day-paper)), transparent);
+}
+
+.city-ground-night {
+    background: linear-gradient(to top, rgb(var(--sky-night-paper)), transparent);
+}
+
+/* Silhouette tones follow --day (color-mix: Chrome 111+, Safari 16.2+; older
+   engines keep the night tone). */
+.city-fill-far {
+    fill: color-mix(in srgb, rgb(var(--sky-night-far)) calc((1 - var(--day)) * 100%), rgb(var(--sky-day-far)));
+}
+.city-fill-mid {
+    fill: color-mix(in srgb, rgb(var(--sky-night-mid)) calc((1 - var(--day)) * 100%), rgb(var(--sky-day-mid)));
+}
+.city-fill-near {
+    fill: color-mix(in srgb, rgb(var(--sky-night-near)) calc((1 - var(--day)) * 100%), rgb(var(--sky-day-near)));
+}
+
+/* Rise: translateY(--dy) -> 0 across [--s, --s + rise]. */
+.city-building {
+    transform: translateY(calc(var(--dy) * (1 - clamp(0, (var(--p) - var(--s)) / var(--city-rise), 1))));
+}
+
+.city-far {
+    transform: translateY(calc(var(--dy) * (1 - clamp(0, (var(--p) - var(--s)) / var(--d), 1))));
+}
+
+/* Dim window grid: a static part of the building, visible at scroll 0 too. */
+.city-grid {
+    fill: rgb(var(--c-ink) / 0.1);
+}
+
+.dark .city-grid {
+    fill: rgb(var(--c-base) / 0.07);
+}
+
+/* Lit groups: on once the building has finished (--s) and while --day is
+   below the group's threshold (dark theme only; light theme never switches
+   them off, their colour moves to the "glass" tone with --day instead). */
+.city-lit {
+    fill: color-mix(in srgb, rgb(255 222 170 / 0.9) calc((1 - var(--day)) * 100%), rgb(var(--c-ink) / 0.45));
+    opacity: calc(
+        clamp(0, (var(--p) - var(--s)) / 0.05, 1) *
+            (1 - var(--lit-day-off) * (1 - clamp(0, (var(--thr) - var(--day)) / 0.05, 1)))
+    );
+}
+
+/* The eight windows that were already lit at scroll 0 stay as they were. */
+.city-window-static {
+    fill: rgb(var(--c-base));
+    opacity: 0.5;
+}
+
+/* Outline: drawn clockwise from the bottom-left corner during the 0.04 before
+   the building's slot, then fades while the building rises. Near layer only. */
+.city-plan {
+    fill: none;
+    stroke: rgb(var(--c-accent) / 0.85);
+    stroke-width: 1.5;
+    stroke-dasharray: 1;
+    stroke-dashoffset: calc(1 - clamp(0, (var(--p) - var(--s) + var(--city-line-lead)) / var(--city-line-dur), 1));
+    opacity: calc(1 - clamp(0, (var(--p) - var(--s) - 0.03) / 0.025, 1));
+}
+
+/* Crane: the rope pays out and the jib swings around the building's slot. */
+.city-crane-rope {
+    transform-box: fill-box;
+    transform-origin: 50% 0;
+    transform: scaleY(calc(0.2 + 0.8 * clamp(0, (var(--p) - var(--s) - 0.02) / 0.2, 1)));
+}
+
+.city-crane-jib {
+    transform-box: fill-box;
+    transform-origin: 41.5% 0;
+    transform: rotate(
+        calc(
+            -6deg + 6deg * clamp(0, (var(--p) - var(--s)) / 0.08, 1) + 4deg * clamp(0, (var(--p) - var(--s) - 0.08) / 0.06, 1) -
+                4deg * clamp(0, (var(--p) - var(--s) - 0.14) / 0.05, 1)
+        )
+    );
+}
+
+/* Reduced motion: no pin, scroll-0 skyline, visible lit groups on. */
+.city-static .city-lit {
+    opacity: 1;
+}
+
+.city-static .city-plan {
+    opacity: 0;
+}
+
 /* Big ghost/outline display text */
 .text-stroke {
     -webkit-text-stroke: 1.5px rgb(var(--c-ink) / 0.16);

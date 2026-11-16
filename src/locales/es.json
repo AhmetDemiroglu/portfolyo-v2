@@ -1,7 +1,8 @@
 {
     "seo": {
         "home_title": "Ahmet Demiroğlu | Desarrollador Full-Stack",
-        "home_description": "Del urbanismo al software: desarrollador full-stack que construye productos digitales como una ciudad. Web y móvil con React, Vue y .NET.",        "about_title": "Sobre mí | Ahmet Demiroğlu",
+        "home_description": "Del urbanismo al software: desarrollador full-stack que construye productos digitales como una ciudad. Web y móvil con React, Vue y .NET.",
+        "about_title": "Sobre mí | Ahmet Demiroğlu",
         "about_description": "Mi historia de urbanista a desarrollador full-stack: mi trayectoria, mis objetivos y mi camino hacia el software.",
         "skills_title": "Mis Habilidades | Ahmet Demiroğlu",
         "skills_description": "Las tecnologías front-end y back-end que uso en producción: React, Vue, C#, .NET, SQL y más.",
@@ -61,7 +62,8 @@
         "featured_label": "Trabajo seleccionado",
         "featured_title": "Proyectos destacados",
         "featured_link": "Todos los proyectos",
-        "role": "Full-Stack Developer · Esmirna"
+        "role": "Full-Stack Developer · Esmirna",
+        "city_caption": "Primero el plan. Luego la obra."
     },
     "about": {
         "label": "Sobre mí",

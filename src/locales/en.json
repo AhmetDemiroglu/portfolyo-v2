@@ -1,7 +1,8 @@
 {
     "seo": {
         "home_title": "Ahmet Demiroğlu | Full-Stack Developer",
-        "home_description": "From urban planning to software: a full-stack developer building digital products the way you'd build a city. Web & mobile with React, Vue and .NET.",        "about_title": "About Me | Ahmet Demiroğlu",
+        "home_description": "From urban planning to software: a full-stack developer building digital products the way you'd build a city. Web & mobile with React, Vue and .NET.",
+        "about_title": "About Me | Ahmet Demiroğlu",
         "about_description": "My story from urban planner to full-stack developer: my background, goals, and journey into software.",
         "skills_title": "My Skills | Ahmet Demiroğlu",
         "skills_description": "The front-end and back-end technologies I use in production: React, Vue, C#, .NET, SQL, and more.",
@@ -61,7 +62,8 @@
         "featured_label": "Selected Work",
         "featured_title": "Featured projects",
         "featured_link": "All projects",
-        "role": "Full-Stack Developer · Izmir"
+        "role": "Full-Stack Developer · Izmir",
+        "city_caption": "Plan first. Then build."
     },
     "about": {
         "label": "About Me",

@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
+
+# Motion spec reference captures (third-party screenshots, local only)
+docs/motion-ref/

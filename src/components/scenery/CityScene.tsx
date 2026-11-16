@@ -1,192 +1,308 @@
+import { motion, useMotionValueEvent, useTransform, type MotionValue } from "framer-motion";
+import { useEffect, useRef, type CSSProperties } from "react";
+import { useIsDesktop } from "../motion/useIsDesktop";
+import { useTheme } from "../../contexts/ThemeContext";
 import {
-    motion,
-    useReducedMotion,
-    useScroll,
-    useTransform,
-    type MotionValue,
-} from "framer-motion";
-import type { RefObject } from "react";
+    BUILD_END,
+    FAR,
+    MID,
+    MID_STATIC_WINDOWS,
+    NEAR,
+    RISE,
+    buildingPath,
+    outlinePath,
+    type Building,
+    type Layer,
+} from "./city-data";
 
-/* Three skyline silhouettes at different depths + sky objects. Every layer is
-   bound to the hero's scroll progress, so the parallax runs both ways. */
+/* The hero skyline that builds itself while the hero is pinned
+   (docs/MOTION_SPEC.md 12). Three depth layers; each building is its own <g>,
+   drawn at finished height and translated down by `--dy` until `--p` reaches
+   its slot. Its dim window grid is part of the building; lit groups light up
+   once it has finished and the sky (`--day`) is below their threshold.
+   The stage root carries `--p` and `--day`; everything below is CSS. */
 
-function FarSkyline() {
+const CAMERA = { near: 1.18, mid: 1.1, far: 1.04 };
+const CAMERA_MOBILE = { near: 1.09, mid: 1.05, far: 1.02 };
+
+/* Day cycle (12.3). Dark theme: night -> day -> night. Light theme: the inverse. */
+const DAY_KEYS = [0, 0.3, 0.45, 0.6, 0.9, 1];
+const DAY_DARK = [0, 0, 0.85, 0.85, 0, 0];
+const DAY_LIGHT = [1, 1, 0.15, 0.15, 1, 1];
+
+const riseStyle = (start: number, dy: number) => ({ "--s": start, "--dy": `${dy}px` }) as CSSProperties;
+
+function BuildingGroup({ b, baseline, mid }: { b: Building; baseline: number; mid?: boolean }) {
     return (
-        <svg
-            viewBox="0 0 1440 280"
-            preserveAspectRatio="none"
-            className="block h-[150px] w-full sm:h-[200px] lg:h-[240px]"
-        >
-            <path
-                fill="rgb(var(--c-sky-far))"
-                d="M0 280 L0 190 L48 190 L48 152 L96 152 L96 178 L150 178 L150 132 L208 132 L208 170 L262 170 L262 148 L320 148 L320 188 L378 188 L378 120 L430 120 L430 164 L494 164 L494 142 L552 142 L552 184 L614 184 L614 108 L640 108 L640 96 L652 96 L652 108 L678 108 L678 168 L742 168 L742 140 L806 140 L806 178 L868 178 L868 124 L926 124 L926 160 L992 160 L992 142 L1052 142 L1052 186 L1116 186 L1116 112 L1174 112 L1174 158 L1238 158 L1238 134 L1300 134 L1300 176 L1364 176 L1364 150 L1404 150 L1404 188 L1440 188 L1440 280 Z"
-            />
-        </svg>
+        <g className="city-building" style={riseStyle(b.start, b.extra)}>
+            <path d={buildingPath(b, baseline)} />
+            <path d={b.grid} className="city-grid" />
+            {b.lit.map((g, i) => (
+                <path
+                    key={i}
+                    d={g.d}
+                    className="city-lit"
+                    style={{ "--s": b.start + RISE + g.delay, "--thr": g.thr } as CSSProperties}
+                />
+            ))}
+            {mid && b.crane && <Crane extra={b.extra} />}
+        </g>
     );
 }
 
-function MidSkyline() {
+/* Construction crane, parked on the 932..1080 block of the mid layer. It rises
+   with its building; the hook rope pays out and the jib swings while it works. */
+function Crane({ extra }: { extra: number }) {
+    const top = 96 + 320 - extra;
     return (
-        <svg
-            viewBox="0 0 1440 320"
-            preserveAspectRatio="none"
-            className="block h-[180px] w-full sm:h-[240px] lg:h-[300px]"
-        >
-            <g fill="rgb(var(--c-sky-mid))">
-                <path d="M0 320 L0 170 L70 170 L70 120 L130 120 L130 200 L196 200 L196 92 L210 92 L210 78 L246 78 L246 92 L260 92 L260 176 L330 176 L330 140 L396 140 L396 214 L470 214 L470 100 L540 100 L540 188 L600 188 L600 150 L668 150 L668 220 L740 220 L740 124 L808 124 L808 196 L880 196 L880 84 L900 84 L900 64 L912 64 L912 84 L932 84 L932 168 L1080 168 L1080 210 L1158 210 L1158 116 L1226 116 L1226 184 L1296 184 L1296 142 L1366 142 L1366 206 L1440 206 L1440 320 Z" />
-                {/* Construction crane, a small nod to the planning years */}
-                <g>
-                    <rect x="1006" y="96" width="7" height="180" />
-                    <rect x="948" y="96" width="148" height="7" />
-                    <rect x="1080" y="103" width="4" height="26" />
-                    <rect x="1070" y="129" width="24" height="12" />
-                    <path d="M1013 103 L1042 96 L1013 89 Z" />
-                    <rect x="954" y="103" width="4" height="14" />
+        <g className="city-crane">
+            <rect x="1006" y={top} width="7" height="180" />
+            <g className="city-crane-jib">
+                <rect x="948" y={top} width="148" height="7" />
+                <path d={`M1013 ${top + 7} L1042 ${top} L1013 ${top - 7} Z`} />
+                <rect x="954" y={top + 7} width="4" height="14" />
+                <g className="city-crane-rope">
+                    <rect x="1080" y={top + 7} width="4" height="26" />
+                    <rect x="1070" y={top + 33} width="24" height="12" />
                 </g>
             </g>
-            {/* sparse lit windows */}
-            <g fill="rgb(var(--c-base))" opacity="0.5">
-                <rect x="212" y="100" width="6" height="8" />
-                <rect x="228" y="118" width="6" height="8" />
-                <rect x="482" y="120" width="6" height="8" />
-                <rect x="506" y="142" width="6" height="8" />
-                <rect x="754" y="142" width="6" height="8" />
-                <rect x="778" y="164" width="6" height="8" />
-                <rect x="1172" y="134" width="6" height="8" />
-                <rect x="1196" y="156" width="6" height="8" />
+        </g>
+    );
+}
+
+function SkylineSvg({
+    layer,
+    tone,
+    className,
+    outlines,
+    mid,
+    children,
+}: {
+    layer: Layer;
+    tone: "near" | "mid";
+    className: string;
+    outlines?: boolean;
+    mid?: boolean;
+    children?: React.ReactNode;
+}) {
+    return (
+        <svg viewBox={`0 0 ${layer.width} ${layer.height}`} preserveAspectRatio="none" className={className}>
+            <g className={`city-fill-${tone}`}>
+                {layer.buildings.map((b, i) => (
+                    <BuildingGroup key={i} b={b} baseline={layer.height} mid={mid} />
+                ))}
+                {children}
             </g>
+            {/* Outlines sit outside the rising groups, at finished coordinates. */}
+            {outlines && (
+                <g className="city-plans">
+                    {layer.buildings.map((b, i) => (
+                        <path
+                            key={i}
+                            d={outlinePath(b, layer.height)}
+                            className="city-plan"
+                            pathLength={1}
+                            vectorEffect="non-scaling-stroke"
+                            style={{ "--s": b.start } as CSSProperties}
+                        />
+                    ))}
+                </g>
+            )}
         </svg>
     );
 }
 
-function NearSkyline() {
+function Clouds({ y, opacity }: { y: MotionValue<string>; opacity: MotionValue<number> }) {
     return (
-        <svg
-            viewBox="0 0 1440 260"
-            preserveAspectRatio="none"
-            className="block h-[110px] w-full sm:h-[150px] lg:h-[190px]"
-        >
-            <path
-                fill="rgb(var(--c-sky-near))"
-                d="M0 260 L0 120 L88 120 L88 66 L150 66 L150 130 L240 130 L240 90 L330 90 L330 150 L420 150 L420 56 L500 56 L500 124 L590 124 L590 96 L680 96 L680 158 L770 158 L770 70 L856 70 L856 134 L948 134 L948 104 L1040 104 L1040 162 L1130 162 L1130 60 L1216 60 L1216 128 L1306 128 L1306 92 L1440 92 L1440 260 Z"
-            />
-        </svg>
-    );
-}
-
-function Clouds() {
-    return (
-        <>
-            <svg
-                viewBox="0 0 200 60"
-                className="absolute left-[8%] top-[16%] w-32 animate-cloud-drift-slow opacity-70 transition-opacity duration-500 dark:opacity-0 sm:w-44"
-            >
-                <g fill="rgb(var(--c-surface))">
+        <motion.div style={{ y, opacity }} className="absolute inset-0">
+            <svg viewBox="0 0 200 60" className="absolute left-[8%] top-[16%] w-32 animate-cloud-drift-slow opacity-70 sm:w-44">
+                <g fill="rgb(var(--sky-day-surface))">
                     <ellipse cx="60" cy="38" rx="48" ry="16" />
                     <ellipse cx="100" cy="28" rx="36" ry="18" />
                     <ellipse cx="140" cy="38" rx="44" ry="14" />
                 </g>
             </svg>
-            <svg
-                viewBox="0 0 200 60"
-                className="absolute right-[12%] top-[30%] w-24 animate-cloud-drift opacity-60 transition-opacity duration-500 dark:opacity-0 sm:w-36"
-            >
-                <g fill="rgb(var(--c-surface))">
+            <svg viewBox="0 0 200 60" className="absolute right-[12%] top-[30%] w-24 animate-cloud-drift opacity-60 sm:w-36">
+                <g fill="rgb(var(--sky-day-surface))">
                     <ellipse cx="70" cy="36" rx="50" ry="15" />
                     <ellipse cx="115" cy="27" rx="34" ry="16" />
                 </g>
             </svg>
-        </>
+        </motion.div>
     );
 }
 
-function Stars() {
-    const stars: Array<[number, number, number, string]> = [
-        [12, 18, 1.6, "0s"],
-        [22, 34, 1.1, "0.8s"],
-        [31, 12, 1.4, "1.6s"],
-        [44, 26, 1.0, "0.4s"],
-        [55, 10, 1.7, "2.1s"],
-        [63, 30, 1.1, "1.2s"],
-        [72, 16, 1.5, "0.6s"],
-        [81, 28, 1.0, "1.9s"],
-        [90, 14, 1.6, "0.2s"],
-        [86, 44, 1.0, "2.6s"],
-        [17, 48, 1.2, "1.4s"],
-        [49, 42, 1.2, "2.4s"],
-    ];
+const STARS: Array<[number, number, number, string]> = [
+    [12, 18, 1.6, "0s"],
+    [22, 34, 1.1, "0.8s"],
+    [31, 12, 1.4, "1.6s"],
+    [44, 26, 1.0, "0.4s"],
+    [55, 10, 1.7, "2.1s"],
+    [63, 30, 1.1, "1.2s"],
+    [72, 16, 1.5, "0.6s"],
+    [81, 28, 1.0, "1.9s"],
+    [90, 14, 1.6, "0.2s"],
+    [86, 44, 1.0, "2.6s"],
+    [17, 48, 1.2, "1.4s"],
+    [49, 42, 1.2, "2.4s"],
+];
 
+function Stars({ opacity }: { opacity: MotionValue<number> }) {
     return (
-        <div className="absolute inset-0 opacity-0 transition-opacity duration-500 dark:opacity-100">
-            {stars.map(([x, y, size, delay], i) => (
+        <motion.div style={{ opacity }} className="absolute inset-0">
+            {STARS.map(([x, y, size, delay], i) => (
                 <span
                     key={i}
-                    className="absolute animate-star-twinkle rounded-full bg-ink"
-                    style={{
-                        left: `${x}%`,
-                        top: `${y}%`,
-                        width: size * 2,
-                        height: size * 2,
-                        animationDelay: delay,
-                    }}
+                    className="absolute animate-star-twinkle rounded-full bg-[rgb(var(--sky-night-ink))]"
+                    style={{ left: `${x}%`, top: `${y}%`, width: size * 2, height: size * 2, animationDelay: delay }}
                 />
             ))}
-        </div>
+        </motion.div>
     );
 }
 
-function SunMoon({ y }: { y: MotionValue<string> | string }) {
+interface Body {
+    x: MotionValue<string>;
+    y: MotionValue<string>;
+    opacity: MotionValue<number>;
+    scale: MotionValue<number>;
+}
+
+function Sun({ body }: { body: Body }) {
     return (
-        <motion.div
-            style={{ y }}
-            className="absolute right-[6%] top-[9%] sm:right-[18%] sm:top-[14%]"
-        >
-            {/* sun (light) */}
-            <div className="relative h-16 w-16 rounded-full bg-accent opacity-90 shadow-[0_0_70px_rgb(var(--c-accent)/0.55)] transition-opacity duration-500 dark:opacity-0 sm:h-24 sm:w-24" />
-            {/* moon (dark) */}
-            <div className="absolute inset-0 h-16 w-16 rounded-full bg-[rgb(206_214_232)] opacity-0 shadow-[0_0_60px_rgba(160,180,230,0.35)] transition-opacity duration-500 dark:opacity-90 sm:h-24 sm:w-24">
-                <span className="absolute left-[22%] top-[30%] h-3 w-3 rounded-full bg-[rgb(170_180_204)]" />
-                <span className="absolute left-[55%] top-[55%] h-2 w-2 rounded-full bg-[rgb(170_180_204)]" />
-                <span className="absolute left-[60%] top-[22%] h-1.5 w-1.5 rounded-full bg-[rgb(170_180_204)]" />
+        <motion.div style={body} className="absolute right-[4%] top-[9%] sm:right-[18%] sm:top-[14%]">
+            <div className="h-10 w-10 rounded-full bg-accent opacity-90 shadow-[0_0_44px_rgb(var(--c-accent)/0.55)] sm:h-24 sm:w-24 sm:shadow-[0_0_70px_rgb(var(--c-accent)/0.55)]" />
+        </motion.div>
+    );
+}
+
+function Moon({ body }: { body: Body }) {
+    return (
+        <motion.div style={body} className="absolute right-[4%] top-[9%] sm:right-[18%] sm:top-[14%]">
+            <div className="relative h-10 w-10 rounded-full bg-[rgb(206_214_232)] opacity-90 shadow-[0_0_40px_rgba(160,180,230,0.35)] sm:h-24 sm:w-24 sm:shadow-[0_0_60px_rgba(160,180,230,0.35)]">
+                <span className="absolute left-[22%] top-[30%] h-2 w-2 rounded-full bg-[rgb(170_180_204)] sm:h-3 sm:w-3" />
+                <span className="absolute left-[55%] top-[55%] h-1.5 w-1.5 rounded-full bg-[rgb(170_180_204)] sm:h-2 sm:w-2" />
+                <span className="absolute left-[60%] top-[22%] h-1 w-1 rounded-full bg-[rgb(170_180_204)] sm:h-1.5 sm:w-1.5" />
             </div>
         </motion.div>
     );
 }
 
-export function CityScene({ heroRef }: { heroRef: RefObject<HTMLElement | null> }) {
-    const reduce = useReducedMotion();
-    const { scrollYProgress } = useScroll({
-        target: heroRef,
-        offset: ["start start", "end start"],
-    });
+/* Sky bodies (12.3). "Home" is the scroll-0 spot; the resting body sits there,
+   the other one travels an arc from the left horizon to the right horizon.
+   Keys: [home .. sets], [rises .. peak .. sets], [returns .. home]. */
+function useBodies(progress: MotionValue<number>, dark: boolean) {
+    // The body that is home at scroll 0 (moon in dark theme, sun in light).
+    const homeX = useTransform(progress, [0, 0.25, 0.42, 0.7, 0.92, 1], ["0%", "0%", "8%", "30%", "0%", "0%"]);
+    const homeY = useTransform(progress, [0, 0.25, 0.42, 0.7, 0.92, 1], ["0%", "0%", "45%", "60%", "0%", "0%"]);
+    const homeOpacity = useTransform(progress, [0, 0.25, 0.4, 0.7, 0.86, 1], [1, 1, 0, 0, 1, 1]);
+    const homeScale = useTransform(progress, [0, 0.9, 1], [1, 1, 0.9]);
+    // The visiting body: rises from the left, peaks at 0.53, sets on the right.
+    const visitX = useTransform(progress, [0.36, 0.53, 0.74], ["-140%", "-40%", "40%"]);
+    const visitY = useTransform(progress, [0.36, 0.53, 0.74], ["70%", "-10%", "70%"]);
+    const visitOpacity = useTransform(progress, [0.36, 0.44, 0.64, 0.74], [0, 1, 1, 0]);
+    const visitScale = useTransform(progress, [0, 1], [1, 1]);
+    const home: Body = { x: homeX, y: homeY, opacity: homeOpacity, scale: homeScale };
+    const visit: Body = { x: visitX, y: visitY, opacity: visitOpacity, scale: visitScale };
+    return dark ? { moon: home, sun: visit } : { moon: visit, sun: home };
+}
 
-    const yFar = useTransform(scrollYProgress, [0, 1], ["0%", "26%"]);
-    const yMid = useTransform(scrollYProgress, [0, 1], ["0%", "48%"]);
-    const yNear = useTransform(scrollYProgress, [0, 1], ["0%", "76%"]);
-    const ySky = useTransform(scrollYProgress, [0, 1], ["0%", "140%"]);
+export function CityScene({
+    progress,
+    exit,
+    reduce,
+}: {
+    progress: MotionValue<number>;
+    exit: MotionValue<number>;
+    reduce: boolean;
+}) {
+    const stageRef = useRef<HTMLDivElement>(null);
+    const desktop = useIsDesktop();
+    const cam = desktop ? CAMERA : CAMERA_MOBILE;
+    const dark = useTheme().theme === "dark";
+
+    const day = useTransform(progress, DAY_KEYS, dark ? DAY_DARK : DAY_LIGHT);
+
+    /* Two style writes per frame feed every building, grid, lit group, outline
+       and the sky layers through CSS clamp() (index.css "City build"). */
+    useMotionValueEvent(progress, "change", (v) => {
+        stageRef.current?.style.setProperty("--p", v.toFixed(4));
+    });
+    useMotionValueEvent(day, "change", (v) => {
+        stageRef.current?.style.setProperty("--day", v.toFixed(4));
+    });
+    useEffect(() => {
+        stageRef.current?.style.setProperty("--p", progress.get().toFixed(4));
+        stageRef.current?.style.setProperty("--day", day.get().toFixed(4));
+    }, [progress, day]);
+
+    const bodies = useBodies(progress, dark);
+    const starOpacity = useTransform(day, [0, 0.85], [1, 0]);
+    const cloudOpacity = useTransform(day, [0.15, 1], [0, 1]);
+    const cloudY = useTransform(progress, [0, 1], ["0%", "-10%"]);
+    const nightOpacity = useTransform(day, [0, 1], [1, 0]);
+    const dayOpacity = useTransform(day, [0, 1], [0, 1]);
+
+    // Camera (pin) + exit parallax (after release). Scale stays at its final value on exit.
+    const exitSky = useTransform(exit, [0, 1], ["0%", "70%"]);
+    const exitFar = useTransform(exit, [0, 1], ["0%", "13%"]);
+    const exitMid = useTransform(exit, [0, 1], ["0%", "24%"]);
+    const exitNear = useTransform(exit, [0, 1], ["0%", "38%"]);
+    const scaleFar = useTransform(progress, [0.35, 1], [1, cam.far]);
+    const scaleMid = useTransform(progress, [0.35, 1], [1, cam.mid]);
+    const scaleNear = useTransform(progress, [0.35, 1], [1, cam.near]);
+
+    const layer = "absolute inset-x-0 bottom-0 origin-bottom will-change-transform";
 
     return (
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-            {/* sky wash */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[rgb(var(--c-sky-top))] via-paper to-paper" />
+        <div
+            ref={stageRef}
+            aria-hidden="true"
+            data-build-end={BUILD_END.toFixed(3)}
+            className={`city-stage pointer-events-none absolute inset-0 overflow-hidden ${reduce ? "city-static" : ""}`}
+        >
+            {/* sky: day wash underneath, night wash fading on top */}
+            <div className="city-sky-day absolute inset-0" />
+            <motion.div style={{ opacity: nightOpacity }} className="city-sky-night absolute inset-0" />
             <div className="blueprint-grid absolute inset-0 [mask-image:radial-gradient(ellipse_75%_60%_at_50%_38%,black,transparent)]" />
 
-            <Stars />
-            <Clouds />
-            <SunMoon y={reduce ? "0%" : ySky} />
-
-            <motion.div style={{ y: reduce ? "0%" : yFar }} className="absolute inset-x-0 bottom-0">
-                <FarSkyline />
-            </motion.div>
-            <motion.div style={{ y: reduce ? "0%" : yMid }} className="absolute inset-x-0 bottom-0">
-                <MidSkyline />
-            </motion.div>
-            <motion.div style={{ y: reduce ? "0%" : yNear }} className="absolute inset-x-0 bottom-0">
-                <NearSkyline />
+            <Stars opacity={starOpacity} />
+            <Clouds y={cloudY} opacity={cloudOpacity} />
+            <motion.div style={{ y: exitSky }} className="absolute inset-0">
+                <Sun body={bodies.sun} />
+                <Moon body={bodies.moon} />
             </motion.div>
 
-            {/* ground fade into the page */}
-            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-paper to-transparent" />
+            {/* far */}
+            <motion.div style={{ y: exitFar, scale: scaleFar }} className={layer}>
+                <svg
+                    viewBox={`0 0 ${FAR.width} ${FAR.height}`}
+                    preserveAspectRatio="none"
+                    className="block h-[420px] w-full md:h-[400px] lg:h-[480px]"
+                >
+                    <g className="city-far city-fill-far" style={{ "--s": FAR.start, "--d": FAR.dur, "--dy": `${FAR.extra}px` } as CSSProperties}>
+                        <path d={FAR.d} />
+                    </g>
+                </svg>
+            </motion.div>
+
+            {/* mid + crane + the eight windows that were always lit */}
+            <motion.div style={{ y: exitMid, scale: scaleMid }} className={layer}>
+                <SkylineSvg layer={MID} tone="mid" mid className="block h-[500px] w-full md:h-[480px] lg:h-[600px]">
+                    <path d={MID_STATIC_WINDOWS} className="city-window-static" />
+                </SkylineSvg>
+            </motion.div>
+
+            {/* near, with outlines */}
+            <motion.div style={{ y: exitNear, scale: scaleNear }} className={layer}>
+                <SkylineSvg layer={NEAR} tone="near" outlines className="block h-[310px] w-full md:h-[300px] lg:h-[380px]" />
+            </motion.div>
+
+            {/* ground fade into the page: day and night versions cross-fade.
+                Both fade to transparent, so each gets its own opacity; a
+                permanent day layer would bleed a grey band through the night one. */}
+            <motion.div style={{ opacity: dayOpacity }} className="city-ground-day absolute inset-x-0 bottom-0 h-24" />
+            <motion.div style={{ opacity: nightOpacity }} className="city-ground-night absolute inset-x-0 bottom-0 h-24" />
         </div>
     );
 }

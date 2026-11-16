@@ -1,7 +1,8 @@
 {
     "seo": {
         "home_title": "Ahmet Demiroğlu | Full-Stack-Entwickler",
-        "home_description": "Von der Stadtplanung zur Software: Full-Stack-Entwickler, der digitale Produkte baut wie eine Stadt. Web & Mobile mit React, Vue und .NET.",        "about_title": "Über mich | Ahmet Demiroğlu",
+        "home_description": "Von der Stadtplanung zur Software: Full-Stack-Entwickler, der digitale Produkte baut wie eine Stadt. Web & Mobile mit React, Vue und .NET.",
+        "about_title": "Über mich | Ahmet Demiroğlu",
         "about_description": "Meine Geschichte vom Stadtplaner zum Full-Stack-Entwickler: mein Hintergrund, meine Ziele und mein Weg in die Softwareentwicklung.",
         "skills_title": "Meine Fähigkeiten | Ahmet Demiroğlu",
         "skills_description": "Die Front-End- und Back-End-Technologien, die ich in Produktion einsetze: React, Vue, C#, .NET, SQL und mehr.",
@@ -61,7 +62,8 @@
         "featured_label": "Ausgewählte Arbeiten",
         "featured_title": "Hervorgehobene Projekte",
         "featured_link": "Alle Projekte",
-        "role": "Full-Stack Developer · Izmir"
+        "role": "Full-Stack Developer · Izmir",
+        "city_caption": "Erst planen. Dann bauen."
     },
     "about": {
         "label": "Über mich",

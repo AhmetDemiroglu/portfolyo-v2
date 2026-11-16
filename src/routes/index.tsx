@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion, useTransform } from "framer-motion";
 import { useRef, type CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
@@ -9,6 +9,10 @@ import { Contours } from "../components/scenery/Contours";
 import { TechRibbon } from "../components/Marquee";
 import { SectionHeading } from "../components/SectionHeading";
 import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
+import { useHeroProgress } from "../components/motion/useHeroProgress";
+import { useIsDesktop } from "../components/motion/useIsDesktop";
+import { CountUp } from "../components/motion/CountUp";
+import { FeaturedPinned } from "../components/FeaturedPinned";
 import { PhoneMockup, LaptopMockup } from "../components/DeviceMockups";
 import { projectsData } from "../data/projects";
 import septimusLockupLight from "../assets/brand/septimuslab-lockup-yatay-acik-zemin.svg";
@@ -47,79 +51,100 @@ const heroIn = (y: number, delay: number, duration = 0.8) =>
 
 function Hero() {
     const { t } = useTranslation();
-    const heroRef = useRef<HTMLElement>(null);
-    const reduce = useReducedMotion();
-    const { scrollYProgress } = useScroll({
-        target: heroRef,
-        offset: ["start start", "end start"],
-    });
-    const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "-36%"]);
-    const contentOpacity = useTransform(scrollYProgress, [0, 0.65], [1, 0]);
+    const wrapperRef = useRef<HTMLElement>(null);
+    const { progress, exit, reduce } = useHeroProgress(wrapperRef);
+
+    /* Pin timeline, docs/MOTION_SPEC.md 4.1. Everything derives from the one
+       spring-smoothed progress so the layers never drift apart. */
+    const hintOpacity = useTransform(progress, [0, 0.08], [1, 0]);
+    const contentY = useTransform(progress, [0.08, 0.32], ["0%", "-30%"]);
+    const contentOpacity = useTransform(progress, [0.08, 0.32], [1, 0]);
+    const contentVisibility = useTransform(progress, (v) => (v > 0.32 ? "hidden" : "visible"));
+    const captionY = useTransform(progress, [0.88, 1], [16, 0]);
+    const captionOpacity = useTransform(progress, [0.88, 1], [0, 1]);
 
     return (
         <section
-            ref={heroRef}
-            className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden"
+            ref={wrapperRef}
+            className={
+                reduce
+                    ? "relative min-h-[100svh]"
+                    : "relative h-[260svh] md:h-[300svh] motion-reduce:h-auto motion-reduce:min-h-[100svh]"
+            }
         >
-            <CityScene heroRef={heroRef} />
+            <div className="sticky top-0 flex h-[100svh] flex-col items-center justify-center overflow-hidden">
+                <CityScene progress={progress} exit={exit} reduce={reduce} />
 
-            <motion.div
-                style={reduce ? undefined : { y: contentY, opacity: contentOpacity }}
-                className="relative z-10 mx-auto -mt-16 max-w-4xl px-5 text-center sm:px-8"
-            >
-                <div
-                    style={heroIn(20, 0, 0.7)}
-                    className="hero-in flex min-h-[3.75rem] items-end justify-center"
+                <motion.div
+                    style={reduce ? undefined : { y: contentY, opacity: contentOpacity, visibility: contentVisibility }}
+                    className="relative z-10 mx-auto -mt-16 max-w-4xl px-5 text-center sm:px-8"
                 >
-                    <p className="font-mono text-sm uppercase tracking-[0.3em] text-accent sm:text-base">
-                        {t("home.kicker")}
+                    <div
+                        style={heroIn(20, 0, 0.7)}
+                        className="hero-in flex min-h-[3.75rem] items-end justify-center"
+                    >
+                        <p className="font-mono text-sm uppercase tracking-[0.3em] text-accent sm:text-base">
+                            {t("home.kicker")}
+                        </p>
+                    </div>
+
+                    <h1 className="mt-5 font-display text-[2.6rem] font-bold leading-[1.04] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+                        <span className="hero-in block" style={heroIn(34, 0.16)}>
+                            {t("home.line1")}
+                        </span>
+                        <span className="hero-in block" style={heroIn(34, 0.28)}>
+                            {t("home.line2a")}
+                            <span className="text-accent">{t("home.line2b")}</span>
+                        </span>
+                    </h1>
+
+                    <p
+                        style={heroIn(24, 0.4)}
+                        className="hero-in mx-auto mt-7 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg"
+                    >
+                        {t("home.description")}
                     </p>
-                </div>
 
-                <h1 className="mt-5 font-display text-[2.6rem] font-bold leading-[1.04] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-                    <span className="hero-in block" style={heroIn(34, 0.16)}>
-                        {t("home.line1")}
-                    </span>
-                    <span className="hero-in block" style={heroIn(34, 0.28)}>
-                        {t("home.line2a")}
-                        <span className="text-accent">{t("home.line2b")}</span>
-                    </span>
-                </h1>
-
-                <p
-                    style={heroIn(24, 0.4)}
-                    className="hero-in mx-auto mt-7 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg"
-                >
-                    {t("home.description")}
-                </p>
-
-                <div
-                    style={heroIn(24, 0.5)}
-                    className="hero-in mt-10 flex flex-wrap items-center justify-center gap-4"
-                >
-                    <Link
-                        to="/projects"
-                        className="group inline-flex items-center gap-3 rounded-full bg-ink px-7 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-colors hover:bg-accent hover:text-white sm:text-sm"
+                    <div
+                        style={heroIn(24, 0.5)}
+                        className="hero-in mt-10 flex flex-wrap items-center justify-center gap-4"
                     >
-                        {t("home.cta_projects")}
-                        <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-                    </Link>
-                    <Link
-                        to="/contact"
-                        className="inline-flex items-center gap-3 rounded-full border border-line bg-surface/60 px-7 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-ink backdrop-blur-sm transition-colors hover:border-accent hover:text-accent sm:text-sm"
-                    >
-                        {t("home.cta_contact")}
-                    </Link>
-                </div>
-            </motion.div>
+                        <Link
+                            to="/projects"
+                            className="group inline-flex items-center gap-3 rounded-full bg-ink px-7 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-colors hover:bg-accent hover:text-white sm:text-sm"
+                        >
+                            {t("home.cta_projects")}
+                            <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                        </Link>
+                        <Link
+                            to="/contact"
+                            className="inline-flex items-center gap-3 rounded-full border border-line bg-surface/60 px-7 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-ink backdrop-blur-sm transition-colors hover:border-accent hover:text-accent sm:text-sm"
+                        >
+                            {t("home.cta_contact")}
+                        </Link>
+                    </div>
+                </motion.div>
 
-            <div className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2">
-                <div className="flex flex-col items-center gap-2 text-muted">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.3em]">
-                        {t("common.scroll")}
-                    </span>
-                    <FiArrowDown className="animate-scroll-dot" />
-                </div>
+                <motion.div
+                    style={reduce ? undefined : { opacity: hintOpacity }}
+                    className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2"
+                >
+                    <div className="flex flex-col items-center gap-2 text-muted">
+                        <span className="font-mono text-[10px] uppercase tracking-[0.3em]">
+                            {t("common.scroll")}
+                        </span>
+                        <FiArrowDown className="animate-scroll-dot" />
+                    </div>
+                </motion.div>
+
+                {!reduce && (
+                    <motion.p
+                        style={{ y: captionY, opacity: captionOpacity }}
+                        className="absolute inset-x-0 bottom-7 z-10 text-center font-mono text-[11px] uppercase tracking-[0.3em] text-muted"
+                    >
+                        {t("home.city_caption")}
+                    </motion.p>
+                )}
             </div>
         </section>
     );
@@ -134,6 +159,7 @@ function CareerSection() {
 
     return (
         <section className="relative overflow-hidden pb-16 pt-24 sm:pb-20 sm:pt-32">
+            <Contours className="opacity-50" />
             <GhostWord word={t("home.career_ghost")} className="top-8" from={100} to={-160} />
 
             <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
@@ -155,7 +181,7 @@ function CareerSection() {
                         <Reveal key={stat.label} delay={0.08 * i} className="bg-surface">
                             <div className="p-7 sm:p-9">
                                 <p className="font-display text-4xl font-bold text-accent sm:text-5xl">
-                                    {stat.value}
+                                    <CountUp value={stat.value} />
                                 </p>
                                 <p className="mt-3 text-sm leading-snug text-muted">{stat.label}</p>
                             </div>
@@ -169,11 +195,13 @@ function CareerSection() {
 
 function StudioSection() {
     const { t } = useTranslation();
+    const reduce = useReducedMotion();
 
     return (
         <section className="relative py-12 sm:py-16">
             <Contours />
             <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+                <Reveal>
                 <div className="overflow-hidden rounded-3xl border border-line/70 bg-surface shadow-sm">
                     <div className="grid items-center lg:grid-cols-2">
                         <div className="p-9 sm:p-14">
@@ -220,7 +248,14 @@ function StudioSection() {
                         </div>
 
                         <div className="relative hidden h-[420px] overflow-hidden bg-soft lg:block">
-                            <div className="blueprint-grid absolute inset-0" />
+                            {/* the grid "draws in" from the left once the card is in view */}
+                            <motion.div
+                                initial={reduce ? false : { clipPath: "inset(0 100% 0 0)" }}
+                                whileInView={{ clipPath: "inset(0 0% 0 0)" }}
+                                viewport={{ once: true, margin: "-60px" }}
+                                transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                                className="blueprint-grid absolute inset-0"
+                            />
                             <ParallaxY from={50} to={-30} className="absolute left-6 top-16 w-44">
                                 <img
                                     src={pausemenuScreen}
@@ -252,6 +287,7 @@ function StudioSection() {
                         </div>
                     </div>
                 </div>
+                </Reveal>
             </div>
         </section>
     );
@@ -260,6 +296,12 @@ function StudioSection() {
 function FeaturedSection() {
     const { t } = useTranslation();
     const featured = FEATURED_IDS.map((id) => projectsData.find((p) => p.id === id)!);
+    const desktop = useIsDesktop();
+    const reduce = useReducedMotion();
+
+    /* Pinned stepped stage on desktop; the plain grid on narrow screens and
+       under reduced motion (docs/MOTION_SPEC.md 4.6). */
+    if (desktop && !reduce) return <FeaturedPinned projects={featured} />;
 
     return (
         <section className="relative py-24 sm:py-28">
