@@ -114,10 +114,11 @@
         />
 
         <script>
-            /* The queueing stubs stay synchronous so nothing the app reports before
-               the vendors arrive is lost. Only the two remote scripts are held back
-               until the page has settled: previously they executed during load and
-               were a large share of the measured blocking time. */
+            /* The queueing stub stays synchronous so nothing the app reports before
+               gtag arrives is lost. The script itself is requested by the app
+               (src/lib/analytics.ts) only after the first page has rendered:
+               started on `load`, it raced the lazily loaded route code and held
+               back the first paint of text. */
             (function () {
                 window.dataLayer = window.dataLayer || [];
                 window.gtag = function () {
@@ -125,36 +126,6 @@
                 };
                 window.gtag("js", new Date());
                 window.gtag("config", "G-MFJXL2E2NV", { send_page_view: false });
-
-                window.clarity =
-                    window.clarity ||
-                    function () {
-                        (window.clarity.q = window.clarity.q || []).push(arguments);
-                    };
-
-                var loaded = false;
-                function loadVendors() {
-                    if (loaded) return;
-                    loaded = true;
-                    ["https://www.googletagmanager.com/gtag/js?id=G-MFJXL2E2NV",
-                     "https://www.clarity.ms/tag/u10ieihl2z"].forEach(function (src) {
-                        var s = document.createElement("script");
-                        s.async = true;
-                        s.src = src;
-                        document.head.appendChild(s);
-                    });
-                }
-
-                function schedule() {
-                    if ("requestIdleCallback" in window) {
-                        requestIdleCallback(loadVendors, { timeout: 4000 });
-                    } else {
-                        setTimeout(loadVendors, 2000);
-                    }
-                }
-
-                if (document.readyState === "complete") schedule();
-                else window.addEventListener("load", schedule, { once: true });
             })();
         </script>
     </head>
