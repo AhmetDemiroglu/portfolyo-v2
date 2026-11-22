@@ -338,7 +338,7 @@
             },
             "fintel": {
                 "title": "Fintel - Presupuesto Familiar",
-                "description": "Una app de presupuesto familiar que reúne periodos de pago, límite diario, cuotas y lectura de recibos en un solo flujo. Para registrar un gasto basta con escribir \"mercado 640\" o fotografiar el recibo. El asistente 'Nova' interpreta el periodo, y las cifras salen de un núcleo de cálculo con pruebas que da el mismo resultado en todas las pantallas. Disponible en Google Play, versión de iOS en preparación.",
+                "description": "Una app de presupuesto familiar que reúne periodos de pago, límite diario, cuotas y lectura de recibos en un solo flujo. Para registrar un gasto basta con escribir \"mercado 640\" o fotografiar el recibo. El asistente 'Nova' interpreta el periodo, y las cifras salen de un núcleo de cálculo con pruebas que da el mismo resultado en todas las pantallas. Disponible en Google Play y App Store.",
                 "tags": [
                     "React",
                     "TypeScript",

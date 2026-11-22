@@ -338,7 +338,7 @@
             },
             "fintel": {
                 "title": "Fintel - Aile Bütçesi",
-                "description": "Maaş dönemi, günlük limit, taksit ve fiş okumayı tek akışta toplayan aile bütçesi uygulaması. Kayıt için \"market 640\" yazmak ya da fişin fotoğrafını çekmek yeter. 'Nova' asistanı dönemi yorumlar, sayıları ise her ekranda aynı sonucu veren testli bir hesap çekirdeği üretir. Google Play'de yayında, iOS sürümü hazırlanıyor.",
+                "description": "Maaş dönemi, günlük limit, taksit ve fiş okumayı tek akışta toplayan aile bütçesi uygulaması. Kayıt için \"market 640\" yazmak ya da fişin fotoğrafını çekmek yeter. 'Nova' asistanı dönemi yorumlar, sayıları ise her ekranda aynı sonucu veren testli bir hesap çekirdeği üretir. Google Play ve App Store'da yayında.",
                 "tags": [
                     "React",
                     "TypeScript",

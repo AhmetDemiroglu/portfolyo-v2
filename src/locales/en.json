@@ -338,7 +338,7 @@
             },
             "fintel": {
                 "title": "Fintel - Family Budget",
-                "description": "A family budget app that brings pay periods, daily limits, installments and receipt scanning into one flow. Typing \"groceries 640\" or snapping a receipt is enough to log an expense. The 'Nova' assistant interprets the period, while the numbers come from a tested calculation core that gives the same result on every screen. Live on Google Play, iOS version in preparation.",
+                "description": "A family budget app that brings pay periods, daily limits, installments and receipt scanning into one flow. Typing \"groceries 640\" or snapping a receipt is enough to log an expense. The 'Nova' assistant interprets the period, while the numbers come from a tested calculation core that gives the same result on every screen. Live on Google Play and the App Store.",
                 "tags": [
                     "React",
                     "TypeScript",

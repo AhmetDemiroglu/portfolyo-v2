@@ -338,7 +338,7 @@
             },
             "fintel": {
                 "title": "Fintel - Familienbudget",
-                "description": "Eine Familienbudget-App, die Gehaltszeiträume, Tageslimit, Ratenzahlungen und Belegerfassung in einem Ablauf vereint. Für einen Eintrag genügt es, \"Einkauf 640\" zu tippen oder den Beleg zu fotografieren. Der Assistent 'Nova' deutet den Zeitraum, die Zahlen liefert ein getesteter Rechenkern, der auf jedem Bildschirm dasselbe Ergebnis zeigt. Bei Google Play verfügbar, die iOS-Version ist in Vorbereitung.",
+                "description": "Eine Familienbudget-App, die Gehaltszeiträume, Tageslimit, Ratenzahlungen und Belegerfassung in einem Ablauf vereint. Für einen Eintrag genügt es, \"Einkauf 640\" zu tippen oder den Beleg zu fotografieren. Der Assistent 'Nova' deutet den Zeitraum, die Zahlen liefert ein getesteter Rechenkern, der auf jedem Bildschirm dasselbe Ergebnis zeigt. Bei Google Play und im App Store verfügbar.",
                 "tags": [
                     "React",
                     "TypeScript",

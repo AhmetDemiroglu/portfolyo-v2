@@ -86,7 +86,7 @@ export const projectsData: ProjectBase[] = [
         liveLink: "https://app.fintel.septimuslab.com/",
         githubLink: "https://github.com/AhmetDemiroglu/expense-tracker-v2",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.fintel.app",
-        appStoreSoon: true,
+        appStoreLink: "https://apps.apple.com/app/id6835149318",
         badges: ["live"],
         pinned: false,
         mockupType: "phone",
@@ -99,6 +99,7 @@ export const projectsData: ProjectBase[] = [
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/PureScan",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.septimuslab.purescan",
+        /* App Store'a girince: appStoreSoon satırını sil, appStoreLink: "https://apps.apple.com/app/id..." ekle. */
         appStoreSoon: true,
         badges: ["live"],
         pinned: false,
