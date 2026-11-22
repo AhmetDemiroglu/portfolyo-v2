@@ -3,7 +3,7 @@ import { motion, useMotionValueEvent, useScroll, useSpring, useTransform } from 
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FiArrowRight } from "react-icons/fi";
-import type { ResolvedProject } from "../data/projects";
+import type { ResolvedProject, ResolvedShot } from "../data/projects";
 import { ScreenImage } from "./ScreenImage";
 import { SectionHeading } from "./SectionHeading";
 
@@ -18,7 +18,7 @@ import { SectionHeading } from "./SectionHeading";
 const STEPS = 3;
 const HYSTERESIS = 0.04;
 
-function Phone({ src, alt, className }: { src: string; alt: string; className: string }) {
+function Phone({ src, alt, className }: { src: ResolvedShot; alt: string; className: string }) {
     return (
         <div className={`absolute overflow-hidden rounded-[1.6rem] border-[3px] border-ink/70 bg-black shadow-2xl dark:border-line ${className}`}>
             <div className="aspect-[9/19.5] w-full overflow-hidden">

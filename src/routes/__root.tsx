@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { ThemeProvider } from "../contexts/ThemeContext";
-import { trackPageView } from "../lib/analytics";
+import { loadAnalytics, trackPageView } from "../lib/analytics";
 
 function RootLayout() {
     const routerState = useRouterState();
@@ -12,6 +12,10 @@ function RootLayout() {
     useEffect(() => {
         trackPageView();
     }, [routerState.location.href]);
+
+    useEffect(() => {
+        loadAnalytics();
+    }, []);
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });

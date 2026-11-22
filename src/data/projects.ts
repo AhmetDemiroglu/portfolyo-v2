@@ -9,33 +9,58 @@ type Lang = "tr" | "en" | "de" | "es";
    every other language the English one (Spanish too where the app ships it). */
 export type Localized = string | ({ tr: string; en: string } & Partial<Record<Lang, string>>);
 
-export const pickShot = (value: Localized, lang: string): string =>
+/* One screenshot in the app's light theme and, once captured, its dark theme.
+   The page shows the one that matches the site theme; without a dark capture
+   the light one is used in both themes. */
+export interface Themed {
+    light: Localized;
+    dark?: Localized;
+}
+
+export interface ResolvedShot {
+    light: string;
+    dark?: string;
+}
+
+const pickLang = (value: Localized, lang: string): string =>
     typeof value === "string" ? value : (value[lang as Lang] ?? value.en);
 
-const shots = import.meta.glob<string>("../assets/{pausemenu,purescan}-*-{tr,en,es}.webp", {
+export const resolveShot = (value: Themed, lang: string): ResolvedShot => ({
+    light: pickLang(value.light, lang),
+    dark: value.dark === undefined ? undefined : pickLang(value.dark, lang),
+});
+
+const shots = import.meta.glob<string>("../assets/{pausemenu,purescan,fintel}-*-{tr,en,es}.webp", {
     eager: true,
     import: "default",
 });
 
-const shot = (name: string, langs: Lang[] = ["tr", "en"]): Localized => {
-    const entries = langs.map((l) => {
-        const url = shots[`../assets/${name}-${l}.webp`];
-        if (!url) throw new Error(`Missing screenshot ${name}-${l}.webp`);
-        return [l, url];
-    });
-    return Object.fromEntries(entries) as Localized;
+/* Files are <name>-<lang>.webp (light) and <name>-dark-<lang>.webp (dark). The
+   dark set is used only when every language of it exists. */
+const shot = (name: string, langs: Lang[] = ["tr", "en"]): Themed => {
+    const collect = (base: string): Localized | undefined => {
+        const entries = langs.map((l) => [l, shots[`../assets/${base}-${l}.webp`]] as const);
+        if (entries.some(([, url]) => !url)) return undefined;
+        return Object.fromEntries(entries) as Localized;
+    };
+    const light = collect(name);
+    if (!light) throw new Error(`Missing screenshot ${name}-<lang>.webp`);
+    return { light, dark: collect(`${name}-dark`) };
 };
+
+/* A screenshot with a single language and theme. */
+const plain = (url: string, dark?: string): Themed => ({ light: url, dark });
 
 const FOODS_LANGS: Lang[] = ["tr", "en", "es"];
 
 export interface ProjectBase {
     id: string;
     /* Resolved (hashed) asset URL. Archive-only entries render no image, so this is optional. */
-    image?: Localized;
+    image?: Themed;
     /* Optional web/desktop screenshot — when set, the featured card shows a laptop+phone duo. */
-    webImage?: Localized;
+    webImage?: Themed;
     /* Two extra phone screens shown behind the main one on the home page stage. */
-    gallery?: [Localized, Localized];
+    gallery?: [Themed, Themed];
     liveLink: string | null;
     githubLink: string | null;
     apkLink?: string | null;
@@ -53,16 +78,16 @@ export interface ProjectBase {
 
 /* A project with every screenshot resolved for one language. */
 export type ResolvedProject = Omit<ProjectBase, "image" | "webImage" | "gallery"> & {
-    image?: string;
-    webImage?: string;
-    gallery?: [string, string];
+    image?: ResolvedShot;
+    webImage?: ResolvedShot;
+    gallery?: [ResolvedShot, ResolvedShot];
 };
 
 export const resolveProject = (p: ProjectBase, lang: string): ResolvedProject => ({
     ...p,
-    image: p.image && pickShot(p.image, lang),
-    webImage: p.webImage && pickShot(p.webImage, lang),
-    gallery: p.gallery && [pickShot(p.gallery[0], lang), pickShot(p.gallery[1], lang)],
+    image: p.image && resolveShot(p.image, lang),
+    webImage: p.webImage && resolveShot(p.webImage, lang),
+    gallery: p.gallery && [resolveShot(p.gallery[0], lang), resolveShot(p.gallery[1], lang)],
 });
 
 export const projectsData: ProjectBase[] = [
@@ -82,7 +107,7 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "fintel",
-        image: fintelScreen,
+        image: plain(fintelScreen),
         liveLink: "https://app.fintel.septimuslab.com/",
         githubLink: "https://github.com/AhmetDemiroglu/expense-tracker-v2",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.fintel.app",
@@ -121,7 +146,7 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "openworld",
-        image: openworld,
+        image: plain(openworld),
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/OpenWorld",
         badges: ["experimental"],
@@ -131,7 +156,7 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "multimind",
-        image: multimind,
+        image: plain(multimind),
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/MultiMind",
         badges: ["experimental"],
@@ -141,7 +166,7 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "sip",
-        image: sip,
+        image: plain(sip),
         liveLink: null,
         githubLink: null,
         badges: ["beta"],

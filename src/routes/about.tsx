@@ -7,12 +7,18 @@ import { FiArrowDown, FiArrowUpRight } from "react-icons/fi";
 import { Contours } from "../components/scenery/Contours";
 import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
 import portrait from "../assets/ahmet.webp";
+import portrait400 from "../assets/ahmet-400.webp";
 
 export const Route = createFileRoute("/about")({
     component: AboutPage,
 });
 
 const MILESTONES = [1, 2, 3, 4, 5, 6, 7] as const;
+/* Shown 224 px wide (256 from sm). The 400w file covers phones up to ~1.75x,
+   the 560w original sharper screens. Keep in sync with portraitPreload in
+   scripts/seo-prerender.ts, or the preload and the <img> fetch different files. */
+const PORTRAIT_SRCSET = `${portrait400} 400w, ${portrait} 560w`;
+const PORTRAIT_SIZES = "(min-width: 640px) 256px, 224px";
 const DARK_PHOTO_MASK =
     "radial-gradient(ellipse 82% 78% at 50% 38%, black 55%, transparent 80%)";
 
@@ -44,9 +50,9 @@ function TimelineItem({ index }: { index: number }) {
                     <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent md:hidden">
                         {t(`about.timeline_${index}_year`)}
                     </p>
-                    <h3 className="mt-2 font-display text-2xl font-bold text-ink md:mt-0">
+                    <h2 className="mt-2 font-display text-2xl font-bold text-ink md:mt-0">
                         {t(`about.timeline_${index}_title`)}
-                    </h3>
+                    </h2>
                     <p className="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-muted">
                         {t(`about.timeline_${index}_subtitle`)}
                     </p>
@@ -130,6 +136,8 @@ function AboutPage() {
                             <div className="relative w-56 overflow-hidden rounded-[1.75rem] border border-accent/55 sm:w-64 dark:hidden">
                                 <img
                                     src={portrait}
+                                    srcSet={PORTRAIT_SRCSET}
+                                    sizes={PORTRAIT_SIZES}
                                     alt="Ahmet Demiroğlu"
                                     width={560}
                                     height={747}
@@ -151,6 +159,8 @@ function AboutPage() {
                                 />
                                 <img
                                     src={portrait}
+                                    srcSet={PORTRAIT_SRCSET}
+                                    sizes={PORTRAIT_SIZES}
                                     alt="Ahmet Demiroğlu"
                                     width={560}
                                     height={747}

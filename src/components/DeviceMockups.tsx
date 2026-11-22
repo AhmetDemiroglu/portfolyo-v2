@@ -1,7 +1,8 @@
+import type { ResolvedShot } from "../data/projects";
 import { ScreenImage } from "./ScreenImage";
 
 interface PhoneMockupProps {
-    src: string;
+    src: ResolvedShot;
     alt: string;
     accentColor?: string;
 }
@@ -34,7 +35,7 @@ export function PhoneMockup({ src, alt, accentColor = "rgba(226,84,14,0.18)" }: 
 }
 
 interface LaptopMockupProps {
-    src: string;
+    src: ResolvedShot;
     alt: string;
     accentColor?: string;
 }
@@ -67,8 +68,8 @@ export function LaptopMockup({ src, alt, accentColor = "rgba(226,84,14,0.14)" }:
 }
 
 interface DeviceDuoProps {
-    laptopSrc: string;
-    phoneSrc: string;
+    laptopSrc: ResolvedShot;
+    phoneSrc: ResolvedShot;
     alt: string;
     accentColor?: string;
 }

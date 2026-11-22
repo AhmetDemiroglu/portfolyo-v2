@@ -96,7 +96,8 @@
     --c-surface: 252 251 248;
     --c-ink: 26 28 33;
     --c-ink-soft: 73 78 90;
-    --c-muted: 124 130 142;
+    /* 4.5:1 or better on base, soft and surface (WCAG AA body text). */
+    --c-muted: 96 102 114;
     --c-line: 213 209 199;
     --c-accent: 226 84 14;
     --c-accent2: 41 88 209;
@@ -112,7 +113,8 @@
     --c-surface: 24 31 45;
     --c-ink: 236 238 243;
     --c-ink-soft: 178 185 198;
-    --c-muted: 118 126 142;
+    /* 4.5:1 or better on surface, the lightest dark background. */
+    --c-muted: 132 140 156;
     --c-line: 52 61 79;
     --c-accent: 255 122 61;
     --c-accent2: 118 163 255;
@@ -122,9 +124,10 @@
     --c-sky-top: 16 22 35;
 }
 
-/* Hero entrance. Deliberately CSS rather than framer-motion: the markup is
-   prerendered, so this starts the moment the HTML is parsed instead of waiting
-   for React to boot, which is what used to push LCP out by ~1.1s. */
+/* Hero entrance. Deliberately CSS rather than framer-motion: it starts on the
+   first commit instead of waiting for framer-motion to mount and measure, which
+   used to push LCP out by ~1.1s. (The hero itself is rendered by React; the
+   built HTML only carries a hidden text copy for crawlers.) */
 @keyframes hero-in {
     from {
         opacity: 0;
@@ -145,6 +148,16 @@
     .hero-in {
         animation: none;
     }
+}
+
+/* The looping scenery (drifting clouds, twinkling stars) holds still until the
+   visitor first scrolls, touches or moves the mouse (src/lib/first-interaction.ts).
+   A page that never stops moving never counts as visually complete, which kept
+   the mobile Speed Index at 5-18 s. The first frame is the same either way. */
+html:not(.interacted) .animate-cloud-drift,
+html:not(.interacted) .animate-cloud-drift-slow,
+html:not(.interacted) .animate-star-twinkle {
+    animation-play-state: paused;
 }
 
 html {

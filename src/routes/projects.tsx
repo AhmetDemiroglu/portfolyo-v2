@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Seo } from "../components/Seo";
 import { projectsData, resolveProject, type ProjectBase, type ResolvedProject } from "../data/projects";
 import { PhoneMockup, LaptopMockup, DeviceDuo } from "../components/DeviceMockups";
+import { ThemedImg } from "../components/ScreenImage";
 import { SectionHeading } from "../components/SectionHeading";
 import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
 
@@ -203,7 +204,7 @@ function ImageArea({ project, tall = false }: { project: FullProject; tall?: boo
                 </div>
             ) : (
                 <ParallaxY from={10} to={-10} className="h-full w-full">
-                    <img
+                    <ThemedImg
                         src={image}
                         alt={project.title}
                         loading="lazy"
@@ -256,7 +257,7 @@ function FeaturedProject({ project }: { project: FullProject }) {
                                     />
                                 ) : (
                                     project.image && (
-                                        <img
+                                        <ThemedImg
                                             src={project.image}
                                             alt={project.title}
                                             decoding="async"

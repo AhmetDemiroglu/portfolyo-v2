@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight, FiMapPin } from "react-icons/fi";
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Seo } from "../components/Seo";
@@ -9,10 +9,21 @@ import { useTheme } from "../contexts/ThemeContext";
 import { Contours } from "../components/scenery/Contours";
 import { SectionHeading } from "../components/SectionHeading";
 import { Reveal } from "../components/motion/primitives";
+import { onFirstInteraction } from "../lib/first-interaction";
 
 /* Leaflet and EmailJS are both loaded on demand: neither is needed to paint
    this page, and the route file itself is imported eagerly by the router. */
 const LocationMap = lazy(() => import("../components/LocationMap"));
+
+/* Same footprint as the map, so nothing moves when it arrives. */
+function MapPlaceholder() {
+    return (
+        <div aria-hidden="true" className="relative h-full w-full overflow-hidden bg-soft">
+            <Contours />
+            <FiMapPin className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-full text-3xl text-accent" />
+        </div>
+    );
+}
 
 const directContactLinks = [
     {
@@ -60,11 +71,12 @@ function ContactPage() {
     const [formStatus, setFormStatus] = useState({ success: false, message: "" });
     const mountedAt = useRef(Date.now());
 
-    /* The map is mounted only after hydration. Rendering a lazy component during
-       the prerender would leave a Suspense boundary the static render cannot
-       finish, which React reports as an error on every visit to this page. */
+    /* Leaflet (~50 KB gzip) and its tiles wait for the visitor's first scroll,
+       touch or mouse move. Loaded straight away, a map tile became the page's
+       largest paint and kept mobile LCP at ~7 s. Arriving here from another
+       page counts as an interaction, so the map then mounts immediately. */
     const [mapReady, setMapReady] = useState(false);
-    useEffect(() => setMapReady(true), []);
+    useEffect(() => onFirstInteraction(() => setMapReady(true)), []);
 
     const translatedDirectLinks = t("contact_page.direct_links", { returnObjects: true }) as Record<
         string,
@@ -200,14 +212,14 @@ function ContactPage() {
                                 </div>
                                 <div className="h-64">
                                     {mapReady ? (
-                                        <Suspense fallback={<div className="h-full w-full bg-soft" />}>
+                                        <Suspense fallback={<MapPlaceholder />}>
                                             <LocationMap
                                                 theme={theme}
                                                 popupHtml={t("contact_page.location_popup")}
                                             />
                                         </Suspense>
                                     ) : (
-                                        <div className="h-full w-full bg-soft" />
+                                        <MapPlaceholder />
                                     )}
                                 </div>
                             </div>

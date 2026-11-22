@@ -15,6 +15,7 @@ import { CountUp } from "../components/motion/CountUp";
 import { FeaturedPinned } from "../components/FeaturedPinned";
 import { PhoneMockup, LaptopMockup } from "../components/DeviceMockups";
 import { projectsData, resolveProject } from "../data/projects";
+import { ThemedImg } from "../components/ScreenImage";
 import septimusLockupLight from "../assets/brand/septimuslab-lockup-yatay-acik-zemin.svg";
 import septimusLockupDark from "../assets/brand/septimuslab-lockup-yatay-koyu-zemin.svg";
 
@@ -256,8 +257,8 @@ function StudioSection() {
                                 className="blueprint-grid absolute inset-0"
                             />
                             <ParallaxY from={50} to={-30} className="absolute left-6 top-16 w-44">
-                                <img
-                                    src={screen("pausemenu")}
+                                <ThemedImg
+                                    src={screen("pausemenu")!}
                                     alt="Pause Menu"
                                     loading="lazy"
                                     decoding="async"
@@ -265,8 +266,8 @@ function StudioSection() {
                                 />
                             </ParallaxY>
                             <ParallaxY from={-30} to={40} className="absolute left-52 top-6 w-44">
-                                <img
-                                    src={screen("purescan")}
+                                <ThemedImg
+                                    src={screen("purescan")!}
                                     alt="PureScan"
                                     loading="lazy"
                                     decoding="async"
@@ -274,8 +275,8 @@ function StudioSection() {
                                 />
                             </ParallaxY>
                             <ParallaxY from={70} to={-50} className="absolute left-[24rem] top-24 w-44">
-                                <img
-                                    src={screen("purescan_foods")}
+                                <ThemedImg
+                                    src={screen("purescan_foods")!}
                                     alt="PureScan Foods"
                                     loading="lazy"
                                     decoding="async"

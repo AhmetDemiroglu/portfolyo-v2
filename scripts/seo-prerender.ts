@@ -122,7 +122,67 @@ function headBlock(route: RouteKey, lang: Lang): string {
     ];
     if (route === "home") lines.push(jsonLd(lang, t));
     if (route === "projects") lines.push(...featuredPreloads(lang));
+    if (route === "about") lines.push(portraitPreload());
+    lines.push(...chunkPreloads(route, lang));
     return lines.join("\n        ");
+}
+
+/* Route chunks (autoCodeSplitting) and the non-Turkish locale files are dynamic
+   imports, so the browser only learns about them once the router or i18next has
+   run: one extra round-trip before the page can paint any text. Their names are
+   taken from the bundle in writeBundle and preloaded from the page's own HTML.
+   Chunks the entry already preloads are left out. */
+const routeChunks = new Map<RouteKey, string[]>();
+const localeChunks = new Map<Lang, string>();
+
+const ROUTE_FILES: Record<RouteKey, string> = {
+    home: "index",
+    about: "about",
+    skills: "skills",
+    projects: "projects",
+    contact: "contact",
+};
+
+function chunkPreloads(route: RouteKey, lang: Lang): string[] {
+    const files = [...(routeChunks.get(route) ?? [])];
+    const locale = localeChunks.get(lang);
+    if (locale) files.push(locale);
+    return files.map((f) => `<link rel="modulepreload" crossorigin href="/${f}" />`);
+}
+
+/* The about portrait is the LCP element on phones and desktops alike, so unlike
+   the projects shots it is preloaded without a media query. */
+function portraitPreload(): string {
+    const full = builtAssets.find((f) => /^ahmet-(?!400-)[\w-]+\.webp$/.test(f));
+    const small = builtAssets.find((f) => /^ahmet-400-[\w-]+\.webp$/.test(f));
+    if (!full || !small) throw new Error("seo-prerender: about portrait not found in assets");
+    // Same srcset and sizes as the <img> in src/routes/about.tsx.
+    return `<link rel="preload" as="image" href="/assets/${full}" imagesrcset="/assets/${small} 400w, /assets/${full} 560w" imagesizes="(min-width: 640px) 256px, 224px" fetchpriority="high" />`;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function collectChunks(bundle: Record<string, any>): void {
+    routeChunks.clear();
+    localeChunks.clear();
+    const chunks = Object.values(bundle).filter((c) => c.type === "chunk");
+    const entry = chunks.find((c) => c.isEntry);
+    const skip = new Set<string>([entry?.fileName, ...(entry?.imports ?? [])]);
+    const byName = new Map(chunks.map((c) => [c.fileName, c]));
+    const withImports = (file: string, seen = new Set<string>()): string[] => {
+        if (skip.has(file) || seen.has(file)) return [];
+        seen.add(file);
+        return [file, ...(byName.get(file)?.imports ?? []).flatMap((i: string) => withImports(i, seen))];
+    };
+    for (const route of ROUTES) {
+        const id = `/src/routes/${ROUTE_FILES[route]}.tsx?tsr-split=component`;
+        const chunk = chunks.find((c) => c.facadeModuleId?.endsWith(id));
+        if (!chunk) throw new Error(`seo-prerender: no chunk for route ${route}`);
+        routeChunks.set(route, withImports(chunk.fileName));
+    }
+    for (const lang of LANGS) {
+        const chunk = chunks.find((c) => c.facadeModuleId?.endsWith(`/src/locales/${lang}.json`));
+        if (chunk && !skip.has(chunk.fileName)) localeChunks.set(lang, chunk.fileName);
+    }
 }
 
 /* Hashed file names of the built assets, filled in closeBundle. */
@@ -130,12 +190,17 @@ let builtAssets: string[] = [];
 
 /* The featured Pause Menu laptop + phone shots sit next to the heading only on
    wide screens; there they otherwise wait for the JS to render before the
-   browser even asks for them. On narrow screens they are below the fold, so
-   the media query keeps phones (and mobile Lighthouse) from fetching early. */
+   browser even asks for them. First-time visitors get the dark theme (see the
+   inline script in index.html), so the dark capture is preloaded when there is
+   one. On narrow screens the shots are below the fold, so the media query keeps
+   phones (and mobile Lighthouse) from fetching early. */
 function featuredPreloads(lang: Lang): string[] {
     const shotLang = lang === "tr" ? "tr" : "en";
+    const find = (name: string) =>
+        builtAssets.find((f) => new RegExp(`^${name}-dark-${shotLang}-[\\w-]+\\.webp$`).test(f)) ??
+        builtAssets.find((f) => new RegExp(`^${name}-${shotLang}-[\\w-]+\\.webp$`).test(f));
     return ["pausemenu-web", "pausemenu-home"].map((name) => {
-        const file = builtAssets.find((f) => new RegExp(`^${name}-${shotLang}-[\\w-]+\\.webp$`).test(f));
+        const file = find(name);
         if (!file) throw new Error(`seo-prerender: ${name}-${shotLang} not found in assets`);
         return `<link rel="preload" as="image" href="/assets/${file}" media="(min-width: 1024px)" fetchpriority="high" />`;
     });
@@ -284,6 +349,9 @@ export function seoPrerender(): Plugin {
         apply: "build",
         configResolved(config) {
             outDir = resolve(config.root, config.build.outDir);
+        },
+        writeBundle(_options, bundle) {
+            collectChunks(bundle);
         },
         closeBundle() {
             const template = readFileSync(resolve(outDir, "index.html"), "utf8");

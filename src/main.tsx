@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { RouterProvider, createRouter, createBrowserHistory } from '@tanstack/react-router'
 import { parseHref } from '@tanstack/history'
 import './index.css'
+import './lib/first-interaction'
 import { routeTree } from './routeTree.gen'
 import i18n from './i18n';
 import { Suspense } from 'react';
