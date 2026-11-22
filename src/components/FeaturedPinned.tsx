@@ -3,7 +3,7 @@ import { motion, useMotionValueEvent, useScroll, useSpring, useTransform } from 
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FiArrowRight } from "react-icons/fi";
-import type { ProjectBase } from "../data/projects";
+import type { ResolvedProject } from "../data/projects";
 import { SectionHeading } from "./SectionHeading";
 
 /* Featured projects as a pinned, stepped stage (docs/MOTION_SPEC.md 4.6, 15):
@@ -29,7 +29,7 @@ function Phone({ src, alt, className }: { src: string; alt: string; className: s
 
 /* Centre phone in front, two behind it fanned out. When inactive the side
    phones tuck in behind the centre one, so activation reads as a fan opening. */
-function PhoneFan({ project, title, active }: { project: ProjectBase; title: string; active: boolean }) {
+function PhoneFan({ project, title, active }: { project: ResolvedProject; title: string; active: boolean }) {
     const [left, right] = project.gallery ?? [];
     const ease = "transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]";
     return (
@@ -64,7 +64,7 @@ function PhoneFan({ project, title, active }: { project: ProjectBase; title: str
     );
 }
 
-export function FeaturedPinned({ projects }: { projects: ProjectBase[] }) {
+export function FeaturedPinned({ projects }: { projects: ResolvedProject[] }) {
     const { t } = useTranslation();
     const wrapperRef = useRef<HTMLElement>(null);
     const { scrollYProgress } = useScroll({ target: wrapperRef, offset: ["start start", "end end"] });
@@ -94,7 +94,7 @@ export function FeaturedPinned({ projects }: { projects: ProjectBase[] }) {
     };
 
     const active = projects[index];
-    const title = (p: ProjectBase) => t(`projects_page.projects.${p.id}.title`);
+    const title = (p: ResolvedProject) => t(`projects_page.projects.${p.id}.title`);
     const tags = (t(`projects_page.projects.${active.id}.tags`, { returnObjects: true }) as string[]).slice(0, 3);
 
     return (

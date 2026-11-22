@@ -1,26 +1,41 @@
 import fintelScreen from "../assets/fintel-screen.webp";
-import pausemenuScreen from "../assets/pausemenu-screen.webp";
-import pausemenuWeb from "../assets/pausemenu-web.webp";
-import pausemenuLists from "../assets/pausemenu-lists.webp";
-import pausemenuDetail from "../assets/pausemenu-detail.webp";
-import purescanResult from "../assets/purescan-result.webp";
-import purescanIngredients from "../assets/purescan-ingredients.webp";
-import purescanFoodsAnalysis from "../assets/purescan-foods-analysis.webp";
-import purescanFoodsLibrary from "../assets/purescan-foods-library.webp";
 import multimind from "../assets/multimind.webp";
 import openworld from "../assets/openworld.webp";
-import purescanFoodsScreen from "../assets/purescan-foods-screen.webp";
-import purescanScreen from "../assets/purescan-screen.webp";
 import sip from "../assets/sip.webp";
+
+type Lang = "tr" | "en" | "de" | "es";
+
+/* A screenshot that differs by language: Turkish pages show the Turkish app,
+   every other language the English one (Spanish too where the app ships it). */
+export type Localized = string | ({ tr: string; en: string } & Partial<Record<Lang, string>>);
+
+export const pickShot = (value: Localized, lang: string): string =>
+    typeof value === "string" ? value : (value[lang as Lang] ?? value.en);
+
+const shots = import.meta.glob<string>("../assets/{pausemenu,purescan}-*-{tr,en,es}.webp", {
+    eager: true,
+    import: "default",
+});
+
+const shot = (name: string, langs: Lang[] = ["tr", "en"]): Localized => {
+    const entries = langs.map((l) => {
+        const url = shots[`../assets/${name}-${l}.webp`];
+        if (!url) throw new Error(`Missing screenshot ${name}-${l}.webp`);
+        return [l, url];
+    });
+    return Object.fromEntries(entries) as Localized;
+};
+
+const FOODS_LANGS: Lang[] = ["tr", "en", "es"];
 
 export interface ProjectBase {
     id: string;
     /* Resolved (hashed) asset URL. Archive-only entries render no image, so this is optional. */
-    image?: string;
+    image?: Localized;
     /* Optional web/desktop screenshot — when set, the featured card shows a laptop+phone duo. */
-    webImage?: string;
+    webImage?: Localized;
     /* Two extra phone screens shown behind the main one on the home page stage. */
-    gallery?: [string, string];
+    gallery?: [Localized, Localized];
     liveLink: string | null;
     githubLink: string | null;
     apkLink?: string | null;
@@ -36,12 +51,26 @@ export interface ProjectBase {
     accentColor?: string;
 }
 
+/* A project with every screenshot resolved for one language. */
+export type ResolvedProject = Omit<ProjectBase, "image" | "webImage" | "gallery"> & {
+    image?: string;
+    webImage?: string;
+    gallery?: [string, string];
+};
+
+export const resolveProject = (p: ProjectBase, lang: string): ResolvedProject => ({
+    ...p,
+    image: p.image && pickShot(p.image, lang),
+    webImage: p.webImage && pickShot(p.webImage, lang),
+    gallery: p.gallery && [pickShot(p.gallery[0], lang), pickShot(p.gallery[1], lang)],
+});
+
 export const projectsData: ProjectBase[] = [
     {
         id: "pausemenu",
-        image: pausemenuScreen,
-        webImage: pausemenuWeb,
-        gallery: [pausemenuLists, pausemenuDetail],
+        image: shot("pausemenu-home"),
+        webImage: shot("pausemenu-web"),
+        gallery: [shot("pausemenu-aibots"), shot("pausemenu-game")],
         liveLink: "https://pausemenu.app",
         githubLink: "https://github.com/AhmetDemiroglu/pause-menu",
         appStoreLink: "https://apps.apple.com/app/id6781281375",
@@ -65,8 +94,8 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "purescan",
-        image: purescanScreen,
-        gallery: [purescanIngredients, purescanResult],
+        image: shot("purescan-home"),
+        gallery: [shot("purescan-ingredients"), shot("purescan-result")],
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/PureScan",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.septimuslab.purescan",
@@ -78,8 +107,8 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "purescan_foods",
-        image: purescanFoodsScreen,
-        gallery: [purescanFoodsLibrary, purescanFoodsAnalysis],
+        image: shot("purescan-foods-home", FOODS_LANGS),
+        gallery: [shot("purescan-foods-library", FOODS_LANGS), shot("purescan-foods-analysis", FOODS_LANGS)],
         liveLink: null,
         githubLink: "https://github.com/AhmetDemiroglu/PureScanFoods",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.purescan.foods",

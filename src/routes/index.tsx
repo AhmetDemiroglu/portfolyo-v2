@@ -14,12 +14,9 @@ import { useIsDesktop } from "../components/motion/useIsDesktop";
 import { CountUp } from "../components/motion/CountUp";
 import { FeaturedPinned } from "../components/FeaturedPinned";
 import { PhoneMockup, LaptopMockup } from "../components/DeviceMockups";
-import { projectsData } from "../data/projects";
+import { projectsData, resolveProject } from "../data/projects";
 import septimusLockupLight from "../assets/brand/septimuslab-lockup-yatay-acik-zemin.svg";
 import septimusLockupDark from "../assets/brand/septimuslab-lockup-yatay-koyu-zemin.svg";
-import pausemenuScreen from "../assets/pausemenu-screen.webp";
-import purescanScreen from "../assets/purescan-screen.webp";
-import purescanFoodsScreen from "../assets/purescan-foods-screen.webp";
 
 export const Route = createFileRoute("/")({
     component: HomePage,
@@ -195,8 +192,9 @@ function CareerSection() {
 }
 
 function StudioSection() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const reduce = useReducedMotion();
+    const screen = (id: string) => resolveProject(projectsData.find((p) => p.id === id)!, i18n.language).image;
 
     return (
         <section className="relative py-12 sm:py-16">
@@ -259,7 +257,7 @@ function StudioSection() {
                             />
                             <ParallaxY from={50} to={-30} className="absolute left-6 top-16 w-44">
                                 <img
-                                    src={pausemenuScreen}
+                                    src={screen("pausemenu")}
                                     alt="Pause Menu"
                                     loading="lazy"
                                     decoding="async"
@@ -268,7 +266,7 @@ function StudioSection() {
                             </ParallaxY>
                             <ParallaxY from={-30} to={40} className="absolute left-52 top-6 w-44">
                                 <img
-                                    src={purescanScreen}
+                                    src={screen("purescan")}
                                     alt="PureScan"
                                     loading="lazy"
                                     decoding="async"
@@ -277,7 +275,7 @@ function StudioSection() {
                             </ParallaxY>
                             <ParallaxY from={70} to={-50} className="absolute left-[24rem] top-24 w-44">
                                 <img
-                                    src={purescanFoodsScreen}
+                                    src={screen("purescan_foods")}
                                     alt="PureScan Foods"
                                     loading="lazy"
                                     decoding="async"
@@ -295,8 +293,10 @@ function StudioSection() {
 }
 
 function FeaturedSection() {
-    const { t } = useTranslation();
-    const featured = FEATURED_IDS.map((id) => projectsData.find((p) => p.id === id)!);
+    const { t, i18n } = useTranslation();
+    const featured = FEATURED_IDS.map((id) =>
+        resolveProject(projectsData.find((p) => p.id === id)!, i18n.language),
+    );
     const desktop = useIsDesktop();
     const reduce = useReducedMotion();
 

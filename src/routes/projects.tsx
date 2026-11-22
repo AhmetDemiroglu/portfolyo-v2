@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FaApple, FaGithub, FaGooglePlay } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Seo } from "../components/Seo";
-import { projectsData, type ProjectBase } from "../data/projects";
+import { projectsData, resolveProject, type ProjectBase, type ResolvedProject } from "../data/projects";
 import { PhoneMockup, LaptopMockup, DeviceDuo } from "../components/DeviceMockups";
 import { SectionHeading } from "../components/SectionHeading";
 import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
@@ -15,7 +15,7 @@ interface ProjectTranslation {
     tags: string[];
 }
 
-type FullProject = ProjectBase & ProjectTranslation;
+type FullProject = ResolvedProject & ProjectTranslation;
 
 const FEATURED_ID = "pausemenu";
 const MAIN_ORDER = ["purescan_foods", "purescan", "fintel", "openworld", "multimind", "sip"];
@@ -146,18 +146,30 @@ function Tags({ tags }: { tags: string[] }) {
 function ExpandableText({ text }: { text: string }) {
     const { t } = useTranslation();
     const [expanded, setExpanded] = useState(false);
-    const isLong = text.length > 220;
+    const [clamped, setClamped] = useState(false);
+    const ref = useRef<HTMLParagraphElement>(null);
+
+    /* The toggle only appears when the 4-line clamp actually hides text at the
+       current width; a character count misfires on wide cards. */
+    useLayoutEffect(() => {
+        const el = ref.current;
+        if (!el || expanded) return;
+        const check = () => setClamped(el.scrollHeight - el.clientHeight > 1);
+        check();
+        const ro = new ResizeObserver(check);
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [expanded, text]);
 
     return (
         <div>
             <p
-                className={`text-sm leading-relaxed text-ink-soft ${
-                    !expanded && isLong ? "line-clamp-4" : ""
-                }`}
+                ref={ref}
+                className={`text-sm leading-relaxed text-ink-soft ${expanded ? "" : "line-clamp-4"}`}
             >
                 {text}
             </p>
-            {isLong && (
+            {(clamped || expanded) && (
                 <button
                     onClick={() => setExpanded((v) => !v)}
                     className="mt-2 font-mono text-[11px] uppercase tracking-[0.15em] text-accent hover:underline"
@@ -327,10 +339,10 @@ function ArchiveRow({ project }: { project: FullProject }) {
 }
 
 function ProjectsPage() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const withTranslation = (project: ProjectBase): FullProject => ({
-        ...project,
+        ...resolveProject(project, i18n.language),
         title: t(`projects_page.projects.${project.id}.title`),
         description: t(`projects_page.projects.${project.id}.description`),
         tags: t(`projects_page.projects.${project.id}.tags`, { returnObjects: true }) as string[],
