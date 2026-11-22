@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState, type ImgHTMLAttributes } from "react";
 import type { ResolvedShot } from "../data/projects";
+import { SCREEN_SIZES, srcSetFor } from "../lib/responsive";
 
 /* One <img> per theme, switched with the site's `dark` class. The hidden one
    has no layout box, so its lazy image is never fetched until it is shown. */
@@ -8,11 +9,12 @@ export function ThemedImg({
     className = "",
     ...rest
 }: { src: ResolvedShot } & Omit<ImgHTMLAttributes<HTMLImageElement>, "src">) {
-    if (!src.dark) return <img src={src.light} className={className} {...rest} />;
+    const sized = (url: string) => ({ src: url, srcSet: srcSetFor(url), sizes: SCREEN_SIZES });
+    if (!src.dark) return <img {...sized(src.light)} className={className} {...rest} />;
     return (
         <>
-            <img src={src.light} className={`${className} dark:hidden`} {...rest} />
-            <img src={src.dark} className={`${className} hidden dark:block`} {...rest} />
+            <img {...sized(src.light)} className={`${className} dark:hidden`} {...rest} />
+            <img {...sized(src.dark)} className={`${className} hidden dark:block`} {...rest} />
         </>
     );
 }
@@ -39,6 +41,8 @@ function Layer({ src, alt, themeClass }: { src: string; alt: string; themeClass:
             <img
                 ref={ref}
                 src={src}
+                srcSet={srcSetFor(src)}
+                sizes={SCREEN_SIZES}
                 alt={alt}
                 loading="lazy"
                 decoding="async"

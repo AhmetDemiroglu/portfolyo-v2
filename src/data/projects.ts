@@ -1,4 +1,5 @@
 import fintelScreen from "../assets/fintel-screen.webp";
+import fintelScreenDark from "../assets/fintel-screen-dark.webp";
 import multimind from "../assets/multimind.webp";
 import openworld from "../assets/openworld.webp";
 import sip from "../assets/sip.webp";
@@ -107,7 +108,7 @@ export const projectsData: ProjectBase[] = [
     },
     {
         id: "fintel",
-        image: plain(fintelScreen),
+        image: plain(fintelScreen, fintelScreenDark),
         liveLink: "https://app.fintel.septimuslab.com/",
         githubLink: "https://github.com/AhmetDemiroglu/expense-tracker-v2",
         googlePlayLink: "https://play.google.com/store/apps/details?id=com.fintel.app",
