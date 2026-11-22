@@ -1,3 +1,5 @@
+import { ScreenImage } from "./ScreenImage";
+
 interface PhoneMockupProps {
     src: string;
     alt: string;
@@ -20,7 +22,7 @@ export function PhoneMockup({ src, alt, accentColor = "rgba(226,84,14,0.18)" }: 
                         <div className="h-[5px] w-12 rounded-full bg-zinc-800 sm:w-14" />
                     </div>
                     <div className="aspect-[9/19] w-full overflow-hidden">
-                        <img src={src} alt={alt} loading="lazy" className="h-full w-full object-cover object-top" />
+                        <ScreenImage src={src} alt={alt} />
                     </div>
                 </div>
             </div>
@@ -55,7 +57,7 @@ export function LaptopMockup({ src, alt, accentColor = "rgba(226,84,14,0.14)" }:
                     <div className="ml-1.5 h-3 max-w-[120px] flex-1 rounded-md bg-zinc-700/60 sm:ml-2 sm:h-4 sm:max-w-[160px]" />
                 </div>
                 <div className="aspect-[16/10] w-full overflow-hidden">
-                    <img src={src} alt={alt} loading="lazy" className="h-full w-full object-cover object-top" />
+                    <ScreenImage src={src} alt={alt} />
                 </div>
             </div>
             <div className="h-2 w-[108%] max-w-[305px] rounded-b-md bg-ink/70 sm:h-3 sm:max-w-[346px] dark:bg-line" />
@@ -94,8 +96,8 @@ export function DeviceDuo({ laptopSrc, phoneSrc, alt, accentColor = "rgba(139,92
                         <span className="h-2 w-2 rounded-full bg-green-500/70" />
                         <div className="ml-2 h-4 flex-1 rounded-md bg-zinc-700/60" />
                     </div>
-                    <div className="aspect-[16/10] w-full overflow-hidden bg-black">
-                        <img src={laptopSrc} alt={alt} loading="lazy" className="h-full w-full object-cover object-top" />
+                    <div className="aspect-[16/10] w-full overflow-hidden">
+                        <ScreenImage src={laptopSrc} alt={alt} />
                     </div>
                 </div>
                 <div className="mx-auto h-3 w-[110%] -translate-x-[4.5%] rounded-b-lg bg-ink/80 shadow-lg dark:bg-line" />
@@ -107,8 +109,8 @@ export function DeviceDuo({ laptopSrc, phoneSrc, alt, accentColor = "rgba(139,92
                     <div className="flex justify-center bg-black pb-1 pt-1.5">
                         <div className="h-[4px] w-10 rounded-full bg-zinc-800" />
                     </div>
-                    <div className="aspect-[9/19] w-full overflow-hidden bg-black">
-                        <img src={phoneSrc} alt={alt} loading="lazy" className="h-full w-full object-cover object-top" />
+                    <div className="aspect-[9/19] w-full overflow-hidden">
+                        <ScreenImage src={phoneSrc} alt={alt} />
                     </div>
                 </div>
             </div>

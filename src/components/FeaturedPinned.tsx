@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FiArrowRight } from "react-icons/fi";
 import type { ResolvedProject } from "../data/projects";
+import { ScreenImage } from "./ScreenImage";
 import { SectionHeading } from "./SectionHeading";
 
 /* Featured projects as a pinned, stepped stage (docs/MOTION_SPEC.md 4.6, 15):
@@ -21,7 +22,7 @@ function Phone({ src, alt, className }: { src: string; alt: string; className: s
     return (
         <div className={`absolute overflow-hidden rounded-[1.6rem] border-[3px] border-ink/70 bg-black shadow-2xl dark:border-line ${className}`}>
             <div className="aspect-[9/19.5] w-full overflow-hidden">
-                <img src={src} alt={alt} loading="lazy" decoding="async" className="h-full w-full object-cover object-top" />
+                <ScreenImage src={src} alt={alt} />
             </div>
         </div>
     );

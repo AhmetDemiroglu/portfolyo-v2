@@ -15,7 +15,7 @@
      the LCP element or shift layout. */
 
 import { execFileSync } from "node:child_process";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { Plugin } from "vite";
@@ -121,7 +121,24 @@ function headBlock(route: RouteKey, lang: Lang): string {
         `<meta data-seo name="twitter:description" content="${esc(head.description)}" />`,
     ];
     if (route === "home") lines.push(jsonLd(lang, t));
+    if (route === "projects") lines.push(...featuredPreloads(lang));
     return lines.join("\n        ");
+}
+
+/* Hashed file names of the built assets, filled in closeBundle. */
+let builtAssets: string[] = [];
+
+/* The featured Pause Menu laptop + phone shots sit next to the heading only on
+   wide screens; there they otherwise wait for the JS to render before the
+   browser even asks for them. On narrow screens they are below the fold, so
+   the media query keeps phones (and mobile Lighthouse) from fetching early. */
+function featuredPreloads(lang: Lang): string[] {
+    const shotLang = lang === "tr" ? "tr" : "en";
+    return ["pausemenu-web", "pausemenu-home"].map((name) => {
+        const file = builtAssets.find((f) => new RegExp(`^${name}-${shotLang}-[\\w-]+\\.webp$`).test(f));
+        if (!file) throw new Error(`seo-prerender: ${name}-${shotLang} not found in assets`);
+        return `<link rel="preload" as="image" href="/assets/${file}" media="(min-width: 1024px)" fetchpriority="high" />`;
+    });
 }
 
 /* Hidden the way screen-reader-only text is, so text extractors keep it. */
@@ -270,6 +287,7 @@ export function seoPrerender(): Plugin {
         },
         closeBundle() {
             const template = readFileSync(resolve(outDir, "index.html"), "utf8");
+            builtAssets = readdirSync(resolve(outDir, "assets"));
             const write = (file: string, html: string) => {
                 const target = resolve(outDir, file);
                 mkdirSync(dirname(target), { recursive: true });
