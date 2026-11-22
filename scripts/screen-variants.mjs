@@ -17,7 +17,7 @@ const outDir = resolve(root, "src/assets/w");
 /* Phones are drawn 84-180 CSS px wide, laptops up to ~320, the featured web
    shot up to ~670. These cover 1x-2x screens without sending the full file. */
 const TARGETS = [280, 480, 800];
-const SCREENS = /^(pausemenu|purescan|fintel|openworld|sip|multimind)-.*\.webp$/;
+const SCREENS = /^(pausemenu|purescan|fintel|openworld|sip|multimind)(-.*)?\.webp$/;
 
 const width = (file) =>
     Number(execFileSync("sips", ["-g", "pixelWidth", file], { encoding: "utf8" }).match(/pixelWidth: (\d+)/)[1]);
@@ -25,7 +25,8 @@ const width = (file) =>
 mkdirSync(outDir, { recursive: true });
 const files = execFileSync("git", ["ls-files", "src/assets/*.webp"], { cwd: root, encoding: "utf8" })
     .split("\n")
-    .filter((f) => f && SCREENS.test(basename(f)));
+    // The pathspec's * also matches "w/", so the copies themselves are skipped here.
+    .filter((f) => f && !f.startsWith("src/assets/w/") && SCREENS.test(basename(f)));
 
 const widths = {};
 for (const rel of files) {
