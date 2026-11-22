@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "../components/Seo";
 import { FiArrowDown, FiArrowUpRight } from "react-icons/fi";
 import { Contours } from "../components/scenery/Contours";
 import { GhostWord, ParallaxY, Reveal } from "../components/motion/primitives";
@@ -71,7 +71,7 @@ function TimelineItem({ index }: { index: number }) {
 }
 
 function AboutPage() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const reduce = useReducedMotion();
     const timelineRef = useRef<HTMLDivElement>(null);
 
@@ -92,10 +92,7 @@ function AboutPage() {
 
     return (
         <div>
-            <Helmet key={i18n.language} defer={false} prioritizeSeoTags>
-                <title>{t("seo.about_title")}</title>
-                <meta name="description" content={t("seo.about_description") ?? ""} />
-            </Helmet>
+            <Seo route="about" />
 
             {/* Hero */}
             <section

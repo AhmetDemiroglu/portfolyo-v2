@@ -4,7 +4,7 @@ import { BsTwitterX } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "../components/Seo";
 import { useTheme } from "../contexts/ThemeContext";
 import { Contours } from "../components/scenery/Contours";
 import { SectionHeading } from "../components/SectionHeading";
@@ -40,16 +40,25 @@ export const Route = createFileRoute("/contact")({
     component: ContactPage,
 });
 
+/* The form posts straight from the browser to EmailJS with a public key, so the
+   only defences that live here are the cheap ones that stop dumb bots and
+   accidental repeats. The real limits (allowed origin, CAPTCHA) are EmailJS
+   dashboard settings. */
+const MIN_FILL_MS = 3000;
+const COOLDOWN_MS = 60_000;
+const LAST_SENT_KEY = "contact:lastSent";
+
 const inputClass =
     "w-full rounded-xl border border-line/80 bg-soft/60 p-3.5 text-ink placeholder-muted transition-colors focus:border-accent focus:outline-none";
 
 function ContactPage() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const { theme } = useTheme();
 
     const formRef = useRef<HTMLFormElement>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [formStatus, setFormStatus] = useState({ success: false, message: "" });
+    const mountedAt = useRef(Date.now());
 
     /* The map is mounted only after hydration. Rendering a lazy component during
        the prerender would leave a Suspense boundary the static render cannot
@@ -79,6 +88,28 @@ function ContactPage() {
         e.preventDefault();
         const form = formRef.current;
         if (!form) return;
+
+        /* Bots fill every field, people never see this one; and nobody types
+           three fields in under three seconds. Both get a fake success, so a
+           bot learns nothing and no mail is sent. */
+        const trap = (form.elements.namedItem("botcheck") as HTMLInputElement | null)?.value;
+        if (trap || Date.now() - mountedAt.current < MIN_FILL_MS) {
+            setFormStatus({ success: true, message: t("contact_page.form_status_success") });
+            form.reset();
+            return;
+        }
+
+        let lastSent = 0;
+        try {
+            lastSent = Number(localStorage.getItem(LAST_SENT_KEY)) || 0;
+        } catch {
+            /* storage unavailable: no cooldown, the EmailJS limits still apply */
+        }
+        if (Date.now() - lastSent < COOLDOWN_MS) {
+            setFormStatus({ success: false, message: t("contact_page.form_status_wait") });
+            return;
+        }
+
         setIsSubmitting(true);
 
         import("@emailjs/browser")
@@ -92,6 +123,11 @@ function ContactPage() {
             )
             .then(
                 () => {
+                    try {
+                        localStorage.setItem(LAST_SENT_KEY, String(Date.now()));
+                    } catch {
+                        /* storage unavailable */
+                    }
                     setFormStatus({ success: true, message: t("contact_page.form_status_success") });
                     form.reset();
                 },
@@ -109,10 +145,7 @@ function ContactPage() {
 
     return (
         <div className="relative overflow-hidden">
-            <Helmet key={i18n.language} defer={false} prioritizeSeoTags>
-                <title>{t("seo.contact_title")}</title>
-                <meta name="description" content={t("seo.contact_description") ?? ""} />
-            </Helmet>
+            <Seo route="contact" />
 
             <Contours className="opacity-60" />
 
@@ -217,6 +250,7 @@ function ContactPage() {
                                 name="from_name"
                                 placeholder={t("contact_page.form_placeholder_name")}
                                 required
+                                maxLength={100}
                                 className={inputClass}
                             />
                             <input
@@ -224,14 +258,25 @@ function ContactPage() {
                                 name="from_email"
                                 placeholder={t("contact_page.form_placeholder_email")}
                                 required
+                                maxLength={254}
                                 className={inputClass}
                             />
                             <textarea
                                 name="message"
                                 placeholder={t("contact_page.form_placeholder_message")}
                                 required
+                                maxLength={5000}
                                 rows={8}
                                 className={`${inputClass} resize-none`}
+                            />
+                            {/* Honeypot: off-screen, skipped by keyboard and screen readers. */}
+                            <input
+                                type="text"
+                                name="botcheck"
+                                tabIndex={-1}
+                                autoComplete="off"
+                                aria-hidden="true"
+                                className="absolute -left-[9999px] h-px w-px opacity-0"
                             />
                             <button
                                 type="submit"

@@ -1,7 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { FiArrowLeft } from "react-icons/fi";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "../components/Seo";
 import { Contours } from "../components/scenery/Contours";
 import { Reveal } from "../components/motion/primitives";
 
@@ -10,14 +10,11 @@ export const Route = createFileRoute("/$")({
 });
 
 function NotFoundPage() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <div className="relative flex min-h-[100svh] items-center justify-center overflow-hidden">
-            <Helmet key={i18n.language} defer={false} prioritizeSeoTags>
-                <title>{t("seo.404_title")}</title>
-                <meta name="description" content={t("seo.404_description") ?? ""} />
-            </Helmet>
+            <Seo route="404" />
 
             <Contours />
 

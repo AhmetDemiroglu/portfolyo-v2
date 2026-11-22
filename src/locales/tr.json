@@ -425,6 +425,7 @@
         "form_button_submitting": "Gönderiliyor...",
         "form_status_success": "Mesajınız başarıyla gönderildi!",
         "form_status_error": "Bir hata oluştu: ",
+        "form_status_wait": "Az önce bir mesaj gönderdiniz. Lütfen bir dakika sonra tekrar deneyin.",
         "social_title": "Sosyal Medya",
         "direct_links": {
             "email": {

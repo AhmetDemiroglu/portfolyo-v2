@@ -37,7 +37,7 @@ import {
 import { DiNetmagazine } from "react-icons/di";
 import { TbBrandReactNative, TbSql } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "../components/Seo";
 import { Contours } from "../components/scenery/Contours";
 import { SectionHeading } from "../components/SectionHeading";
 import { GhostWord, Reveal } from "../components/motion/primitives";
@@ -171,7 +171,7 @@ export const Route = createFileRoute("/skills")({
 });
 
 function SkillsPage() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const categories = t("skills_page.skill_categories", { returnObjects: true }) as MainCategory[];
 
     const withDetails = (skill: { name: string; description: string }, key?: string): Skill => ({
@@ -198,10 +198,7 @@ function SkillsPage() {
 
     return (
         <div className="relative overflow-hidden">
-            <Helmet key={i18n.language} defer={false} prioritizeSeoTags>
-                <title>{t("seo.skills_title")}</title>
-                <meta name="description" content={t("seo.skills_description") ?? ""} />
-            </Helmet>
+            <Seo route="skills" />
 
             <Contours className="opacity-60" />
             <GhostWord word={t("skills_page.ghost")} className="top-32" from={120} to={-120} />

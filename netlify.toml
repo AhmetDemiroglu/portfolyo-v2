@@ -21,7 +21,8 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# No catch-all rewrite. Every real page is a file the build writes (index.html,
+# about.html, en/index.html, en/about.html ...); any other path falls through to
+# 404.html, which Netlify serves with a real 404 status. The old "/* ->
+# /index.html 200" answered every made-up URL with the home page and a 200
+# (soft 404), which also let crawlers spend requests on pages that do not exist.

@@ -3,7 +3,7 @@ import { FaApple, FaGithub, FaGooglePlay } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "../components/Seo";
 import { projectsData, type ProjectBase } from "../data/projects";
 import { PhoneMockup, LaptopMockup, DeviceDuo } from "../components/DeviceMockups";
 import { SectionHeading } from "../components/SectionHeading";
@@ -327,7 +327,7 @@ function ArchiveRow({ project }: { project: FullProject }) {
 }
 
 function ProjectsPage() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const withTranslation = (project: ProjectBase): FullProject => ({
         ...project,
@@ -346,10 +346,7 @@ function ProjectsPage() {
 
     return (
         <div className="relative overflow-hidden">
-            <Helmet key={i18n.language} defer={false} prioritizeSeoTags>
-                <title>{t("seo.projects_title")}</title>
-                <meta name="description" content={t("seo.projects_description") ?? ""} />
-            </Helmet>
+            <Seo route="projects" />
 
             <GhostWord word={t("projects_page.ghost")} className="top-28" from={-100} to={140} />
 

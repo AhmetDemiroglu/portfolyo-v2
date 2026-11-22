@@ -3,25 +3,17 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--seo:start-->
         <title>Ahmet Demiroğlu | Full-Stack Developer</title>
-        <meta
-            name="description"
-            content="Şehir planlamadan yazılıma: React, Vue ve .NET ile ölçeklenebilir web ve mobil ürünler geliştiren Full-Stack Developer."
-        />
+        <meta data-seo name="description" content="Şehir planlamadan yazılıma: dijital ürünleri şehir kurar gibi inşa eden Full-Stack Developer. React, Vue ve .NET ile web ve mobil ürünler." />
+        <link data-seo rel="canonical" href="https://ahmetdemiroglu.dev/" />
+        <meta data-seo name="robots" content="index, follow" />
+        <!--seo:end-->
         <meta name="author" content="Ahmet Demiroğlu" />
-        <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#f5f3ee" />
-        <link rel="canonical" href="https://ahmetdemiroglu.dev/" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content="tr_TR" />
         <meta property="og:site_name" content="Ahmet Demiroğlu" />
-        <meta property="og:title" content="Ahmet Demiroğlu | Full-Stack Developer" />
-        <meta
-            property="og:description"
-            content="Şehir planlamadan yazılıma: React, Vue ve .NET ile ölçeklenebilir web ve mobil ürünler geliştiriyorum."
-        />
-        <meta property="og:url" content="https://ahmetdemiroglu.dev/" />
         <meta property="og:image" content="https://ahmetdemiroglu.dev/og-image.png" />
         <meta
             property="og:image:secure_url"
@@ -36,11 +28,6 @@
         />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ahmet Demiroğlu | Full-Stack Developer" />
-        <meta
-            name="twitter:description"
-            content="React, Vue ve .NET ile ölçeklenebilir web ve mobil ürünler geliştiriyorum."
-        />
         <meta name="twitter:image" content="https://ahmetdemiroglu.dev/og-image.png" />
         <meta
             name="twitter:image:alt"
@@ -60,15 +47,40 @@
                 } catch (e) {
                     el.classList.add("dark");
                 }
+                /* The URL decides the language ("/en/about" is English, "/about"
+                   Turkish). A visitor who lands on a Turkish address but chose,
+                   or browses in, another language is moved to that language's
+                   address here, before any module runs, so the app boots straight
+                   into it. Crawlers are left where they are: every language has
+                   its own URL for them, linked with hreflang. Keep the rules in
+                   sync with src/seo/site.ts. */
                 try {
-                    var cookie = document.cookie.match(/(?:^|;\s*)i18next=([^;]*)/);
-                    var lng =
-                        (cookie && decodeURIComponent(cookie[1])) ||
-                        localStorage.getItem("i18nextLng") ||
-                        navigator.language ||
-                        "tr";
-                    lng = lng.split("-")[0];
-                    el.lang = ["tr", "en", "de", "es"].indexOf(lng) === -1 ? "tr" : lng;
+                    var langs = ["en", "de", "es"];
+                    var path = location.pathname;
+                    var m = path.match(/^\/(en|de|es)(?=\/|$)/);
+                    var lng = m ? m[1] : "tr";
+                    if (!m) {
+                        var cookie = document.cookie.match(/(?:^|;\s*)i18next=([^;]*)/);
+                        var pref =
+                            (cookie && decodeURIComponent(cookie[1])) ||
+                            localStorage.getItem("i18nextLng");
+                        if (
+                            !pref &&
+                            !navigator.webdriver &&
+                            !/bot|crawl|spider|slurp|google|lighthouse|headless|preview|inspection/i.test(navigator.userAgent)
+                        ) {
+                            pref = (navigator.language || "").split("-")[0];
+                        }
+                        if (langs.indexOf(pref) !== -1) {
+                            history.replaceState(
+                                history.state,
+                                "",
+                                "/" + pref + path + location.search + location.hash
+                            );
+                            lng = pref;
+                        }
+                    }
+                    el.lang = lng;
                 } catch (e) {}
             })();
         </script>
@@ -147,7 +159,7 @@
         </script>
     </head>
     <body>
-        <div id="root"></div>
+        <div id="root"><!--seo:body--></div>
         <script type="module" src="/src/main.tsx"></script>
     </body>
 </html>

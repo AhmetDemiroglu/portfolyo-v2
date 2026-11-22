@@ -2,8 +2,9 @@ import i18n from 'i18next';
 import type { BackendModule, ReadCallback } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import tr from './locales/tr.json';
+import { LANGS, langFromPath } from './seo/site';
 
-export const SUPPORTED_LANGUAGES = ['tr', 'en', 'de', 'es'] as const;
+export const SUPPORTED_LANGUAGES = LANGS;
 const STORAGE_KEY = 'i18nextLng';
 const COOKIE_KEY = 'i18next';
 
@@ -34,10 +35,12 @@ const lazyBackend: BackendModule = {
 const isSupported = (value: string | null | undefined): value is string =>
   !!value && (SUPPORTED_LANGUAGES as readonly string[]).includes(value);
 
-/* Detection is done by hand rather than with i18next-browser-languagedetector so
-   that reading the preference and *applying* it can happen at different moments
-   (see below), and so the inline script in index.html can use the same rules. */
-function readStored(): string | undefined {
+/* The URL decides the language: "/" and "/about" are Turkish, "/en/about" is
+   English. Every language has its own crawlable address with hreflang, so a page
+   must never change language on its own. The stored choice and the browser
+   locale are only used once, in main.tsx, to send a returning or first-time
+   visitor from a Turkish address to their language before the app mounts. */
+export function readStoredLanguage(): string | undefined {
   try {
     const cookie = document.cookie.match(/(?:^|;\s*)i18next=([^;]*)/);
     const fromCookie = cookie && decodeURIComponent(cookie[1]);
@@ -45,17 +48,14 @@ function readStored(): string | undefined {
     const fromStorage = localStorage.getItem(STORAGE_KEY);
     if (isSupported(fromStorage)) return fromStorage;
   } catch {
-    /* private mode or storage disabled: fall through to the browser locale */
+    /* private mode or storage disabled */
   }
   return undefined;
 }
 
 function detect(): string {
   if (typeof document === 'undefined') return 'tr';
-  const stored = readStored();
-  if (stored) return stored;
-  const fromNavigator = navigator.language?.split('-')[0];
-  return isSupported(fromNavigator) ? fromNavigator : 'tr';
+  return langFromPath(window.location.pathname);
 }
 
 export const preferredLanguage = detect();

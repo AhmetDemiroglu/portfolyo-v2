@@ -2,7 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { motion, useReducedMotion, useTransform } from "framer-motion";
 import { useRef, type CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "../components/Seo";
 import { FiArrowDown, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 import { CityScene } from "../components/scenery/CityScene";
 import { Contours } from "../components/scenery/Contours";
@@ -374,14 +374,9 @@ function FeaturedSection() {
 }
 
 function HomePage() {
-    const { t, i18n } = useTranslation();
-
     return (
         <div>
-            <Helmet key={i18n.language} defer={false} prioritizeSeoTags>
-                <title>{t("seo.home_title")}</title>
-                <meta name="description" content={t("seo.home_description") ?? ""} />
-            </Helmet>
+            <Seo route="home" />
 
             <Hero />
             <TechRibbon items={RIBBON} />

@@ -26,3 +26,6 @@ dist-ssr
 
 # Motion spec reference captures (third-party screenshots, local only)
 docs/motion-ref/
+
+# SEO denetim notları ve açık listesi (repo herkese açık, commit edilmez)
+docs/seo-denetim/

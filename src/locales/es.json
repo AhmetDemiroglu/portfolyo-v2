@@ -425,6 +425,7 @@
         "form_button_submitting": "Enviando...",
         "form_status_success": "¡Tu mensaje ha sido enviado con éxito!",
         "form_status_error": "Ocurrió un error: ",
+        "form_status_wait": "Acabas de enviar un mensaje. Inténtalo de nuevo en un minuto.",
         "social_title": "Redes",
         "direct_links": {
             "email": {

@@ -425,6 +425,7 @@
         "form_button_submitting": "Wird gesendet...",
         "form_status_success": "Ihre Nachricht wurde erfolgreich gesendet!",
         "form_status_error": "Ein Fehler ist aufgetreten: ",
+        "form_status_wait": "Sie haben gerade eine Nachricht gesendet. Bitte versuchen Sie es in einer Minute erneut.",
         "social_title": "Social Media",
         "direct_links": {
             "email": {

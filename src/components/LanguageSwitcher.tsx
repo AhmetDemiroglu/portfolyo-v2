@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FiChevronDown } from 'react-icons/fi'
+import { useRouter } from '@tanstack/react-router'
 import { FlagIcon } from './FlagIcon'
+import { isLang } from '../seo/site'
+import { setUrlLang } from '../lib/url-lang'
 
 const languageOptions = [
   { code: 'tr', name: 'Türkçe', country: 'TR' },
@@ -14,6 +17,7 @@ const languageOptions = [
    chunk of every page for this one dropdown. */
 export function LanguageSwitcher() {
   const { i18n } = useTranslation()
+  const router = useRouter()
   const [open, setOpen] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -40,9 +44,15 @@ export function LanguageSwitcher() {
     }
   }, [open])
 
+  /* Each language has its own address, so switching moves to it: the same page
+     under the other prefix, as a new history entry. No reload: the router keeps
+     the page mounted and only the prefix in the URL changes. */
   const selectLanguage = (code: string) => {
-    i18n.changeLanguage(code)
     setOpen(false)
+    if (!isLang(code) || code === i18n.resolvedLanguage) return
+    setUrlLang(code)
+    i18n.changeLanguage(code)
+    router.history.push(router.state.location.href, router.state.location.state)
   }
 
   return (

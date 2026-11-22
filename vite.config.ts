@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
-import sitemap from 'vite-plugin-sitemap'
+import { seoPrerender } from './scripts/seo-prerender'
 
 export default defineConfig({
   base: '/',
@@ -11,14 +11,8 @@ export default defineConfig({
       autoCodeSplitting: true,
     }),
     react(),
-    sitemap({ hostname: 'https://ahmetdemiroglu.dev',
-      dynamicRoutes: [
-        '/about',
-        '/skills',
-        '/projects',
-        '/contact',
-      ],
-    })
+    // Per-page HTML with head tags, 404.html and sitemap.xml: see the file.
+    seoPrerender(),
   ],
   build: {
     // Lets Lighthouse (and us) read the shipped bundle; maps are never fetched
