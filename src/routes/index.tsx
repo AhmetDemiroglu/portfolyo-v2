@@ -192,6 +192,9 @@ function CareerSection() {
     );
 }
 
+/* The phone screenshots are 400x870. Without width/height, `sizes="auto"` on a
+   lazy srcset image squeezes them into a 300x150-ish box (they came out almost
+   square), so the real proportions are given here. */
 function StudioSection() {
     const { t, i18n } = useTranslation();
     const reduce = useReducedMotion();
@@ -260,6 +263,8 @@ function StudioSection() {
                                 <ThemedImg
                                     src={screen("pausemenu")!}
                                     alt="Pause Menu"
+                                    width={400}
+                                    height={870}
                                     loading="lazy"
                                     decoding="async"
                                     className="rounded-2xl border-4 border-ink/70 shadow-2xl dark:border-line"
@@ -269,6 +274,8 @@ function StudioSection() {
                                 <ThemedImg
                                     src={screen("purescan")!}
                                     alt="PureScan"
+                                    width={400}
+                                    height={870}
                                     loading="lazy"
                                     decoding="async"
                                     className="rounded-2xl border-4 border-ink/70 shadow-2xl dark:border-line"
@@ -278,6 +285,8 @@ function StudioSection() {
                                 <ThemedImg
                                     src={screen("purescan_foods")!}
                                     alt="PureScan Foods"
+                                    width={400}
+                                    height={870}
                                     loading="lazy"
                                     decoding="async"
                                     className="rounded-2xl border-4 border-ink/70 shadow-2xl dark:border-line"
