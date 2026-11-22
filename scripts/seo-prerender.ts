@@ -196,13 +196,29 @@ let builtAssets: string[] = [];
    phones (and mobile Lighthouse) from fetching early. */
 function featuredPreloads(lang: Lang): string[] {
     const shotLang = lang === "tr" ? "tr" : "en";
-    const find = (name: string) =>
-        builtAssets.find((f) => new RegExp(`^${name}-dark-${shotLang}-[\\w-]+\\.webp$`).test(f)) ??
-        builtAssets.find((f) => new RegExp(`^${name}-${shotLang}-[\\w-]+\\.webp$`).test(f));
-    return ["pausemenu-web", "pausemenu-home"].map((name) => {
-        const file = find(name);
-        if (!file) throw new Error(`seo-prerender: ${name}-${shotLang} not found in assets`);
-        return `<link rel="preload" as="image" href="/assets/${file}" media="(min-width: 1024px)" fetchpriority="high" />`;
+    const widths = JSON.parse(readFileSync(resolve(root, "src/assets/w/widths.json"), "utf8")) as Record<string, number>;
+    /* The file with the plain name; "<name>-280-<hash>" copies must not match. */
+    const original = (base: string) =>
+        builtAssets.find((f) => new RegExp(`^${base}-(?!\\d+-)[\\w-]{8}\\.webp$`).test(f));
+    return [
+        ["pausemenu-web", "580px"],
+        ["pausemenu-home", "170px"],
+    ].map(([name, drawn]) => {
+        const base = builtAssets.some((f) => f.startsWith(`${name}-dark-${shotLang}-`))
+            ? `${name}-dark-${shotLang}`
+            : `${name}-${shotLang}`;
+        const file = original(base);
+        if (!file) throw new Error(`seo-prerender: ${base} not found in assets`);
+        /* Same candidates and drawn width as the <img>'s srcset, so the browser
+           preloads the file the image will pick instead of a second one. */
+        const copies = builtAssets
+            .map((f) => f.match(new RegExp(`^${base}-(\\d+)-[\\w-]{8}\\.webp$`)))
+            .filter((m): m is RegExpMatchArray => Boolean(m))
+            .map((m) => [Number(m[1]), m[0]] as const)
+            .sort((x, y) => x[0] - y[0]);
+        const srcset = [...copies.map(([w, f]) => `/assets/${f} ${w}w`), `/assets/${file} ${widths[base]}w`].join(", ");
+        const set = copies.length ? ` imagesrcset="${srcset}" imagesizes="${drawn}"` : "";
+        return `<link rel="preload" as="image" href="/assets/${file}"${set} media="(min-width: 1024px)" fetchpriority="high" />`;
     });
 }
 
