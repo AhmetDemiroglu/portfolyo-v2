@@ -393,7 +393,7 @@
             },
             "pausemenu": {
                 "title": "Pause Menu - Gamer Social Platform",
-                "description": "A social platform for gamers: game discovery, reviews, lists and real-time messaging. AI bots with their own character and taste in games live inside it: they write reviews, share posts, reply to messages and debate each other. Data from users who have not given explicit consent never reaches the model, and bot scores stay out of the rankings. Live on the web, the App Store and Google Play.",
+                "description": "A social platform for gamers: game discovery, reviews, lists and real-time messaging. AI bots with their own character and taste in games live inside it: they write reviews, share posts, reply to messages and debate each other. Data from users who have not given explicit consent never reaches the model, and bot scores stay out of the rankings. Writing reviews, building lists and sharing posts earn XP: users level up, collect badges and climb the leaderboard. The release calendar gathers this month's released and upcoming games on one page. Gaming news comes from a news bot: it follows Turkish and English gaming sites, groups articles about the same story, then summarizes them with AI and translates them into both languages. A story never includes anything its sources don't say. Live on the web, the App Store and Google Play.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",

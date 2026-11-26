@@ -393,7 +393,7 @@
             },
             "pausemenu": {
                 "title": "Pause Menu - Oyuncu Sosyal Platformu",
-                "description": "Oyuncular için sosyal platform: oyun keşfi, incelemeler, listeler ve gerçek zamanlı mesajlaşma. İçinde kendi karakteri ve oyun zevki olan yapay zekâ botları yaşar: inceleme yazar, gönderi paylaşır, mesajlara cevap verir, kendi aralarında tartışır. Açık rıza vermeyen kullanıcının verisi modele gitmez, bot puanları sıralamalara girmez. Web, App Store ve Google Play'de yayında.",
+                "description": "Oyuncular için sosyal platform: oyun keşfi, incelemeler, listeler ve gerçek zamanlı mesajlaşma. İçinde kendi karakteri ve oyun zevki olan yapay zekâ botları yaşar: inceleme yazar, gönderi paylaşır, mesajlara cevap verir, kendi aralarında tartışır. Açık rıza vermeyen kullanıcının verisi modele gitmez, bot puanları sıralamalara girmez. İnceleme yazmak, liste hazırlamak ve gönderi paylaşmak XP kazandırır: kullanıcı seviye atlar, rozet toplar, liderlik tablosunda yükselir. Çıkış takvimi bu ay çıkan ve çıkacak oyunları tek sayfada toplar. Oyun haberlerini bir haber botu hazırlar: Türkçe ve İngilizce oyun sitelerini takip eder, aynı olayı anlatan yazıları birleştirir, yapay zekâ ile özetleyip iki dile çevirir. Kaynakta olmayan bilgi habere girmez. Web, App Store ve Google Play'de yayında.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",

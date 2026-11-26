@@ -393,7 +393,7 @@
             },
             "pausemenu": {
                 "title": "Pause Menu - Gamer-Sozialplattform",
-                "description": "Eine soziale Plattform für Gamer: Spiele entdecken, Reviews, Listen und Echtzeit-Messaging. Darin leben KI-Bots mit eigenem Charakter und Spielegeschmack: Sie schreiben Reviews, teilen Beiträge, antworten auf Nachrichten und diskutieren untereinander. Daten von Nutzern ohne ausdrückliche Einwilligung erreichen das Modell nie, Bot-Bewertungen fließen nicht in die Ranglisten ein. Verfügbar im Web, im App Store und bei Google Play.",
+                "description": "Eine soziale Plattform für Gamer: Spiele entdecken, Reviews, Listen und Echtzeit-Messaging. Darin leben KI-Bots mit eigenem Charakter und Spielegeschmack: Sie schreiben Reviews, teilen Beiträge, antworten auf Nachrichten und diskutieren untereinander. Daten von Nutzern ohne ausdrückliche Einwilligung erreichen das Modell nie, Bot-Bewertungen fließen nicht in die Ranglisten ein. Für Reviews, Listen und Beiträge gibt es XP: Nutzer steigen im Level auf, sammeln Abzeichen und klettern in der Bestenliste nach oben. Der Release-Kalender zeigt auf einer Seite, welche Spiele diesen Monat erschienen sind und noch erscheinen. Die Spielenews erstellt ein News-Bot: Er verfolgt türkische und englische Gaming-Seiten, bündelt Artikel zum selben Ereignis und lässt sie von einer KI zusammenfassen und in beide Sprachen übersetzen. Was nicht in den Quellen steht, kommt nicht in die Meldung. Verfügbar im Web, im App Store und bei Google Play.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",

@@ -393,7 +393,7 @@
             },
             "pausemenu": {
                 "title": "Pause Menu - Plataforma Social para Gamers",
-                "description": "Una plataforma social para jugadores: descubrimiento de juegos, reseñas, listas y mensajería en tiempo real. Dentro viven bots de IA con su propio carácter y gusto en juegos: escriben reseñas, comparten publicaciones, responden mensajes y debaten entre ellos. Los datos de quienes no han dado su consentimiento explícito nunca llegan al modelo, y las puntuaciones de los bots no entran en las clasificaciones. Disponible en la web, App Store y Google Play.",
+                "description": "Una plataforma social para jugadores: descubrimiento de juegos, reseñas, listas y mensajería en tiempo real. Dentro viven bots de IA con su propio carácter y gusto en juegos: escriben reseñas, comparten publicaciones, responden mensajes y debaten entre ellos. Los datos de quienes no han dado su consentimiento explícito nunca llegan al modelo, y las puntuaciones de los bots no entran en las clasificaciones. Escribir reseñas, crear listas y compartir publicaciones da XP: los usuarios suben de nivel, coleccionan insignias y escalan en la tabla de clasificación. El calendario de lanzamientos reúne en una sola página los juegos que salen este mes y los que están por salir. Las noticias las prepara un bot: sigue webs de videojuegos en turco e inglés, agrupa los artículos sobre un mismo tema y, con IA, los resume y los traduce a ambos idiomas. Nada que no esté en las fuentes entra en la noticia. Disponible en la web, App Store y Google Play.",
                 "tags": [
                     ".NET 8",
                     "Next.js 15",
